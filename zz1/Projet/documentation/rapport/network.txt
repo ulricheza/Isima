@@ -1,0 +1,65 @@
+Configuration du reseau choisie:
+
+/*-----------------------------------------------------------*/
+Declaration necessaire sous linux:
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+
+#define closesocket(s) close(s)   // permet de rendre portable les fonctions de fermeture de socket entre LINUX et WIN32
+
+typedef int SOCKET;                       // ces typedef sont deja inclus dans winsock2.h
+typedef struct sockaddr_in SOCKADRR_IN;
+typedef struct sockaddr SOCKADDR;
+
+/*-----------------------------------------------------------*/
+Declaration necessaire pour WINDOWS
+
+#include <winsock2.h>
+
+typedef int socklen_t;
+
+ATTENTION ne pas oublier dans le main:
+
+   WSADATA WSAData;
+   WSAStartup(MAKEWORD(2,2), &WSAData);
+
+et finir par:
+
+   WSACleanup ();
+
+/*-----------------------------------------------------------*/
+De plus pour une question de rapidite le port de transmission sera definie par:
+
+#define PORT XX 
+
+Par default on a choisi le port 2012 .
+
+/*-----------------------------------------------------------*/
+/*-----------------------------------------------------------*/
+
+Le choix du joueur qui fera le serveur se fera par les utilisateurs:
+
+Lors du commencement du mode local:
+ Le joueur aura le choix de: 
+    -Creer une partie (le joueur sera serveur)
+    -Rejoindre une partie ( il lui sera demandé de rentrer l'adresse IP du joueur qui sera le serveur ).
+
+/*-----------------------------------------------------------*/
+/*-----------------------------------------------------------*/
+
+Transmissions des données:
+
+la transmission des coordonnées de tir se fera par long (necessitant la conversion htonl et ntohl) correspondant a la coordonnee 1D du tir.
+
+Pour la transmission de la reponse, elle se fera aussi par entier selon le protocole suivant:
+0  : rate
+1  : touche
+2  : touche et coule
+
+
+
+

@@ -1,0 +1,6 @@
+CommandLine
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\xst.exe -ise C:/TP Circuits/G12/compteur16bit/compteur16bit.ise -intstyle ise -ifn C:/TP Circuits/G12/compteur16bit/compt.xst -ofn C:/TP Circuits/G12/compteur16bit/compt.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

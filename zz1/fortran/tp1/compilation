@@ -1,0 +1,5 @@
+gfortran -c facto_lu.f90
+gfortran -c lu.f90
+gfortran facto_lu.o lu.o -o factorisation
+rm *.o
+rm *.mod

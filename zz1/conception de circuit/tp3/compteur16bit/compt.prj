@@ -1,0 +1,5 @@
+vhdl work "Mux4_1_Bus4.vhf"
+vhdl work "DEC7SEG.vhf"
+vhdl work "CLOCK.vhf"
+vhdl work "AFF8SEG.vhf"
+vhdl work "compt.vhf"

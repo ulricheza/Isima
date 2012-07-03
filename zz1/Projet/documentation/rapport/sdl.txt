@@ -1,0 +1,42 @@
+Fiche de choix pour la sdl.
+
+Nouvelle fonctionnalite a integrer:
+
+une fonction qui met a jour la message-box. /*fait*/
+une fonction de liberation de la memoire.(elle sera appele dans le cas d'un event SDL_QUIT)
+une fonction de lecture instantané d'adresse ip. /*fait*/
+une fonction de decodage pixel ==> coordonnées x y /*fait*/
+une fonction de mise a jour des scores /*fait*/
+une fonction mute/unmute /*fait*/
+
+Les fonctions a modifier:
+
+tir_humain: gestion du choix a la souris.
+placement_bateau: gestion clic droit pour le sens.
+                  gestion de la verification du positionnement etc 
+reponse_tir: affichage les images sur les mers
+             
+Correctif à apporter lors des versions precedentes:
+
+   -gestion du match_nul (2 joueurs pouvaient gagner)
+   -gestion des transfert de données x84/x64 
+
+
+
+solutions apportee:
+
+gestions du son:
+   mute/unmute: booleen dans la structure des variables.
+   les 6 sons seront integre dans la structure des variables. 
+   le mode un joueur sera gérée avec des tick pour eviter la superposition des sons
+
+
+les surfaces courantes ==> seront integrer dans la structure var_t;
+
+Coordonnées diverses:
+
+Taille font message box: 70
+font message box: "game_over.ttf"
+position message box : x = 100
+                       y = 725
+

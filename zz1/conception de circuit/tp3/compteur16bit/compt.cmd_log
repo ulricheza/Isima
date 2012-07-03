@@ -1,0 +1,19 @@
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/TP Circuits/G12/compteur16bit/compt.sch" compt.vhf
+xst -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -ifn "C:/TP Circuits/G12/compteur16bit/compt.xst" -ofn "C:/TP Circuits/G12/compteur16bit/compt.syr"
+ngdbuild -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-4 "compt.ngc" compt.ngd
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/TP Circuits/G12/compteur16bit/compt.sch" compt.vhf
+xst -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -ifn "C:/TP Circuits/G12/compteur16bit/compt.xst" -ofn "C:/TP Circuits/G12/compteur16bit/compt.syr"
+ngdbuild -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-4 "compt.ngc" compt.ngd
+ngdbuild -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-4 "compt.ngc" compt.ngd
+ngdbuild -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-4 "compt.ngc" compt.ngd
+map -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr off -k 4 -c 100 -o compt_map.ncd compt.ngd compt.pcf
+par -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -w -intstyle ise -ol std -t 1 compt_map.ncd compt.ncd compt.pcf
+trce -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -e 3 -s 4 -xml compt compt.ncd -o compt.twr compt.pcf -ucf contrainte.ucf
+bitgen -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -f compt.ut compt.ncd
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/TP Circuits/G12/compteur16bit/compt.sch" compt.vhf
+xst -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -ifn "C:/TP Circuits/G12/compteur16bit/compt.xst" -ofn "C:/TP Circuits/G12/compteur16bit/compt.syr"
+ngdbuild -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-4 "compt.ngc" compt.ngd
+map -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr off -k 4 -c 100 -o compt_map.ncd compt.ngd compt.pcf
+par -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -w -intstyle ise -ol std -t 1 compt_map.ncd compt.ncd compt.pcf
+trce -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -e 3 -s 4 -xml compt compt.ncd -o compt.twr compt.pcf -ucf contrainte.ucf
+bitgen -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise" -intstyle ise -f compt.ut compt.ncd

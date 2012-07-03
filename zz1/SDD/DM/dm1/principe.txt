@@ -1,0 +1,84 @@
+/*algo de principe du devoir maison sdd n°1*/
+
+probleme 4
+
+on prendra comme hypothese que:
+   - le premier mot de la liste sera inversé
+   - Que la liste ne contenait pas d'erreur 
+   - La liste se termine par NIL et ne possede pas d'espace avant
+   - On ne peut avoir 2 espaces d'affilé
+   - une phrase ne peut commencer par un espace.
+   
+
+procedure pb4(entrée:t)
+   si liste non vide alors
+      tant non fin de liste
+         recherche d'une sous-liste entre 2 espaces
+         si sous-liste doit etre inversé alors
+            on inverse la sous-liste
+            prochaine sous-liste sera pas a inverser
+         sinon
+            la prochaine sous-liste sera a inverser
+         fsi
+      fin
+   sinon
+      ecrire("liste vide")
+   fsi
+fin
+
+/*lexique des notations*/
+debut: adresse du pointeur sur le debut d'une sous-liste
+fin  : adresse du pointeur sur la fin d'une sous-liste
+t    : adresse du pointeur de tête de liste
+inv  : booleen pour savoir si la sous-liste doit etre inversé
+/*fin du lexique*/
+
+procedure pb4(entrée: t)
+   si cm(t)!=NIL alors
+      m(debut):=cm(t);
+      m(fin):=cm(t);
+      m(inv):=1;
+      tant que cm(cm(fin))!=NIL faire
+         tant que (cm(cm(fin))!=' ' et (cm(cm(fin))!=NIL faire
+             m(fin):=cm(fin) + 1 ;
+         fin;
+         si cm(inv)=1 alors
+             si cm(fin)!=cm(debut) alors
+                inverser(cm(debut),cm(fin)-1);
+             fsi;
+             m(inv):=0;
+         sinon
+             m(inv):=1;
+         fsi
+         si cm(cm(fin))!=NIL alors
+            m(fin):=cm(fin) + 1 ;
+            m(debut):=cm(fin);
+         fsi;
+      fin
+   sinon
+      ecrire("liste vide");
+fin;
+
+/*lexique de notations*/
+a : valeur temporaire pour la fin de boucle
+d : adresse du debut de la sous-liste a inverser
+f : adresse de fin de la sous-liste a inverser
+/*fin du lexique*/
+
+procedure inverser (entrée:d,f)
+   m(a):= E((cm(f)-cm(d))/2);
+   pour m(i) de 0 à cm(a) faire 
+     echange(cm(d)+cm(i),cm(f)-cm(i));
+   fait
+fin
+
+/*lexique de notations*/
+a,b : adresses des valeurs a echanger
+temp: variable temporaire de stockage
+/*fin du lexique*/
+ 
+procedure echange(entrée: a,b)
+   m(temp):=cm(a);
+   m(a):= cm(b);
+   m(b):=cm(temp);
+fin

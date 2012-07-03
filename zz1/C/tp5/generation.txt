@@ -1,0 +1,8 @@
+-----Generation de pass------
+
+mot de passe generer == g|-^,I%< 
+generer en MD5 == $1$ISIMA$t5dX1q9Xn9UvA3Owv5XlT1 
+generer en DES == ZZlFm80SAkXbk 
+mot de passe generer == tC7MO)"h 
+generer en MD5 == $1$ISIMA$t8DpFHR86stEmbW1nrUiz/ 
+generer en DES == ZZRFPw0iQC/EA 

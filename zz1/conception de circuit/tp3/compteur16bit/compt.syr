@@ -1,0 +1,754 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/TP Circuits/G12/compteur16bit/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to C:/TP Circuits/G12/compteur16bit/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: compt.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "compt.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "compt"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : compt
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : compt.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/TP Circuits/G12/compteur16bit/DEC7SEG.vhf" in Library work.
+Entity <dec7seg> compiled.
+Entity <dec7seg> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/TP Circuits/G12/compteur16bit/Mux4_1_Bus4.vhf" in Library work.
+Entity <mux4_1_bus4> compiled.
+Entity <mux4_1_bus4> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/TP Circuits/G12/compteur16bit/AFF8SEG.vhf" in Library work.
+Entity <ftce_mxilinx_aff8seg> compiled.
+Entity <ftce_mxilinx_aff8seg> (Architecture <behavioral>) compiled.
+Entity <cb2ce_mxilinx_aff8seg> compiled.
+Entity <cb2ce_mxilinx_aff8seg> (Architecture <behavioral>) compiled.
+Entity <m2_1e_mxilinx_aff8seg> compiled.
+Entity <m2_1e_mxilinx_aff8seg> (Architecture <behavioral>) compiled.
+Entity <m4_1e_mxilinx_aff8seg> compiled.
+Entity <m4_1e_mxilinx_aff8seg> (Architecture <behavioral>) compiled.
+Entity <d2_4e_mxilinx_aff8seg> compiled.
+Entity <d2_4e_mxilinx_aff8seg> (Architecture <behavioral>) compiled.
+Entity <aff8seg> compiled.
+Entity <aff8seg> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/TP Circuits/G12/compteur16bit/CLOCK.vhf" in Library work.
+Entity <ftce_mxilinx_clock> compiled.
+Entity <ftce_mxilinx_clock> (Architecture <behavioral>) compiled.
+Entity <cb16ce_mxilinx_clock> compiled.
+Entity <cb16ce_mxilinx_clock> (Architecture <behavioral>) compiled.
+Entity <clock> compiled.
+Entity <clock> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/TP Circuits/G12/compteur16bit/compt.vhf" in Library work.
+Entity <ftce_mxilinx_compt> compiled.
+Entity <ftce_mxilinx_compt> (Architecture <behavioral>) compiled.
+Entity <cb16ce_mxilinx_compt> compiled.
+Entity <cb16ce_mxilinx_compt> (Architecture <behavioral>) compiled.
+Entity <compt> compiled.
+Entity <compt> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <compt> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <AFF8SEG> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CLOCK> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CB16CE_MXILINX_compt> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CB2CE_MXILINX_AFF8SEG> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <D2_4E_MXILINX_AFF8SEG> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DEC7SEG> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <M4_1E_MXILINX_AFF8SEG> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Mux4_1_Bus4> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CB16CE_MXILINX_CLOCK> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FTCE_MXILINX_compt> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FTCE_MXILINX_AFF8SEG> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <M2_1E_MXILINX_AFF8SEG> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FTCE_MXILINX_CLOCK> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <compt> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/TP Circuits/G12/compteur16bit/compt.vhf" line 489: Unconnected output port 'CEO' of component 'CB16CE_MXILINX_compt'.
+WARNING:Xst:753 - "C:/TP Circuits/G12/compteur16bit/compt.vhf" line 489: Unconnected output port 'TC' of component 'CB16CE_MXILINX_compt'.
+    Set user-defined property "HU_SET =  XLXI_3_16" for instance <XLXI_3> in unit <compt>.
+Entity <compt> analyzed. Unit <compt> generated.
+
+Analyzing Entity <AFF8SEG> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/TP Circuits/G12/compteur16bit/AFF8SEG.vhf" line 469: Unconnected output port 'CEO' of component 'CB2CE_MXILINX_AFF8SEG'.
+WARNING:Xst:753 - "C:/TP Circuits/G12/compteur16bit/AFF8SEG.vhf" line 469: Unconnected output port 'TC' of component 'CB2CE_MXILINX_AFF8SEG'.
+    Set user-defined property "HU_SET =  XLXI_1_6" for instance <XLXI_1> in unit <AFF8SEG>.
+    Set user-defined property "HU_SET =  XLXI_44_4" for instance <XLXI_44> in unit <AFF8SEG>.
+    Set user-defined property "HU_SET =  XLXI_94_5" for instance <XLXI_94> in unit <AFF8SEG>.
+Entity <AFF8SEG> analyzed. Unit <AFF8SEG> generated.
+
+Analyzing Entity <CB2CE_MXILINX_AFF8SEG> in library <work> (Architecture <behavioral>).
+    Set user-defined property "HU_SET =  I_Q0_0" for instance <I_Q0> in unit <CB2CE_MXILINX_AFF8SEG>.
+    Set user-defined property "HU_SET =  I_Q1_1" for instance <I_Q1> in unit <CB2CE_MXILINX_AFF8SEG>.
+Entity <CB2CE_MXILINX_AFF8SEG> analyzed. Unit <CB2CE_MXILINX_AFF8SEG> generated.
+
+Analyzing Entity <FTCE_MXILINX_AFF8SEG> in library <work> (Architecture <behavioral>).
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_AFF8SEG>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_AFF8SEG>.
+Entity <FTCE_MXILINX_AFF8SEG> analyzed. Unit <FTCE_MXILINX_AFF8SEG> generated.
+
+Analyzing Entity <D2_4E_MXILINX_AFF8SEG> in library <work> (Architecture <behavioral>).
+Entity <D2_4E_MXILINX_AFF8SEG> analyzed. Unit <D2_4E_MXILINX_AFF8SEG> generated.
+
+Analyzing Entity <DEC7SEG> in library <work> (Architecture <behavioral>).
+    Set user-defined property "INIT =  2812" for instance <XLXI_58> in unit <DEC7SEG>.
+    Set user-defined property "INIT =  D860" for instance <XLXI_59> in unit <DEC7SEG>.
+    Set user-defined property "INIT =  D004" for instance <XLXI_60> in unit <DEC7SEG>.
+    Set user-defined property "INIT =  8492" for instance <XLXI_61> in unit <DEC7SEG>.
+    Set user-defined property "INIT =  02BA" for instance <XLXI_62> in unit <DEC7SEG>.
+    Set user-defined property "INIT =  208E" for instance <XLXI_63> in unit <DEC7SEG>.
+    Set user-defined property "INIT =  1083" for instance <XLXI_64> in unit <DEC7SEG>.
+Entity <DEC7SEG> analyzed. Unit <DEC7SEG> generated.
+
+Analyzing Entity <M4_1E_MXILINX_AFF8SEG> in library <work> (Architecture <behavioral>).
+    Set user-defined property "HU_SET =  I_M01_3" for instance <I_M01> in unit <M4_1E_MXILINX_AFF8SEG>.
+    Set user-defined property "HU_SET =  I_M23_2" for instance <I_M23> in unit <M4_1E_MXILINX_AFF8SEG>.
+Entity <M4_1E_MXILINX_AFF8SEG> analyzed. Unit <M4_1E_MXILINX_AFF8SEG> generated.
+
+Analyzing Entity <M2_1E_MXILINX_AFF8SEG> in library <work> (Architecture <behavioral>).
+Entity <M2_1E_MXILINX_AFF8SEG> analyzed. Unit <M2_1E_MXILINX_AFF8SEG> generated.
+
+Analyzing Entity <Mux4_1_Bus4> in library <work> (Architecture <behavioral>).
+Entity <Mux4_1_Bus4> analyzed. Unit <Mux4_1_Bus4> generated.
+
+Analyzing Entity <CLOCK> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/TP Circuits/G12/compteur16bit/CLOCK.vhf" line 439: Unconnected output port 'CEO' of component 'CB16CE_MXILINX_CLOCK'.
+WARNING:Xst:753 - "C:/TP Circuits/G12/compteur16bit/CLOCK.vhf" line 439: Unconnected output port 'TC' of component 'CB16CE_MXILINX_CLOCK'.
+    Set user-defined property "HU_SET =  XLXI_1_17" for instance <XLXI_1> in unit <CLOCK>.
+WARNING:Xst:753 - "C:/TP Circuits/G12/compteur16bit/CLOCK.vhf" line 453: Unconnected output port 'CEO' of component 'CB16CE_MXILINX_CLOCK'.
+WARNING:Xst:753 - "C:/TP Circuits/G12/compteur16bit/CLOCK.vhf" line 453: Unconnected output port 'TC' of component 'CB16CE_MXILINX_CLOCK'.
+    Set user-defined property "HU_SET =  XLXI_5_16" for instance <XLXI_5> in unit <CLOCK>.
+Entity <CLOCK> analyzed. Unit <CLOCK> generated.
+
+Analyzing Entity <CB16CE_MXILINX_CLOCK> in library <work> (Architecture <behavioral>).
+    Set user-defined property "HU_SET =  I_Q0_1" for instance <I_Q0> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q1_0" for instance <I_Q1> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q2_3" for instance <I_Q2> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q3_2" for instance <I_Q3> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q4_7" for instance <I_Q4> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q5_6" for instance <I_Q5> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q6_5" for instance <I_Q6> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q7_4" for instance <I_Q7> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q8_8" for instance <I_Q8> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q9_9" for instance <I_Q9> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q10_10" for instance <I_Q10> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q11_11" for instance <I_Q11> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q12_12" for instance <I_Q12> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q13_13" for instance <I_Q13> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q14_14" for instance <I_Q14> in unit <CB16CE_MXILINX_CLOCK>.
+    Set user-defined property "HU_SET =  I_Q15_15" for instance <I_Q15> in unit <CB16CE_MXILINX_CLOCK>.
+Entity <CB16CE_MXILINX_CLOCK> analyzed. Unit <CB16CE_MXILINX_CLOCK> generated.
+
+Analyzing Entity <FTCE_MXILINX_CLOCK> in library <work> (Architecture <behavioral>).
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_CLOCK>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_CLOCK>.
+Entity <FTCE_MXILINX_CLOCK> analyzed. Unit <FTCE_MXILINX_CLOCK> generated.
+
+Analyzing Entity <CB16CE_MXILINX_compt> in library <work> (Architecture <behavioral>).
+    Set user-defined property "HU_SET =  I_Q0_1" for instance <I_Q0> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q1_0" for instance <I_Q1> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q2_3" for instance <I_Q2> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q3_2" for instance <I_Q3> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q4_7" for instance <I_Q4> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q5_6" for instance <I_Q5> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q6_5" for instance <I_Q6> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q7_4" for instance <I_Q7> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q8_8" for instance <I_Q8> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q9_9" for instance <I_Q9> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q10_10" for instance <I_Q10> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q11_11" for instance <I_Q11> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q12_12" for instance <I_Q12> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q13_13" for instance <I_Q13> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q14_14" for instance <I_Q14> in unit <CB16CE_MXILINX_compt>.
+    Set user-defined property "HU_SET =  I_Q15_15" for instance <I_Q15> in unit <CB16CE_MXILINX_compt>.
+Entity <CB16CE_MXILINX_compt> analyzed. Unit <CB16CE_MXILINX_compt> generated.
+
+Analyzing Entity <FTCE_MXILINX_compt> in library <work> (Architecture <behavioral>).
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_compt>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_compt>.
+Entity <FTCE_MXILINX_compt> analyzed. Unit <FTCE_MXILINX_compt> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <D2_4E_MXILINX_AFF8SEG>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/AFF8SEG.vhf".
+Unit <D2_4E_MXILINX_AFF8SEG> synthesized.
+
+
+Synthesizing Unit <DEC7SEG>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/DEC7SEG.vhf".
+Unit <DEC7SEG> synthesized.
+
+
+Synthesizing Unit <Mux4_1_Bus4>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/Mux4_1_Bus4.vhf".
+Unit <Mux4_1_Bus4> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_AFF8SEG>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/AFF8SEG.vhf".
+Unit <FTCE_MXILINX_AFF8SEG> synthesized.
+
+
+Synthesizing Unit <M2_1E_MXILINX_AFF8SEG>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/AFF8SEG.vhf".
+Unit <M2_1E_MXILINX_AFF8SEG> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_CLOCK>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/CLOCK.vhf".
+Unit <FTCE_MXILINX_CLOCK> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_compt>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/compt.vhf".
+Unit <FTCE_MXILINX_compt> synthesized.
+
+
+Synthesizing Unit <CB16CE_MXILINX_compt>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/compt.vhf".
+Unit <CB16CE_MXILINX_compt> synthesized.
+
+
+Synthesizing Unit <CB2CE_MXILINX_AFF8SEG>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/AFF8SEG.vhf".
+Unit <CB2CE_MXILINX_AFF8SEG> synthesized.
+
+
+Synthesizing Unit <M4_1E_MXILINX_AFF8SEG>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/AFF8SEG.vhf".
+Unit <M4_1E_MXILINX_AFF8SEG> synthesized.
+
+
+Synthesizing Unit <CB16CE_MXILINX_CLOCK>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/CLOCK.vhf".
+Unit <CB16CE_MXILINX_CLOCK> synthesized.
+
+
+Synthesizing Unit <AFF8SEG>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/AFF8SEG.vhf".
+WARNING:Xst:653 - Signal <XLXI_1_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <AFF8SEG> synthesized.
+
+
+Synthesizing Unit <CLOCK>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/CLOCK.vhf".
+WARNING:Xst:653 - Signal <XLXI_5_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_1_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <CLOCK> synthesized.
+
+
+Synthesizing Unit <compt>.
+    Related source file is "C:/TP Circuits/G12/compteur16bit/compt.vhf".
+WARNING:Xst:653 - Signal <XLXI_3_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_1_Pt_D_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_1_Pt_C_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_1_Pt_B_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_1_Pt_A_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <C<31:18>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <C<16:15>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <C<13:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <compt> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\10.1\ISE.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 50
+ Flip-Flops                                            : 50
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <compt> ...
+
+Optimizing unit <D2_4E_MXILINX_AFF8SEG> ...
+
+Optimizing unit <Mux4_1_Bus4> ...
+
+Optimizing unit <FTCE_MXILINX_AFF8SEG> ...
+
+Optimizing unit <M2_1E_MXILINX_AFF8SEG> ...
+
+Optimizing unit <FTCE_MXILINX_CLOCK> ...
+
+Optimizing unit <FTCE_MXILINX_compt> ...
+
+Optimizing unit <CB16CE_MXILINX_compt> ...
+
+Optimizing unit <CB2CE_MXILINX_AFF8SEG> ...
+
+Optimizing unit <M4_1E_MXILINX_AFF8SEG> ...
+
+Optimizing unit <CB16CE_MXILINX_CLOCK> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block compt, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 50
+ Flip-Flops                                            : 50
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : compt.ngr
+Top Level Output File Name         : compt
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 145
+#      AND2                        : 17
+#      AND3                        : 19
+#      AND3B1                      : 12
+#      AND3B2                      : 5
+#      AND4                        : 12
+#      AND5                        : 9
+#      GND                         : 1
+#      INV                         : 1
+#      MUXF5                       : 1
+#      OR2                         : 2
+#      OR4                         : 4
+#      ROM16X1                     : 7
+#      VCC                         : 5
+#      XOR2                        : 50
+# FlipFlops/Latches                : 50
+#      FDCE                        : 50
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 2
+#      OBUF                        : 12
+# Logical                          : 4
+#      NAND2                       : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       25  out of   4656     0%  
+ Number of Slice Flip Flops:             50  out of   9312     0%  
+ Number of 4 input LUTs:                  8  out of   9312     0%  
+    Number used as ROMs:                  7
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)            | Load  |
+-----------------------------------+----------------------------------+-------+
+XLXI_2/XLXI_5/I_Q1/Q               | NONE(XLXI_3/I_Q15/I_36_35)       | 16    |
+XLXI_2/XLXI_1/I_Q14/Q              | NONE(XLXI_1/XLXI_1/I_Q1/I_36_35) | 2     |
+XLXI_2/XLXI_1/I_Q15/Q              | NONE(XLXI_2/XLXI_5/I_Q15/I_36_35)| 16    |
+CLK                                | BUFGP                            | 16    |
+-----------------------------------+----------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+--------------------------+-------+
+Control Signal                     | Buffer(FF name)          | Load  |
+-----------------------------------+--------------------------+-------+
+N0(XST_GND:G)                      | NONE(XLXI_3/I_Q3/I_36_35)| 50    |
+-----------------------------------+--------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.260ns (Maximum Frequency: 121.065MHz)
+   Minimum input arrival time before clock: 2.824ns
+   Maximum output required time after clock: 8.818ns
+   Maximum combinational path delay: 6.201ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_2/XLXI_5/I_Q1/Q'
+  Clock period: 7.827ns (frequency: 127.763MHz)
+  Total number of paths / destination ports: 136 / 16
+-------------------------------------------------------------------------
+Delay:               7.827ns (Levels of Logic = 6)
+  Source:            XLXI_3/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_3/I_Q15/I_36_35 (FF)
+  Source Clock:      XLXI_2/XLXI_5/I_Q1/Q rising
+  Destination Clock: XLXI_2/XLXI_5/I_Q1/Q rising
+
+  Data Path: XLXI_3/I_Q0/I_36_35 to XLXI_3/I_Q15/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.591   0.669  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND4:I3->O            5   0.704   0.633  I_36_10 (T4)
+     AND5:I4->O            5   0.704   0.633  I_36_14 (T8)
+     AND5:I4->O            5   0.704   0.633  I_36_29 (T12)
+     AND2:I1->O            1   0.704   0.420  I_36_23 (T13)
+     begin scope: 'I_Q13'
+     XOR2:I0->O            1   0.704   0.420  I_36_32 (TQ)
+     FDCE:D                    0.308          I_36_35
+    ----------------------------------------
+    Total                      7.827ns (4.419ns logic, 3.408ns route)
+                                       (56.5% logic, 43.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_2/XLXI_1/I_Q14/Q'
+  Clock period: 3.284ns (frequency: 304.541MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               3.284ns (Levels of Logic = 2)
+  Source:            XLXI_1/XLXI_1/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_1/XLXI_1/I_Q1/I_36_35 (FF)
+  Source Clock:      XLXI_2/XLXI_1/I_Q14/Q rising
+  Destination Clock: XLXI_2/XLXI_1/I_Q14/Q rising
+
+  Data Path: XLXI_1/XLXI_1/I_Q0/I_36_35 to XLXI_1/XLXI_1/I_Q1/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            27   0.591   1.261  I_36_35 (Q)
+     end scope: 'I_Q0'
+     begin scope: 'I_Q1'
+     XOR2:I0->O            1   0.704   0.420  I_36_32 (TQ)
+     FDCE:D                    0.308          I_36_35
+    ----------------------------------------
+    Total                      3.284ns (1.603ns logic, 1.681ns route)
+                                       (48.8% logic, 51.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_2/XLXI_1/I_Q15/Q'
+  Clock period: 8.260ns (frequency: 121.065MHz)
+  Total number of paths / destination ports: 136 / 16
+-------------------------------------------------------------------------
+Delay:               8.260ns (Levels of Logic = 6)
+  Source:            XLXI_2/XLXI_5/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_2/XLXI_5/I_Q15/I_36_35 (FF)
+  Source Clock:      XLXI_2/XLXI_1/I_Q15/Q rising
+  Destination Clock: XLXI_2/XLXI_1/I_Q15/Q rising
+
+  Data Path: XLXI_2/XLXI_5/I_Q1/I_36_35 to XLXI_2/XLXI_5/I_Q15/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            20   0.591   1.102  I_36_35 (Q)
+     end scope: 'I_Q1'
+     AND4:I2->O            5   0.704   0.633  I_36_10 (T4)
+     AND5:I4->O            5   0.704   0.633  I_36_14 (T8)
+     AND5:I4->O            5   0.704   0.633  I_36_29 (T12)
+     AND2:I1->O            1   0.704   0.420  I_36_23 (T13)
+     begin scope: 'I_Q13'
+     XOR2:I0->O            1   0.704   0.420  I_36_32 (TQ)
+     FDCE:D                    0.308          I_36_35
+    ----------------------------------------
+    Total                      8.260ns (4.419ns logic, 3.841ns route)
+                                       (53.5% logic, 46.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 7.791ns (frequency: 128.353MHz)
+  Total number of paths / destination ports: 136 / 16
+-------------------------------------------------------------------------
+Delay:               7.791ns (Levels of Logic = 6)
+  Source:            XLXI_2/XLXI_1/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_2/XLXI_1/I_Q15/I_36_35 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: XLXI_2/XLXI_1/I_Q0/I_36_35 to XLXI_2/XLXI_1/I_Q15/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.591   0.633  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND4:I3->O            5   0.704   0.633  I_36_10 (T4)
+     AND5:I4->O            5   0.704   0.633  I_36_14 (T8)
+     AND5:I4->O            5   0.704   0.633  I_36_29 (T12)
+     AND2:I1->O            1   0.704   0.420  I_36_23 (T13)
+     begin scope: 'I_Q13'
+     XOR2:I0->O            1   0.704   0.420  I_36_32 (TQ)
+     FDCE:D                    0.308          I_36_35
+    ----------------------------------------
+    Total                      7.791ns (4.419ns logic, 3.372ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_2/XLXI_5/I_Q1/Q'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              2.824ns (Levels of Logic = 2)
+  Source:            SW0 (PAD)
+  Destination:       XLXI_3/I_Q15/I_36_35 (FF)
+  Destination Clock: XLXI_2/XLXI_5/I_Q1/Q rising
+
+  Data Path: SW0 to XLXI_3/I_Q15/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.218   1.051  SW0_IBUF (SW0_IBUF)
+     begin scope: 'XLXI_3'
+     begin scope: 'I_Q15'
+     FDCE:CE                   0.555          I_36_35
+    ----------------------------------------
+    Total                      2.824ns (1.773ns logic, 1.051ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_1/I_Q14/Q'
+  Total number of paths / destination ports: 237 / 12
+-------------------------------------------------------------------------
+Offset:              8.818ns (Levels of Logic = 5)
+  Source:            XLXI_1/XLXI_1/I_Q0/I_36_35 (FF)
+  Destination:       AFF<6> (PAD)
+  Source Clock:      XLXI_2/XLXI_1/I_Q14/Q rising
+
+  Data Path: XLXI_1/XLXI_1/I_Q0/I_36_35 to AFF<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            27   0.591   1.261  I_36_35 (Q)
+     end scope: 'I_Q0'
+     end scope: 'XLXI_1/XLXI_1'
+     AND3B1:I1->O          1   0.704   0.420  XLXI_1/XLXI_97/XLXI_109 (XLXI_1/XLXI_97/XLXN_16)
+     OR4:I2->O             7   0.704   0.708  XLXI_1/XLXI_97/XLXI_113 (XLXI_1/V<0>)
+     ROM16X1:A0->O         1   0.738   0.420  XLXI_1/XLXI_71/XLXI_58 (AFF_0_OBUF)
+     OBUF:I->O                 3.272          AFF_0_OBUF (AFF<0>)
+    ----------------------------------------
+    Total                      8.818ns (6.009ns logic, 2.809ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_2/XLXI_5/I_Q1/Q'
+  Total number of paths / destination ports: 112 / 7
+-------------------------------------------------------------------------
+Offset:              8.226ns (Levels of Logic = 5)
+  Source:            XLXI_3/I_Q12/I_36_35 (FF)
+  Destination:       AFF<6> (PAD)
+  Source Clock:      XLXI_2/XLXI_5/I_Q1/Q rising
+
+  Data Path: XLXI_3/I_Q12/I_36_35 to AFF<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.591   0.669  I_36_35 (Q)
+     end scope: 'I_Q12'
+     end scope: 'XLXI_3'
+     AND3:I2->O            1   0.704   0.420  XLXI_1/XLXI_97/XLXI_111 (XLXI_1/XLXI_97/XLXN_2)
+     OR4:I0->O             7   0.704   0.708  XLXI_1/XLXI_97/XLXI_113 (XLXI_1/V<0>)
+     ROM16X1:A0->O         1   0.738   0.420  XLXI_1/XLXI_71/XLXI_58 (AFF_0_OBUF)
+     OBUF:I->O                 3.272          AFF_0_OBUF (AFF<0>)
+    ----------------------------------------
+    Total                      8.226ns (6.009ns logic, 2.217ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               6.201ns (Levels of Logic = 3)
+  Source:            SW1 (PAD)
+  Destination:       AFF_A (PAD)
+
+  Data Path: SW1 to AFF_A
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.218   0.587  SW1_IBUF (SW1_IBUF)
+     NAND2:I0->O           1   0.704   0.420  XLXI_1/XLXI_70 (AFF_D_OBUF)
+     OBUF:I->O                 3.272          AFF_D_OBUF (AFF_D)
+    ----------------------------------------
+    Total                      6.201ns (5.194ns logic, 1.007ns route)
+                                       (83.8% logic, 16.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.88 secs
+ 
+--> 
+
+Total memory usage is 147508 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

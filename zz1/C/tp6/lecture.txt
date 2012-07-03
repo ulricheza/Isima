@@ -1,0 +1,7 @@
+cool mon 
+programme qui 
+est le tp
+numero 6
+ou 5 
+fonctionne sans bug
+meme si il peut etre optimisé

@@ -1,0 +1,36 @@
+# *******************************************************************
+# *                                                                 *
+# *          Affectation des broches sur Carte NEXYS 2              *
+# *                   Jeu  " R E F L E X E "                        *
+# *                E. Mesnard - (c) 2009/2010                       *
+# *                                                                 *
+# *******************************************************************
+
+
+# Afficheurs 8 segments
+# ---------------------
+# Attention : AFF est un bus AFF(7:0)
+NET "AFF<0>"  LOC = "L18"  ; 
+NET "AFF<1>"  LOC = "F18"  ;
+NET "AFF<2>"  LOC = "D17"  ; 
+NET "AFF<3>"  LOC = "D16"  ; 
+NET "AFF<4>"  LOC = "G14"  ; 
+NET "AFF<5>"  LOC = "J17"  ; 
+NET "AFF<6>"  LOC = "H14"  ; 
+NET "AFF<7>"  LOC = "C17"  ;
+# Commandes des 4 afficheurs
+NET "AFF_A"  LOC = "F17"  ; 
+NET "AFF_B"  LOC = "H17"  ; 
+NET "AFF_C"  LOC = "C18"  ; 
+NET "AFF_D"  LOC = "F15"  ;
+
+#boutons switch
+NET "SW0"  LOC = "G18"  ; 
+NET "SW1"  LOC = "H18"  ; 
+
+# Horloge a 50 Mhz
+# ----------------
+NET "CLK"  LOC = "B8"  ;
+
+
+

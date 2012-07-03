@@ -1,0 +1,2 @@
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/TP Circuits/G12/compteur16bit/Mux4_1_Bus4.sch" Mux4_1_Bus4.vhf
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/TP Circuits/G12/compteur16bit/Mux4_1_Bus4.sch" Mux4_1_Bus4.vhf

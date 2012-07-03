@@ -1,0 +1,2 @@
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/TP Circuits/G12/compteur16bit/Demux1_2.sch" Demux1_2.vhf
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/TP Circuits/G12/compteur16bit/Demux1_2.sch" Demux1_2.vhf

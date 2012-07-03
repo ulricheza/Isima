@@ -1,0 +1,35 @@
+#resume du tp de Visual basic (VBS)
+
+#ecriture dans une fenetre
+
+wscript.echo "Coucou les zz1"
+
+#on peut utiliser l'affichage dans la console avec cscript <nomprog>
+
+#sur une machine ou on a les droits on peut changer le comportement par defaut avec
+
+CSCRIPT //H :CSCRIPT 
+CSCRIPT //H :WSCRIPT
+
+#on peut rendre la modif definitive avec //S
+
+#langage VBS
+
+#les structure de controle
+
+#boucle for
+
+   for i=1 to 10 step 1
+
+   next
+
+#test if
+
+   if a = 5 then
+   
+   else
+
+   end if
+
+ 
+                  

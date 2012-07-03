@@ -1,0 +1,97 @@
+# *******************************************************************
+# *                                                                 *
+# *          Affectation des broches sur Carte NEXYS 2              *
+# *                  E. Mesnard - (c) ISIMA 2009                    *
+# *                                                                 *
+# *******************************************************************
+
+
+# Mode d'emploi
+# -------------
+
+# Retirer le "#" en tete de la ligne dont la broche est utilisee...
+# Bien respecter la syntaxe pour le nom des NET
+
+
+# Horloge (toujours validee) 50 Mhz
+# ---------------------------------
+NET "CLK"  LOC = "B8"  ;
+
+
+# Boutons poussoirs
+# -----------------
+#NET "BTN0"  LOC = "B18"  ;
+#NET "BTN1"  LOC = "D18"  ;
+#NET "BTN2"  LOC = "E18"  ;
+#NET "BTN3"  LOC = "H13"  ;
+
+# Boutons poussoirs en bus BTN(3:0)
+# ---------------------------------
+#NET "BTN<0>"  LOC = "B18"  ;
+#NET "BTN<1>"  LOC = "D18"  ;
+#NET "BTN<2>"  LOC = "E18"  ;
+#NET "BTN<3>"  LOC = "H13"  ;
+
+
+# LED vertes
+# ----------
+#NET "LED0"  LOC = "J14"  ;
+#NET "LED1"  LOC = "J15"  ;
+#NET "LED2"  LOC = "K15"  ;
+#NET "LED3"  LOC = "K14"  ;
+#NET "LED4"  LOC = "E17"  ;
+#NET "LED5"  LOC = "P15"  ;
+#NET "LED6"  LOC = "F4"  ;
+#NET "LED7"  LOC = "R4"  ;
+
+# LED vertes en bus LED(7:0)
+# --------------------------
+#NET "LED<0>"  LOC = "J14"  ;
+#NET "LED<1>"  LOC = "J15"  ;
+#NET "LED<2>"  LOC = "K15"  ;
+#NET "LED<3>"  LOC = "K14"  ;
+#NET "LED<4>"  LOC = "E17"  ;
+#NET "LED<5>"  LOC = "P15"  ;
+#NET "LED<6>"  LOC = "F4"  ;
+#NET "LED<7>"  LOC = "R4"  ;
+
+
+# Boutons switch
+# --------------
+#NET "SW0"  LOC = "G18"  ; 
+#NET "SW1"  LOC = "H18"  ; 
+#NET "SW2"  LOC = "K18"  ; 
+#NET "SW3"  LOC = "K17"  ; 
+#NET "SW4"  LOC = "L14"  ; 
+#NET "SW5"  LOC = "L13"  ; 
+#NET "SW6"  LOC = "N17"  ; 
+#NET "SW7"  LOC = "R17"  ; 
+
+# Boutons switch en bus SW(7:0)
+# -----------------------------
+#NET "SW<0>"  LOC = "G18"  ; 
+#NET "SW<1>"  LOC = "H18"  ; 
+#NET "SW<2>"  LOC = "K18"  ; 
+#NET "SW<3>"  LOC = "K17"  ; 
+#NET "SW<4>"  LOC = "L14"  ; 
+#NET "SW<5>"  LOC = "L13"  ; 
+#NET "SW<6>"  LOC = "N17"  ; 
+#NET "SW<7>"  LOC = "R17"  ; 
+
+
+# Afficheurs 8 segments en bus AFF(7:0)
+# -------------------------------------
+#NET "AFF<0>"  LOC = "L18"  ; 
+#NET "AFF<1>"  LOC = "F18"  ; 
+#NET "AFF<2>"  LOC = "D17"  ; 
+#NET "AFF<3>"  LOC = "D16"  ; 
+#NET "AFF<4>"  LOC = "G14"  ; 
+#NET "AFF<5>"  LOC = "J17"  ; 
+#NET "AFF<6>"  LOC = "H14"  ; 
+#NET "AFF<7>"  LOC = "C17"  ;
+# Commandes des 4 afficheurs
+#NET "AFF_A"  LOC = "F17"  ; 
+#NET "AFF_B"  LOC = "H17"  ; 
+#NET "AFF_C"  LOC = "C18"  ; 
+#NET "AFF_D"  LOC = "F15"  ;
+

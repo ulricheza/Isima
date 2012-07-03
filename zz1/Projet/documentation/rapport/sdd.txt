@@ -1,0 +1,132 @@
+SDD choisi:
+
+/*---------------------------------------*/
+une flotte comprend:
+- 1 bateau a 6 cases
+- 1 bateau a 4 cases
+- 2 bateaux a 3 cases
+- 1 bateau a 2 cases
+/*---------------------------------------*/
+
+/*---------------------------------------*/
+structure definisant un bateau:
+
+typedef struct bateau {
+   int vie;
+   int taille;
+   int x;
+   int y;
+   int sens;  /* 0 si horizontal*/
+}bateau_t;
+
+/*---------------------------------------*/
+
+/*---------------------------------------*/
+gestion de la flotte:
+
+bateau_t flotte_hum[4];
+bateau_t flotte_cpu[4];
+
+0   ==> bateau a 6 cases
+1   ==> bateau a 4 cases
+2,3 ==> bateau a 3 cases
+4   ==> bateau a 2 cases
+
+/*---------------------------------------*/
+
+/*---------------------------------------*/
+gestion des "mers" 2 par joueur, mer "home", mer "cible"
+
+tableau 1D pour une gestion facilite de l'aleatoire
+
+int * mer_cible_hum;
+int * mer_home_hum;
+int * mer_cible_cpu;
+int * mer_home_cpu;
+
+mer "cible":
+-1 : il s'est rien passe
+0  : tire et rate
+1  : tire et touche
+2  : tire et coup fatal
+
+mer "home":
+-1   : si rien
+0..4 : selon bateau
+5    : tir rate
+6    : touche
+/*---------------------------------------*/
+maj du 24 fevrier 2010:
+Changement de la structure bateau, desormais elle contient la taille des bateau 
+ainsi que la position de la tete ainsi que son sens
+/*---------------------------------------*/
+maj du 26 fevrier 2010:
+la gestion du nombre de bateau restant se fera par des int
+int remain_bat_cpu;
+int remain_bat_hum;
+/*---------------------------------------*/
+
+/*---------------------------------------*/
+maj du 2 mars 2010:
+On utilisera le fichier log_erreur.txt pour notifier les erreurs possibles qu'il y a pu y avoir
+lors du jeu
+/*---------------------------------------*/
+maj du 2 avril 2010
+On utilisera pour supprimer les variables globales une stucture les comprennant
+on passera alors l'adresse de cette structure dans les fonctions necessitant de les modifier
+
+typedef struct var_game
+{
+   int * mer_cible_hum;
+   int * mer_home_hum;
+   int * mer_cible_cpu;
+   int * mer_home_cpu;
+
+   int remain_bat_cpu;
+   int remain_bat_hum;
+   int mute;
+   int z;
+
+   bateau_t flotte_hum[5];
+   bateau_t flotte_cpu[5];
+ 
+   FILE * log_erreur;
+ 
+   SOCKET sock_client;
+   SOCKET sock_serveur;
+   SOCKADDR_IN sin_client;
+   SOCKADDR_IN sin_serveur;
+
+   
+   SDL_Surface * ecran;
+
+   SDL_Surface * message_img;
+   SDL_Rect box_position;
+   TTF_Font * police_box;
+
+   SDL_Surface * score;
+   SDL_Rect score_position;
+   TTF_Font * police_score;
+
+   SDL_Surface * mute_button;
+   SDL_Surface * unmute_button;
+   SDL_Rect mute_position;
+
+   SDL_Surface * rate;
+   SDL_Surface * touche;
+   SDL_Surface * frag_bat;
+
+   SDL_Surface * background;
+   SDL_Rect position_back;
+
+   FSOUND_SAMPLE * tir_sound;
+   FSOUND_SAMPLE * rate_sound;
+   FSOUND_SAMPLE * coule_sound;
+   FSOUND_SAMPLE * touche_sound;
+   FSOUND_SAMPLE * place_sound;
+   FSOUND_SAMPLE * gagne;
+   FSOUND_SAMPLE * perdu; 
+   
+}var_game_t;
+
+/*---------------------------------------*/

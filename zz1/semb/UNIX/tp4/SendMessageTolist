@@ -1,0 +1,6 @@
+mail -s "Votre sujet de TP" Maxime < FichierSujetTP
+sleep 1
+mail -s "Votre sujet de TP" Bernard < FichierSujetTP
+sleep 1
+mail -s "Votre sujet de TP" Coralie < FichierSujetTP
+sleep 1

@@ -1,0 +1,2 @@
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/TP Circuits/G12/compteur16bit/CLOCK.sch" CLOCK.vhf
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/TP Circuits/G12/compteur16bit/CLOCK.sch" CLOCK.vhf

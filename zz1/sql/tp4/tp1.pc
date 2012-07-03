@@ -1,0 +1,139 @@
+/**
+ * \file tp1.pc
+ * \brief Programme d'initiatiation au proC
+ * \author Maxime Escourbiac
+ * \version 1.0
+ * \date Vendredi 30 avril
+ *
+ * Programme d'initiation au proC
+ *
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+EXEC SQL BEGIN DECLARE SECTION;
+   
+   VARCHAR login[20];
+   VARCHAR pass[20];
+   VARCHAR xx[20];
+   VARCHAR yy[20];
+   VARCHAR zz[20];
+   VARCHAR libel[20];
+   short prix;
+   short num_prod;
+   short num_client;
+   short temp;
+   
+EXEC SQL END DECLARE SECTION;
+EXEC SQL INCLUDE sqlca; 
+void connect();
+void exit_mal();
+void rech_clt();
+void lib_client();
+void adj_prod();
+
+int main(int argc , char * argv[])
+{
+   int i = 0;
+   EXEC SQL WHENEVER SQLERROR DO exit_mal();
+   EXEC SQL WHENEVER SQLWARNING CONTINUE;
+   printf("connexion...\n");
+   connect();
+   while(i != -1)
+   {
+      printf("Menu\n");
+      printf("1) Recherche client\n");
+      printf("2) Produit-Client\n");
+      printf("3) Ajout produit\n");
+	  scanf("%i",&i);
+      switch(i)
+      {
+         case 1:
+                rech_clt();
+	            break;
+	     case 2:
+	            lib_client();
+				break;
+		 case 3:
+		        adj_prod();
+				break;
+	     default:
+	            i = -1;
+      }
+   }
+   EXEC SQL COMMIT RELEASE;
+   system("pause");
+   return(EXIT_SUCCESS);
+}
+
+void connect()
+{
+   printf("login?\n");
+   scanf("%s",login.arr);
+   login.len=strlen(login.arr);
+   printf("pass?\n");
+   scanf("%s",pass.arr);
+   pass.len=strlen(pass.arr);
+   EXEC SQL CONNECT :login IDENTIFIED BY :pass;
+}
+
+void exit_mal()
+{
+   printf("erreur : %s",sqlca.sqlerrm.sqlerrmc);
+   EXEC SQL WHENEVER SQLERROR CONTINUE;
+   EXEC SQL ROLLBACK RELEASE;
+   system("pause");
+   exit(EXIT_FAILURE);
+}
+
+void rech_clt()
+{
+   printf("numero du client a chercher?\n");
+   scanf("%d",&num_client);
+   EXEC SQL WHENEVER NOTFOUND GOTO faux;
+   EXEC SQL SELECT NomClt INTO :xx FROM Clients WHERE RTRIM(NumClt)= :num_client;
+   printf("%s\n",xx.arr);
+   goto end;
+   faux: printf("client non trouve\n");
+   end: ;
+}
+
+void lib_client()
+{
+   EXEC SQL DECLARE curs CURSOR FOR
+      SELECT Libelle, NomClt
+	  FROM Livraisons L,Produits P, Clients C
+      WHERE L.NumProduit = P.NumProduit AND L.NumClt = C.NumClt;
+   EXEC SQL WHENEVER NOTFOUND GOTO faux;
+   EXEC SQL OPEN curs;
+   for(;;)
+   {
+      EXEC SQL FETCH curs INTO :yy,:zz;
+	  printf(" libelle: %s , Client: %s \n",yy.arr,zz.arr);
+	  memset(yy.arr,0,20*sizeof(char));
+      memset(zz.arr,0,20*sizeof(char));
+   }
+   faux: EXEC SQL CLOSE curs;
+}
+
+void adj_prod()
+{
+   printf("Libelle du produit?\n");
+   scanf("%s",libel.arr);
+   libel.len = strlen(libel.arr);
+   printf("Numero de produit?\n");
+   scanf("%d",&num_prod);
+   printf("Prix?\n");
+   scanf("%d",&prix);
+   EXEC SQL WHENEVER NOTFOUND GOTO adj;
+   EXEC SQL SELECT NumProduit INTO :temp
+            FROM Produits
+            WHERE RTRIM(NumProduit) = : num_prod;
+   printf("produit deja existant\n");
+   goto end;
+   adj: EXEC SQL INSERT INTO Produits VALUES (:num_prod,:libel, :prix);
+   end: ;
+}   

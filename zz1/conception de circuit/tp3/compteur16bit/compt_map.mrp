@@ -1,0 +1,389 @@
+Release 10.1 Map K.31 (nt)
+Xilinx Mapping Report File for Design 'compt'
+
+Design Information
+------------------
+Command Line   : map -ise "C:/TP Circuits/G12/compteur16bit/compteur16bit.ise"
+-intstyle ise -p xc3s500e-fg320-4 -cm area -pr off -k 4 -c 100 -o compt_map.ncd
+compt.ngd compt.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.46 $
+Mapped Date    : Fri Mar 05 17:18:10 2010
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Logic Utilization:
+  Number of Slice Flip Flops:            36 out of   9,312    1%
+  Number of 4 input LUTs:                73 out of   9,312    1%
+Logic Distribution:
+  Number of occupied Slices:             49 out of   4,656    1%
+    Number of Slices containing only related logic:      49 out of      49 100%
+    Number of Slices containing unrelated logic:          0 out of      49   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:          73 out of   9,312    1%
+  Number of bonded IOBs:                 15 out of     232    6%
+  Number of BUFGMUXs:                     1 out of      24    4%
+
+  Number of RPM macros:           36
+Peak Memory Usage:  143 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+Section 14 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:243 - Logical network XLXI_3/CEO has no load.
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 3
+   more times for the following (max. 5 shown):
+   XLXI_1/XLXI_1/CEO,
+   XLXI_2/XLXI_5/CEO,
+   XLXI_2/XLXI_1/CEO
+   To see the details of these warning messages, please use the -detail switch.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  50 block(s) removed
+  12 block(s) optimized away
+  50 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "XLXI_3/CEO" is sourceless and has been removed.
+The signal "XLXI_3/TC" is sourceless and has been removed.
+ Sourceless block "XLXI_3/I_36_54" (AND) removed.
+The signal "XLXI_1/XLXI_1/CEO" is sourceless and has been removed.
+The signal "XLXI_1/XLXI_1/TC" is sourceless and has been removed.
+ Sourceless block "XLXI_1/XLXI_1/I_36_52" (AND) removed.
+The signal "XLXI_2/XLXI_5/CEO" is sourceless and has been removed.
+The signal "XLXI_2/XLXI_5/Q<10>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/XLXI_5/I_36_26" (AND) removed.
+  The signal "XLXI_2/XLXI_5/T11" is sourceless and has been removed.
+   Sourceless block "XLXI_2/XLXI_5/I_Q11/I_36_32" (XOR) removed.
+    The signal "XLXI_2/XLXI_5/I_Q11/TQ" is sourceless and has been removed.
+     Sourceless block "XLXI_2/XLXI_5/I_Q11/I_36_35" (FF) removed.
+      The signal "XLXI_2/XLXI_5/Q<11>" is sourceless and has been removed.
+       Sourceless block "XLXI_2/XLXI_5/I_36_29" (AND) removed.
+        The signal "XLXI_2/XLXI_5/T12" is sourceless and has been removed.
+         Sourceless block "XLXI_2/XLXI_5/I_36_22" (AND) removed.
+          The signal "XLXI_2/XLXI_5/TC" is sourceless and has been removed.
+           Sourceless block "XLXI_2/XLXI_5/I_36_54" (AND) removed.
+         Sourceless block "XLXI_2/XLXI_5/I_36_23" (AND) removed.
+          The signal "XLXI_2/XLXI_5/T13" is sourceless and has been removed.
+           Sourceless block "XLXI_2/XLXI_5/I_Q13/I_36_32" (XOR) removed.
+            The signal "XLXI_2/XLXI_5/I_Q13/TQ" is sourceless and has been removed.
+             Sourceless block "XLXI_2/XLXI_5/I_Q13/I_36_35" (FF) removed.
+              The signal "XLXI_2/XLXI_5/Q<13>" is sourceless and has been removed.
+               Sourceless block "XLXI_2/XLXI_5/I_36_24" (AND) removed.
+                The signal "XLXI_2/XLXI_5/T14" is sourceless and has been removed.
+                 Sourceless block "XLXI_2/XLXI_5/I_Q14/I_36_32" (XOR) removed.
+                  The signal "XLXI_2/XLXI_5/I_Q14/TQ" is sourceless and has been removed.
+                   Sourceless block "XLXI_2/XLXI_5/I_Q14/I_36_35" (FF) removed.
+                    The signal "XLXI_2/XLXI_5/Q<14>" is sourceless and has been removed.
+                     Sourceless block "XLXI_2/XLXI_5/I_36_25" (AND) removed.
+                      The signal "XLXI_2/XLXI_5/T15" is sourceless and has been removed.
+                       Sourceless block "XLXI_2/XLXI_5/I_Q15/I_36_32" (XOR) removed.
+                        The signal "XLXI_2/XLXI_5/I_Q15/TQ" is sourceless and has been removed.
+                         Sourceless block "XLXI_2/XLXI_5/I_Q15/I_36_35" (FF) removed.
+                          The signal "XLXI_2/XLXI_5/Q<15>" is sourceless and has been removed.
+         Sourceless block "XLXI_2/XLXI_5/I_Q12/I_36_32" (XOR) removed.
+          The signal "XLXI_2/XLXI_5/I_Q12/TQ" is sourceless and has been removed.
+           Sourceless block "XLXI_2/XLXI_5/I_Q12/I_36_35" (FF) removed.
+            The signal "XLXI_2/XLXI_5/Q<12>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/XLXI_5/I_Q10/I_36_32" (XOR) removed.
+  The signal "XLXI_2/XLXI_5/I_Q10/TQ" is sourceless and has been removed.
+   Sourceless block "XLXI_2/XLXI_5/I_Q10/I_36_35" (FF) removed.
+The signal "XLXI_2/XLXI_5/Q<2>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/XLXI_5/I_36_3" (AND) removed.
+  The signal "XLXI_2/XLXI_5/T3" is sourceless and has been removed.
+   Sourceless block "XLXI_2/XLXI_5/I_Q3/I_36_32" (XOR) removed.
+    The signal "XLXI_2/XLXI_5/I_Q3/TQ" is sourceless and has been removed.
+     Sourceless block "XLXI_2/XLXI_5/I_Q3/I_36_35" (FF) removed.
+      The signal "XLXI_2/XLXI_5/Q<3>" is sourceless and has been removed.
+       Sourceless block "XLXI_2/XLXI_5/I_36_10" (AND) removed.
+        The signal "XLXI_2/XLXI_5/T4" is sourceless and has been removed.
+         Sourceless block "XLXI_2/XLXI_5/I_36_14" (AND) removed.
+          The signal "XLXI_2/XLXI_5/T8" is sourceless and has been removed.
+           Sourceless block "XLXI_2/XLXI_5/I_36_27" (AND) removed.
+            The signal "XLXI_2/XLXI_5/T10" is sourceless and has been removed.
+           Sourceless block "XLXI_2/XLXI_5/I_36_28" (AND) removed.
+            The signal "XLXI_2/XLXI_5/T9" is sourceless and has been removed.
+             Sourceless block "XLXI_2/XLXI_5/I_Q9/I_36_32" (XOR) removed.
+              The signal "XLXI_2/XLXI_5/I_Q9/TQ" is sourceless and has been removed.
+               Sourceless block "XLXI_2/XLXI_5/I_Q9/I_36_35" (FF) removed.
+                The signal "XLXI_2/XLXI_5/Q<9>" is sourceless and has been removed.
+           Sourceless block "XLXI_2/XLXI_5/I_Q8/I_36_32" (XOR) removed.
+            The signal "XLXI_2/XLXI_5/I_Q8/TQ" is sourceless and has been removed.
+             Sourceless block "XLXI_2/XLXI_5/I_Q8/I_36_35" (FF) removed.
+              The signal "XLXI_2/XLXI_5/Q<8>" is sourceless and has been removed.
+         Sourceless block "XLXI_2/XLXI_5/I_36_15" (AND) removed.
+          The signal "XLXI_2/XLXI_5/T5" is sourceless and has been removed.
+           Sourceless block "XLXI_2/XLXI_5/I_Q5/I_36_32" (XOR) removed.
+            The signal "XLXI_2/XLXI_5/I_Q5/TQ" is sourceless and has been removed.
+             Sourceless block "XLXI_2/XLXI_5/I_Q5/I_36_35" (FF) removed.
+              The signal "XLXI_2/XLXI_5/Q<5>" is sourceless and has been removed.
+               Sourceless block "XLXI_2/XLXI_5/I_36_19" (AND) removed.
+                The signal "XLXI_2/XLXI_5/T6" is sourceless and has been removed.
+                 Sourceless block "XLXI_2/XLXI_5/I_Q6/I_36_32" (XOR) removed.
+                  The signal "XLXI_2/XLXI_5/I_Q6/TQ" is sourceless and has been removed.
+                   Sourceless block "XLXI_2/XLXI_5/I_Q6/I_36_35" (FF) removed.
+                    The signal "XLXI_2/XLXI_5/Q<6>" is sourceless and has been removed.
+                     Sourceless block "XLXI_2/XLXI_5/I_36_21" (AND) removed.
+                      The signal "XLXI_2/XLXI_5/T7" is sourceless and has been removed.
+                       Sourceless block "XLXI_2/XLXI_5/I_Q7/I_36_32" (XOR) removed.
+                        The signal "XLXI_2/XLXI_5/I_Q7/TQ" is sourceless and has been removed.
+                         Sourceless block "XLXI_2/XLXI_5/I_Q7/I_36_35" (FF) removed.
+                          The signal "XLXI_2/XLXI_5/Q<7>" is sourceless and has been removed.
+         Sourceless block "XLXI_2/XLXI_5/I_Q4/I_36_32" (XOR) removed.
+          The signal "XLXI_2/XLXI_5/I_Q4/TQ" is sourceless and has been removed.
+           Sourceless block "XLXI_2/XLXI_5/I_Q4/I_36_35" (FF) removed.
+            The signal "XLXI_2/XLXI_5/Q<4>" is sourceless and has been removed.
+ Sourceless block "XLXI_2/XLXI_5/I_Q2/I_36_32" (XOR) removed.
+  The signal "XLXI_2/XLXI_5/I_Q2/TQ" is sourceless and has been removed.
+   Sourceless block "XLXI_2/XLXI_5/I_Q2/I_36_35" (FF) removed.
+The signal "XLXI_2/XLXI_5/T2" is sourceless and has been removed.
+The signal "XLXI_2/XLXI_1/CEO" is sourceless and has been removed.
+The signal "XLXI_2/XLXI_1/TC" is sourceless and has been removed.
+ Sourceless block "XLXI_2/XLXI_1/I_36_54" (AND) removed.
+Unused block "XLXI_1/XLXI_1/I_36_37" (AND) removed.
+Unused block "XLXI_2/XLXI_1/I_36_22" (AND) removed.
+Unused block "XLXI_2/XLXI_5/I_36_4" (AND) removed.
+Unused block "XLXI_3/I_36_22" (AND) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+VCC 		XLXI_1/XLXI_1/I_36_47
+AND3 		XLXI_1/XLXI_94/I_M01/I_36_30
+AND3B1 		XLXI_1/XLXI_94/I_M01/I_36_31
+OR2 		XLXI_1/XLXI_94/I_M01/I_36_38
+AND3 		XLXI_1/XLXI_94/I_M23/I_36_30
+AND3B1 		XLXI_1/XLXI_94/I_M23/I_36_31
+OR2 		XLXI_1/XLXI_94/I_M23/I_36_38
+VCC 		XLXI_2/XLXI_1/I_36_9
+VCC 		XLXI_2/XLXI_3
+VCC 		XLXI_2/XLXI_5/I_36_9
+VCC 		XLXI_3/I_36_9
+GND 		XST_GND
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |             | Strength | Rate |              |          | Delay    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+| AFF<0>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| AFF<1>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| AFF<2>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| AFF<3>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| AFF<4>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| AFF<5>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| AFF<6>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| AFF<7>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| AFF_A                              | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| AFF_B                              | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| AFF_C                              | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| AFF_D                              | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| CLK                                | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0    |
+| SW0                                | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0    |
+| SW1                                | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+XLXI_1/XLXI_1/XLXI_1/XLXI_1_I_Q0_0      
+XLXI_1/XLXI_1/XLXI_1/XLXI_1_I_Q1_1      
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q0_1      
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q10_10    
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q11_11    
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q12_12    
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q13_13    
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q14_14    
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q15_15    
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q1_0      
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q2_3      
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q3_2      
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q4_7      
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q5_6      
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q6_5      
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q7_4      
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q8_8      
+XLXI_2/XLXI_1/XLXI_2/XLXI_1_I_Q9_9      
+XLXI_2/XLXI_5/XLXI_2/XLXI_5_I_Q0_1      
+XLXI_2/XLXI_5/XLXI_2/XLXI_5_I_Q1_0      
+XLXI_3/XLXI_3_I_Q0_1                    
+XLXI_3/XLXI_3_I_Q10_10                  
+XLXI_3/XLXI_3_I_Q11_11                  
+XLXI_3/XLXI_3_I_Q12_12                  
+XLXI_3/XLXI_3_I_Q13_13                  
+XLXI_3/XLXI_3_I_Q14_14                  
+XLXI_3/XLXI_3_I_Q15_15                  
+XLXI_3/XLXI_3_I_Q1_0                    
+XLXI_3/XLXI_3_I_Q2_3                    
+XLXI_3/XLXI_3_I_Q3_2                    
+XLXI_3/XLXI_3_I_Q4_7                    
+XLXI_3/XLXI_3_I_Q5_6                    
+XLXI_3/XLXI_3_I_Q6_5                    
+XLXI_3/XLXI_3_I_Q7_4                    
+XLXI_3/XLXI_3_I_Q8_8                    
+XLXI_3/XLXI_3_I_Q9_9                    
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 14 - Utilization by Hierarchy
+-------------------------------------
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name    |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| compt/             |           | 13/73         | 0/36          | 14/73         | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | compt                     |
+| +XLXI_1            |           | 3/14          | 0/2           | 4/16          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_1              |
+| ++XLXI_1           |           | 0/2           | 0/2           | 0/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_1/XLXI_1       |
+| +++I_Q0            |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_1/XLXI_1/I_Q0  |
+| +++I_Q1            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_1/XLXI_1/I_Q1  |
+| ++XLXI_71          |           | 4/4           | 0/0           | 7/7           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_1/XLXI_71      |
+| ++XLXI_94          |           | 1/1           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_1/XLXI_94      |
+| ++XLXI_97          |           | 4/4           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_1/XLXI_97      |
+| +XLXI_2            |           | 0/24          | 0/18          | 0/22          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2              |
+| ++XLXI_1           |           | 6/22          | 0/16          | 6/21          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1       |
+| +++I_Q0            |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q0  |
+| +++I_Q1            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q1  |
+| +++I_Q10           |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q10 |
+| +++I_Q11           |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q11 |
+| +++I_Q12           |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q12 |
+| +++I_Q13           |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q13 |
+| +++I_Q14           |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q14 |
+| +++I_Q15           |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q15 |
+| +++I_Q2            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q2  |
+| +++I_Q3            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q3  |
+| +++I_Q4            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q4  |
+| +++I_Q5            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q5  |
+| +++I_Q6            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q6  |
+| +++I_Q7            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q7  |
+| +++I_Q8            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q8  |
+| +++I_Q9            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_1/I_Q9  |
+| ++XLXI_5           |           | 0/2           | 0/2           | 0/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_5       |
+| +++I_Q0            |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_5/I_Q0  |
+| +++I_Q1            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_2/XLXI_5/I_Q1  |
+| +XLXI_3            |           | 6/22          | 0/16          | 6/21          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3              |
+| ++I_Q0             |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q0         |
+| ++I_Q1             |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q1         |
+| ++I_Q10            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q10        |
+| ++I_Q11            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q11        |
+| ++I_Q12            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q12        |
+| ++I_Q13            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q13        |
+| ++I_Q14            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q14        |
+| ++I_Q15            |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q15        |
+| ++I_Q2             |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q2         |
+| ++I_Q3             |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q3         |
+| ++I_Q4             |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q4         |
+| ++I_Q5             |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q5         |
+| ++I_Q6             |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q6         |
+| ++I_Q7             |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q7         |
+| ++I_Q8             |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q8         |
+| ++I_Q9             |           | 1/1           | 1/1           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | compt/XLXI_3/I_Q9         |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.
