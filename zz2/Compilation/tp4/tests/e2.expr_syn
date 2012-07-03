@@ -1,0 +1,25 @@
+ FICHIER CONTENANT LES RESULTATS DE L'ANALYSE SYNTAXIQUE
+               resultat du compilateur partie syntaxique 
+---------------------------------------------------------
+reduction r8
+   creation du noeud pour l'ident nr 0, de nom : A
+reduction r6
+   transfert du facteur vers le terme
+reduction r3
+   transfert du terme vers l'expression
+reduction r8
+   creation du noeud pour l'ident nr 1, de nom : B
+reduction r6
+   transfert du facteur vers le terme
+reduction r1
+   creation noeud d'addition
+reduction r9
+   transfert l'arbre expression sur facteur, sans parentheses
+reduction r6
+   transfert du facteur vers le terme
+reduction r3
+   transfert du terme vers l'expression
+reduction r7
+   creation du noeud pour la valeur 254
+reduction r6
+   transfert du facteur vers le terme

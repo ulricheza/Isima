@@ -1,0 +1,12 @@
+Maxime Escourbiac
+
+/* Compte rendu tp4 */
+
+Question 1:
+On utilise tar pour conserver les droits
+
+Question 2:
+tar -cf -. | (cd /new_home ; tar -xf _)
+
+Question 3:
+Il dit que l'on possede pas les droits

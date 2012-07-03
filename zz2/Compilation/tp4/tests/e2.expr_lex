@@ -1,0 +1,11 @@
+ FICHIER CONTENANT LES LEXEMES LUS APRES L'ANALYSE LEXICALE
+               resultat du compilateur partie lexicale
+------------------------------------------------------------
+Symbole lu : ( 
+AL ident  : 0 A
+Symbole lu : + 
+AL ident  : 1 B
+Symbole lu : ) 
+Symbole lu : - 
+entier lu 254
+AL ident  : 1 B

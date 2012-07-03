@@ -1,0 +1,39 @@
+//algorithme de lecture du fichier
+
+LireFichier(fichier)
+|
+|   ouverture du fichier
+|   si ouverture non réussi
+|   |   quitter programme
+|   fsi
+|   
+|   lecture de la première ligne (inutile avec nos hypothèses
+|   tant non fin de fichier
+|   |   lire ligne
+|   |   stocker un lieu
+|   |   si le lieu est un point de collecte
+|   |   |   Stocker la requete
+|   |   fsi
+|   fait
+|   fermer le fichier
+fin
+
+//algorithme de l'heuristique d'insertion
+HeuInsertion(Chromosome * gene)
+|   faire une copie de la liste du chromosome
+|   Tant qu'il reste des requetes dans la copie de la liste
+|   |   faire une copie de la copie de la liste
+|   |   Rajouter en fin une nouvelle tournee dans la liste des tournées
+|   |   Tant que la copie de la copie de liste n'est pas vide
+|   |   |   On supprime les requetes non inserable en fin de la tournee de la copie
+|   |   |   de copie de liste
+|   |   |   On tri selon l'ordre croissant la copie de la copie de liste selon la date
+|   |   |   d'arrive au depot.
+|   |   |   On ajoute la meilleure requete dans tournée courante
+|   |   |   On supprime la meilleure requete de la copie de la liste
+|   |   |   On met a jour les variables temporelles
+|   |   fait
+|   |   on finalise la tournee
+|   fait
+|   On recupere le nombre de vehicule et la distance parcourue
+fait   

@@ -1,0 +1,24 @@
+  Analyse lexicale et syntaxique avec lex et yacc.
+
+Observer le fichier anasyn.y
+
+1.Faire le make et tester le programme fbsy dans le repertoire tests.
+obsrever le fichier source .fb et resultat .fbsy.
+
+
+2.
+Ajout de l'instruction for i := expr to expr loop instruction
+Prendre les fichiers synfr.h et syng.h realises lors du TP1
+. Ceci nous recupere les lexemes.
+
+Dans le fichier anasyn.y ajouter les 'tocken' pour le FOR, TO et LOOP.
+
+
+Ajouter egalement dans ce fichier  le non terminal for_instr ainsi
+que son instance en partie droite de la production instr.
+
+
+Faire make clean et make. Modifier le fichier pr1.fb en ajoutant une
+instruction for... et faire un nouveau test. Observer le fichier .fbsy.
+
+

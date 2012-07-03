@@ -1,0 +1,44 @@
+ FICHIER CONTENANT LES RESULTATS DE L'ANALYSE SYNTAXIQUE
+               resultat du compilateur fbsy
+---------------------------------------------------------
+decl_var := type_var : liste_ident
+decl_var := type_var : liste_ident
+decl := partie_decl_var
+decl_const := l = const
+decl := partie_decl_const
+indice = 3
+indice = 4
+type_tableau type_predef
+decl_type := tab = type
+decl := partie_decl_type
+decl_var := type_var : liste_ident
+decl := partie_decl_var
+expression
+instr : affectation
+expression
+expression
+expression
+instr : affectation
+expression
+expression
+expression
+instr : affectation
+expression op_rel expression
+expression
+instr : affectation
+expression
+instr : affectation
+instr : partie_instr
+instr : if_instr
+expression
+expression
+expression
+instr : affectation
+instr : partie_instr
+instr : for_instr
+expression
+expression
+expression
+expression
+instr : affectation
+program jeu1_pr1

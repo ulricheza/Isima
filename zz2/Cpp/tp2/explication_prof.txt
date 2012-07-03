@@ -1,0 +1,56 @@
+Bonjour à tous,
+
+J'espère que vos vacances se passe bien.
+Vu que moi je me trouve au boulot, je me permets de vous rappeler que 
+l'on a 4 heures de TP de C++ ensemble cette semaine ! :)
+
+Comme promis, voilà la correction du TP2. Je n'ai fait que la partie sur 
+les String ; la partie sur les vecteurs étant très très proche.
+
+Il y a quelques petites choses à noter :
+1 - J'ai mis le constructeur prenant un int /explicit/. Cela signifie 
+qu'il ne peut pas être appelé implicitement et uniquement explicitement.
+Cela veut dire, par exemple, que ma fonction "void displayByValue( 
+String inString );" qui prend un String en paramètre ne peut pas prendre 
+un int :
+displayByValue( 4 );
+Ça ne compile pas car j'ai interdit au compilateur d'utiliser le 
+constructeur qui prend un int pour réaliser une conversion implicite
+À l'inverse :
+displayByValue( "toto" );
+Ça compile car le compilateur utilise le constructeur qui prend un "char 
+*" en paramètre pour réaliser une conversion implicite en String.
+
+2 - Pourquoi j'ai mis l'opérateur + en ami et pas l'opérateur << ?
+Tout simplement car pour implémenter l'opérateur <<, je n'ai eu à 
+rajouter à la classe qu'un petit getter pour la taille, rien de méchant. 
+Si j'avais voulu faire de même pour l'opérateur +, cela aurait nécessité 
+de disposer d'un getter vers le pointeur de char. Ce qui m'a paru un peu 
+dangereux (une fois que l'on a le pointeur, on peut tout casser) et j'ai 
+préféré rompre complétement l'encapsulation pour l'opérateur + et 
+conserver une bonne encapsulation pour tout le reste.
+
+3 - Enfin, ma surcharge de l'opérateur =.
+J'ai utilisé un mécanisme qui évite de réaliser le test que vous 
+connaissez ("if (this != &inString)") mais qui a un autre gros avantage 
+que j'explique plus loin.
+Qu'est ce que je fais :je crée un copie à l'aide de mon constructeur de 
+copie, puis j'échange toute les valeurs de ma copie avec mon instance 
+courante (*this). J'ai donc bien dans mon instance courante les mêmes 
+valeurs que dans le paramètre de mon opérateur =.
+Lorsque je vais sortir de la méthode, l'instance tmp va être détruite et 
+je n'aurais donc pas de fuite de mémoire.
+Cette technique à bien sur des désavantages (elle peut être plus 
+couteuse en temps de calcul par exemple) mais possède un gros avantages 
+: elle est "exception safe". C'est à dire que si la création de "String 
+tmp( inString;" bug : pas de problème, this n'a pas encore été modifié. 
+Si ça ne bug pas, pas de problème, les swap ne lancent pas d'exception 
+donc c'est super !
+
+Voilà pour ce TP.
+Pour compiler mes sources : "g++ -o tp2 main.cpp string.cpp" puis 
+"./tp2" pour exécuter.
+
+Si vous avez la moindre question, n'hésitez pas.
+
+Jonathan Caux

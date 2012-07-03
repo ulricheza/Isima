@@ -1,0 +1,46 @@
+ FICHIER CONTENANT LES LEXEMES LUS APRES L'ANALYSE LEXICALE
+               resultat du compilateur fbll
+------------------------------------------------------------
+AL motcle : 276
+AL ident  : 0 toto
+AL symb   : ;
+AL ident  : 1 pour
+AL ident  : 2 a
+AL ident  : 3 iterer
+Commentaire : {Ž}
+Fin du commentaire
+AL motcle : 282
+AL motcle : 285
+AL symb   : :
+AL ident  : 4 i
+AL symb   : ;
+AL motcle : 267
+AL ident  : 2 a
+AL symb   : =
+AL ident  : 5 m
+AL symb   : ;
+AL ident  : 6 b
+AL symb   : =
+AL ident  : 7 k
+AL symb   : ;
+AL ident  : 8 hfjkdh
+chaine de car : "ooo "" ooo"
+chaine de car : "jdjd"
+chaine de car : "gdhdjf"
+AL entier : 25
+AL ident  : 4 i
+AL ident  : 4 i
+AL symb   : +
+AL ident  : 9 FOoR
+AL ident  : 2 a
+AL motcle : 287
+AL entier : 25
+AL motcle : 288
+Commentaire : { }
+Fin du commentaire
+AL entier : 25
+AL ident  : 10 ret
+AL motcle : 266
+AL motcle : 269
+AL symb   : .
+Fin de fichier

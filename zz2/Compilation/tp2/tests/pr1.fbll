@@ -1,0 +1,93 @@
+ FICHIER CONTENANT LES LEXEMES LUS APRES L'ANALYSE LEXICALE
+               resultat du compilateur fbll
+------------------------------------------------------------
+AL motcle : 277
+AL ident  : 0 jeu1_pr1
+AL symb   : ;
+AL motcle : 283
+AL motcle : 289
+AL symb   : :
+AL ident  : 1 i
+AL symb   : ;
+AL motcle : 289
+AL symb   : :
+AL ident  : 2 j
+AL symb   : ,
+AL ident  : 3 k
+AL symb   : ;
+AL motcle : 268
+AL ident  : 4 l
+AL symb   : =
+AL symb   : ;
+AL motcle : 282
+AL ident  : 5 tab
+AL symb   : =
+AL motcle : 266
+AL symb   : [
+AL symb   : ,
+AL symb   : ]
+AL motcle : 275
+AL motcle : 289
+AL symb   : ;
+AL motcle : 283
+AL ident  : 5 tab
+AL symb   : :
+AL ident  : 6 t
+AL symb   : ;
+AL motcle : 267
+AL ident  : 1 i
+AL symb   : ;
+AL ident  : 6 t
+AL symb   : [
+AL symb   : ,
+AL symb   : ]
+AL symb   : ;
+AL ident  : 6 t
+AL symb   : [
+AL symb   : ]
+AL symb   : [
+AL symb   : ]
+AL symb   : ;
+AL motcle : 272
+AL symb   : (
+AL ident  : 1 i
+AL symb   : <
+AL symb   : )
+AL motcle : 281
+AL motcle : 267
+AL ident  : 1 i
+AL ident  : 1 i
+AL symb   : +
+AL symb   : ;
+AL ident  : 2 j
+AL ident  : 1 i
+AL symb   : *
+AL ident  : 4 l
+AL symb   : ;
+AL motcle : 270
+AL symb   : ;
+AL motcle : 286
+AL ident  : 1 i
+AL motcle : 287
+AL motcle : 288
+AL motcle : 267
+AL ident  : 2 j
+AL ident  : 1 i
+AL symb   : +
+AL symb   : ;
+AL motcle : 270
+AL symb   : ;
+AL ident  : 2 j
+AL ident  : 1 i
+AL symb   : *
+AL symb   : /
+AL symb   : (
+AL symb   : -
+AL ident  : 6 t
+AL symb   : [
+AL symb   : ,
+AL symb   : ]
+AL symb   : )
+AL symb   : ;
+AL motcle : 270
+AL symb   : .

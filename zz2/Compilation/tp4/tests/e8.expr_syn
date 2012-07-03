@@ -1,0 +1,36 @@
+ FICHIER CONTENANT LES RESULTATS DE L'ANALYSE SYNTAXIQUE
+               resultat du compilateur partie syntaxique 
+---------------------------------------------------------
+reduction r7
+   creation du noeud pour la valeur 5
+reduction r6
+   transfert du facteur vers le terme
+reduction r3
+   transfert du terme vers l'expression
+reduction r8
+   creation du noeud pour l'ident nr 0, de nom : x
+reduction r6
+   transfert du facteur vers le terme
+reduction r3
+   transfert du terme vers l'expression
+reduction r7
+   creation du noeud pour la valeur 3
+reduction r6
+   transfert du facteur vers le terme
+reduction r1
+   creation noeud d'addition
+reduction r10
+reduction r6
+   transfert du facteur vers le terme
+reduction r3
+   transfert du terme vers l'expression
+reduction r7
+   creation du noeud pour la valeur 25
+reduction r6
+   transfert du facteur vers le terme
+reduction r7
+   creation du noeud pour la valeur 9
+reduction r5
+   creation noeud de division
+reduction r1
+   creation noeud d'addition

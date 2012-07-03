@@ -1,0 +1,22 @@
+//TODO
+
+tp a rendre le 13/03 a minuit au max
+
+Cahier des charges
+
+Client:
+
+Choix du pseudo ou recuperation de son identité (Serialization, Isolated Storage enregistrement, enregistrement (sécurisé)
+Envoi de msgs (signés)
+Affichage des messages non lus (a intervalles réguliers ou à la demande)
+UI : Console, graphique
+- changement de pseudo
+- Avatar
+Etc
+
+Serveur:
+Enregistrement des clients (sécurité)
+Réception (sauvegarde des msgs)
+Envoi des msgs non lus aux clients
+Serialization (des clients, des msgs)
+possibilite d'avoir des msgs privés

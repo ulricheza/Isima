@@ -1,0 +1,7 @@
+rm *.aux
+nuwebf anasynw
+pdflatex anasynw
+pdflatex anasynw
+nuwebf anasynw
+pdflatex anasynw
+pdflatex anasynw

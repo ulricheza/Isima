@@ -1,0 +1,297 @@
+Received: from mail-wy0-f172.google.com (mail-wy0-f172.google.com [74.125.82.172])
+	by poste.isima.fr (8.13.8/8.13.8) with ESMTP id o94Jssio340042
+	for <escourbi@poste.isima.fr>; Mon, 4 Oct 2010 21:55:15 +0200
+Received: by mail-wy0-f172.google.com with SMTP id 11so4942341wyi.3
+        for <escourbi@poste.isima.fr>; Mon, 04 Oct 2010 12:56:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=gamma;
+        h=domainkey-signature:mime-version:received:received:in-reply-to
+         :references:date:message-id:subject:from:to:content-type;
+        bh=Tp/Z2CrvePQdfPHFh3tcSqBIB8vnJgrVywy+L3xEXNw=;
+        b=NnX15NnbnHQHrO6aZ6YAMWN9kOOaO7uUvR6qMGkXLPWrKE738o2hggriS/3CPDuE5t
+         J0No4sZnY2m1is0uLuH8ImO3PWkXSUMK4di1dLkyovD+NZXTpi47/lexM0Mvkg+bIu6/
+         RLYhunPPPCzmTJE/CmYNJHWoqOXOtRbPyUSSA=
+DomainKey-Signature: a=rsa-sha1; c=nofws;
+        d=gmail.com; s=gamma;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        b=sgGWTNlMAVA0uqPhNZAel2/OJ/xjYWjsL78eRa3S55pzAdSBw+dOvUe9vLIiJDsR/h
+         Ac3UGfTkKtuepu8i0pZdV0E8v6tvQ+0IotoUXzrI41dh+CVoQutjxqSUdGWC8f8RVOeq
+         sVd6/fVIYeqYKaW3y/7xHoymsPqGYFtBe4I9o=
+MIME-Version: 1.0
+Received: by 10.216.12.139 with SMTP id 11mr8207913wez.63.1286222163372; Mon,
+ 04 Oct 2010 12:56:03 -0700 (PDT)
+Received: by 10.216.174.145 with HTTP; Mon, 4 Oct 2010 12:56:03 -0700 (PDT)
+In-Reply-To: <49763.172.26.29.227.1285323212.squirrel@www.isima.fr>
+References: <49763.172.26.29.227.1285323212.squirrel@www.isima.fr>
+Date: Mon, 4 Oct 2010 21:56:03 +0200
+Message-ID: <AANLkTinq5nJ+hs-vn19J6HT8Du1qqYPWQ-DCfBGsAVNg@mail.gmail.com>
+Subject: Re: English Email Week 2
+From: =?ISO-8859-1?Q?Erwan_Bourr=E9?= <jacen.solo44@gmail.com>
+To: escourbi@poste.isima.fr
+Content-Type: multipart/alternative; boundary=0016364c7ad726769f0491cfefa6
+X-Greylist: Default is to whitelist mail, not delayed by milter-greylist-3.0 (poste.isima.fr [193.55.95.131]); Mon, 04 Oct 2010 21:55:16 +0200 (CEST)
+
+--0016364c7ad726769f0491cfefa6
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+2010/9/24 <suzi-sue@isima.fr>
+
+> Dear ZZeds,
+>
+> Please find below the vocabulary for your CV.
+>
+> I have attached the Egide glossary for French higher eductaion and the
+> answer pdf for all the CV stuff.  Please do not look at the answers for
+> the weeks ahead just check your answers for what we have done.
+>
+> Homework this week.
+> Basically just reading on cover letters pages 12 to 17.  There are
+> exercises to do on Page 14.
+>
+> Reminder:
+> You must bring a printed copy of your CV to your English class in Week 4
+> (in two weeks).  Failure to do so will result in penalty points being
+> taken off.  O.5 pts for each day late.
+>
+> Have a nice weekend.
+>
+> Susan
+>
+>
+> Vocabulary for your CV
+> EDUCATION
+>
+> ISIMA
+> College of Engineering in Computer Science, Modelling and Applications //
+> Institut Sup=E9rieur d'Informatique, de Mod=E9lisation et de leurs
+> Applications, Option XX.
+> Graduating in September 2012.  Diploma equivalent to a Master=92s Degree =
+in
+> Engineering.
+> Modules:
+> Clermont-Ferrand, France.
+>
+> Classe pr=E9paratoire
+> two-year preparatory course for the competitive examination admission to =
+a
+> French grande =E9cole, Option =85 / Speciality:
+> Lyc=E9e XXX, town, country.
+>
+> Licence
+> =91Licence 1 et 2 Maths-Info Pr=E9paration aux Concours Communs
+> Polytechniques=92.
+> equivalent to two years of university study
+> Modules:
+> Universit=E9 XXX, town, country
+>
+> DEUG
+> two-year course in XXX, Option ...
+> Modules:
+> Universit=E9 XXX, town, country.
+>
+> DUT
+> two-year higher diploma course in technology, Option XXX
+> Modules:
+> IUT, town, country.
+>
+> BTS
+> two-year employment-oriented technician qualification diploma
+> (employment-oriented)
+> Lyc=E9e XXX, town, country.
+>
+> Baccalaur=E9at
+> French Baccalaureate S (equivalent to A levels (UK) / High School Leaving
+> Certificate (US)) specializing in XXX.
+> Lyc=E9e XXX, town, country.
+>
+> Baccalaur=E9at Professionnel
+> (secondary school leaving certificate =96 vocational) specializing in XXX=
+.
+> Lyc=E9e XXX, town, country.
+>
+> BEP
+> Brevet d'=E9tudes professionnelles (foundation diploma =96 vocational)
+> Lyc=E9e XXX, town, country.
+>
+> Licence Professionnelle =3D Vocational Degree
+> (employment-oriented diploma including 12 to 16 weeks' work experience in
+> a company)
+>
+> with honours (UK) / with honors (US)
+>
+> dual program course
+>
+> PROJECT HISTORY
+> (with report, oral defence (US) / viva voce (UK) and assessment)
+> First Year Project (20/50 hours etc)
+> Name
+> Description
+> Key words
+>
+> WORK EXPERIENCE
+> Dates + Length
+> Name of company
+> Location (town/country)
+> Description (missions / achievements / responsibilities)
+> Key words
+>
+> COMPUTER/IT SKILLS (or make up your own headings)
+> Systems
+> Languages and Libraries
+> Software/Database
+> Internet Applications
+> IDE
+> Hardware
+> Certification (in progress)
+>
+> INTERESTS and HOBBIES
+> animateur =3D youth leader / coordinator / camp counselor
+> BAFA =3D French national diploma for youth leaders
+> Secourisme =3D First-Aid Certificate
+> association =3D (non-profit making) organisation / club / charity
+> interim =96 temping
+> saisonnier  =3D seasonal worker
+> BDE =3D student body council
+>
+> lifesaving
+> role play
+>
+
+--0016364c7ad726769f0491cfefa6
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+<br><br><div class=3D"gmail_quote">2010/9/24  <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:suzi-sue@isima.fr">suzi-sue@isima.fr</a>&gt;</span><br><blockquo=
+te class=3D"gmail_quote" style=3D"border-left: 1px solid rgb(204, 204, 204)=
+; margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+Dear ZZeds,<br>
+<br>
+Please find below the vocabulary for your CV.<br>
+<br>
+I have attached the Egide glossary for French higher eductaion and the<br>
+answer pdf for all the CV stuff. =A0Please do not look at the answers for<b=
+r>
+the weeks ahead just check your answers for what we have done.<br>
+<br>
+Homework this week.<br>
+Basically just reading on cover letters pages 12 to 17. =A0There are<br>
+exercises to do on Page 14.<br>
+<br>
+Reminder:<br>
+You must bring a printed copy of your CV to your English class in Week 4<br=
+>
+(in two weeks). =A0Failure to do so will result in penalty points being<br>
+taken off. =A0O.5 pts for each day late.<br>
+<br>
+Have a nice weekend.<br>
+<br>
+Susan<br>
+<br>
+<br>
+Vocabulary for your CV<br>
+EDUCATION<br>
+<br>
+ISIMA<br>
+College of Engineering in Computer Science, Modelling and Applications //<b=
+r>
+Institut Sup=E9rieur d&#39;Informatique, de Mod=E9lisation et de leurs<br>
+Applications, Option XX.<br>
+Graduating in September 2012. =A0Diploma equivalent to a Master=92s Degree =
+in<br>
+Engineering.<br>
+Modules:<br>
+Clermont-Ferrand, France.<br>
+<br>
+Classe pr=E9paratoire<br>
+two-year preparatory course for the competitive examination admission to a<=
+br>
+French grande =E9cole, Option =85 / Speciality:<br>
+Lyc=E9e XXX, town, country.<br>
+<br>
+Licence<br>
+=91Licence 1 et 2 Maths-Info Pr=E9paration aux Concours Communs Polytechniq=
+ues=92.<br>
+equivalent to two years of university study<br>
+Modules:<br>
+Universit=E9 XXX, town, country<br>
+<br>
+DEUG<br>
+two-year course in XXX, Option ...<br>
+Modules:<br>
+Universit=E9 XXX, town, country.<br>
+<br>
+DUT<br>
+two-year higher diploma course in technology, Option XXX<br>
+Modules:<br>
+IUT, town, country.<br>
+<br>
+BTS<br>
+two-year employment-oriented technician qualification diploma<br>
+(employment-oriented)<br>
+Lyc=E9e XXX, town, country.<br>
+<br>
+Baccalaur=E9at<br>
+French Baccalaureate S (equivalent to A levels (UK) / High School Leaving<b=
+r>
+Certificate (US)) specializing in XXX.<br>
+Lyc=E9e XXX, town, country.<br>
+<br>
+Baccalaur=E9at Professionnel<br>
+(secondary school leaving certificate =96 vocational) specializing in XXX.<=
+br>
+Lyc=E9e XXX, town, country.<br>
+<br>
+BEP<br>
+Brevet d&#39;=E9tudes professionnelles (foundation diploma =96 vocational)<=
+br>
+Lyc=E9e XXX, town, country.<br>
+<br>
+Licence Professionnelle =3D Vocational Degree<br>
+(employment-oriented diploma including 12 to 16 weeks&#39; work experience =
+in<br>
+a company)<br>
+<br>
+with honours (UK) / with honors (US)<br>
+<br>
+dual program course<br>
+<br>
+PROJECT HISTORY<br>
+(with report, oral defence (US) / viva voce (UK) and assessment)<br>
+First Year Project (20/50 hours etc)<br>
+Name<br>
+Description<br>
+Key words<br>
+<br>
+WORK EXPERIENCE<br>
+Dates + Length<br>
+Name of company<br>
+Location (town/country)<br>
+Description (missions / achievements / responsibilities)<br>
+Key words<br>
+<br>
+COMPUTER/IT SKILLS (or make up your own headings)<br>
+Systems<br>
+Languages and Libraries<br>
+Software/Database<br>
+Internet Applications<br>
+IDE<br>
+Hardware<br>
+Certification (in progress)<br>
+<br>
+INTERESTS and HOBBIES<br>
+animateur =3D youth leader / coordinator / camp counselor<br>
+BAFA =3D French national diploma for youth leaders<br>
+Secourisme =3D First-Aid Certificate<br>
+association =3D (non-profit making) organisation / club / charity<br>
+interim =96 temping<br>
+saisonnier =A0=3D seasonal worker<br>
+BDE =3D student body council<br>
+<br>
+lifesaving<br>
+role play<br>
+</blockquote></div><br>
+
+--0016364c7ad726769f0491cfefa6--

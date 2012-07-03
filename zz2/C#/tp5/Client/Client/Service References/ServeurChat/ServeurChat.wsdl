@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LogIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nick" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nickhashed" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="counter" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="G" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="J" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="P" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Q" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Seed" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="X" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Y" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogInResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Register">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nick" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nickhashed" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="counter" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="G" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="J" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="P" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Q" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Seed" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="X" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Y" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegisterResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nick" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="messagehashed" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMessageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPrivateMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nick" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="recipient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="messagehashed" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPrivateMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendPrivateMessageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveAllMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nick" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nickhashed" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveAllMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiveAllMessageResult" type="tns:ArrayOfMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMessage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Message" nillable="true" type="tns:Message" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Message">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Auteur" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Creation" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReceiveMessageNonRead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nick" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nickhashed" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveMessageNonReadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiveMessageNonReadResult" type="tns:ArrayOfMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceivePrivateMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nick" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nickhashed" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceivePrivateMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceivePrivateMessageResult" type="tns:ArrayOfMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeNick">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oldnick" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newnick" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newnickhashed" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeNickResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeNickResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LogInSoapIn">
+    <wsdl:part name="parameters" element="tns:LogIn" />
+  </wsdl:message>
+  <wsdl:message name="LogInSoapOut">
+    <wsdl:part name="parameters" element="tns:LogInResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="RegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPrivateMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:SendPrivateMessage" />
+  </wsdl:message>
+  <wsdl:message name="SendPrivateMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:SendPrivateMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveAllMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveAllMessage" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveAllMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveAllMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveMessageNonReadSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveMessageNonRead" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveMessageNonReadSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveMessageNonReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceivePrivateMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceivePrivateMessage" />
+  </wsdl:message>
+  <wsdl:message name="ReceivePrivateMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceivePrivateMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNickSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeNick" />
+  </wsdl:message>
+  <wsdl:message name="ChangeNickSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeNickResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServeurChatSoap">
+    <wsdl:operation name="LogIn">
+      <wsdl:input message="tns:LogInSoapIn" />
+      <wsdl:output message="tns:LogInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input message="tns:RegisterSoapIn" />
+      <wsdl:output message="tns:RegisterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input message="tns:SendMessageSoapIn" />
+      <wsdl:output message="tns:SendMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPrivateMessage">
+      <wsdl:input message="tns:SendPrivateMessageSoapIn" />
+      <wsdl:output message="tns:SendPrivateMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveAllMessage">
+      <wsdl:input message="tns:ReceiveAllMessageSoapIn" />
+      <wsdl:output message="tns:ReceiveAllMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMessageNonRead">
+      <wsdl:input message="tns:ReceiveMessageNonReadSoapIn" />
+      <wsdl:output message="tns:ReceiveMessageNonReadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePrivateMessage">
+      <wsdl:input message="tns:ReceivePrivateMessageSoapIn" />
+      <wsdl:output message="tns:ReceivePrivateMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNick">
+      <wsdl:input message="tns:ChangeNickSoapIn" />
+      <wsdl:output message="tns:ChangeNickSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServeurChatSoap" type="tns:ServeurChatSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LogIn">
+      <soap:operation soapAction="http://tempuri.org/LogIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://tempuri.org/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPrivateMessage">
+      <soap:operation soapAction="http://tempuri.org/SendPrivateMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveAllMessage">
+      <soap:operation soapAction="http://tempuri.org/ReceiveAllMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMessageNonRead">
+      <soap:operation soapAction="http://tempuri.org/ReceiveMessageNonRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePrivateMessage">
+      <soap:operation soapAction="http://tempuri.org/ReceivePrivateMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNick">
+      <soap:operation soapAction="http://tempuri.org/ChangeNick" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServeurChatSoap12" type="tns:ServeurChatSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LogIn">
+      <soap12:operation soapAction="http://tempuri.org/LogIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap12:operation soapAction="http://tempuri.org/Register" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap12:operation soapAction="http://tempuri.org/SendMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPrivateMessage">
+      <soap12:operation soapAction="http://tempuri.org/SendPrivateMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveAllMessage">
+      <soap12:operation soapAction="http://tempuri.org/ReceiveAllMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMessageNonRead">
+      <soap12:operation soapAction="http://tempuri.org/ReceiveMessageNonRead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePrivateMessage">
+      <soap12:operation soapAction="http://tempuri.org/ReceivePrivateMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNick">
+      <soap12:operation soapAction="http://tempuri.org/ChangeNick" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServeurChat">
+    <wsdl:port name="ServeurChatSoap" binding="tns:ServeurChatSoap">
+      <soap:address location="http://localhost:49430/ServeurChat.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServeurChatSoap12" binding="tns:ServeurChatSoap12">
+      <soap12:address location="http://localhost:49430/ServeurChat.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

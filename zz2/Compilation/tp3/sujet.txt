@@ -1,0 +1,25 @@
+   Langage d'espressions sur les entiers.
+   
+   La base est le langage des expressions sur les entiers donne
+   par les fichiers analex.l et anasyn.y.
+   
+   Dans un premier temps faire make et tester le programme expr sur l'exemple
+   qui se trouve dans le répertoire tests.
+   
+   Si cela fonctionne, on envisage d'evaluer les expressions en cours d'analyse
+   syntaxique.
+   
+   Pour cela, il faut, dans le fichier anasyn.y :
+     - ajouter le champ dans le %union v de type int;
+	 - typer les nom-terminaux E, T et F avec ce nouveau champ ;
+	 - ajouter les actions qui calculent le resultat pour les differentes
+	   derivations de E, T et F ;
+	 - afficher la valeur de E dans la derivation de l'axiome S.
+Faire make clean et make. Tester sur differents exemples dans le repertoire tests.
+
+Puis ajouter les actions qui affichent l'expression en postfixe au fur et
+a mesure de l'analyse.
+	 
+Faire make clean et make. Tester sur differents exemples dans le repertoire tests.
+
+

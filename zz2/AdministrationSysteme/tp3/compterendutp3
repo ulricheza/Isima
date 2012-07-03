@@ -1,0 +1,37 @@
+Maxime Escourbiac
+
+/* Compte rendu tp3 */
+
+
+Question 1:
+fsck -y
+
+Question 2:
+mount -o remount,rw LABEL=/G32....
+
+recuperer le clavier fr loadkeys fr
+
+Question 3:
+problème d'ecriture dans fstab
+
+erreur au boot
+entrer le password root
+fsck -> no errors
+commande mount -o remount,rw ....
+
+Question 4: Suppression de la fstab
+
+Ca ne boote plus car le systeme n'arrive plus a monter les partitions disques
+notes lors de la reparation:
+/!\ attention au read only
+
+-perte du mot de passe root
+Demarrer au niveau 1
+/passwd taper le nouveau passord
+
+emmelage de rc
+redemarrer avec l'option init=/bin/bash
+mount -o remount,rw /
+
+Question 5: Script de sauvegarde
+Voir script fourni

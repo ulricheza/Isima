@@ -1,0 +1,224 @@
+Received: from sp.isima.fr (sp.isima.fr [193.55.95.1])
+	by poste.isima.fr (8.13.8/8.13.8) with ESMTP id p4R8NMqc823312
+	for <escourbi@poste.isima.fr>; Fri, 27 May 2011 10:23:23 +0200
+Received: from [127.0.0.1] (pc158.isima.fr [193.55.95.158])
+	by sp.isima.fr (8.13.8/8.13.8) with ESMTP id p4R8Ofv8937988
+	for <escourbi@poste.isima.fr>; Fri, 27 May 2011 10:24:42 +0200
+Message-ID: <4DDF6041.9070309@isima.fr>
+Date: Fri, 27 May 2011 10:26:41 +0200
+From: Luc Touraille <luc.touraille@isima.fr>
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.2.17) Gecko/20110414 Thunderbird/3.1.10
+MIME-Version: 1.0
+To: Maxime Escourbiac <escourbi@poste.isima.fr>
+Subject: Re: [C#-ZZ2] Demande =?ISO-8859-1?Q?d=27=E9valuation_du_TP_?=
+ =?ISO-8859-1?Q?sur_le_forum/chat?=
+References: <4DDEBF29.5090704@poste.isima.fr>
+In-Reply-To: <4DDEBF29.5090704@poste.isima.fr>
+Content-Type: multipart/mixed;
+ boundary="------------000902090608050508060603"
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-3.0 (poste.isima.fr [193.55.95.131]); Fri, 27 May 2011 10:23:23 +0200 (CEST)
+X-Greylist: Sender IP whitelisted, not delayed by milter-greylist-3.0 (sp.isima.fr [193.55.95.1]); Fri, 27 May 2011 10:24:42 +0200 (CEST)
+
+This is a multi-part message in MIME format.
+--------------000902090608050508060603
+Content-Type: multipart/alternative;
+ boundary="------------030300030600060100010202"
+
+
+--------------030300030600060100010202
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Le 26/05/2011 22:59, Maxime Escourbiac a écrit :
+> Bonjour,
+>
+> Je vous écris pour demander si cela est possible d'avoir un retour sur 
+> le tp rendu en développement .NET afin de pouvoir se rendre compte des 
+> erreurs et des maladresses faites dans le service-réseau afin de les 
+> corriger.
+>
+> Cordialement Maxime Escourbiac
+>
+>
+Bonjour Maxime,
+
+Votre TP était très bon (19/20), donc je n'aurais pas beaucoup de 
+remarques. Je vais passer sur les points positifs
+histoire de gagner du temps :-) (mais je tiens quand même à vous 
+féliciter pour avoir fait des tests unitaires, ça fait
+plaisir !).
+
+Le premier point négatif concerne la sauvegarde des données 
+utilisateurs. J'avais explicitement demandé à ce qu'elle
+soit effectué dans un "isolated storage 
+<http://msdn.microsoft.com/en-us/library/3ak841sy%28v=vs.80%29.aspx>". 
+Généralement, on évite de sauvegarder des données directement à côté
+de l'exécutable, notamment parce que des utilisateurs différents doivent 
+pouvoir avoir des données différentes (d'où
+le répertoire Application Data dans Mes Documents).
+
+Autre problème assez important niveau sécurité : lors de 
+l'enregistrement ou de la connexion, vous envoyez le mot
+de passe en clair, à la vue de tous. Sécuriser l'envoi de passwords 
+n'est pas chose facile, mais la moindre des choses
+serait d'utiliser un hash : ça n'empêcherait pas l'usurpation 
+d'identité, mais ça éviterait que le mot de passe de
+l'utilisateur ne soit connu (ce qui peut être embêtant s'il utilise le 
+même sur le site internet de sa banque ^^).
+Le mieux, ce serait de ne pas utiliser de mot de passe et de conserver 
+la clé entre les différentes connexions. La clé
+est créé uniquement lors de la création d'un compte ; le serveur 
+conserve les clés publiques de ses clients, et les clients
+conservent leur clé privée. De cette façon, il n'y a même plus besoin 
+d'avoir une fonctionnalité "reconnexion".
+
+L'interface n'est pas très intuitive à utiliser. On ne comprend pas bien 
+à quoi servent les deux champs à droite, on a
+l'impression qu'on est sensé écrire dedans. Il faudrait d'ailleurs 
+griser les items de menus qui sont désactivés, et
+indiquer d'une façon ou d'une autre quels sont les champs en lecture et 
+ceux en écriture. Pour la rédaction de message,
+je ne vois pas l'intérêt d'avoir une fenêtre à part, pourquoi ne pas 
+tout avoir dans une seule fenêtre ? D'autre part, pourquoi
+avoir utilisé un Treeview alors qu'il n'y a pas vraiment d'arborescence 
+de message ? J'aime bien le "A Propos" par contre :-).
+
+Tout le code métier est contenu dans les fenêtres. Pour une petite appli 
+comme ça, ce n'est pas trop embêtant, mais dans
+la vraie vie il faut bien découpler code métier et code d'affichage 
+(pour pouvoir changer la vue sans problème).
+
+Lors de l'envoi de messages, vous supprimez l'utilisateur "todeliver" 
+avant de le rajouter une ligne après -> quel est l'intérêt ?
+Comme on manipule des références, c'est le même objet qui est supprimé 
+puis rajouté.
+
+Enfin, le pseudo du destinataire n'est pas signé lors d'un envoi de 
+message privé.
+
+Voilà !
+
+Cordialement,
+
+Luc
+
+
+--------------030300030600060100010202
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1"
+      http-equiv="Content-Type">
+    <title></title>
+  </head>
+  <body bgcolor="#ffffff" text="#000000">
+    Le 26/05/2011 22:59, Maxime Escourbiac a &eacute;crit&nbsp;:
+    <blockquote cite="mid:4DDEBF29.5090704@poste.isima.fr" type="cite">Bonjour,
+      <br>
+      <br>
+      Je vous &eacute;cris pour demander si cela est possible d'avoir un retour
+      sur le tp rendu en d&eacute;veloppement .NET afin de pouvoir se rendre
+      compte des erreurs et des maladresses faites dans le
+      service-r&eacute;seau afin de les corriger.
+      <br>
+      <br>
+      Cordialement Maxime Escourbiac
+      <br>
+      <br>
+      <br>
+    </blockquote>
+    Bonjour Maxime,<br>
+    <br>
+    Votre TP &eacute;tait tr&egrave;s bon (19/20), donc je n'aurais pas beaucoup de
+    remarques. Je vais passer sur les points positifs<br>
+    histoire de gagner du temps :-) (mais je tiens quand m&ecirc;me &agrave; vous
+    f&eacute;liciter pour avoir fait des tests unitaires, &ccedil;a fait<br>
+    plaisir !).<br>
+    <br>
+    Le premier point n&eacute;gatif concerne la sauvegarde des donn&eacute;es
+    utilisateurs. J'avais explicitement demand&eacute; &agrave; ce qu'elle<br>
+    soit effectu&eacute; dans un "<a
+href="http://msdn.microsoft.com/en-us/library/3ak841sy%28v=vs.80%29.aspx">isolated
+      storage</a>". G&eacute;n&eacute;ralement, on &eacute;vite de sauvegarder des donn&eacute;es
+    directement &agrave; c&ocirc;t&eacute;<br>
+    de l'ex&eacute;cutable, notamment parce que des utilisateurs diff&eacute;rents
+    doivent pouvoir avoir des donn&eacute;es diff&eacute;rentes (d'o&ugrave;<br>
+    le r&eacute;pertoire Application Data dans Mes Documents).<br>
+    <br>
+    Autre probl&egrave;me assez important niveau s&eacute;curit&eacute; : lors de
+    l'enregistrement ou de la connexion, vous envoyez le mot<br>
+    de passe en clair, &agrave; la vue de tous. S&eacute;curiser l'envoi de passwords
+    n'est pas chose facile, mais la moindre des choses<br>
+    serait d'utiliser un hash : &ccedil;a n'emp&ecirc;cherait pas l'usurpation
+    d'identit&eacute;, mais &ccedil;a &eacute;viterait que le mot de passe de<br>
+    l'utilisateur ne soit connu (ce qui peut &ecirc;tre emb&ecirc;tant s'il utilise
+    le m&ecirc;me sur le site internet de sa banque ^^).<br>
+    Le mieux, ce serait de ne pas utiliser de mot de passe et de
+    conserver la cl&eacute; entre les diff&eacute;rentes connexions. La cl&eacute;<br>
+    est cr&eacute;&eacute; uniquement lors de la cr&eacute;ation d'un compte ; le serveur
+    conserve les cl&eacute;s publiques de ses clients, et les clients<br>
+    conservent leur cl&eacute; priv&eacute;e. De cette fa&ccedil;on, il n'y a m&ecirc;me plus
+    besoin d'avoir une fonctionnalit&eacute; "reconnexion".<br>
+    <br>
+    L'interface n'est pas tr&egrave;s intuitive &agrave; utiliser. On ne comprend pas
+    bien &agrave; quoi servent les deux champs &agrave; droite, on a<br>
+    l'impression qu'on est sens&eacute; &eacute;crire dedans. Il faudrait d'ailleurs
+    griser les items de menus qui sont d&eacute;sactiv&eacute;s, et<br>
+    indiquer d'une fa&ccedil;on ou d'une autre quels sont les champs en lecture
+    et ceux en &eacute;criture. Pour la r&eacute;daction de message,<br>
+    je ne vois pas l'int&eacute;r&ecirc;t d'avoir une fen&ecirc;tre &agrave; part, pourquoi ne pas
+    tout avoir dans une seule fen&ecirc;tre ? D'autre part, pourquoi<br>
+    avoir utilis&eacute; un Treeview alors qu'il n'y a pas vraiment
+    d'arborescence de message ? J'aime bien le "A Propos" par contre
+    :-).<br>
+    <br>
+    Tout le code m&eacute;tier est contenu dans les fen&ecirc;tres. Pour une petite
+    appli comme &ccedil;a, ce n'est pas trop emb&ecirc;tant, mais dans<br>
+    la vraie vie il faut bien d&eacute;coupler code m&eacute;tier et code d'affichage
+    (pour pouvoir changer la vue sans probl&egrave;me).<br>
+    <br>
+    Lors de l'envoi de messages, vous supprimez l'utilisateur
+    "todeliver" avant de le rajouter une ligne apr&egrave;s -&gt; quel est
+    l'int&eacute;r&ecirc;t ?<br>
+    Comme on manipule des r&eacute;f&eacute;rences, c'est le m&ecirc;me objet qui est
+    supprim&eacute; puis rajout&eacute;.<br>
+    <br>
+    Enfin, le pseudo du destinataire n'est pas sign&eacute; lors d'un envoi de
+    message priv&eacute;.<br>
+    <br>
+    Voil&agrave; !<br>
+    <br>
+    Cordialement,<br>
+    <br>
+    Luc<br>
+    <br>
+  </body>
+</html>
+
+--------------030300030600060100010202--
+
+--------------000902090608050508060603
+Content-Type: text/x-vcard; charset=utf-8;
+ name="luc_touraille.vcf"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+ filename="luc_touraille.vcf"
+
+begin:vcard
+fn:Luc Touraille
+n:Touraille;Luc
+org:LIMOS
+adr;quoted-printable;quoted-printable:Bureau B116;;Campus des C=C3=A9zeaux;Aubi=C3=A8re;;63173;France
+email;internet:luc.touraille@isima.fr
+title:PhD Student
+tel;work:+33 (0)4 73 40 53 68
+x-mozilla-html:FALSE
+version:2.1
+end:vcard
+
+
+--------------000902090608050508060603--
+

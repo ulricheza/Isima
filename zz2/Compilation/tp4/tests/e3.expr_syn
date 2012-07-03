@@ -1,0 +1,67 @@
+ FICHIER CONTENANT LES RESULTATS DE L'ANALYSE SYNTAXIQUE
+               resultat du compilateur partie syntaxique 
+---------------------------------------------------------
+reduction r8
+   creation du noeud pour l'ident nr 0, de nom : re
+reduction r6
+   transfert du facteur vers le terme
+reduction r3
+   transfert du terme vers l'expression
+reduction r7
+   creation du noeud pour la valeur 2
+reduction r6
+   transfert du facteur vers le terme
+reduction r3
+   transfert du terme vers l'expression
+reduction r8
+   creation du noeud pour l'ident nr 1, de nom : ra
+reduction r6
+   transfert du facteur vers le terme
+reduction r2
+   creation noeud de soustraction
+reduction r9
+   transfert l'arbre expression sur facteur, sans parentheses
+reduction r6
+   transfert du facteur vers le terme
+reduction r7
+   creation du noeud pour la valeur 56
+reduction r4
+   creation noeud de multiplication
+reduction r1
+   creation noeud d'addition
+reduction r9
+   transfert l'arbre expression sur facteur, sans parentheses
+reduction r6
+   transfert du facteur vers le terme
+reduction r8
+   creation du noeud pour l'ident nr 2, de nom : A
+reduction r6
+   transfert du facteur vers le terme
+reduction r7
+   creation du noeud pour la valeur 2
+reduction r4
+   creation noeud de multiplication
+reduction r3
+   transfert du terme vers l'expression
+reduction r8
+   creation du noeud pour l'ident nr 3, de nom : B
+reduction r6
+   transfert du facteur vers le terme
+reduction r1
+   creation noeud d'addition
+reduction r9
+   transfert l'arbre expression sur facteur, sans parentheses
+reduction r4
+   creation noeud de multiplication
+reduction r3
+   transfert du terme vers l'expression
+reduction r7
+   creation du noeud pour la valeur 254
+reduction r6
+   transfert du facteur vers le terme
+reduction r8
+   creation du noeud pour l'ident nr 3, de nom : B
+reduction r4
+   creation noeud de multiplication
+reduction r2
+   creation noeud de soustraction

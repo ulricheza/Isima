@@ -1,0 +1,12 @@
+ FICHIER CONTENANT LES LEXEMES LUS APRES L'ANALYSE LEXICALE
+               resultat du compilateur partie lexicale
+------------------------------------------------------------
+AL ident  : 0 x
+entier lu 5
+AL ident  : 0 x
+Symbole lu : + 
+entier lu 3
+Symbole lu : + 
+entier lu 25
+Symbole lu : / 
+entier lu 9

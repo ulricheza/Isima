@@ -1,0 +1,23 @@
+Maxime ESCOURBIAC
+/*Compte rendu TP2 */
+
+Question 1:
+-Cela lance le serveur graphique
+- la clause once sert lorsqu'on tue un processus à le redemarrer
+en changeant la clause en respawn le processus ne redemarrera pas l'avoir tue
+
+Question 2:
+
+/usr/sbin/sendmail -> lien vers /etc/alternatives/mta
+/etc/init.d/sendmail -> script d'arret et de demarrage
+/etc/rc3.d/S80Sendmail -> lien vers /etc/init.d/sendmail
+/etc/rc5.d/S80Sendmail -> lien vers /etc/init.d/sendmail
+
+Question 3:
+Il a fallu installer xinetd : yum install xinetd
+/etc/init.d/xinetd start -> demarre le daemon
+/etc/init.d/xinetd stop  -> arrete le daemon
+
+Question 4:
+Voir script fourni
+

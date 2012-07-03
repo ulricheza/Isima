@@ -1,0 +1,55 @@
+
+SQL*Loader: Release 11.1.0.6.0 - Production on Ven. Janv. 14 11:04:37 2011
+
+Copyright (c) 1982, 2007, Oracle.  All rights reserved.
+
+Fichier de contrôle :   loader1.sql
+Fichier de données :      loader1.sql
+  Fichier BAD :     loader1.bad
+  Fichier DISCARD :  aucune spécification
+
+ (Allouer tous les rebuts)
+
+Nombre à charger : ALL
+Nombre à sauter: 0
+Erreurs permises: 50
+Tableau de liens :     64 lignes, maximum de 256000 octets
+Continuation :    aucune spécification
+Chemin utilisé:      Classique
+
+Table AUTEURS, chargé à partir de chaque enregistrement physique.
+Option d'insertion en vigueur pour cette table : INSERT
+
+   Nom de colonne               Position   Long.  Séparat. Encadrem. Type de données
+------------------------------ ---------- ----- ---- ---- ---------------------
+NUM                                 FIRST     *   ,       CHARACTER            
+NOM                                  NEXT     *   ,       CHARACTER            
+    NULL (non renseigné) si NOM = 0X6e756c6c(caractère 'null')
+PRENOM                               NEXT     *   ,       CHARACTER            
+    NULL (non renseigné) si PRENOM = 0X6e756c6c(caractère 'null')
+PAYS                                 NEXT     *   ,       CHARACTER            
+    NULL (non renseigné) si PAYS = 0X6e756c6c(caractère 'null')
+TEL                                  NEXT     *   ,       CHARACTER            
+    NULL (non renseigné) si TEL = 0X6e756c6c(caractère 'null')
+
+
+Table AUTEURS :
+  Chargement réussi de 4 Lignes.
+  0 Lignes chargement impossible dû à des erreurs de données.
+  0 Lignes chargement impossible car échec de toutes les clauses WHEN.
+  0 Lignes chargement impossible car tous les champs étaient non renseignés.
+
+
+Espace affecté au tableau de liens :                  82560 octets(64 lignes)
+Octets de tampon de lecture : 1048576
+
+Nombre total d'enregistrements logiques ignorés :          0
+Nombre total d'enregistrements logiques lus :             4
+Nombre total d'enregistrements logiques rejetés :         0
+Nombre total d'enregistrements logiques mis au rebut :        0
+
+Le début de l'exécution a été effectué sur Ven. Janv. 14 11:04:37 2011
+La fin de l'exécution a été effectuée sur Ven. Janv. 14 11:04:39 2011
+
+Temps écoulé (ELAPSED) :     00:00:02.60
+Temps processeur (CPU) :    00:00:00.03

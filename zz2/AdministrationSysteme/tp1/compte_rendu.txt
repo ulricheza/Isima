@@ -1,0 +1,35 @@
+Maxime ESCOURBIAC
+
+/* Compte rendu du tp1*/
+
+/*fichier /etc/group */
+comptabilite:x:2000:rastignac,dupont,durant,gargniotte
+informatique:x:2001:goriot,rastignac
+commercial:x:2002:gagalow,pourcent,moreau,rastignac
+director:x:2003:rastignac
+
+/*fichier /etc/passwd */
+dupont:x:1001:100:Jean Dupont:/home/dupont:/bin/bash
+durant:x:1002:100:Phillipe Durant:/home/durant:/bin/bash
+gargniotte:x:1003:100:Isabelle Gargniotte:/home/gargniotte:/bin/bash
+goriot:x:1004:100:Laurent Goriot:/home/goriot:/bin/bash
+gagalow:x:1005:100:Nicole Gagalowisting:/home/gagalow:/bin/bash
+pourcent:x:1006:100:Vincent Pourcent:/home/pourcent:/bin/bash
+moreau:x:1007:100:Ginette Moreau:/home/moreau:/bin/bash
+rastignac:x:1000:100:Paul Rastignac:/home/rastignac:/bin/bash
+
+/*utilisation de ls -la sur home*/
+
+drwxrwxr-x  2 root       commercial   4096 Jan  4 16:13 commercial
+drwxrwxr-x  2 root       comptabilite 4096 Jan  4 16:12 comptabilite
+drwxr-x---  3 dupont     director     4096 Jan  4 15:56 dupont
+drwxr-x---  3 durant     director     4096 Jan  4 15:57 durant
+drwxr-x---  3 gagalow    director     4096 Jan  4 15:59 gagalow
+drwxr-x---  3 gargniotte director     4096 Jan  4 15:58 gargniotte
+drwxr-x---  3 goriot     director     4096 Jan  4 16:04 goriot
+drwxrwxr-x  2 root       informatique 4096 Jan  4 16:12 informatique
+drwxr-x---  3 moreau     director     4096 Jan  4 16:00 moreau
+drwxr-x---  3 pourcent   director     4096 Jan  4 15:59 pourcent
+drwx------  3 rastignac  director     4096 Jan  4 16:07 rastignac
+
+

@@ -1,0 +1,7 @@
+ (let a = 5 + 7 in
+    (let b = a*3 + 255 in
+       (let c = a * (b + 354) in
+           (a - b + c * d)
+       )
+    )
+)

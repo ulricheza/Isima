@@ -1,0 +1,72 @@
+	Analyse lexico-syntaxique d'expression, abrbre abstrait et evaluation
+	
+	
+	1- Analyse de l'existant
+	
+	observer les fichiers suivants :
+	- analex.l
+	- anasyn.y
+	- Expr*
+	- VisitorAffiche
+	
+	Faire make clean pui make
+	
+	executer expr sur e1.expr dans le repertoire tests.
+	
+	Faire une expression de la forme a + b + c + d + e + f
+	
+	observer l'arbre obtenu. Qu'en conclure vis a vis de la priorite
+	a droite ou a gauche des operateurs ? Pourquoi est-ce ainsi ?
+	
+	2- Ajout de l'expression "let ident := E in E"
+	il faut modifier les fichiers de la manire suivante 
+	 - analex.l : ajouter le lexeme ":=" et retourner le token AFFECT
+	 - ExprDeriv.hpp : ajouter la classe derivee pour le noeud correspondant
+	 - ExrpDeriv.cpp : ...
+	 - VisitorExpr.hpp : ajouter la methode pour la nouvelle classe
+	 - VisitorAffiche.hpp et cpp : implementer la methode
+	 - anasyn.y : definir le token AFFECT qui manque et ajouter l'action qui creer le noeud
+	    pour l'expression "let ...";
+	
+	Faire macke clean puis make.
+	
+	Que constate-t-on a lexecution de bison (yacc) ? Que signifie le probleme et a quoi est-il du ?
+	
+	Pour le resoudre je propose de faire le let de la maniere suivante :
+	   "let IDENT := E in E tel" en rajoutant un mot-cle qui ferme le let.
+	   Faire la modif et constater qu'il n'y a plus de pb.
+	   
+
+  3 Ajout d'instructions
+  
+   on rajoute des listes d'instructions LI, constituees d'au moins une
+   instruction I qui  est  l'affectation "IDENT := E;" ou l'instruction "WRITE(IDENT);"
+   qui imprime l'identificateur et sa valeur à l'ecran.
+   
+   
+   
+   Dans le fichier anasyn.y ajouter les regles pour cela
+    et modifier la derivation de l'axiome qui
+   doit deriver vers des listes d'instructions.
+   
+   Pour interpreter les sequences d'instruction, on va proceder de la maniere 
+   suivante dans un premier temps:
+   -  supprimer l'affichage de l'arbre dans le main.c
+   - recopier le visiteur d'affichage vers un visiteur VisitorEval caracterise par
+      - un atribut v qui contient la valeur calculee;
+	  - pour les methodes d'expression binaire, deux variable locales, v0 et v1 
+	    pour memoriser la valeur des deux sous-expressions avant le calcul;
+	  - pour le noeud "let i := e0 in e1", on recupere la valeur de e0 que l'on
+	    ajoute a l'environnement (fichiers Def.h et Def.cpp) avec PushDef(...). Puis
+		on calcule e1 qui donne la valeur resultante. Finalement on depile la valeur
+		de i en faisant un PopDef(...)
+   -  Dans le fichier anasyn.y
+      - on instancie un Visiteur d'evaluation des expression (ne pas oublier les include)
+	  - on ne modofie rien pour les expressions.
+	  - pour les instructions :
+	     - i := e; : on appelle le visiteur sur l'arbre de E. On recupere la valeur
+		   (Visiteur->_v) et on la place dans l'environnement pour i avec la fonction 
+		   ChangeDef(...)
+		 - READ(i) : on lit la valeur au clavier et on la range pour i avec ChangeDef(..).
+		   Il est nécessaire de déclarer une variable pour recuperer la valeur.
+		 - on imprime directement le nom de la variable et sa valeur.

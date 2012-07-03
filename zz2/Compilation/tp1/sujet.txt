@@ -1,0 +1,22 @@
+  langage de programmation : ajout de lexemes pour l'instruction iteration for.
+
+en anglais :.
+for ident := expr to expr loop instr
+
+ou
+
+en francais :
+pour ident := expr a expr iterer instr
+
+Faire make clean pui make.
+Tester le programme fbll sur l'exemple dans le repepertoire tests et constater
+que les symbole pour, a et iterer sont vus comme des identificateurs.
+
+Dans les fichiers synfr.h et syngb.h, ajouter les entrees dans la table
+avec les constantes FOR, TO et LOOP qui doivent etre definies dans le fichier
+y.tab.h avec des nouvelles valeurs.
+
+Il n'y a rien a modifier dans le fichier analex.l.
+
+Faire make clean et make. Tester à nouveau sur l'exemple et observer les chagements.
+

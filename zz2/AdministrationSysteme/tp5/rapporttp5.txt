@@ -1,0 +1,49 @@
+/*------------------------------------------------*/
+/* Compte rendu du tp5 d'administration systeme   */
+/* Installation de logiciels sur cent OS (Red Hat)*/
+/*------------------------------------------------*/
+
+/* Installation de xview-client */
+
+[root@localhost Desktop]# rpm -i xview-clients-3.2p1.4-6.i386.rpm 
+error: Failed dependencies:
+        libXpm.so.4 is needed by xview-clients-3.2p1.4-6.i386
+        libolgx.so.3 is needed by xview-clients-3.2p1.4-6.i386
+        libxview.so.3 is needed by xview-clients-3.2p1.4-6.i386
+
+[root@localhost Desktop]# rpm -i xview-3.2p1.4-6.i386.rpm 
+[root@localhost Desktop]# rpm -i xview-clients-3.2p1.4-6.i386.rpm 
+error: Failed dependencies:
+        libXpm.so.4 is needed by xview-clients-3.2p1.4-6.i386
+
+[root@localhost Desktop]# yum install libXpm
+
+[root@localhost Desktop]# rpm -i xview-clients-3.2p1.4-6.i386.rpm 
+
+/*installation succed */
+
+/* Installation de AcrobatReader                           */
+dezip de l'archive
+cd AdobeReader/
+./INSTALL
+
+/* Installation de xv3.10a.tgz */
+dezip de l'archive
+observation des erreurs obtenues
+modification du makefile en fonction de la configuration du poste
+installation des librairies manquantes
+
+[root@localhost ~]# yum install libX11-devel
+[root@localhost ~]# yum install libpng-devel
+[root@localhost ~]# yum install libjpeg-devel
+[root@localhost ~]# yum install libtiff-devel
+[root@localhost ~]# yum install ImageMagick-devel
+
+
+/*installation de xcdess.tgzl */
+yum install gtk2-devel
+./configure
+make
+make install
+
+
