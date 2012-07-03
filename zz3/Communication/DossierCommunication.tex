@@ -1,0 +1,137 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[frenchb]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage {amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{soul}
+\usepackage{algorithm,algorithmic}
+\usepackage{listings}
+\usepackage[top=2.5cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+
+\renewcommand{\thepage}{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page de garde
+\begin{figure}
+   \includegraphics[scale = 0.75]{HeaderPagedeGarde.PNG}
+\end{figure}
+
+
+
+
+\author{Maxime Escourbiac \\ Responsable CEA : Penh Lamuth \\ Responsable ISIMA : Loïc Yon}
+\title{
+  Dossier de communication \\ Stage de 2ème année \\ Génie logiciel et Systèmes Informatiques \\
+  \bigskip
+   \large{
+      Développement de logiciels de simulations numériques d'explosions et d'incendies servant dans les installations nucléaires.
+   }
+}
+\date{16 décembre 2011}
+\maketitle
+
+\newpage
+
+\tableofcontents
+\newpage
+
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+
+\begin{flushleft}
+\LARGE{ \underline{Introduction}\bigskip}
+\end{flushleft}
+
+\normalsize{
+Durant ma deuxième année à l'Institut Supérieur d'Informatique de Modélisation et de leurs Applications, j'ai effectué mon stage au Commissariat à l'Énergie Atomique et aux énergies alternatives. Le CEA est actuellement implanté sur dix centres répartis dans toute la France. Il emploie 15700 personnes avec un budget annuel de 3.9 milliards d'euros. J'ai été affecté à la Direction de la Protection et de la Sûreté Nucléaire (DPSN) qui est situé dans la région parisienne, à Fontenay-aux-Roses (92). Le but de ce service est de conseiller et assister les unités concernées dans l'application de la politique de sûreté nucléaire au CEA.\\
+
+La sécurité dans le domaine du nucléaire est une notion qui était déjà très importante depuis le début, elle a été amplifié suite aux derniers événements de mars dernier à Fukushima. C'est pour cela que le CEA a développé des simulations d'accidents. C'est sur un de ces projets que j'ai apporté ma contribution.\\
+
+ Le logiciel CDI est un outil d'aide à la décision qui doit permettre aux exploitants d'INB (Installation Nucléaire de Base) de vérifier que leurs installations sont compatibles avec les exigences réglementaires demandées par l'Autorité de Sûreté Nucléaire. Le logiciel permet d'évaluer réalistement, les valeurs essentielles d'un incendie comme la température des gaz aux différents endroits du local (murs, plafond, plancher et équipements installés), la pression des gaz et la durée du feu. Il permet également de vérifier les dimensionnements d'un pièce face au risque incendie grâce aux calculs de températures et de tenues des structures métalliques et béton ou encore de vérifier l'efficacité de certaines méthodes d'extinction du feu comme l'inertage. Le logiciel CDI rentre dans le cadre de la sûreté, c'est pour cela que les résultats utilisent des marges de sécurité qui proviennent notamment de la pratique d'ingénierie et de la simplification des modèles relatifs à la physique du feu. Ces simplifications permettent au logiciel d'être facile d'utilisation et d'obtenir des résultats avec un temps de calcul très réduit (quelques secondes) ce qui le différencie des autres logiciels de simulation tels que FDS (Fire Dynamics Simulator) du NIST (National Institute of Standards and Technology). Compte tenu de tout cela, il est envisagé d'utiliser CDI en situation réelle de crise.
+}
+
+\newpage
+
+\section{Intégration à l'équipe et début de stage}
+
+\normalsize{
+Lors de notre arrivée au centre CEA de Fontenay-aux-Roses (92) avec deux camarades (Jean-Christophe Septier et Rémi Dubujet), monsieur {\bf Penh Lamuth} nous a présenté au reste de l'équipe notamment au reste des personnes du service. J'ai pu distinguer toutes sortes de comportements lors de mes premiers échanges avec les différents membres. Des personnes agacées de perdre leur avec des présentations qui leur ont semblé inutiles, aux personnes contentes de l'arrivée de nouveaux développeurs. En effet, la DPSN est un service fonctionnel, c'est à dire que la majorité des employés font des tâches de gestion et d'administration, seulement trois personnes font de la recherche. Notre équipe était constitué de mes camarades de l'ISIMA et d'une physicienne stagiaire venant de l'université de Marseille. Un étudiant des l'école des ponts et chaussées nous à rejoint fin avril pour apporter ses connaissances dans le domaine de la mécanique.\\
+
+Les premiers jours de stage ont consisté à la présentation des objectifs à réaliser et des travaux effectués par les anciens stagiaires issus de l'ISIMA. Contrairement à mes camarades, je n'ai pas eu de difficultés administratives ce qui m'a permis de devenir opérationnel très rapidement et de me concentrer sur la grande masse d'informations à analyser et à synthétiser.\\
+}
+
+\section{Communication dans le service}
+
+\normalsize{
+Avec un statut de stagiaire, l'intégration dans un service est encore plus difficile car tous le monde savent que notre présence est ponctuelle, donc la plupart des personnes prefere ignorer notre présence.
+L'observation des règles de communication dans le service a été une phase très instructive. En effet, cerner les personnalités des membres du service m'a permis d'éviter certaines situations qui aurait pu tourner en ma défaveur.
+}
+
+\subsection{Le bonjour/Au revoir}
+
+\normalsize{
+Cet élément est très important pour nouer le contact et ainsi permettre de fluidifier les collaborations. La politique observé est que les personnes saluaient leurs proches collaborateurs et leurs supérieurs. Les autres bénéficiaient d'un bonjour oral dans le couloir. Cette mécanique peut être modifié au fil du temps et au fil des affinités mais comme dans l'ensemble les tâches des membres du service sont assez indépendantes, cela ne favorise pas la communication entre les personnes. Le but que je m'étais fixé en tant que stagiaire ne cherchant pas absolument à me faire remarquer pour une embauche était de m'insérer tout simplement dans le système.
+}
+
+\subsection{La machine à café}
+\normalsize{
+Dès le premier jour, mon tuteur de stage m'avait prévenu, la machine à café d'une entreprise est un lieu important pour la vie d'une équipe. Elle permet de prendre contact avec les gens, de créer des affinités ou tout simplement demander des conseils. Mais rester longtemps devant peut donner une mauvaise image aux supérieurs hiérarchiques sur la quantité de travail fourni. Scénario qui s'est produit avec la stagiaire en physique, en l'apprenant cela la démotivé et créa une spirale infernale dont elle ne s'est pas sortie.
+}
+
+\section{Les rapports hiérarchiques}
+
+\subsection{La relation avec les supérieurs}
+
+\normalsize{
+Dans ce stage, je considérai comme supérieur hiérarchiques le chef et le sous-chef de service. En effet, avec mon tuteur nous avons eu plus une relation de coopération que d'une classique relation responsable/stagiaire. \\
+
+Le premier obstacle que j'ai eu avec le sous-chef du service est le fait que c'est une personne qui n'a pas suivi de formation technique donc il a été très difficile de d'adapter le discours pour, par exemple, effectuer un rapport sur notre avancé dans le projet. Le second a été son attitude très désintéressé sur le sujet. Cela s'est remarqué lors de ma présentation de mi-stage où il n'a  pas été attentif. Cela a été la première fois que je présentais mes travaux devant personne d'intéressé. Cela a été sans doute le moment le plus difficile de mon stage. Je n'ai pas essayé d'enter en contact avec cette personne pour tenter de connaître les raisons de ce désintérêt. Mon tuteur m'a dit qu'il agissait comme ça avec la plupart des personnes du service. \\
+ 
+Le chef du service, monsieur {\bf Maurice HAESSLER} quant à lui, a tenu un suivi régulier de notre avancée. Son attitude en réunion a été, par contre très originale, il paraissait dormir tout le long de la présentation mais arrivait à intervenir sur un point technique précis dès qu'il trouvait un point qui nécessitait des éclaircissements. Cela a été très déconcertant mais très gratifiant par rapport au travail que nous avons fourni. 
+}
+
+\subsection{La relation avec le personnel administratif}
+
+\normalsize{
+Le service dans lequel j'ai travaillé possède deux secrétaires, ma relation avec l'une d'entre elle est passé de difficile à impossible à vivre. J'ai attribué la raison de ce conflit au fait que j'ai eu l'occasion d'obtenir une mission pour aller au centre de traitement de déchets à La Hague. Occasion que n'a pas eu la stagiaire provenant de Marseille qui travaillait avec moi sur le projet. Pratiquement quatre mois après la fin de mon stage, je n'ai toujours pas sur de la raison qui a provoqué ce conflit. L'un des inconvénient de s'être fâché avec une secrétaire a été la ralentissement systématique des démarches administratives que j'ai pu entreprendre, ce qui n'a pas amélioré la situation. 
+}
+
+\subsection{La relation avec mon tuteur de stage}
+
+\normalsize{
+Mon tuteur, {\bf Penh Lamuth}, a été une personne formidable qui m'a montré les différentes ficelles de l'entreprise. Etant chercheur en physique, on a su être complémentaire pour mener à bout notre projet. Notre méthode de travail était simple, on faisait de la correction mutuelle. De mon côté, je vérifiais le modèle qu'il me proposait si je ne trouvais pas d'erreur je commencer à le coder. Par la suite je lui fournissais les résultats pour qu'il puisse les comparer à la théorie. En cas de non-conformité, je devais corriger. On repetait ce chemin jusqu'à la validation des résultats. \\
+Dans ce moteur bien huilé, il y a eu quelques grain de sable, comme des problèmes de compréhension mutuelle dû à notre différence de formation. Mais rien qui a pu empecher notre collaboration. \\
+Monsieur {\bf Lamuth} m'a permis de collaborer avec {\bf Areva}. Cette confiance qu'il a pu m'accorder à été un élement moteur de mon stage, me poussant à m'investir encore plus dans mon travail.\\
+Pour finir avec les relations de travail avec mon tuteur, on garde toujours contact et il m'a renouvellé sa confiance en me proposant un projet avec le job-service de l'ISIMA. Ce fut, sans aucun doute, l'expérience humaine la plus enrichissante que j'ai eu durant ce stage.\\
+}
+
+\section{Le travail d'équipe}
+
+\subsection{L'équipe de développement}
+
+\normalsize{
+Avec Jean-Christophe Septier(ISIMA), Rémi Dubujet(ISIMA), et Romain Fargue(Ponts et chaussées), nous formions une petite équipe de développeurs affectés sur des projets différents. Etant habitué de travailler avec Jean-Christophe qui était et est toujours mon binôme à l'ISIMA, l'ambiance et l'entraide était très intéressante. Par contre, je connaissais très peu Rémi avant ce stage, il possède un caractère très différent du mien, malgré tout on a appris à ce connaître et à travailler emsemble. Le dernier membre, Romain Fargue qui ne vient pas d'une formation d'ingénieur informatique classique est un cas particulier. En effet, il a fallu qu'on le forme à certaines techniques qu'il n'avait pas appris à son école. Ce travail de formation, m'a permis de prendre du recul sur ce qu'est le travail en équipe. Avec les projets ISIMA, nous sommes habitués de travailler avec des personnes de compétences équivalentes. De son côté, Romain qui grâce à ses compétences en physique/chimie, nous a permis de franchir des obstacles que l'on aurait eu du mal à les contourner seul.
+}
+
+\subsection{La stagiaire de Marseille}
+
+\normalsize{
+La collaboration avec Emilie Harbepin, a sans doute été la plus mauvaise que j'ai pu avoir pendant ce stage. Elle devait dans un premier temps, aider monsieur Lamuth a élaboré les modèles de simulation, et par la suite faire des tests sur le logiciel que je développais. J'avais besoin de retour pour avancer dans mon stage. J'avais toujours les résultats des tests deux ou trois jours après la date limite. J'aurais toléré ces retards de rendu si elle n'arrivait pas une ou deux heure en retard tous les jours et si elle ne partais pas en avance. J'ai eu un cas de conscience par rapport à ça. Soit je lui disais personellement afin de pas ébruiter le problème et du coup ne pas compromettre sa réussite du stage ou de faire remonter le problème à mon tuteur. J'ai choisi la première solution et j'ai décidé par la suite d'intégrer les tests à mon plan de développement. 
+}
+
+\newpage
+
+\section{Conclusion}
+
+\normalsize{
+Pour conclure, j'ai pu voir dans le domaine de la communication dans le service du bon et du moins bon. Je suis conscient d'avoir fait des erreurs comme dans la gestion du cas de la stagiaire de Marseille. Mais l'hetérogeinité des méthodes de communication qu'il y a eu dans le service a été une bonne expérience que j'ai pu directement mettre en oeuvre pour mon alternance à Michelin. La confiance que m'a accordé monsieur Lamuth ainsi que sa gestion du stage m'a permis de progresser tant sur le plan technique que professionnel. La liaison difficile entre le sous-chef du service et une secretaire semble anecdotique à côté.
+}
+
+\end{document}
