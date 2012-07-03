@@ -1,0 +1,49 @@
+
+#!/bin/sh
+
+CE_ATLAS=`lcg-infosites --vo atlas ce|wc -l`
+CE_LHCB=`lcg-infosites --vo lhcb ce|wc -l`
+CE_ALICE=`lcg-infosites --vo alice ce|wc -l`
+
+printf "%-15s|%15s\n" "VO" "#CEs"
+
+
+if [ "$CE_ATLAS" -le "$CE_LHCB" ];
+then
+        if [ "$CE_ATLAS" -le "$CE_ALICE" ];
+        then
+                printf "%-15s|%15s\n" "atlas" $CE_ATLAS
+                printf "%-15s|%15s\n" "alice" $CE_ALICE
+        else
+                printf "%-15s|%15s\n" "alice" $CE_ALICE
+                printf "%-15s|%15s\n" "atlas" $CE_ATLAS
+        fi
+        printf "%-15s|%15s\n" "lhcb" $CE_LHCB
+else
+        if [ "$CE_LHCB" -le "$CE_ALICE" ];
+        then
+                printf "%-15s|%15s\n" "lhcb" $CE_LHCB
+                printf "%-15s|%15s\n" "alice" $CE_ALICE
+        else
+                printf "%-15s|%15s\n" "alice" $CE_ALICE
+                printf "%-15s|%15s\n" "lhcb" $CE_LHCB
+        fi
+        printf "%-15s|%15s\n" "atlas" $CE_ATLAS
+fi
+
+___________________________________________________________________
+
+#!/bin/sh
+E_CE=`lcg-infosites --vo $1 ce|grep /|cut -d'   ' -f1,2`
+printf "%-15s|%25s\n" "#CPU_CE" "#CPUs_free_n_reachable"
+j=0;
+for i in $E_CE
+do
+        if [ "$(($j%2))" -eq "0" ];
+        then
+                printf "%-15s|" "$i"
+        else
+                printf "%25s\n" "$i"
+        fi
+        j=`expr $j + 1`
+done

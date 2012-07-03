@@ -1,0 +1,18 @@
+#!/bin/sh
+CE=`lcg-infosites --vo $1 ce|grep /|cut -d'   ' -f1,2`
+printf "%-15s|%25s\n" "#CPU_CE" "#CPUs_free_n_reachable"
+j=0;
+for i in $CE
+do
+        if [ "$(($j%2))" -eq "0" ];
+        then
+                printf "%-15s|" "$i"
+        else
+                printf "%25s\n" "$i"
+        fi
+        j=`expr $j + 1`
+done
+___________________________________________________________
+lcg-info --list-attrs
+
+CLOSECE = lcg-infosites --vo BIOMED --closeCE

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+ <!-- ************************************************************* -->
+    <!-- *** Project Information ************************************* -->
+    <!-- ************************************************************* -->
+
+    <groupId>fr.isima</groupId>
+    <artifactId>pov-ray-grid</artifactId>
+    <version>0.1</version>
+   
+    <name>PovRay-grid</name>
+    
+     <!-- ************************************************************* -->
+    <!-- *** POM Relationships *************************************** -->
+    <!-- ************************************************************* -->
+
+
+    <dependencies>
+        <dependency>
+            <groupId>fr.in2p3.jsaga</groupId>
+            <artifactId>jsaga-engine</artifactId>
+            <version>${lib.fr.in2p3.jsaga.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.in2p3.jsaga.adaptor</groupId>
+            <artifactId>jsaga-adaptor-classic</artifactId>
+            <version>${lib.fr.in2p3.jsaga.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.in2p3.jsaga.adaptor</groupId>
+            <artifactId>jsaga-adaptor-voms</artifactId>
+            <version>${lib.fr.in2p3.jsaga.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.in2p3.jsaga.adaptor</groupId>
+            <artifactId>jsaga-adaptor-globus</artifactId>
+            <version>${lib.fr.in2p3.jsaga.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.in2p3.jsaga.adaptor</groupId>
+            <artifactId>jsaga-adaptor-srm</artifactId>
+            <version>${lib.fr.in2p3.jsaga.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.in2p3.jsaga.adaptor</groupId>
+            <artifactId>jsaga-adaptor-wms</artifactId>
+            <version>${lib.fr.in2p3.jsaga.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.in2p3.jsaga.adaptor</groupId>
+            <artifactId>jsaga-adaptor-cream</artifactId>
+            <version>${lib.fr.in2p3.jsaga.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.in2p3.jsaga.adaptor</groupId>
+            <artifactId>jsaga-adaptor-ssh</artifactId>
+            <version>${lib.fr.in2p3.jsaga.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.in2p3.jsaga.adaptor</groupId>
+            <artifactId>jsaga-adaptor-batchssh</artifactId>
+            <version>${lib.fr.in2p3.jsaga.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.in2p3.jsaga.adaptor</groupId>
+            <artifactId>jsaga-adaptor-lfc</artifactId>
+            <version>${lib.fr.in2p3.jsaga.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ogf.saga</groupId>
+            <artifactId>saga-api</artifactId>
+            <version>${lib.org.ogf.saga.version}</version>
+        </dependency>
+    </dependencies>
+
+
+    <!-- ************************************************************* -->
+    <!-- *** Build Settings ****************************************** -->
+    <!-- ************************************************************* -->
+
+    <packaging>jar</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <lib.fr.in2p3.jsaga.version>0.9.14</lib.fr.in2p3.jsaga.version>
+        <lib.org.ogf.saga.version>1.1.1</lib.org.ogf.saga.version>
+        
+    </properties>
+
+    <build>
+
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2-beta-5</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+		
+                    <archive>
+                        <manifest>
+                            <mainClass>fr.isima.grille.Program</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>fr.isima.grille.Job2</mainClass>
+                                </transformer>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                    <resource>META-INF/adaptor.properties</resource>
+                                </transformer>
+                            </transformers>
+
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+				
+                            <artifactSet>
+                                <excludes>
+                                    <exclude>org.bouncycastle:bcpg-jdk14</exclude>
+								<!--
+								<exclude>xml-apis:xml-apis</exclude>
+								<exclude>org.glite:glite-ce-delegation</exclude> 
+								-->
+                                </excludes>
+                            </artifactSet>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        
+        <extensions>
+               <!-- Enable the use of SSH -->
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>1.0-beta-6</version>
+            </extension>
+        </extensions>
+
+        
+    </build>
+
+
+
+    <!-- ************************************************************* -->
+    <!-- *** Build Environment  ************************************** -->
+    <!-- ************************************************************* -->
+
+
+    <repositories>
+        
+        <!-- JSaga repository -->
+        <repository>
+            <id>SE-IN2P3</id>
+            <url>http://grid.in2p3.fr/maven2</url>
+        </repository>
+    </repositories>
+    
+
+
+    <!-- ************************************************************* -->
+    <!-- *** Deployment  ********************************************* -->
+    <!-- ************************************************************* -->
+    
+    <distributionManagement>
+        <repository>
+            <id> UIid </id>
+            <url> scp://zz05@193.55.252.161/home/zz3/zz05/deployed </url>
+        </repository>
+    </distributionManagement>
+
+</project>
+

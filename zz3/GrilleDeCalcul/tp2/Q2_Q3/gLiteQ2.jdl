@@ -1,0 +1,6 @@
+Executable = "soumissionBasiqueJobs.sh";
+StdOutput = "stdout.log";
+StdError = "stderr.log";
+InputSandbox = {"soumissionBasiqueJobs.sh"};
+OutputSandbox = {"stdout.log","stderr.log"};
+

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="51">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>cartesien.h</itemPath>
+      <itemPath>nuage.h</itemPath>
+      <itemPath>point.h</itemPath>
+      <itemPath>polaire.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>cartesien.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+      <itemPath>nuage.cpp</itemPath>
+      <itemPath>point.cpp</itemPath>
+      <itemPath>polaire.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="cartesien.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="cartesien.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="main.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="nuage.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="nuage.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="point.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="point.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="polaire.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="polaire.h">
+        <itemTool>3</itemTool>
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <compileType>
+        <cCompilerTool>
+          <developmentMode>5</developmentMode>
+        </cCompilerTool>
+        <ccCompilerTool>
+          <developmentMode>5</developmentMode>
+        </ccCompilerTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="cartesien.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="cartesien.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="main.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="nuage.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="nuage.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="point.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="point.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="polaire.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="polaire.h">
+        <itemTool>3</itemTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
