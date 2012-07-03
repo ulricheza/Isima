@@ -1,0 +1,146 @@
+<project default="run" basedir=".">
+	<!--
+	init :
+		<property> 
+	clean :
+	 	<delete>
+	compile :
+		<mkdir> du dossier des classes
+		<javac> avec en param le dossier des sources, le dossier destination et la version du compilo	
+	jar :
+		<mkdir> du dossier jar
+		<jar> avec en param le nom de la jar, le dossier cible et un <manifest> contenant la classes qui contient le main
+	run :
+		<java> avec le nom de la jar à executer et l'option fork=true pour que l'appli s'execute dans une nouvelle JVM 
+	
+	 -->
+    <property name="src.dir"     value="src"/>
+    <property name="build.dir"   value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="jar.dir"     value="${build.dir}/jar/"/>
+	<property name="model.dir" value="../axeModel/"/>
+	<property name="test.dir" location="../axeTest/" />
+    <property name="main-class"  value="com.isima.axe.main.Main"/>
+	<property name="nameJar"  value="librairie.jar"/>
+	<property name="versionJava"  value="1.4"/>
+	<property name="coveragereport.dir"  value="report"/>
+	<property name="reports.xml.dir" value="report/xml"/>
+	<property name="instrumented.dir" value="lib/"/>
+    <property name="cobertura.dir" value="/home/etud/millau/java/cobertura-1.9.4.1" />
+	<property name="cobertura.ser" value="${coveragereport.dir}/cobertura.ser" />
+	<property name="build.instrumented" location="build-instrumented" />
+
+	<!-- récupertion des lib de cobertura -->
+    <path id="cobertura.lib">
+          <fileset dir="${cobertura.dir}">
+                <include name="cobertura.jar" />
+                <include name="lib/**/*.jar" />
+          </fileset>
+    </path>
+	<!-- definition de la taskdef --> 
+    <taskdef classpathref="cobertura.lib" resource="tasks.properties" />
+	
+	<!-- ajout de junit.jar -->
+    <path id="classpath.test">
+          <path refid="cobertura.lib" />
+          <pathelement location="lib/junit.jar" />
+    </path>
+	
+	<!-- clean target -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    	<delete dir="${coveragereport.dir}"/>
+    	<delete dir="${build.instrumented}"/>
+    </target>
+
+	<!-- compilation -->
+    <target name="compile">
+        <mkdir dir="${classes.dir}"/>
+        <javac  source="${versionJava}" destdir="${classes.dir}" debug="true">
+        	<src path="${src.dir}"></src>
+        	<src path="${model.dir}${src.dir}"></src>
+        	<src path="${test.dir}/${src.dir}"></src>
+        	<classpath>
+        		<path refid="classpath.test"/>
+        	</classpath>
+        </javac>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.dir}${nameJar}" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main-class}"/>
+            </manifest>
+        </jar>
+    </target>
+	
+    <target name="start">
+        <java jar="${jar.dir}${nameJar}" fork="true"/>
+    </target>
+	
+	<target name="junit">
+		<mkdir dir="${coveragereport.dir}"/>
+		<mkdir dir="${reports.xml.dir}"/>
+		<echo message="--  Execution des tests unitaires  --"></echo>
+		<junit fork="yes" dir="${basedir}" failureProperty="test.failed" haltonerror="true" haltonfailure="true" printsummary="on">
+
+			<sysproperty key="net.sourceforge.cobertura.datafile" file="${cobertura.ser}" />
+			<!--
+				Note the classpath order: instrumented classes are before the
+				original (uninstrumented) classes.  This is important.
+			-->
+			<classpath location="${build.instrumented}" />
+			<classpath location="${classes.dir}" />
+			<!--
+				The instrumented classes reference classes used by the
+				Cobertura runtime, so Cobertura and its dependencies
+				must be on your classpath.
+			-->
+			<classpath refid="classpath.test" />
+			<!-- sortie xml pour les tests unitaires -->
+			<formatter type="xml" />
+			<test name="${testcase}" todir="${reports.xml.dir}" if="testcase" />
+			<batchtest todir="${reports.xml.dir}" unless="testcase">
+				<fileset dir="${classes.dir}">
+					<include name="**/*Test.class" />
+				</fileset>
+			</batchtest>
+		</junit>
+	
+	</target>
+	
+	<!-- générer le fichier instrument ( cobertura.ser) -->
+	<target name="instrument">
+		<cobertura-instrument datafile="${cobertura.ser}" todir="${build.instrumented}">
+	          <ignore regex="org.apache.log4j.*" />
+	          <fileset dir="${build.dir}">
+	                <include name="**/*.class" />
+	          	 	<exclude name="**/*Test.class" />
+	          </fileset>
+	    </cobertura-instrument>
+	</target>
+		
+	<target name="report">
+		
+		<echo message="--  generation de la couverture de test  --"></echo>
+		<!-- generation du rapport covertura -->
+		
+		<cobertura-report format="html" datafile="${cobertura.ser}" destdir="${coveragereport.dir}" >
+		    <fileset dir="${src.dir}">
+		        <include name="**/*.java" />
+		    </fileset>
+		    <fileset dir="${model.dir}${src.dir}">
+		        <include name="**/*.java" />
+		    </fileset>
+		    <fileset dir="${test.dir}/${src.dir}">
+		        <include name="**/*.java" />
+		    </fileset>
+		</cobertura-report>
+	</target>
+
+	
+	<target name="run" depends="clean,compile,instrument,junit,report,jar,start"/>
+
+</project>
+

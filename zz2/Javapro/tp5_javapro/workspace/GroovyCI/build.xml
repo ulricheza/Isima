@@ -1,0 +1,87 @@
+<project name="GroovyCI" default="run">
+  
+  <property name="basedir"        value="/home/etud/escourbi/workspace/GroovyCI" />
+  <property name="build"          value="${basedir}/bin" />
+  <property name="buildtest"      value="${basedir}/bintest" />
+  <property name="src"            value="${basedir}/src" />
+  <property name="version"        value="1.6" />
+  <property name="release"        value="${basedir}/release" />
+  <property name="jar"            value="${release}/${ant.project.name}.jar" />
+  <property name="main-class"     value="groovyci.Program" />
+  <property name="junitlocation"  value="/home/etud/escourbi/tp5_javapro/eclipse/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/junit.jar" />
+  <property name="groovylocation" value="/home/etud/escourbi/tp5_javapro/groovy/embeddable/groovy-all-1.7.9.jar" />	
+  <property name="reports.xml.dir" value="${basedir}/reports"/>
+
+
+   <!-- ajout de junit.jar -->
+   <path id="classpath.test">
+      <pathelement location="${junitlocation}"/>
+   	  <pathelement location="${groovylocation}"/>      
+   	  <pathelement location="${build}"/>
+   	  <pathelement location="${buildtest}"/>
+   </path> 
+  
+  <target name="clean">
+    <echo>Cleaning...</echo>
+    <delete dir="${build}" />
+    <delete dir="${buildtest}" />
+    <delete dir="${release}" />
+  </target>
+  
+  <target name="compile" depends="clean">  
+    <echo>Compiling project...</echo>
+    <mkdir dir="${build}" />
+    <javac srcdir="${src}/groovyci" source="${version}" destdir="${build}">
+    	<classpath>
+    		<path refid="classpath.test"/>
+    	</classpath>
+    </javac>
+  	<mkdir dir="${buildtest}" />
+    <javac srcdir="${src}/unittest" source="${version}" destdir="${buildtest}">
+    	<classpath>
+    		<path refid="classpath.test"/>
+    	</classpath>
+    </javac>
+  </target>
+    	
+  <target name="junit" depends="compile">
+     <mkdir dir="${reports.xml.dir}"/>
+     <echo message="--  Execution des tests unitaires  --"></echo>
+     <junit fork="yes" dir="${basedir}" failureProperty="test.failed" haltonerror="true" haltonfailure="true" printsummary="on">
+     	<classpath>
+    		<path refid="classpath.test"/>
+        </classpath>
+    		  
+    	<formatter type="xml" />
+    	<batchtest todir="${reports.xml.dir}">
+     	   <fileset dir="${build}" includes="**/*Test.class"/>
+     	</batchtest>
+     </junit>
+  </target>
+    	    	
+  <target name="package" depends="junit">
+    <echo>Packaging...</echo>
+	<mkdir dir="${release}" />
+  	<mkdir dir="${release}/log"/>
+  	<copy todir="${release}/ressources" file="${basedir}/ressources/properties.txt"/> 
+    <jar destfile="${jar}" basedir="${build}" > 
+       <manifest>
+          <attribute name="Main-Class" value="${main-class}"/>
+       	  <attribute name="Class-Path" value="${groovylocation}"/>
+       	  
+       </manifest>
+    </jar>
+  </target>
+   
+ 					
+  <target name="run" depends="package">
+    <echo>Running...</echo>
+    <java jar="${jar}" dir="${release}" fork="true">
+    	<classpath>
+    		<path refid="classpath.test"/>
+    	</classpath>
+    	<arg line="${basedir}/ressources/factorielle10.groovy 10 ${basedir}/ressources/fibonnaci10.groovy 10 ${basedir}/ressources/padovan10.groovy 10"/>
+    </java>
+  </target>
+	
+</project>

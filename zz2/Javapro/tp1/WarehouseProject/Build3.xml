@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="tp1" default="anttask" basedir=".">
+	<property name="basedir" value="." />
+	<property name="build"   value="${basedir}/build" />
+	<property name="src"     value="${basedir}/src" />
+	<property name="version" value="1.4" />
+	<property name="release" value="${basedir}/dist" />
+	<property name="jar"     value="${release}/monpaquet.jar" />
+	<property name="main-class" value="fr.isima.tp.Tp1" />
+
+	
+	<taskdef name="myTask" classpath="${build}" classname="AntTask.MyTask" />
+		
+	<target name="anttask">
+    		<myTask 
+				src="${src}" 
+				dest="${build}"
+				jarFile="${jar}" 
+				mainClass="${main-class}"
+				vers="${version}"
+         	/>
+	</target>
+</project>

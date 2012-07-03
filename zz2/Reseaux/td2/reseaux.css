@@ -1,0 +1,36 @@
+    	BODY { background-color: white }
+
+		BLOCKQUOTE, LI, UL, OL, P, DL {font-family:sans-serif}
+		TD, TH, CAPTION {font-family:sans-serif}
+		PRE {font-family:monospace; }
+		TT {font-family:monospace; font-weight:bold}
+		.commande {color:fuchsia}
+		TT.commande {color:fuchsia; }
+
+		H1 {font-family:sans-serif; font-weight:bold; color:navy;
+			text-align:center}
+		H2 {font-family:sans-serif; font-weight:bold; text-decoration:underline; color:navy}
+		H3 {font-family:sans-serif; font-weight:bold; text-decoration:underline; color:navy}
+		H4 {font-family:sans-serif; font-weight:bold; text-decoration:underline; color:navy}
+		H5 {font-family:sans-serif; font-weight:bold; color:navy}
+		
+		/*A:link {color:#005bce; background-color:ivory; text-decoration:none}
+		A:visited {color:maroon; background-color:ivory; text-decoration:none}*/
+		A:link {color:#005bce; text-decoration:underline}
+		A:visited {color:maroon; text-decoration:underline}
+
+		UL {list-style:disc}
+		UL.sans-point {list-style:none}
+		SUP, SUB {font-size:smaller}
+		
+		DIV.toc UL, DIV.toc OL {list-style:none; font-family:sans-serif}
+		DIV.toc A:visited {color:teal; text-decoration:none; background-color:transparent}
+		BLOCKQUOTE.toc UL {list-style:none; font-family:sans-serif}
+		BLOCKQUOTE.toc A:visited {color:teal; text-decoration:none; background-color:transparent}
+
+		.titre {font-family:sans-serif; font-size:x-large; font-weight:bold; color:navy}
+		.listing {font-family:monospace; }
+		.a-verifier {color:white; font-weight:bold; background-color:red}
+		.heure {color:red}
+        .etranger {font-style:italic}
+        .exercice {color:red; font-weight:bold}

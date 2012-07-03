@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+ <TITLE>traceroute - octobre 1999</TITLE>
+</HEAD>
+
+<BODY BGCOLOR=white>
+<PRE>
+> <B>traceroute custsv</B>
+traceroute to cust (193.54.51.1), 30 hops max, 40 byte packets
+ 1  cust (193.54.51.1)  1 ms  1 ms  0 ms
+
+> <B>traceroute lminux</B>
+traceroute to lminux.univ-bpclermont.fr (193.54.49.218), 30 hops max, 40 byte packets
+ 1  custgw (193.54.51.241)  2 ms *  2 ms
+ 2  lminux (193.54.49.218)  3 ms  5 ms  3 ms
+
+> <B>traceroute www.isima.fr</B>
+traceroute to www.isima.fr (193.55.95.143), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  2 ms  3 ms  3 ms
+ 2  192.54.142.227 (192.54.142.227)  4 ms  4 ms  8 ms
+ 3  www.isima.fr (193.55.95.143)  4 ms  2 ms  2 ms
+
+> <B>traceroute ftp.univ-lyon1.fr</B>
+traceroute to cismserveur.univ-lyon1.fr (134.214.103.240), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  2 ms  3 ms  2 ms
+ 2  clermont2.cssi.renater.fr (195.220.98.89)  1 ms  3 ms  2 ms
+ 3  nio-n1.cssi.renater.fr (195.220.98.97)  12 ms  12 ms  17 ms
+ 4  nio-n2.cssi.renater.fr (193.51.206.6)  22 ms  12 ms  11 ms
+ 5  lyon.cssi.renater.fr (195.220.98.6)  20 ms  19 ms  21 ms
+ 6  univ-lyon.cssi.renater.fr (195.220.98.26)  318 ms  331 ms  319 ms
+ 7  accel101-cs7505.univ-lyon1.fr (134.214.200.226)  301 ms  319 ms  311 ms
+ 8  cismserveur.univ-lyon1.fr (134.214.103.240)  315 ms  331 ms  342 ms
+
+> <B>traceroute www.brive.unilim.fr</B>
+traceroute to cache.brive.unilim.fr (193.50.176.192), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  18 ms  2 ms  3 ms
+ 2  clermont2.cssi.renater.fr (195.220.98.89)  4 ms  9 ms  5 ms
+ 3  nio-n1.cssi.renater.fr (195.220.98.97)  13 ms  14 ms  15 ms
+ 4  limoges.cssi.renater.fr (195.220.99.70)  20 ms  20 ms  21 ms
+ 5  NRCP-limoges.cssi.renater.fr (195.220.99.78)  22 ms  28 ms  21 ms
+ 6  192.168.1.2 (192.168.1.2)  38 ms  35 ms  48 ms
+ 7  cache.brive.unilim.fr (193.50.176.192)  55 ms  68 ms  50 ms
+
+> <B>traceroute www.altavista.com</B>
+traceroute to altavista.com (204.152.190.16), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  5 ms  2 ms  1 ms
+ 2  clermont2.cssi.renater.fr (195.220.98.89)  13 ms  14 ms  7 ms
+ 3  nio-n1.cssi.renater.fr (195.220.98.97)  15 ms  16 ms  22 ms
+ 4  nio-i.cssi.renater.fr (193.51.206.10)  12 ms  14 ms  14 ms
+ 5  193.51.206.34 (193.51.206.34)  148 ms  147 ms  144 ms
+ 6  bagnolet2-backbone.opentransit.net (193.251.128.113)  143 ms  147 ms *
+ 7  anet.paris.opentransit.net (193.55.152.186)  152 ms  146 ms *
+ 8  * 198.67.133.81 (198.67.133.81)  222 ms  217 ms
+ 9  icm-bb11-pen-2-3.icp.net (198.67.133.73)  222 ms *  222 ms
+10  icm-bb4-pen-4-0-0.icp.net (198.67.133.66)  224 ms  241 ms  222 ms
+11  BR1.PSK1.Alter.net (192.157.69.60)  227 ms  225 ms *
+12  Hssi2-0.HR2.EWR1.ALTER.NET (137.39.100.30)  230 ms  224 ms  224 ms
+13  112.ATM3-0.XR2.EWR1.ALTER.NET (146.188.176.30)  223 ms  227 ms  247 ms
+14  192.ATM2-0.TR2.EWR1.ALTER.NET (146.188.176.82)  224 ms  230 ms  225 ms
+15  105.at-5-1-0.TR4.SCL1.ALTER.NET (152.63.3.206)  283 ms  283 ms  294 ms
+16  499.ATM6-0.XR2.PAO1.ALTER.NET (152.63.49.33)  281 ms  283 ms  280 ms
+17  188.ATM8-0-0.GW6.PAO1.ALTER.NET (146.188.149.21)  280 ms  285 ms *
+18  mibh-gw.customer.ALTER.NET (157.130.197.122)  284 ms  287 ms  289 ms
+19  pla1b.feed1.pla.mibh.net (204.152.184.211)  287 ms *  287 ms
+20  www.altavista.com (204.152.190.16)  287 ms  287 ms  281 ms
+
+> <B>traceroute www.ncd.com</B>
+traceroute to www.ncd.com (38.249.224.2), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  2 ms  2 ms  2 ms
+ 2  clermont2.cssi.renater.fr (195.220.98.89)  5 ms  2 ms  3 ms
+ 3  nio-n1.cssi.renater.fr (195.220.98.97)  20 ms  13 ms  12 ms
+ 4  nio-i.cssi.renater.fr (193.51.206.10)  12 ms  13 ms  14 ms
+ 5  193.51.206.34 (193.51.206.34)  148 ms  147 ms  144 ms
+ 6  bagnolet2-backbone.opentransit.net (193.251.128.113)  149 ms  148 ms  149 ms
+ 7  bagnolet1-backbone.opentransit.net (193.251.128.33)  152 ms  145 ms  154 ms
+ 8  stockton.opentransit.net (193.251.128.130)  278 ms  280 ms  285 ms
+ 9  cix.esc.us.psi.net (198.32.128.53)  283 ms  284 ms  286 ms
+10  nw2.isc.psi.net (38.1.10.3)  286 ms  285 ms  283 ms
+11  rc7.nw.us.psi.net (38.1.23.199)  284 ms  291 ms  288 ms
+12  ip23.ci2.sanfrancisco.ca.us.psi.net (38.146.152.23)  289 ms  296 ms  294 ms
+13  gilligan.ncd.com (38.249.224.2)  306 ms  291 ms  288 ms
+
+> <B>traceroute www.inetech.fr</B>
+traceroute to ip-210.inetech.fr (194.250.235.210), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  2 ms  2 ms  3 ms
+ 2  clermont2.cssi.renater.fr (195.220.98.89)  3 ms  3 ms  3 ms
+ 3  nio-n1.cssi.renater.fr (195.220.98.97)  13 ms  12 ms  12 ms
+ 4  nio-i.cssi.renater.fr (193.51.206.10)  13 ms  12 ms  12 ms
+ 5  193.51.206.34 (193.51.206.34)  148 ms  146 ms  149 ms
+ 6  bagnolet2-backbone.opentransit.net (193.251.128.113)  149 ms  152 ms  146 ms
+ 7  AUBG1-P1-2.rain.fr (194.250.89.21)  177 ms  168 ms  165 ms
+ 8  * * AUB-DAR1-p1-0-0.rain.fr (194.250.89.10)  190 ms
+ 9  LYO5-ATM-6-0-0.rain.fr (194.51.221.58)  166 ms  244 ms  179 ms
+10  * Inetech.rain.fr (195.101.12.74)  975 ms  837 ms
+11  * ip-210.inetech.fr (194.250.235.210)  879 ms  1064 ms
+
+><B> traceroute www.nat.fr</B>
+traceroute to sancy.nat.fr (212.208.83.2), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  24 ms  112 ms  4 ms
+ 2  clermont2.cssi.renater.fr (195.220.98.89)  4 ms  2 ms  6 ms
+ 3  nio-n1.cssi.renater.fr (195.220.98.97)  13 ms  12 ms  12 ms
+ 4  nio-i.cssi.renater.fr (193.51.206.10)  13 ms  15 ms  13 ms
+ 5  193.51.206.58 (193.51.206.58)  14 ms  19 ms  13 ms
+ 6  internetway.gix-paris.ft.net (194.68.129.236)  13 ms  20 ms  13 ms
+ 7  513.HSSI0-513.CR1.PAR1.FR.UU.NET (194.98.1.214)  16 ms  23 ms  16 ms
+ 8  102.ATM5-102.CR1.NAN1.FR.UU.NET (194.98.1.194)  21 ms  17 ms  16 ms
+ 9  603.HSSI1-603.GW1.CLF1.FR.UU.NET (212.208.238.10)  42 ms  46 ms  33 ms
+10  neyrial-gw.clermont.iway.fr (212.208.243.1)  92 ms  113 ms  80 ms
+11  sancy.nat.fr (212.208.83.2)  73 ms  99 ms  37 ms
+
+> <B>traceroute www.alpes-net.fr</B>
+traceroute to geneve.alpes-net.fr (212.124.0.4), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  32 ms  2 ms  2 ms
+ 2  clermont2.cssi.renater.fr (195.220.98.89)  3 ms  4 ms  3 ms
+ 3  nio-n1.cssi.renater.fr (195.220.98.97)  15 ms  12 ms  11 ms
+ 4  nio-i.cssi.renater.fr (193.51.206.10)  12 ms  11 ms  14 ms
+ 5  193.51.206.58 (193.51.206.58)  17 ms  13 ms  13 ms
+ 6  oleane.gix-paris.ft.net (194.68.129.246)  16 ms  17 ms  15 ms
+ 7  103.ATM6-0.GW2.Telehouse.OLEANE.NET (195.25.25.165)  500 ms  130 ms  141 ms
+ 8  100.ATM6-0.GW16.Defense.OLEANE.NET (194.2.3.230)  263 ms *  241 ms
+ 9  FastEth1-0.GW20.Defense.OLEANE.NET (195.25.8.18)  254 ms  262 ms *
+10  100.ATM6-0.GW5.Grenoble.OLEANE.NET (195.25.25.22)  239 ms *  284 ms
+11  gw-tow.alpes-net.fr (212.124.1.3)  279 ms  500 ms  276 ms
+12  gw-tow.alpes-net.fr (212.124.1.3)  293 ms  259 ms  295 ms
+13  wtc-gw.alpes-net.fr (212.124.0.254)  305 ms  283 ms *
+14  geneve.alpes-net.fr (212.124.0.4)  311 ms  310 ms  333 ms
+
+</PRE>
+
+</BODY>
+</HTML>

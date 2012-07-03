@@ -1,0 +1,165 @@
+Maxime ESCOURBIAC
+Jean-Christophe SEPTIER
+ZZ2 F2
+
+Reseaux avances TP1: Socket en C et en Java.
+
+
+Voici un fichier retracant des resultats obtenues grace aux programmes developpes
+durant les seances de TP.
+
+Mode d'emploie::
+
+Serveur C: recoit des nombres qu'il accumule afin de calculer la moyenne, s'arrete de recevoir apres 
+avoir recu le mot fin. ensuite il envoie la valeur calcule. ( On acceptera les valeurs negatives).
+
+Serveur Java: recoit une phrase et retourne son poids, on appelle poids ici, la somme du code ASCII
+de tous les caracteres de la phrase
+
+Client C: demande en premier si on veux se connecter au serveur C ou Java, ensuite il demande l'adresse.
+et pour finir il execute la partie metier du serveur concerne.
+
+Client Java: Demande sur quel serveur il veut se connecter, l'adresse est passe en parametre du programme
+et pour finir il execute la partie metier du serveur concerne.
+
+/***********************************************************************************/
+/***********************************************************************************/
+
+Client C ---> Serveur C:
+
+cote serveur:
+
+./serveur_c
+PID du serveur: 6498 
+Creation de la socket serveur
+parametrage de la socket serveur
+Ecoute sur le port 61569 
+Attente d'un client
+Attente d'un client
+Attente du message: 
+message : 15 
+Attente du message: 
+message : -75 
+Attente du message: 
+message : 12 
+Attente du message: 
+message : -3 
+Attente du message: 
+Envoie de la valeur au client -12
+Fermeture de la socket client
+Operation effectue
+
+cote client:
+
+./client_c
+-------Menu--------------------
+1) Connexion au serveur C 
+2) Connexion au serveur JAVA
+-------------------------------
+1
+Veuillez saisir un nom de serveur
+localhost
+Entrer votre nombre ( entre -99 999 et 99 999 ) ou end pour terminer la session 
+15
+Entrer votre nombre ( entre -99 999 et 99 999 ) ou end pour terminer la session 
+-75
+Entrer votre nombre ( entre -99 999 et 99 999 ) ou end pour terminer la session 
+12         
+Entrer votre nombre ( entre -99 999 et 99 999 ) ou end pour terminer la session 
+-3
+Entrer votre nombre ( entre -99 999 et 99 999 ) ou end pour terminer la session 
+end
+Valeur retourne du serveur
+-12
+
+/***********************************************************************************/
+/***********************************************************************************/
+
+Client Java ---> Serveur C:
+
+cote serveur:
+
+Attente d'un client
+Attente du message: 
+message : 15 
+Attente du message: 
+message : -75 
+Attente du message: 
+message : 12 
+Attente du message: 
+message : -3 
+Attente du message: 
+Envoie de la valeur au client -12
+Fermeture de la socket client
+Operation effectue
+
+
+cote client:
+
+ java clientTcp localhostMenu :
+____________________________
+1     : Serveur C 
+2     : Serveur Java 
+Autre : Quitter 
+1
+Entrer votre nombre ( entre -99 999 et 99 999 ) ou end pour terminer la session 
+15
+Entrer votre nombre ( entre -99 999 et 99 999 ) ou end pour terminer la session 
+-75
+Entrer votre nombre ( entre -99 999 et 99 999 ) ou end pour terminer la session 
+12
+Entrer votre nombre ( entre -99 999 et 99 999 ) ou end pour terminer la session 
+-3
+Entrer votre nombre ( entre -99 999 et 99 999 ) ou end pour terminer la session 
+end
+Moyenne: -12
+
+
+/***********************************************************************************/
+/***********************************************************************************/
+
+Client Java ---> Serveur Java:
+
+cote serveur:
+
+java serveurTcp 
+La socket est cree
+Line: je teste ma fonction
+1922
+
+cote client:
+
+java clientTcp localhostMenu :
+____________________________
+1     : Serveur C 
+2     : Serveur Java 
+Autre : Quitter 
+2
+Entrer une ligne de texte: 
+je teste ma fonction
+Taille de la phrase: 1922
+
+/***********************************************************************************/
+/***********************************************************************************/
+
+Client C ---> Serveur Java:
+
+cote serveur:
+
+Line: je teste encore mes programmes
+2930
+
+cote client:
+
+./client_c
+-------Menu--------------------
+1) Connexion au serveur C 
+2) Connexion au serveur JAVA
+-------------------------------
+2
+Veuillez saisir un nom de serveur
+localhost
+Veuillez rentrer la phrase de calcul
+je teste encore mes programmes
+Valeur retourne du serveur
+2930

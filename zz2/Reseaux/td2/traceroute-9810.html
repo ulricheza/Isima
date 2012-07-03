@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//AdvaSoft//DTD HTML 3.2 extended 961018//EN">
+<HTML>
+<HEAD>
+ <TITLE>exemples traceroute</TITLE>
+ <LINK HREF="../../reseaux.css" REL="STYLESHEET" TYPE="text/css">
+</HEAD>
+
+<BODY BGCOLOR=white>
+<I>Ces chemins sont tous tracés à partir de <TT>custsv</TT> (<TT>193.54.51.1</TT>)</I>
+<PRE>
+
+<B>> traceroute custsv</B>
+traceroute to cust (193.54.51.1), 30 hops max, 40 byte packets
+ 1  custsv (193.54.51.1)  1 ms  1 ms  0 ms
+ 
+<B>> traceroute lminux</B>
+traceroute to lminux.univ-bpclermont.fr (192.54.142.88), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  3 ms  6 ms  4 ms
+ 2  lminux (192.54.142.88)  3 ms  3 ms  2 ms
+ 
+<B>> traceroute www.isima.fr</B>
+traceroute to www.isima.fr (193.55.95.143), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  3 ms  3 ms  3 ms
+ 2  192.54.142.227 (192.54.142.227)  4 ms  3 ms  3 ms
+ 3  193.55.95.143 (193.55.95.143)  4 ms  2 ms  3 ms
+ 
+<B>> traceroute ftp.univ-lyon1.fr</B>
+traceroute to cismserveur.univ-lyon1.fr (134.214.103.240), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  3 ms  3 ms  2 ms
+ 2  195.83.236.13 (195.83.236.13)  3 ms  4 ms  4 ms
+ 3  clermont1.cratere.ft.net (193.54.132.13)  19 ms  7 ms  4 ms
+ 4  clermont.renater.ft.net (193.54.132.241)  5 ms  10 ms  7 ms
+ 5  stamand1.renater.ft.net (195.220.180.109)  13 ms  13 ms  25 ms
+ 6  stamand2.renater.ft.net (195.220.180.42)  13 ms  20 ms  27 ms
+ 7  lyon.renater.ft.net (192.93.43.34)  20 ms  28 ms  33 ms
+ 8  193.48.66.234 (193.48.66.234)  20 ms  20 ms  26 ms
+ 9  u-1-cism-villeurbanne.aramis.ft.net (193.48.66.14)  152 ms  154 ms  192 ms
+10  cisco-aramis.univ-lyon1.fr (193.48.222.1)  169 ms  153 ms  224 ms
+11  cismserveur.univ-lyon1.fr (134.214.103.240)  209 ms  242 ms  191 ms
+
+<B>> traceroute ftp.univ-lille1.fr</B>
+traceroute to beta.univ-lille1.fr (134.206.1.72), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  3 ms  3 ms  3 ms
+ 2  195.83.236.13 (195.83.236.13)  4 ms  4 ms  4 ms
+ 3  clermont1.cratere.ft.net (193.54.132.13)  13 ms  5 ms  5 ms
+ 4  clermont.renater.ft.net (193.54.132.241)  4 ms  5 ms  5 ms
+ 5  stamand1.renater.ft.net (195.220.180.109)  14 ms  29 ms  17 ms
+ 6  stamand2.renater.ft.net (195.220.180.42)  13 ms  24 ms  14 ms
+ 7  lille.renater.ft.net (195.220.180.206)  29 ms  16 ms  27 ms
+ 8  lille1.noropale.ft.net (193.54.138.241)  17 ms  21 ms  19 ms
+ 9  u-dusva-noropale.noropale.ft.net (193.54.138.50)  31 ms  19 ms  19 ms
+10  cisco4000-eth1.univ-lille1.fr (193.49.224.2)  32 ms  33 ms  50 ms
+11  beta.univ-lille1.fr (134.206.1.72)  36 ms  38 ms  21 ms
+
+<B>> traceroute www.altavista.com</B>
+traceroute to altavista.digital.com (204.74.103.37), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  3 ms  2 ms  3 ms
+ 2  195.83.236.13 (195.83.236.13)  4 ms  4 ms  4 ms
+ 3  clermont1.cratere.ft.net (193.54.132.13)  5 ms  13 ms  13 ms
+ 4  clermont.renater.ft.net (193.54.132.241)  5 ms  10 ms  5 ms
+ 5  stamand1.renater.ft.net (195.220.180.109)  28 ms  28 ms  13 ms
+ 6  rbs1.renater.ft.net (195.220.180.90)  40 ms  17 ms  15 ms
+ 7  * * paii.renater.ft.net (195.220.180.225)  22 ms
+ 8  * bagnolet2-atm-3.opentransit.net (193.55.152.26)  30 ms  36 ms
+ 9  relay-pos-6.opentransit.net (193.55.152.70)  124 ms  98 ms  100 ms
+10  194.206.207.38 (194.206.207.38)  99 ms *  101 ms
+11  sl-bb10-rly-0-3.sprintlink.net (144.232.7.129)  100 ms  99 ms *
+12  sl-bb1-rly-0-0-0.sprintlink.net (144.232.0.30)  129 ms *  101 ms
+13  207.240.56.165 (207.240.56.165)  146 ms  102 ms  102 ms
+14  fe-6-1.core1.wdc1.genuity.net (207.240.2.97)  107 ms  108 ms  163 ms
+15  fe-11-0.core1.sjc1.genuity.net (207.240.1.145)  294 ms fe-12-0.core1.sjc1.genuity.net (207.240.1.33)  291 ms fe-12-1.core1.sjc1.genuity.net (207.240.2.33)  249 ms
+16  fe-12-1.border1.sjc1.genuity.net (207.240.2.147)  281 ms * *
+17  altavista.digital.com (204.74.103.37)  207 ms  249 ms  216 ms
+
+<B>> traceroute www.ncd.com</B>
+traceroute to www.ncd.com (38.249.224.2), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  3 ms  2 ms  3 ms
+ 2  195.83.236.13 (195.83.236.13)  4 ms  5 ms  6 ms
+ 3  clermont1.cratere.ft.net (193.54.132.13)  20 ms  10 ms  12 ms
+ 4  clermont.renater.ft.net (193.54.132.241)  11 ms  4 ms  4 ms
+ 5  stamand1.renater.ft.net (195.220.180.109)  13 ms  44 ms  37 ms
+ 6  stamand1.renater.ft.net (195.220.180.109)  31 ms  14 ms  14 ms
+ 7  rbs1.renater.ft.net (195.220.180.90)  41 ms  13 ms  42 ms
+ 8  paii.renater.ft.net (195.220.180.225)  39 ms bagnolet2-atm-3.opentransit.net (193.55.152.26)  27 ms  21 ms
+ 9  * relay-pos-6.opentransit.net (193.55.152.70)  127 ms  114 ms
+10  relay-pos-6.opentransit.net (193.55.152.70)  99 ms  102 ms  105 ms
+11  * sl-bb5-dc-4-0-0.sprintlink.net (144.232.7.166)  289 ms  236 ms
+12  sl-e1-mae-0-1-0.sprintlink.net (144.232.8.26)  202 ms  116 ms  131 ms
+13  mae-east.psi.net (192.41.177.245)  136 ms  203 ms  102 ms
+14  * nw.ext.sc.psi.net (38.1.3.7)  394 ms  379 ms
+15  ip23.ci2.sanfrancisco.ca.us.psi.net (38.146.152.23)  360 ms  323 ms  342 ms
+16  gilligan.ncd.com (38.249.224.2)  335 ms  318 ms  345 ms
+
+<B>> traceroute www.inetech.fr</B>
+traceroute to ip-210.inetech.fr (194.250.235.210), 30 hops max, 40 byte packets
+ 1  * 193.54.49.126 (193.54.49.126)  3 ms  3 ms
+ 2  195.83.236.13 (195.83.236.13)  5 ms  3 ms  5 ms
+ 3  clermont1.cratere.ft.net (193.54.132.13)  21 ms  10 ms  11 ms
+ 4  clermont.renater.ft.net (193.54.132.241)  10 ms  11 ms  12 ms
+ 5  stamand1.renater.ft.net (195.220.180.109)  65 ms  107 ms  20 ms
+ 6  rbs1.renater.ft.net (195.220.180.90)  20 ms  34 ms  31 ms
+ 7  rbs1.rain.fr (194.51.0.69)  20 ms  15 ms  14 ms
+ 8  dar2.rain.fr (194.51.0.146)  16 ms  20 ms  17 ms
+ 9  LYO5-S-4-0-0.rain.fr (194.250.180.150)  35 ms  22 ms  25 ms
+10  Inetech.rain.fr (195.101.12.74)  122 ms  220 ms  198 ms
+11  ip-210.inetech.fr (194.250.235.210)  183 ms  173 ms  196 ms
+
+<B>> traceroute www.nat.fr</B>
+traceroute to webgood.nat.fr (194.206.8.28), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  3 ms  3 ms  2 ms
+ 2  195.83.236.13 (195.83.236.13)  3 ms  3 ms  3 ms
+ 3  clermont1.cratere.ft.net (193.54.132.13)  4 ms  5 ms  5 ms
+ 4  clermont.renater.ft.net (193.54.132.241)  5 ms  5 ms  10 ms
+ 5  stamand1.renater.ft.net (195.220.180.109)  14 ms  16 ms  25 ms
+ 6  rbs1.renater.ft.net (195.220.180.90)  14 ms  20 ms  14 ms
+ 7  rbs1.rain.fr (194.51.0.69)  14 ms  16 ms  14 ms
+ 8  dar2.rain.fr (194.51.0.146)  144 ms  20 ms  219 ms
+ 9  Poitiers2.rain.fr (194.250.180.26)  25 ms  25 ms  36 ms
+10  212.234.253.2 (212.234.253.2)  62 ms  115 ms  99 ms
+11  194.206.6.17 (194.206.6.17)  74 ms  91 ms  95 ms
+12  194.206.8.1 (194.206.8.1)  188 ms *  132 ms
+13  194.206.8.28 (194.206.8.28)  214 ms  181 ms  183 ms
+
+<B>> traceroute www.alpes-net.fr</B>	(<I>voir aussi ci-dessous à une autre date</I>)
+traceroute to geneve.alpes-net.fr (195.10.3.2), 30 hops max, 40 byte packets
+ 1  193.54.49.126 (193.54.49.126)  5 ms  2 ms  3 ms
+ 2  195.83.236.13 (195.83.236.13)  4 ms  4 ms  4 ms
+ 3  clermont1.cratere.ft.net (193.54.132.13)  5 ms  14 ms  5 ms
+ 4  clermont.renater.ft.net (193.54.132.241)  5 ms  5 ms  5 ms
+ 5  stamand1.renater.ft.net (195.220.180.109)  14 ms  14 ms  14 ms
+ 6  rbs1.renater.ft.net (195.220.180.90)  16 ms  13 ms  22 ms
+ 7  ri-renater.gix-paris.ft.net (195.220.180.250)  18 ms  14 ms  19 ms
+ 8  internetway.gix-paris.ft.net (194.68.129.236)  14 ms  14 ms  15 ms
+ 9  512.HSSI0-0.BACK1.PAR1.InetWAY.NET (194.98.1.122)  15 ms  17 ms  16 ms
+10  FE6-0.BORD1.PAR1.InetWAY.NET (194.53.76.196)  17 ms  20 ms  28 ms
+11  194.98.75.82 (194.98.75.82)  29 ms  41 ms  40 ms
+12  geneve.alpes-net.fr (195.10.3.2)  28 ms  29 ms  30 ms
+
+&gt; <B>traceroute www.alpes-net.fr</B>
+ 1  cisco-ubp (192.54.142.200)  2 ms  3 ms  3 ms
+ 2  193.54.48.1 (193.54.48.1)  3 ms  4 ms  4 ms
+ 3  clermont1.cratere.ft.net (193.54.132.13)  4 ms  6 ms  19 ms
+ 4  clermont.renater.ft.net (193.54.132.241)  15 ms  5 ms  7 ms
+ 5  stamand2.renater.ft.net (195.220.180.65)  21 ms  22 ms  23 ms
+ 6  rbs1.renater.ft.net (192.93.43.46)  214 ms  213 ms  20 ms
+ 7  renater.FR.ten-34.net (193.203.228.5)  29 ms  15 ms  16 ms
+ 8  FR.uk.ten-34.net (193.203.228.2)  23 ms  43 ms  29 ms
+ 9  london6.att-unisource.net (195.206.64.69)  33 ms  23 ms  35 ms
+10  london5.att-unisource.net (195.206.64.49)  42 ms  45 ms  32 ms
+11  stockholm5.att-unisource.net (195.206.64.37)  54 ms  60 ms  53 ms
+12  stockholm1.att-unisource.net (195.206.64.82)  56 ms  58 ms  61 ms
+13  Fddi10-0.GW2.STK2.Alter.Net (194.68.128.23)  72 ms  67 ms  66 ms
+14  Fddi0-0.CR2.STK2.Alter.Net (146.188.31.98)  73 ms  63 ms  59 ms
+15  219.Hssi4-0.CR2.PAR2.Alter.Net (146.188.2.237)  212 ms *  249 ms
+16  * * 412.ATM8-0-0.GW1.PAR2.Alter.Net (146.188.4.65)  170 ms
+17  412.ATM8-0-0.GW1.PAR2.Alter.Net (146.188.4.65)  173 ms  217 ms  187 ms
+18  Oleane-2-gw.customer.ALTER.NET (146.188.32.90)  329 ms  319 ms Oleane-1-gw.customer.ALTER.NET (146.188.32.94)  325 ms
+19  Serial1.GW13.Defense.OLEANE.NET (194.2.3.177)  298 ms  387 ms  325 ms
+20  Eth0-0.GW12.Defense.OLEANE.NET (194.2.3.195)  369 ms  358 ms  367 ms
+21  * Serial0-0.GW3.Lyon.OLEANE.NET (194.2.3.58)  417 ms  365 ms
+22  Lyn-E0.OLEANE.NET (194.2.27.34)  489 ms  403 ms  308 ms
+23  Alpes-Network.GW.OLEANE.NET (194.2.12.70)  271 ms  312 ms Serial1-0-CG8.GW1.Grenoble.OLEANE.NET (194.2.3.62)  326 ms
+24  Alpes-Network.GW.OLEANE.NET (194.2.12.70)  276 ms  719 ms  305 ms
+25  * wtc-gw.alpes-net.fr (195.10.3.254)  310 ms *
+
+
+</PRE>
+</BODY>
+</HTML>

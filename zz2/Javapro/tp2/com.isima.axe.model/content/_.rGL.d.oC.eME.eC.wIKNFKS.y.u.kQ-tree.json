@@ -1,0 +1,342 @@
+
+{ 
+    identifier: 'id',
+    label: 'title',
+    items: [
+        {
+            title: 'Diagrammes',
+            top: true,
+            id: '_DIAGRAMS_ROOT_NODE_',
+            icon: 'icon-1593500547',
+            children: [
+                {_reference: '_.jPJ.a.gC.eNE.eC.wIKNFKS.y.u.kQ' }
+            ]
+        },
+        {
+            title: 'AXE::com.isima.library.model::com.isima.library.model',
+            id: '_.jPJ.a.gC.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_.jPJ.a.gC.eNE.eC.wIKNFKS.y.u.kQ-content.html',
+            icon: 'icon688200719'
+        },
+	
+        {
+            title: 'Modèles',
+            top: true,
+            id: '_MODELS_ROOT_NODE_',
+            icon: 'icon-1593500547',
+            children: [
+                {_reference: '_.rGL.d.oC.eME.eC.wIKNFKS.y.u.kQ' }
+            ]
+
+        },
+        {
+            title: 'AXE',
+            id: '_.rGL.d.oC.eME.eC.wIKNFKS.y.u.kQ',
+            object: '_.rGL.d.oC.eME.eC.wIKNFKS.y.u.kQ-top-summary.html',
+            icon: 'icon-1593500547',
+            children: [
+                {_reference: '_DMAOIC.eNE.eC.wIKNFKS.y.u.kQ' }
+            ]
+        }
+		,
+        {
+            title: 'com.isima.library.model',
+            id: '_DMAOIC.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_DMAOIC.eNE.eC.wIKNFKS.y.u.kQ-content.html',
+            icon: 'icon-1593500547',
+            children: [
+                {_reference: '_KXHJ8C.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_QOU08C.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.d.aU8MC.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.h.z.i.i.sC.eOE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.z.xC0.oC.ePE.eC.wIKNFKS.y.u.kQ' }
+            ]
+        }
+		,
+        {
+            title: 'Library',
+            id: '_KXHJ8C.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_KXHJ8C.eNE.eC.wIKNFKS.y.u.kQ-content.html',
+            icon: 'icon486874062',
+            children: [
+                {_reference: '_7ESD.oC.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.t.qRV.kC.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.yWF.k.cC.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.h.z.sT.sC.eOE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.z.xC0.pC.ePE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.q.yT_EC.ePE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_AL.z-IC.eOE.eC.wIKNFKS.y.u.kQ' }
+            ]
+        }
+		,
+        {
+            title: 'id',
+            id: '_7ESD.oC.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_KXHJ8C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_7ESD.oC.eNE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'name',
+            id: '_.t.qRV.kC.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_KXHJ8C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_.t.qRV.kC.eNE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'address',
+            id: '_.yWF.k.cC.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_KXHJ8C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_.yWF.k.cC.eNE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'books',
+            id: '_.h.z.sT.sC.eOE.eC.wIKNFKS.y.u.kQ',
+            object: '_KXHJ8C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_.h.z.sT.sC.eOE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'subscribers',
+            id: '_.z.xC0.pC.ePE.eC.wIKNFKS.y.u.kQ',
+            object: '_KXHJ8C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_.z.xC0.pC.ePE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'addBook',
+            id: '_.q.yT_EC.ePE.eC.wIKNFKS.y.u.kQ',
+            object: '_KXHJ8C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_.q.yT_EC.ePE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon738531457'
+        }
+		,
+        {
+            title: 'toString',
+            id: '_AL.z-IC.eOE.eC.wIKNFKS.y.u.kQ',
+            object: '_KXHJ8C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_AL.z-IC.eOE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon738531457'
+        }
+		,
+        {
+            title: 'Book',
+            id: '_QOU08C.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_QOU08C.eNE.eC.wIKNFKS.y.u.kQ-content.html',
+            icon: 'icon486874062',
+            children: [
+                {_reference: '_8.t7.iAC.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_9XW5.gC.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_97.a.o0C.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.h.z.sT.s.y.eOE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_BGOX8C.eOE.eC.wIKNFKS.y.u.kQ' }
+            ]
+        }
+		,
+        {
+            title: 'id',
+            id: '_8.t7.iAC.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_QOU08C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_8.t7.iAC.eNE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'title',
+            id: '_9XW5.gC.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_QOU08C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_9XW5.gC.eNE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'author',
+            id: '_97.a.o0C.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_QOU08C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_97.a.o0C.eNE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'library',
+            id: '_.h.z.sT.s.y.eOE.eC.wIKNFKS.y.u.kQ',
+            object: '_QOU08C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_.h.z.sT.s.y.eOE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'toString',
+            id: '_BGOX8C.eOE.eC.wIKNFKS.y.u.kQ',
+            object: '_QOU08C.eNE.eC.wIKNFKS.y.u.kQ-content.html#_BGOX8C.eOE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon738531457'
+        }
+		,
+        {
+            title: 'Person',
+            id: '_.d.aU8MC.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_.d.aU8MC.eNE.eC.wIKNFKS.y.u.kQ-content.html',
+            icon: 'icon486874062',
+            children: [
+                {_reference: '_21.iLQC.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.pZ.u.t.cC.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.q7.o.lEC.eNE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.z.xC0.oS.ePE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_G.c.a.u.oC.eQE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_M.b.q7UC.eQE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_MM1.jMC.eSE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_CHMF.sC.eOE.eC.wIKNFKS.y.u.kQ' }
+            ]
+        }
+		,
+        {
+            title: 'id',
+            id: '_21.iLQC.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_.d.aU8MC.eNE.eC.wIKNFKS.y.u.kQ-content.html#_21.iLQC.eNE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'firstName',
+            id: '_.pZ.u.t.cC.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_.d.aU8MC.eNE.eC.wIKNFKS.y.u.kQ-content.html#_.pZ.u.t.cC.eNE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'lastName',
+            id: '_.q7.o.lEC.eNE.eC.wIKNFKS.y.u.kQ',
+            object: '_.d.aU8MC.eNE.eC.wIKNFKS.y.u.kQ-content.html#_.q7.o.lEC.eNE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'library',
+            id: '_.z.xC0.oS.ePE.eC.wIKNFKS.y.u.kQ',
+            object: '_.d.aU8MC.eNE.eC.wIKNFKS.y.u.kQ-content.html#_.z.xC0.oS.ePE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'subscribes',
+            id: '_G.c.a.u.oC.eQE.eC.wIKNFKS.y.u.kQ',
+            object: '_.d.aU8MC.eNE.eC.wIKNFKS.y.u.kQ-content.html#_G.c.a.u.oC.eQE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon738531457'
+        }
+		,
+        {
+            title: 'borrows',
+            id: '_M.b.q7UC.eQE.eC.wIKNFKS.y.u.kQ',
+            object: '_.d.aU8MC.eNE.eC.wIKNFKS.y.u.kQ-content.html#_M.b.q7UC.eQE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon738531457'
+        }
+		,
+        {
+            title: 'return',
+            id: '_MM1.jMC.eSE.eC.wIKNFKS.y.u.kQ',
+            object: '_.d.aU8MC.eNE.eC.wIKNFKS.y.u.kQ-content.html#_MM1.jMC.eSE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon738531457'
+        }
+		,
+        {
+            title: 'toString',
+            id: '_CHMF.sC.eOE.eC.wIKNFKS.y.u.kQ',
+            object: '_.d.aU8MC.eNE.eC.wIKNFKS.y.u.kQ-content.html#_CHMF.sC.eOE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon738531457'
+        }
+		,
+        {
+            title: 'Borrowing',
+            id: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ',
+            object: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html',
+            icon: 'icon671422555',
+            children: [
+                {_reference: '_K71V.sC.ePE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_MG.fK8C.ePE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_NT-R.wC.ePE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_15.k.x8C.eQE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_1Q.xQEC.eRE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_.y.t.c-.wC.eRE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_0X2.rEC.eRE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_F.l.hN.w.i.eOE.eC.wIKNFKS.y.u.kQ' },
+                {_reference: '_F.lX.c.wC.eOE.eC.wIKNFKS.y.u.kQ' }
+            ]
+        }
+		,
+        {
+            title: 'borrowingDate',
+            id: '_K71V.sC.ePE.eC.wIKNFKS.y.u.kQ',
+            object: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html#_K71V.sC.ePE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'expectedReturnDate',
+            id: '_MG.fK8C.ePE.eC.wIKNFKS.y.u.kQ',
+            object: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html#_MG.fK8C.ePE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'actualReturnDate',
+            id: '_NT-R.wC.ePE.eC.wIKNFKS.y.u.kQ',
+            object: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html#_NT-R.wC.ePE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'toString',
+            id: '_15.k.x8C.eQE.eC.wIKNFKS.y.u.kQ',
+            object: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html#_15.k.x8C.eQE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon738531457'
+        }
+		,
+        {
+            title: 'isInProgress',
+            id: '_1Q.xQEC.eRE.eC.wIKNFKS.y.u.kQ',
+            object: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html#_1Q.xQEC.eRE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon738531457'
+        }
+		,
+        {
+            title: 'isCompleted',
+            id: '_.y.t.c-.wC.eRE.eC.wIKNFKS.y.u.kQ',
+            object: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html#_.y.t.c-.wC.eRE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon738531457'
+        }
+		,
+        {
+            title: 'isLate',
+            id: '_0X2.rEC.eRE.eC.wIKNFKS.y.u.kQ',
+            object: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html#_0X2.rEC.eRE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon738531457'
+        }
+		,
+        {
+            title: 'borrower',
+            id: '_F.l.hN.w.i.eOE.eC.wIKNFKS.y.u.kQ',
+            object: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html#_F.l.hN.w.i.eOE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'borrowings',
+            id: '_F.lX.c.wC.eOE.eC.wIKNFKS.y.u.kQ',
+            object: '_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html#_F.lX.c.wC.eOE.eC.wIKNFKS.y.u.kQ',
+            icon: 'icon-754640816'
+        }
+		,
+        {
+            title: 'has >',
+            id: '_.h.z.i.i.sC.eOE.eC.wIKNFKS.y.u.kQ',
+            object: '_.h.z.i.i.sC.eOE.eC.wIKNFKS.y.u.kQ-content.html',
+            icon: 'icon-1576726827'
+        }
+		,
+        {
+            title: 'subscribes to >',
+            id: '_.z.xC0.oC.ePE.eC.wIKNFKS.y.u.kQ',
+            object: '_.z.xC0.oC.ePE.eC.wIKNFKS.y.u.kQ-content.html',
+            icon: 'icon-1576726827'
+        }
+		
+    ]
+}
+
+		

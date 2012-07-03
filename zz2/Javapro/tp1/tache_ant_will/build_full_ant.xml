@@ -1,0 +1,33 @@
+<project name="HelloWorld" default="run">
+  
+  <property name="basedir" value="." />
+  <property name="build"   value="${basedir}/bin" />
+  <property name="src"     value="${basedir}/src" />
+  <property name="version" value="1.4" />
+  <property name="release" value="${basedir}/release" />
+  <property name="jar"     value="${release}/${ant.project.name}.jar" />
+  <property name="main-class" value="main.Main" />
+
+  <target name="clean">
+    <echo>Cleaning...</echo>
+    <delete dir="${build}" />
+    <delete dir="${release}" />
+  </target>
+  <target name="compile" depends="clean">  
+    <echo>Compiling...</echo>
+    <mkdir dir="${build}" />
+    <javac srcdir="${src}" source="${version}" destdir="${build}" />
+  </target>
+  <target name="package" depends="compile">
+    <echo>Packaging...</echo>
+    <jar destfile="${jar}" basedir="${build}">
+      <manifest>
+        <attribute name="Main-Class" value="${main-class}"/>
+      </manifest>
+    </jar>
+  </target>
+  <target name="run" depends="package">
+    <echo>Running...</echo>
+    <java jar="${jar}" fork="true" />
+  </target>
+</project>

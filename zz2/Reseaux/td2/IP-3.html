@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+	<TITLE>Etude de couches de niveau Réseau (2)</TITLE>
+	<LINK HREF="./reseaux.css" REL="STYLESHEET" TYPE="text/css">
+</HEAD>
+
+<BODY BGCOLOR=white>
+<H1>2 - Correspondance entre adresse-MAC et adresse-IP : ARP</H1>
+<P ALIGN="RIGHT">
+<I><A HREF="mailto:laurenco@isima.fr">Patrice Laurençot</A><br/ >
+<!--#config timefmt="%b %Y"--><!--#flastmod virtual="$DOCUMENT_URI" --></I>
+</P>
+<HR>
+
+	<BLOCKQUOTE>
+	<P>Lorsque l'entité-IP du système A doit envoyer une PDU-IP à l'entité-IP du système B du même 
+	réseau local, elle utilise le <B>Service ARP</B> (<i>Address Resoltion Protocol</i>) pour connaître l'adresse-MAC du système B.</P>
+	<P>Le Service ARP est réalisé grâce à une <B>entité-ARP</B> installée dans chaque 
+	système et à un <B>protocole ARP</B>, qui utilise directement le Service Ethernet II. Chaque entité-ARP 
+	conserve chaque correspondance pendant quelques minutes dans une table.</P>
+	<dl>
+	<dt><span class="exercice">Exercice 2-1</span> : 
+		<B>examen de tables-ARP</B>
+		<dd>Afficher le contenu de la table-ARP d'un système par la commande 
+			"<TT class="commande">arp -a</TT>" (même commande pour 
+			DEC-Unix, SUN, IBM-AIX ou Microsoft).
+			<BLOCKQUOTE>Des explications complètes sur la commande <TT>arp</TT> se trouvées dans les manuels <br/ >
+				[SUN : <TT>arp(1m)</TT>, DEC-Unix: <TT>arp(8)</TT>, AIX: <TT>arp</TT>]
+			</BLOCKQUOTE></dd>
+	<dt><span class="exercice">Exercice 2-2</span> : 
+		<B>observation de la mise en oeuvre du protocole-ARP</B></dt>
+		<dd>Repérer dans le fichier 
+			<A HREF="../TRACES/complet.html"><TT>complet.html</TT></A> les 
+			PDU-Ethernet II qui contiennent des PDU-ARP, en particulier celles 
+			qui concernent des systèmes du réseau local du CUST (PDU n&deg; 
+			806, 807, 857, 859, 918, 920, 1048, 1049).</P>
+			<BLOCKQUOTE>Des explications complémentaires se trouvent dans les 
+				manuels <br/ >[SUN : <TT>arp(7p)</TT>, DEC-Unix : 
+				<TT>arp(7)</TT>]
+			</BLOCKQUOTE>
+		<P>Question : pourquoi ne voit-on pas les autres réponses ?</P></dd>
+	</dl>
+	</BLOCKQUOTE>
+
+<HR>
+<A HREF="./IP.html">Revenir au menu</A> 
+</BODY>
+</HTML>

@@ -1,0 +1,951 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Documentation UML de com.isima.library.model</title>
+<meta name="generator" content="IBM Rational Model Publisher">
+<meta name="description" content="Sommaire pour Borrowing">
+<link rel="stylesheet" type="text/css" href="WebPublish.css">
+</head>
+<body>
+<table class="NavigationBar">
+<tr>
+<td>
+<table class="NavBarLeft">
+<tr>
+<td class="NavBarMainLink"><a target="_top" href="../index.html">Présentation</a></td><td class="NavBarMainLink"><a href="_.rGL.d.oC.eME.eC.wIKNFKS.y.u.kQ-top-summary.html">Haut</a></td><td class="NavBarMainLink"><a href="_DMAOIC.eNE.eC.wIKNFKS.y.u.kQ-content.html">Package</a></td><td class="NavBarMainHighlight">Elément</td>
+</tr>
+</table>
+</td><td class="NavBarRight">Documentation UML de com.isima.library.model</td>
+</tr>
+</table>
+<table>
+<tr class="NavBarBookMarks">
+<td class="BookMarkSections"><span class="BookMarkElements">Récapitulatif :</span><span class="BookMarkElements"><a href="#attributeSummary" title="Attributs">Attributs</a></span><span class="BookMarkElements"><a href="#operationSummary" title="Opérations">Opérations</a></span><span class="BookMarkElements"><a href="#propertiesTable" title="Propriétés">Propriétés</a></span></td><td class="BookMarkSections"><span class="BookMarkElements">Détail :</span><span class="BookMarkElements"><a href="#attributeDetail" title="Attributs">Attributs</a></span><span class="BookMarkElements"><a href="#operationDetail" title="Opérations">Opérations</a></span></td>
+</tr>
+</table>
+<hr>
+<span class="PackageFullyQualifiedName">com.isima.library.model</span>
+<br>
+<span class="ElementTitle">Classe d'associationBorrowing</span>
+<p>
+<a name="documentationSection"></a>To simplify things, there are no limits to the number of borrowings.</br>Notice that the borrowings list, for a given person, may contain books that have been returned and books that have not yet be returned.</p>
+<p></p>
+<table class="SummaryTable" border="1">
+<tr>
+<td class="SummaryTitle" colspan="3"><a name="attributeSummary">Attributs</a></td>
+</tr>
+<tr>
+<td class="packagedElementType">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Date </td><td><a title="AXE::com.isima.library.model::Borrowing::actualReturnDate" href="#_NT-R.wC.ePE.eC.wIKNFKS.y.u.kQ"><img border="0" src="../images/-754640816_icon.png" alt="actualReturnDate"></a>&nbsp;<a title="AXE::com.isima.library.model::Borrowing::actualReturnDate" href="#_NT-R.wC.ePE.eC.wIKNFKS.y.u.kQ">actualReturnDate</a></td><td></td>
+</tr>
+<tr>
+<td class="packagedElementType">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Date </td><td><a title="AXE::com.isima.library.model::Borrowing::borrowingDate" href="#_K71V.sC.ePE.eC.wIKNFKS.y.u.kQ"><img border="0" src="../images/-754640816_icon.png" alt="borrowingDate"></a>&nbsp;<a title="AXE::com.isima.library.model::Borrowing::borrowingDate" href="#_K71V.sC.ePE.eC.wIKNFKS.y.u.kQ">borrowingDate</a></td><td></td>
+</tr>
+<tr>
+<td class="packagedElementType">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Date </td><td><a title="AXE::com.isima.library.model::Borrowing::expectedReturnDate" href="#_MG.fK8C.ePE.eC.wIKNFKS.y.u.kQ"><img border="0" src="../images/-754640816_icon.png" alt="expectedReturnDate"></a>&nbsp;<a title="AXE::com.isima.library.model::Borrowing::expectedReturnDate" href="#_MG.fK8C.ePE.eC.wIKNFKS.y.u.kQ">expectedReturnDate</a></td><td></td>
+</tr>
+</table>
+<p></p>
+<table class="SummaryTable" border="1">
+<tr>
+<td class="SummaryTitle" colspan="3"><a name="operationSummary">Opérations</a></td>
+</tr>
+<tr>
+<td class="packagedElementType">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean </td><td><a title="AXE::com.isima.library.model::Borrowing::isCompleted" href="#_.y.t.c-.wC.eRE.eC.wIKNFKS.y.u.kQ"><img border="0" src="../images/738531457_icon.png" alt="isCompleted"></a>&nbsp;<a title="AXE::com.isima.library.model::Borrowing::isCompleted" href="#_.y.t.c-.wC.eRE.eC.wIKNFKS.y.u.kQ">isCompleted</a></td><td>
+<p>
+<a name="documentationSection"></a>Returns true if the borrowing is completed (that is, if there is an actualReturnDate).</p>
+</td>
+</tr>
+<tr>
+<td class="packagedElementType">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean </td><td><a title="AXE::com.isima.library.model::Borrowing::isInProgress" href="#_1Q.xQEC.eRE.eC.wIKNFKS.y.u.kQ"><img border="0" src="../images/738531457_icon.png" alt="isInProgress"></a>&nbsp;<a title="AXE::com.isima.library.model::Borrowing::isInProgress" href="#_1Q.xQEC.eRE.eC.wIKNFKS.y.u.kQ">isInProgress</a></td><td>
+<p>
+<a name="documentationSection"></a>Returns true if the borrowing is in-progress (that is, if there is no actualReturnDate).</p>
+</td>
+</tr>
+<tr>
+<td class="packagedElementType">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean </td><td><a title="AXE::com.isima.library.model::Borrowing::isLate" href="#_0X2.rEC.eRE.eC.wIKNFKS.y.u.kQ"><img border="0" src="../images/738531457_icon.png" alt="isLate"></a>&nbsp;<a title="AXE::com.isima.library.model::Borrowing::isLate" href="#_0X2.rEC.eRE.eC.wIKNFKS.y.u.kQ">isLate</a></td><td>
+<p>
+<a name="documentationSection"></a>Returns true if the borrowing is late (that is, if the current date is greater than expectedReturnDate).</p>
+</td>
+</tr>
+<tr>
+<td class="packagedElementType">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; String </td><td><a title="AXE::com.isima.library.model::Borrowing::toString" href="#_15.k.x8C.eQE.eC.wIKNFKS.y.u.kQ"><img border="0" src="../images/738531457_icon.png" alt="toString"></a>&nbsp;<a title="AXE::com.isima.library.model::Borrowing::toString" href="#_15.k.x8C.eQE.eC.wIKNFKS.y.u.kQ">toString</a></td><td></td>
+</tr>
+</table>
+<br>
+<a name="propertiesTable">
+<p class="LargeTitle">Propriétés :</p>
+</a>
+<table class="PropertiesTable" cellpadding="4" cellspacing="0" border="1">
+<tr>
+<td class="PropertyName"><b>Alias</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Classifier Behavior</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Abstract</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Active</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Derived</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Leaf</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Keywords</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Kind</b></td><td class="PropertyValue">0 - simple</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name</b></td><td class="PropertyValue">Borrowing</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name Expression</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Namespace</b></td><td class="PropertyValue"><a href="_DMAOIC.eNE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Package&gt; com.isima.library.model</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owned Template Signature</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owner</b></td><td class="PropertyValue"><a href="_DMAOIC.eNE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Package&gt; com.isima.library.model</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Package</b></td><td class="PropertyValue"><a href="_DMAOIC.eNE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Package&gt; com.isima.library.model</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Qualified Name</b></td><td class="PropertyValue">AXE::com.isima.library.model::Borrowing</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Representation</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Stereotype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Visibility</b></td><td class="PropertyValue">Public</td>
+</tr>
+</table>
+<p></p>
+<table class="DetailsTable">
+<tr>
+<td class="DetailsTitle" colspan="2"><a name="attributeDetail">Détails d'attribut</a></td>
+</tr>
+</table>
+<span class="ListItem">
+<br>
+<img src="../images/-754640816_icon.png" alt="">&nbsp;<a name="_NT-R.wC.ePE.eC.wIKNFKS.y.u.kQ">actualReturnDate</a></span>
+<pre>Private&nbsp;&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Date actualReturnDate</pre>
+<dl>
+<dd></dd>
+<dt>
+<a name="attributeConstraintsTable_NT-R.wC.ePE.eC.wIKNFKS.y.u.kQ"><b>Contraintes :</b></a>
+</dt>
+<dt>
+<b>Propriétés :</b>
+</dt>
+<dd>
+<br>
+<table class="PropertiesTable" cellpadding="4" cellspacing="0" border="1">
+<tr>
+<td class="PropertyName"><b>Aggregation</b></td><td class="PropertyValue">None</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Alias</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Association</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Association End</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Class</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Datatype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Default</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Default Value</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Composite</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Derived</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Derived Union</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Leaf</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Ordered</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Read Only</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Static</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Unique</b></td><td class="PropertyValue">true</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Keywords</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Lower</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Lower Value</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Multiplicity</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name</b></td><td class="PropertyValue">actualReturnDate</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name Expression</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Namespace</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Opposite</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owner</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Association</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Qualified Name</b></td><td class="PropertyValue">AXE::com.isima.library.model::Borrowing::actualReturnDate</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Stereotype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Type</b></td><td class="PropertyValue">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Date</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Upper</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Upper Value</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Visibility</b></td><td class="PropertyValue">Private</td>
+</tr>
+</table>
+</dd>
+</dl>
+<hr>
+<span class="ListItem">
+<br>
+<img src="../images/-754640816_icon.png" alt="">&nbsp;<a name="_K71V.sC.ePE.eC.wIKNFKS.y.u.kQ">borrowingDate</a></span>
+<pre>Private&nbsp;&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Date borrowingDate</pre>
+<dl>
+<dd></dd>
+<dt>
+<a name="attributeConstraintsTable_K71V.sC.ePE.eC.wIKNFKS.y.u.kQ"><b>Contraintes :</b></a>
+</dt>
+<dt>
+<b>Propriétés :</b>
+</dt>
+<dd>
+<br>
+<table class="PropertiesTable" cellpadding="4" cellspacing="0" border="1">
+<tr>
+<td class="PropertyName"><b>Aggregation</b></td><td class="PropertyValue">None</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Alias</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Association</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Association End</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Class</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Datatype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Default</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Default Value</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Composite</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Derived</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Derived Union</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Leaf</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Ordered</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Read Only</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Static</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Unique</b></td><td class="PropertyValue">true</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Keywords</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Lower</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Lower Value</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Multiplicity</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name</b></td><td class="PropertyValue">borrowingDate</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name Expression</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Namespace</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Opposite</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owner</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Association</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Qualified Name</b></td><td class="PropertyValue">AXE::com.isima.library.model::Borrowing::borrowingDate</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Stereotype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Type</b></td><td class="PropertyValue">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Date</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Upper</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Upper Value</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Visibility</b></td><td class="PropertyValue">Private</td>
+</tr>
+</table>
+</dd>
+</dl>
+<hr>
+<span class="ListItem">
+<br>
+<img src="../images/-754640816_icon.png" alt="">&nbsp;<a name="_MG.fK8C.ePE.eC.wIKNFKS.y.u.kQ">expectedReturnDate</a></span>
+<pre>Private&nbsp;&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Date expectedReturnDate</pre>
+<dl>
+<dd></dd>
+<dt>
+<a name="attributeConstraintsTable_MG.fK8C.ePE.eC.wIKNFKS.y.u.kQ"><b>Contraintes :</b></a>
+</dt>
+<dt>
+<b>Propriétés :</b>
+</dt>
+<dd>
+<br>
+<table class="PropertiesTable" cellpadding="4" cellspacing="0" border="1">
+<tr>
+<td class="PropertyName"><b>Aggregation</b></td><td class="PropertyValue">None</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Alias</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Association</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Association End</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Class</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Datatype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Default</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Default Value</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Composite</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Derived</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Derived Union</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Leaf</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Ordered</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Read Only</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Static</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Unique</b></td><td class="PropertyValue">true</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Keywords</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Lower</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Lower Value</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Multiplicity</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name</b></td><td class="PropertyValue">expectedReturnDate</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name Expression</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Namespace</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Opposite</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owner</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Association</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Qualified Name</b></td><td class="PropertyValue">AXE::com.isima.library.model::Borrowing::expectedReturnDate</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Stereotype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Type</b></td><td class="PropertyValue">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Date</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Upper</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Upper Value</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Visibility</b></td><td class="PropertyValue">Private</td>
+</tr>
+</table>
+</dd>
+</dl>
+<p></p>
+<table class="DetailsTable">
+<tr>
+<td class="DetailsTitle" colspan="2"><a name="operationDetail">Détails d'opération</a></td>
+</tr>
+</table>
+<br>
+<span class="ListItem"><img src="../images/738531457_icon.png" alt="">&nbsp;<a name="_.y.t.c-.wC.eRE.eC.wIKNFKS.y.u.kQ">isCompleted</a></span>
+<pre>Public&nbsp;&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean isCompleted()</pre>
+<dl>
+<dd></dd>
+<p>
+<a name="documentationSection"></a>Returns true if the borrowing is completed (that is, if there is an actualReturnDate).</p>
+<dt>
+<b>Paramètres :</b>
+</dt>
+<dt>
+<b>Retours :</b>
+</dt>
+<dd>&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean </dd>
+<dt>
+<a name="operationConstraintsTable_.y.t.c-.wC.eRE.eC.wIKNFKS.y.u.kQ"><b>Contraintes :</b></a>
+</dt>
+<dt>
+<b>Propriétés :</b>
+</dt>
+<dd>
+<br>
+<table class="PropertiesTable" cellpadding="4" cellspacing="0" border="1">
+<tr>
+<td class="PropertyName"><b>Alias</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Body Condition</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Class</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Concurrency</b></td><td class="PropertyValue">Sequential</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Datatype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Interface</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Abstract</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Leaf</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Ordered</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Query</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Static</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Unique</b></td><td class="PropertyValue">true</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Keywords</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Lower</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name</b></td><td class="PropertyValue">isCompleted</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name Expression</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Namespace</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owned Template Signature</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owner</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Qualified Name</b></td><td class="PropertyValue">AXE::com.isima.library.model::Borrowing::isCompleted</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Stereotype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Type</b></td><td class="PropertyValue">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Upper</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Visibility</b></td><td class="PropertyValue">Public</td>
+</tr>
+</table>
+</dd>
+</dl>
+<hr>
+<br>
+<span class="ListItem"><img src="../images/738531457_icon.png" alt="">&nbsp;<a name="_1Q.xQEC.eRE.eC.wIKNFKS.y.u.kQ">isInProgress</a></span>
+<pre>Public&nbsp;&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean isInProgress()</pre>
+<dl>
+<dd></dd>
+<p>
+<a name="documentationSection"></a>Returns true if the borrowing is in-progress (that is, if there is no actualReturnDate).</p>
+<dt>
+<b>Paramètres :</b>
+</dt>
+<dt>
+<b>Retours :</b>
+</dt>
+<dd>&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean </dd>
+<dt>
+<a name="operationConstraintsTable_1Q.xQEC.eRE.eC.wIKNFKS.y.u.kQ"><b>Contraintes :</b></a>
+</dt>
+<dt>
+<b>Propriétés :</b>
+</dt>
+<dd>
+<br>
+<table class="PropertiesTable" cellpadding="4" cellspacing="0" border="1">
+<tr>
+<td class="PropertyName"><b>Alias</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Body Condition</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Class</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Concurrency</b></td><td class="PropertyValue">Sequential</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Datatype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Interface</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Abstract</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Leaf</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Ordered</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Query</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Static</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Unique</b></td><td class="PropertyValue">true</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Keywords</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Lower</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name</b></td><td class="PropertyValue">isInProgress</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name Expression</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Namespace</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owned Template Signature</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owner</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Qualified Name</b></td><td class="PropertyValue">AXE::com.isima.library.model::Borrowing::isInProgress</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Stereotype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Type</b></td><td class="PropertyValue">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Upper</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Visibility</b></td><td class="PropertyValue">Public</td>
+</tr>
+</table>
+</dd>
+</dl>
+<hr>
+<br>
+<span class="ListItem"><img src="../images/738531457_icon.png" alt="">&nbsp;<a name="_0X2.rEC.eRE.eC.wIKNFKS.y.u.kQ">isLate</a></span>
+<pre>Public&nbsp;&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean isLate()</pre>
+<dl>
+<dd></dd>
+<p>
+<a name="documentationSection"></a>Returns true if the borrowing is late (that is, if the current date is greater than expectedReturnDate).</p>
+<dt>
+<b>Paramètres :</b>
+</dt>
+<dt>
+<b>Retours :</b>
+</dt>
+<dd>&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean </dd>
+<dt>
+<a name="operationConstraintsTable_0X2.rEC.eRE.eC.wIKNFKS.y.u.kQ"><b>Contraintes :</b></a>
+</dt>
+<dt>
+<b>Propriétés :</b>
+</dt>
+<dd>
+<br>
+<table class="PropertiesTable" cellpadding="4" cellspacing="0" border="1">
+<tr>
+<td class="PropertyName"><b>Alias</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Body Condition</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Class</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Concurrency</b></td><td class="PropertyValue">Sequential</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Datatype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Interface</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Abstract</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Leaf</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Ordered</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Query</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Static</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Unique</b></td><td class="PropertyValue">true</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Keywords</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Lower</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name</b></td><td class="PropertyValue">isLate</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name Expression</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Namespace</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owned Template Signature</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owner</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Qualified Name</b></td><td class="PropertyValue">AXE::com.isima.library.model::Borrowing::isLate</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Stereotype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Type</b></td><td class="PropertyValue">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; Boolean</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Upper</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Visibility</b></td><td class="PropertyValue">Public</td>
+</tr>
+</table>
+</dd>
+</dl>
+<hr>
+<br>
+<span class="ListItem"><img src="../images/738531457_icon.png" alt="">&nbsp;<a name="_15.k.x8C.eQE.eC.wIKNFKS.y.u.kQ">toString</a></span>
+<pre>Public&nbsp;&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; String toString()</pre>
+<dl>
+<dd></dd>
+<dt>
+<b>Paramètres :</b>
+</dt>
+<dt>
+<b>Retours :</b>
+</dt>
+<dd>&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; String </dd>
+<dt>
+<a name="operationConstraintsTable_15.k.x8C.eQE.eC.wIKNFKS.y.u.kQ"><b>Contraintes :</b></a>
+</dt>
+<dt>
+<b>Propriétés :</b>
+</dt>
+<dd>
+<br>
+<table class="PropertiesTable" cellpadding="4" cellspacing="0" border="1">
+<tr>
+<td class="PropertyName"><b>Alias</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Body Condition</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Class</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Concurrency</b></td><td class="PropertyValue">Sequential</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Datatype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Interface</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Abstract</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Leaf</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Ordered</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Query</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Static</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Is Unique</b></td><td class="PropertyValue">false</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Keywords</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Lower</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name</b></td><td class="PropertyValue">toString</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Name Expression</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Namespace</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owned Template Signature</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owner</b></td><td class="PropertyValue"><a href="_F.lE.h0C.eOE.eC.wIKNFKS.y.u.kQ-content.html">&lt;Association Class&gt; Borrowing</a></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Owning Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Qualified Name</b></td><td class="PropertyValue">AXE::com.isima.library.model::Borrowing::toString</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Stereotype</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Template Parameter</b></td><td class="PropertyValue"></td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Type</b></td><td class="PropertyValue">&lt;&lt;Java Class&gt;&gt; &lt;Class&gt; String</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Upper</b></td><td class="PropertyValue">1</td>
+</tr>
+<tr>
+<td class="PropertyName"><b>Visibility</b></td><td class="PropertyValue">Public</td>
+</tr>
+</table>
+</dd>
+</dl>
+<hr>
+<br>
+<table class="NavigationBar">
+<tr>
+<td>
+<table class="NavBarLeft">
+<tr>
+<td class="NavBarMainLink"><a target="_top" href="../index.html">Présentation</a></td><td class="NavBarMainLink"><a href="_.rGL.d.oC.eME.eC.wIKNFKS.y.u.kQ-top-summary.html">Haut</a></td><td class="NavBarMainLink"><a href="_DMAOIC.eNE.eC.wIKNFKS.y.u.kQ-content.html">Package</a></td><td class="NavBarMainHighlight">Elément</td>
+</tr>
+</table>
+</td><td class="NavBarRight">Documentation UML de com.isima.library.model</td>
+</tr>
+</table>
+<table>
+<tr class="NavBarBookMarks">
+<td class="BookMarkSections"><span class="BookMarkElements">Récapitulatif :</span><span class="BookMarkElements"><a href="#attributeSummary" title="Attributs">Attributs</a></span><span class="BookMarkElements"><a href="#operationSummary" title="Opérations">Opérations</a></span><span class="BookMarkElements"><a href="#propertiesTable" title="Propriétés">Propriétés</a></span></td><td class="BookMarkSections"><span class="BookMarkElements">Détail :</span><span class="BookMarkElements"><a href="#attributeDetail" title="Attributs">Attributs</a></span><span class="BookMarkElements"><a href="#operationDetail" title="Opérations">Opérations</a></span></td>
+</tr>
+</table>
+</body>
+</html>

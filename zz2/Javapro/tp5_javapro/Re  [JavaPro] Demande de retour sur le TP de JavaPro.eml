@@ -1,0 +1,68 @@
+Received: from mail-bw0-f44.google.com (mail-bw0-f44.google.com [209.85.214.44])
+	by poste.isima.fr (8.13.8/8.13.8) with ESMTP id p4R6dpKo864440
+	for <escourbi@poste.isima.fr>; Fri, 27 May 2011 08:39:51 +0200
+Received: by bwz13 with SMTP id 13so993772bwz.3
+        for <escourbi@poste.isima.fr>; Thu, 26 May 2011 23:43:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=gamma;
+        h=domainkey-signature:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:content-type:content-transfer-encoding;
+        bh=WJExbDrZEiK8Hf4+ArO4J88X0MDlCtS8SVdHsvgsUos=;
+        b=g9bnUsFKymRAqNFU/HPeSqa9+3qg28afXiowpG133mx6zthL8NyhHaC+9p5LRA1gi9
+         lBwxzBO9KRWfoBWhzMEBZvK07Z5bUipCduJbqAPj7vP7+wmAGI1yEVyjnlDqGOJ4DhET
+         krDSm046jNltC7mf2DnUER8IKMkILF6SCzXIM=
+DomainKey-Signature: a=rsa-sha1; c=nofws;
+        d=gmail.com; s=gamma;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type:content-transfer-encoding;
+        b=UqzkMamZ2eNrW/Hgdgs69ljgVZGxOR+qhAuWdHhgOq/wsg3PxH9z16DWdNSRaxBLWR
+         A0QIyq7gdo0/kya09KIeSVXkLbYs9aviXPY8WS8lxkfRu4dQIwEnxi0oOfSXvbzm5pmL
+         MHqvNteTuiNR0ZKoy8LZGGxB2zsCzR3AmbCzg=
+Received: by 10.204.20.74 with SMTP id e10mr1423396bkb.148.1306478586114; Thu,
+ 26 May 2011 23:43:06 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.204.154.139 with HTTP; Thu, 26 May 2011 23:42:26 -0700 (PDT)
+In-Reply-To: <4DDEC0DA.9040104@poste.isima.fr>
+References: <4DDEC0DA.9040104@poste.isima.fr>
+From: Romain Seguy <romain.seguy@gmail.com>
+Date: Fri, 27 May 2011 08:42:26 +0200
+Message-ID: <BANLkTikcFXHo16MqDwJPLQ-woZB+ujOS3g@mail.gmail.com>
+Subject: Re: [JavaPro] Demande de retour sur le TP de JavaPro
+To: Maxime Escourbiac <escourbi@poste.isima.fr>
+Content-Type: text/plain; charset=ISO-8859-1
+X-Greylist: Default is to whitelist mail, not delayed by milter-greylist-3.0 (poste.isima.fr [193.55.95.131]); Fri, 27 May 2011 08:39:51 +0200 (CEST)
+Content-Transfer-Encoding: 8bit
+X-MIME-Autoconverted: from quoted-printable to 8bit by poste.isima.fr id p4R6dpKo864440
+
+Hello,
+
+J'avais noté les points suivants :
+- pas de tag Subversion pour préciser la version à corriger ;
+- utilisation faible de Subversion (soit pas durant les TPs, soit
+juste avant de le rendre -- je ne sais plus quel cas s'applique à toi)
+;
+- les bibliothèques Java n'étaient pas livrées ;
+- le découpage des classes et la qualité du code étaient au niveau attendu ;
+- commentaires du code à améliorer ;
+- bons tests unitaires ;
+- Cobertura pas mis en place ;
+- utilisation d'Hudson basique ;
+- build.xml moyen, peu commenté, avec des paths en dur et sans commentaires.
+
+A+
+RS
+
+Le 26 mai 2011 23:06, Maxime Escourbiac <escourbi@poste.isima.fr> a écrit :
+> Bonjour,
+>
+> Je vous écris pour vous demander s'il était possible d'avoir un retour sur
+> notre TP. En effet il s'agissait pour moi de mon "premier" mini-projet en
+> Java, j'aurai aimé savoir quels ont été les principales erreurs que vous
+> avez pu rencontrés, que ce soit dans le code, le style et les outils
+> utilisés (JUnit, Ant, Hudson) afin de pouvoir les gommer et de m'améliorer
+> dans ce langage.
+>
+> Cordialement Maxime ESCOURBIAC
+>
+>
+

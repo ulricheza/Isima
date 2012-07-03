@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+  <TITLE>Format des PDU IP</TITLE>
+   <LINK HREF="../../reseaux.css" REL="STYLESHEET" TYPE="text/css">
+</HEAD>
+<BODY BGCOLOR=white>
+
+<H1>Format des PDU-IP</H1>
+
+
+<CENTER>
+<TABLE BORDER="1" WIDTH="100%" ALIGN=center CELLPADDING="5" CELLSPACING="0">
+<TR><TD WIDTH="50%" ALIGN=left COLSPAN=3><SMALL><TT>0</TT></SMALL></TD><TD WIDTH="50%" ALIGN=right COLSPAN=2><SMALL><TT>31</TT></SMALL></TD></TR>
+<TR>
+	<TD WIDTH="12%" ALIGN=center>version <TT><SMALL>[v]</SMALL></TT></TD>
+	<TD WIDTH="12%" ALIGN=center>lg.ent&ecirc;te <TT><SMALL>[hl]</SMALL></TT></TD>
+	<TD WIDTH="25%" ALIGN=center>service <TT><SMALL>[qos]</SMALL></TT></TD>
+	<TD WIDTH="50%" ALIGN=center COLSPAN=2>longueur totale <TT><SMALL>[lg]</SMALL></TT></TD></TR>
+<TR>
+	<TD ALIGN="center" COLSPAN=3>identificateur de la PDU-IP <TT><SMALL>[id]</SMALL></TT></TD>
+	<TD ALIGN="center">flags <TT><SMALL>[off]</SMALL></TT></TD>
+	<TD ALIGN="center">position du fragment <TT><SMALL>[off]</SMALL></TT></TD></TR>
+<TR>
+	<TD ALIGN="center" COLSPAN=2>dur&eacute;e de vie <TT><SMALL>[ttl]</SMALL></TT></TD>
+	<TD ALIGN="center">protocole encapsul&eacute; <TT><SMALL>[p]</SMALL></TT></TD>
+	<TD ALIGN="center" COLSPAN=2>somme de contr&ocirc;le <TT><SMALL>[ck]</SMALL></TT></TD></TR>
+<TR>
+	<TD ALIGN="center" COLSPAN=5>adresse source <TT><SMALL>[Src]</SMALL></TT></TD></TR>
+<TR>
+	<TD ALIGN="center" COLSPAN=5>adresse destination<TT><SMALL>[Dst]</SMALL></TT></TD></TR>
+<TR>
+	<TD ALIGN="center" COLSPAN=5>donn&eacute;es (PDU de couche sup&eacute;rieure)</TD></TR>
+</TABLE>
+</CENTER>
+
+<P>Chaque ligne repr&eacute;sente 4 octets; par exemple <TT>version</TT> est
+sur 4 bits, et <TT>dur&eacute;e de vie</TT> sur 1 octet.</P>
+
+<P>Les valeurs du champ <TT><B>service</B></TT> sont une combinaison des
+param&egrave;tres de qualit&eacute; :</P>
+
+<BLOCKQUOTE>
+<TABLE BORDER="0" CELLSPACING="1" CELLPADDING="2">
+<TR VALIGN="TOP">
+	<TH>bits</TH><TH>signification</TH><TH>valeurs</TH></TR>
+<TR VALIGN="TOP">
+	<TD><TT>xxx.....</TT></TD>
+	<TD>niveau de priorit&eacute; (<I>precedance</I>)</TD>
+	<TD>000=normale &agrave; 111=maximale</TD></TR>
+<TR>
+	<TD><TT>...x....</TT></TD>
+	<TD>d&eacute;lai d'acheminement (<I>delay</I>)</TD>
+	<TD>0=normal 1=court</TD></TR>
+<TR>
+	<TD><TT>....x...</TT></TD>
+	<TD>d&eacute;bit de transmission (<I>throughput</I>)</TD>
+	<TD>0=normal 1=&eacute;lev&eacute;</TD></TR>
+<TR>
+	<TD><TT>.....x..</TT></TD>
+	<TD>confidentialit&eacute; (<I>reliability</I>)</TD>
+	<TD>0=normale 1=&eacute;lev&eacute;e</TD></TR>
+</TABLE>
+</BLOCKQUOTE>
+
+<P>Les valeurs du champ <TT><B>flags</B></TT> sont :</P>
+
+<BLOCKQUOTE>
+<TABLE BORDER="0" CELLSPACING="1" CELLPADDING="2">
+<TR VALIGN="TOP">
+	<TH>bits</TH><TH>signification</TH><TH>valeurs</TH></TR>
+<TR VALIGN="TOP">
+	<TD><TT>.x......</TT></TD>
+	<TD>autorisation de fragmentation</TD>
+	<TD>1 = la PDU peut &ecirc;tre fragment&eacute;e</TD></TR>
+<TR VALIGN="TOP">
+	<TD><TT>..x.....</TT></TD>
+	<TD>dernier fragment ?</TD>
+	<TD>1 = ce n'est pas le fragment</TD></TR>
+<TR VALIGN="TOP">
+	<TD><TT>...xxxxx</TT></TD>
+	<TD>position du fragment dans la PDU originelle</TD>
+	<TD>&nbsp;</TD></TR>
+</TABLE>
+</BLOCKQUOTE>
+
+<P>La valeur du champ <TT>p</TT> (protocole encapsul&eacute;) indique à quel protocole appartient la PDU transportée dans le champ 
+<TT>donnée</TT> (<A HREF="./rfc1700-IP_protocol_numbers.html">liste des codes protocole</A>).</P>
+
+<HR>
+<H1>Exemple d'interpr&eacute;tation de PDU-IP</H1>
+
+<P>Soit la PDU-IP :</P>
+<P><TT STYLE="color:red">4500 0028 5b24 0000 3b06 e231 c136 3301 c036 8e0c 03ff 0201 4d20 2492 8e88 05a1 5010 81d0 dfad 0000 0000 0000 0000</TT></P>
+
+<BLOCKQUOTE><TABLE BORDER="BORDER" CELLSPACING="0" CELLPADDING="2">
+<TR VALIGN="TOP"><TH>champ</TH><TH>valeur</TH><TD>&nbsp;</TD></TR>
+<TR VALIGN="TOP"><TD>version</TD><TD><TT>4</TT></TD><TD>&nbsp;</TD></TR>
+<TR VALIGN="TOP"><TD>lg.ent&ecirc;te</TD><TD><TT>5</TT></TD><TD>4*5 = 20 octets</TD></TR>
+<TR VALIGN="TOP"><TD>service</TD><TD><TT>00</TT></TD><TD>service normal</TD></TR>
+<TR VALIGN="TOP"><TD>longueur totale</TD><TD><TT>0028</TT></TD><TD>40 octets</TD></TR>
+<TR VALIGN="TOP"><TD>identificateur de la PDU</TD><TD><TT>5b24</TT></TD><TD>&nbsp;</TD></TR>
+<TR VALIGN="TOP"><TD>flags et position du fragment</TD><TD><TT>0000</TT></TD><TD>premier et dernier fragment</TD></TR>
+<TR VALIGN="TOP"><TD>dur&eacute;e de vie</TD><TD><TT>3b</TT></TD><TD>59 secondes</TD></TR>
+<TR VALIGN="TOP"><TD>protocole encapsul&eacute;</TD><TD><TT>06</TT></TD><TD>TCP</TD></TR>
+<TR VALIGN="TOP"><TD>somme de contr&ocirc;le</TD><TD><TT>e231</TT></TD><TD>&nbsp;</TD></TR>
+<TR VALIGN="TOP"><TD>adresse source</TD><TD><TT>c1363301</TT></TD><TD><TT>193.54.51.1</TT></TD></TR>
+<TR VALIGN="TOP"><TD>adresse destination</TD><TD><TT>c0368e0c</TT></TD><TD><TT>192.54.142.12</TT></TD></TR>
+<TR VALIGN="TOP"><TD>donn&eacute;es</TD><TD><TT>03ff ...</TT></TD><TD>une PDU TCP</TD></TR>
+</TABLE></BLOCKQUOTE>
+
+</BODY></HTML>

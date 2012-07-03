@@ -1,0 +1,31 @@
+<project name="UnitTest" >	
+	
+	<target name = "Book">
+		<junit printsummary="yes">
+			<formatter type="xml"/>
+			<test name="BookTest"/>
+		</junit>
+	</target>
+
+	<target name = "Borrowing">
+		<junit printsummary="yes">
+			<formatter type="xml"/>
+			<test name="BorrowingTest"/>
+		</junit>
+	</target>
+	
+    <target name = "Library">
+		<junit printsummary="yes">
+			<formatter type="xml"/>
+			<test name="LibraryTest"/>
+		</junit>
+	</target>
+    
+	<target name = "Person">
+		<junit printsummary="yes">
+			<formatter type="xml"/>
+			<test name="PersonTest"/>
+		</junit>
+	</target>
+
+</project>

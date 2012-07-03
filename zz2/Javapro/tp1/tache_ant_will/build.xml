@@ -1,0 +1,20 @@
+<project name="HelloWorld" default="main" basedir=".">
+	<property name="basedir" value="." />
+	<property name="build"   value="${basedir}/bin" />
+	<property name="src"     value="${basedir}/src" />
+	<property name="version" value="1.4" />
+	<property name="release" value="${basedir}/release" />
+	<property name="jar"     value="${release}/${ant.project.name}.jar" />
+	<property name="main-class" value="main.Main" />
+			
+	<taskdef name="myTask" classpath="${build}" classname="task.MyTask" />
+		
+	<target name="main">
+		<myTask 
+			srcDir="${src}" 
+			destDir="${build}"
+			jarFile="${jar}" 
+			version="${version}"
+			mainClass="${main-class}" />
+	</target>
+</project>

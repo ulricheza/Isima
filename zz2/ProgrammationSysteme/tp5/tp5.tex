@@ -1,0 +1,53 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{latexsym,a4,times}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\setlength{\oddsidemargin}{-10mm}
+\setlength{\evensidemargin}{2mm}
+\setlength{\textwidth}{170mm}
+\setlength{\textheight}{225mm}
+\setlength{\topmargin}{0mm}
+\setlength{\parskip}{1mm}
+
+\title{Cours de système d'exploitation}
+\author{Christophe Gouinaud}
+\begin{document}
+
+\thispagestyle{empty}
+
+\centerline{\Large \bf TP prog sys numéro 5 : memory maping et verrouillage simple}
+\centerline{\small {\bf ISIMA} ZZ 2 }
+
+\medskip\medskip\medskip
+
+\section{Mappons un résultat}
+
+
+\begin{itemize}
+
+\item Reprogrammer l'exercice de floutage d'image en trois processus gérant respectivement  le rouge, le vert et le bleu en utilisant du memory mapping. Vous n'utiliserez qu'un tableau de donnée en memory mapping en faisant en sorte de ne pas boussiller l'image d'origine. Pour cela on utilisera la fonction truncate pour créer le fichier.
+
+\item Calculer la moyenne du temps nécessaire a créer un pixel pour chaque couche et comparer le a la technique utilisant un pipe.
+
+\item Calculer le taux d'asynchronisme (distance entre les pixels traités par les trois processus). Que remarque-t-on ?
+
+\end{itemize}
+
+\medskip\medskip
+
+\section{Verouillage de fichier}
+
+\begin{itemize}
+
+\item Reprendre le programme permettant de discuter a plusieur en utilisant un fichier commun.  Ecrire un programme qui ecrit de façon aleatoire dans le canal de communication ( voir drand48() ) un message fixe identifiable. Le fichiers de discution doit normalement se corompre au bout d'un certain temps.
+
+\item Améliorer ce programme pour qu'il evite que deux processus utilisateurs écrivent dans le fichier de conversation en meme temps enn utilisant les fonction de verouiilage de fichier (flock ...)
+
+\item Essayer le programme en le faisant tourner en meme temps sur ratus et etud. que se passe t-il.
+
+\end{itemize}
+
+
+\end{document}
+

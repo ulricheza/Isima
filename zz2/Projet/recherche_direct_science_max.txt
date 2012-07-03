@@ -1,0 +1,60 @@
+/*
+Elements trouves sur direct science
+*/
+
+A meta-model for passenger and freight transport in Europe  Original Research Article
+Transport Policy, Volume 11, Issue 4, October 2004, Pages 329-344
+Gerard de Jong, Hugh Gunn, Moshe Ben-Akiva
+
+
+Planning models for freight transportation  Review Article
+European Journal of Operational Research, Volume 97, Issue 3, 16 March 1997, Pages 409-438
+Teodor Gabriel Crainic, Gilbert Laporte
+
+>From timetabling to train regulation?a new train operation model  Original Research Article
+Information and Software Technology, Volume 47, Issue 9, 15 June 2005, Pages 575-585
+Shaw-Ching Chang, Yu-Chi Chung
+
+Computational model of a Shinkansen train running on the railway structure and the industrial applications  Original Research Article
+Journal of Materials Processing Technology, Volume 140, Issues 1-3, 22 September 2003, Pages 705-710
+M Tanabe, H Wakui, N Matsumoto, H Okuda, M Sogabe, S Komiya
+
+A constraint programming model for real-time train scheduling at junctions  Original Research Article
+Transportation Research Part B: Methodological, Volume 41, Issue 2, February 2007, Pages 231-245
+Joaquín Rodriguez
+
+Scheduling trains on a railway network using a discrete event model of railway traffic  Original Research Article
+Transportation Research Part B: Methodological, Volume 38, Issue 1, January 2004, Pages 81-98
+M. J. Dorfman, J. Medanic
+
+A multi-objective train scheduling model and solution  Original Research Article
+Transportation Research Part B: Methodological, Volume 38, Issue 10, December 2004, Pages 927-952
+Keivan Ghoseiri, Ferenc Szidarovszky, Mohammad Jawad Asgharpour
+
+Routing trains through a railway station based on a node packing model  Original Research Article
+European Journal of Operational Research, Volume 128, Issue 1, 1 January 2001, Pages 14-33
+Peter J. Zwaneveld, Leo G. Kroon, Stan P. M. van Hoesel
+
+Efficient scheduling of railway traffic based on global information of train  Original Research Article
+Transportation Research Part B: Methodological, Volume 42, Issue 10, December 2008, Pages 1008-1030
+Feng Li, Ziyou Gao, Keping Li, Lixing Yang
+
+A branch and bound algorithm for scheduling trains in a railway network  Original Research Article
+European Journal of Operational Research, Volume 183, Issue 2, 1 December 2007, Pages 643-657
+Andrea D?Ariano, Dario Pacciarelli, Marco Pranzo
+
+Freight train scheduling with elastic demand  Original Research Article
+Transportation Research Part E: Logistics and Transportation Review, Volume 46, Issue 6, November 2010, Pages 1057-1070
+April Kuo, Elise Miller-Hooks, Hani S. Mahmassani
+
+Dynamic analysis of railway bridge under high-speed trains  Original Research Article
+Computers & Structures, Volume 83, Issues 23-24, September 2005, Pages 1891-1901
+He Xia, Nan Zhang
+
+Railway traffic control and train scheduling based oninter-train conflict management  Original Research Article
+Transportation Research Part B: Methodological, Volume 33, Issue 7, September 1999, Pages 511-534
+ismail iahin
+
+A Lagrangian heuristic algorithm for a real-world train timetabling problem  Original Research Article
+Discrete Applied Mathematics, Volume 154, Issue 5, 1 April 2006, Pages 738-753
+Alberto Caprara, Michele Monaci, Paolo Toth, Pier Luigi Guida

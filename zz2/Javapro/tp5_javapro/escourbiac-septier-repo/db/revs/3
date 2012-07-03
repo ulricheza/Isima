@@ -1,0 +1,90 @@
+id: c.0.r3/0
+type: dir
+count: 0
+cpath: /trunk/GroovyCI/src/unittest
+copyroot: 0 /
+
+PLAIN
+K 8
+unittest
+V 12
+dir c.0.r3/0
+END
+ENDREP
+id: 7.0.r3/131
+type: dir
+pred: 7.0.r2/711
+count: 1
+text: 3 83 35 35 07cca9d80389b777802a22d411b1c2e6
+cpath: /trunk/GroovyCI/src
+copyroot: 0 /
+
+PLAIN
+K 10
+.classpath
+V 15
+file 5.0.r2/441
+K 8
+.project
+V 15
+file 6.0.r2/576
+K 3
+bin
+V 14
+dir 8.0.r2/787
+K 3
+src
+V 14
+dir 7.0.r3/131
+END
+ENDREP
+id: 4.0.r3/418
+type: dir
+pred: 4.0.r2/1007
+count: 1
+text: 3 274 131 131 52df9cb8c16b99361b9b4f39d797ea60
+cpath: /trunk/GroovyCI
+copyroot: 0 /
+
+PLAIN
+K 8
+GroovyCI
+V 14
+dir 4.0.r3/418
+END
+ENDREP
+id: 1.0.r3/611
+type: dir
+pred: 1.0.r2/1184
+count: 2
+text: 3 561 37 37 1ca9f92ec5148b0056c786d9afe38e3d
+cpath: /trunk
+copyroot: 0 /
+
+PLAIN
+K 8
+branches
+V 13
+dir 2.0.r1/61
+K 4
+tags
+V 14
+dir 3.0.r1/126
+K 5
+trunk
+V 14
+dir 1.0.r3/611
+END
+ENDREP
+id: 0.0.r3/851
+type: dir
+pred: 0.0.r2/1424
+count: 3
+text: 3 743 95 95 6287d0de1afd17a12e5868bca93c448d
+cpath: /
+copyroot: 0 /
+
+_3.0.t2-1 add false false /trunk/GroovyCI/src/unittest
+
+
+851 978
