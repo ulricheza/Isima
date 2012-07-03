@@ -1,0 +1,35 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            function valider(){
+                e = document.forms["monformulaire"]["mail"];
+                var elt = document.getElementById("valide");
+                if(e.value.indexOf("@") <0)
+                {    
+                    elt.innerHTML = "email invalide";
+                    elt.style.color = "red";   
+                }
+                else
+                {
+                    elt.innerHTML = "email valide";
+                    elt.style.color = "green"; 
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="monformulaire" action="..." method="post" onsubmit="">
+            <input type="text" name="mail" onkeyup="valider();" />
+        </form>
+        <p id="valide" style="color: red">
+            email invalide
+        <p>
+    </body>
+</html>

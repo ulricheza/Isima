@@ -1,0 +1,119 @@
+petisme@master0:~/ProgParallele/TP3$ mpicc matrixVectorMultiplication.c -o test
+petisme@master0:~/ProgParallele/TP3$ mpirun -machinefile mf -np 4 test
+The vector : 
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+The matrix : 
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+[31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+[41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+[51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
+[61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
+[71, 72, 73, 74, 75, 76, 77, 78, 79, 80]
+[81, 82, 83, 84, 85, 86, 87, 88, 89, 90]
+[91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+I will send this row to the slave 1
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+I will send this row to the slave 2
+[11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+I will send this row to the slave 3
+[21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+Progress : 3/10, Waiting : 3
+I've received the resul 880 from slave#1
+I will send this row to the slave 1
+[31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+Progress : 4/10, Waiting : 3
+I've received the resul 5230 from slave#1
+I will send this row to the slave 1
+[41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+Progress : 5/10, Waiting : 3
+I've received the resul 6680 from slave#1
+I will send this row to the slave 1
+[51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
+Progress : 6/10, Waiting : 3
+I've received the resul 8130 from slave#1
+I will send this row to the slave 1
+[61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
+Progress : 7/10, Waiting : 3
+I've received the resul 9580 from slave#1
+I will send this row to the slave 1
+[71, 72, 73, 74, 75, 76, 77, 78, 79, 80]
+Progress : 8/10, Waiting : 3
+I've received the resul 11030 from slave#1
+I will send this row to the slave 1
+[81, 82, 83, 84, 85, 86, 87, 88, 89, 90]
+Progress : 9/10, Waiting : 3
+I've received the resul 12480 from slave#1
+I will send this row to the slave 1
+[91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+Progress : 10/10, Waiting : 3
+I've received the resul 13930 from slave#1
+Sorry slave#1, no more rows to distribute
+Progress : 10/10, Waiting : 2
+I've received the resul 2330 from slave#2
+Sorry slave#2, no more rows to distribute
+Progress : 10/10, Waiting : 1
+I've received the resul 3780 from slave#3
+Sorry slave#3, no more rows to distribute
+The result vector is :
+[880, 2330, 3780, 5230, 6680, 8130, 9580, 11030, 12480, 13930]
+Execution time = 0.003906 s
+Slave#2, I'm waiting for the vector
+Slave#2, I received the vector : 
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Slave#2, I received the row : 
+[11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+Slave#2, The scalar product is : 2330
+Slave#2, I'm waiting for a new line
+Slave#2, I received the row : 
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Slave#2, I'm done. Bye
+Slave#1, I'm waiting for the vector
+Slave#1, I received the vector : 
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Slave#1, I received the row : 
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Slave#1, The scalar product is : 880
+Slave#1, I'm waiting for a new line
+Slave#1, I received the row : 
+[31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+Slave#1, The scalar product is : 5230
+Slave#1, I'm waiting for a new line
+Slave#1, I received the row : 
+[41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+Slave#1, The scalar product is : 6680
+Slave#1, I'm waiting for a new line
+Slave#1, I received the row : 
+[51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
+Slave#1, The scalar product is : 8130
+Slave#1, I'm waiting for a new line
+Slave#1, I received the row : 
+[61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
+Slave#1, The scalar product is : 9580
+Slave#1, I'm waiting for a new line
+Slave#1, I received the row : 
+[71, 72, 73, 74, 75, 76, 77, 78, 79, 80]
+Slave#1, The scalar product is : 11030
+Slave#1, I'm waiting for a new line
+Slave#1, I received the row : 
+[81, 82, 83, 84, 85, 86, 87, 88, 89, 90]
+Slave#1, The scalar product is : 12480
+Slave#1, I'm waiting for a new line
+Slave#1, I received the row : 
+[91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+Slave#1, The scalar product is : 13930
+Slave#1, I'm waiting for a new line
+Slave#1, I received the row : 
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Slave#1, I'm done. Bye
+Slave#3, I'm waiting for the vector
+Slave#3, I received the vector : 
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Slave#3, I received the row : 
+[21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+Slave#3, The scalar product is : 3780
+Slave#3, I'm waiting for a new line
+Slave#3, I received the row : 
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Slave#3, I'm done. Bye

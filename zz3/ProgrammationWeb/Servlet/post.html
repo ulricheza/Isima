@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Request tracing</title>
+	</head>
+	<body bgcolor="white">
+		<h2 align="center">Request tracing</h2>
+		<form method="post" action="http://localhost:8080/servlet/Post">
+			<center>
+				<p>Best language&nbsp;:<br>
+				<input type="text" name="pr1"
+						size="25" value='Java'><br><br><br>
+				<p>Best platform&nbsp;:<br>
+				<input type="text" name="pr2"
+						size="25" value='Eclipse'><br><br><br>
+				<p>Best engineer&nbsp;:<br>
+				<input type="text" name="pr3"
+						size="25" value='Me'><br><br><br>
+				<input type="submit" value="Send">
+		</form>
+		
+		<p><a href='http://localhost:8080/servlet/Post?pr1=Java&pr2=Eclipse&pr3=Me'>Post?pr1=Java&pr2=Eclipse&pr3=Me'</a>
+	</body>
+</html>

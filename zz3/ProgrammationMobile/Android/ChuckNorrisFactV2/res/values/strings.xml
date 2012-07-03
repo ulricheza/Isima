@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChuckNorrisFact</string>
+    <string name="consigne_demande_fact">Afficher la fact N°</string>
+    <string name="defaut_fact_id">Fact ID</string>
+    <string name="afficher">Afficher</string>
+    <string name="afficher_hasard">Au hasard</string>
+    <string name="id_label">Id: </string>
+    <string name="description_label">Fact:</string>
+    <string name="precedent">Précédent</string>
+    <string name="suivant">Suivant</string>
+    <string name="recherche">Recherche</string> 
+	<string name="ressource_manquante">La ressource est manquante, aucune fact disponible.</string>
+	<string name="ressource_illisible">La ressource est illisible, aucune fact disponible.</string>
+</resources>

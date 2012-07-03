@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" lang="fr"><head>
+<title>Tutoriel OpenCL - Irma-wiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="MediaWiki 1.16.5">
+<link rel="shortcut icon" href="http://www-irma.u-strasbg.fr/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www-irma.u-strasbg.fr/irmawiki/opensearch_desc.php" title="Irma-wiki (fr)">
+<link title="Creative Commons" type="application/rdf+xml" href="http://www-irma.u-strasbg.fr/irmawiki/index.php?title=Tutoriel_OpenCL&amp;action=creativecommons" rel="meta">
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Irma-wiki" href="http://www-irma.u-strasbg.fr/irmawiki/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<link rel="stylesheet" href="Tutoriel_OpenCL_fichiers/shared.css" media="screen">
+<link rel="stylesheet" href="Tutoriel_OpenCL_fichiers/commonPrint.css" media="print">
+<link rel="stylesheet" href="Tutoriel_OpenCL_fichiers/main.css" media="screen">
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/irmawiki/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/irmawiki/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/irmawiki/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/irmawiki/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="Tutoriel_OpenCL_fichiers/index_003.css">
+<link rel="stylesheet" href="Tutoriel_OpenCL_fichiers/index_004.css" media="print">
+<link rel="stylesheet" href="Tutoriel_OpenCL_fichiers/index_002.css">
+<link rel="stylesheet" href="Tutoriel_OpenCL_fichiers/index.css">
+<script>
+var skin="monobook",
+stylepath="/irmawiki/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/irmawiki/index.php/$1",
+wgScriptPath="/irmawiki",
+wgScriptExtension=".php",
+wgScript="/irmawiki/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://www-irma.u-strasbg.fr",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Tutoriel_OpenCL",
+wgTitle="Tutoriel OpenCL",
+wgAction="view",
+wgArticleId=1490,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="fr",
+wgContentLanguage="fr",
+wgBreakFrames=false,
+wgCurRevisionId=3339,
+wgVersion="1.16.5",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=[",	.", " 	,"],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Accueil",
+wgFormattedNamespaces={"-2": "Média", "-1": "Spécial", "0": "", "1": "Discussion", "2": "Utilisateur", "3": "Discussion utilisateur", "4": "Irma-wiki", "5": "Discussion Irma-wiki", "6": "Fichier", "7": "Discussion fichier", "8": "MediaWiki", "9": "Discussion MediaWiki", "10": "Modèle", "11": "Discussion modèle", "12": "Aide", "13": "Discussion aide", "14": "Catégorie", "15": "Discussion catégorie"},
+wgNamespaceIds={"média": -2, "spécial": -1, "": 0, "discussion": 1, "utilisateur": 2, "discussion_utilisateur": 3, "irma-wiki": 4, "discussion_irma-wiki": 5, "fichier": 6, "discussion_fichier": 7, "mediawiki": 8, "discussion_mediawiki": 9, "modèle": 10, "discussion_modèle": 11, "aide": 12, "discussion_aide": 13, "catégorie": 14, "discussion_catégorie": 15, "discuter": 1, "discussion_image": 7, "image": 6, "image_talk": 7},
+wgSiteName="Irma-wiki",
+wgCategories=[],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="Tutoriel_OpenCL_fichiers/wikibits.js"></script>
+<script src="Tutoriel_OpenCL_fichiers/ajax.js"></script>
+<script src="Tutoriel_OpenCL_fichiers/index.php"></script>
+
+<style type="text/css">/*<![CDATA[*/
+.source-cpp {line-height: normal;}
+.source-cpp li, .source-cpp pre {
+	line-height: normal; margin: 2em; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for cpp
+ * CSS class: source-cpp, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.cpp.source-cpp .de1, .cpp.source-cpp .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.cpp.source-cpp  {font-family:monospace;}
+.cpp.source-cpp .imp {font-weight: bold; color: red;}
+.cpp.source-cpp li, .cpp.source-cpp .li1 {font-weight: normal; vertical-align:top;}
+.cpp.source-cpp .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.cpp.source-cpp .li2 {font-weight: bold; vertical-align:top;}
+.cpp.source-cpp .kw1 {color: #0000ff;}
+.cpp.source-cpp .kw2 {color: #0000ff;}
+.cpp.source-cpp .kw3 {color: #0000dd;}
+.cpp.source-cpp .kw4 {color: #0000ff;}
+.cpp.source-cpp .co1 {color: #666666;}
+.cpp.source-cpp .co2 {color: #339900;}
+.cpp.source-cpp .coMULTI {color: #ff0000; font-style: italic;}
+.cpp.source-cpp .es0 {color: #000099; font-weight: bold;}
+.cpp.source-cpp .es1 {color: #000099; font-weight: bold;}
+.cpp.source-cpp .es2 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es3 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es4 {color: #660099; font-weight: bold;}
+.cpp.source-cpp .es5 {color: #006699; font-weight: bold;}
+.cpp.source-cpp .br0 {color: #008000;}
+.cpp.source-cpp .sy0 {color: #008000;}
+.cpp.source-cpp .sy1 {color: #000080;}
+.cpp.source-cpp .sy2 {color: #000040;}
+.cpp.source-cpp .sy3 {color: #000040;}
+.cpp.source-cpp .sy4 {color: #008080;}
+.cpp.source-cpp .st0 {color: #FF0000;}
+.cpp.source-cpp .nu0 {color: #0000dd;}
+.cpp.source-cpp .nu6 {color: #208080;}
+.cpp.source-cpp .nu8 {color: #208080;}
+.cpp.source-cpp .nu12 {color: #208080;}
+.cpp.source-cpp .nu16 {color:#800080;}
+.cpp.source-cpp .nu17 {color:#800080;}
+.cpp.source-cpp .nu18 {color:#800080;}
+.cpp.source-cpp .nu19 {color:#800080;}
+.cpp.source-cpp .me1 {color: #007788;}
+.cpp.source-cpp .me2 {color: #007788;}
+.cpp.source-cpp .ln-xtra, .cpp.source-cpp li.ln-xtra, .cpp.source-cpp div.ln-xtra {background-color: #ffc;}
+.cpp.source-cpp span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/irmawiki/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style><style type="text/css">/*<![CDATA[*/
+.source-python {line-height: normal;}
+.source-python li, .source-python pre {
+	line-height: normal; margin: 2em; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for python
+ * CSS class: source-python, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.python.source-python .de1, .python.source-python .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.python.source-python  {font-family:monospace;}
+.python.source-python .imp {font-weight: bold; color: red;}
+.python.source-python li, .python.source-python .li1 {font-weight: normal; vertical-align:top;}
+.python.source-python .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.python.source-python .li2 {font-weight: bold; vertical-align:top;}
+.python.source-python .kw1 {color: #ff7700;font-weight:bold;}
+.python.source-python .kw2 {color: #008000;}
+.python.source-python .kw3 {color: #dc143c;}
+.python.source-python .kw4 {color: #0000cd;}
+.python.source-python .co1 {color: #808080; font-style: italic;}
+.python.source-python .coMULTI {color: #808080; font-style: italic;}
+.python.source-python .es0 {color: #000099; font-weight: bold;}
+.python.source-python .br0 {color: black;}
+.python.source-python .sy0 {color: #66cc66;}
+.python.source-python .st0 {color: #483d8b;}
+.python.source-python .nu0 {color: #ff4500;}
+.python.source-python .me1 {color: black;}
+.python.source-python .ln-xtra, .python.source-python li.ln-xtra, .python.source-python div.ln-xtra {background-color: #ffc;}
+.python.source-python span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/irmawiki/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr ns-0 ns-subject page-Tutoriel_OpenCL skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Tutoriel OpenCL</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">De Irma-wiki.</h3>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Aller à : <a href="#column-one">Navigation</a>, <a href="#searchInput">rechercher</a></div>
+		<!-- start content -->
+<p>--<a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Utilisateur:Navaro" title="Utilisateur:Navaro">Navaro</a> 19 juillet 2011 à 23:41 (CEST)
+</p><p><font color="red">En cours de rédaction...</font>
+</p>
+<table id="toc" class="toc"><tbody><tr><td><div id="toctitle"><h2>Sommaire</h2> <span class="toctoggle">[<a href="javascript:toggleToc()" class="internal" id="togglelink">masquer</a>]</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Obtenir_la_liste_des_.22Devices.22"><span class="tocnumber">2</span> <span class="toctext">Obtenir la liste des "Devices"</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Initialiser_le_.22Context.22"><span class="tocnumber">3</span> <span class="toctext">Initialiser le "Context"</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Le_.22Kernel.22"><span class="tocnumber">4</span> <span class="toctext">Le "Kernel"</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Cr.C3.A9ation_de_la_.22Command_Queue.22"><span class="tocnumber">5</span> <span class="toctext">Création de la "Command Queue"</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Allouer_la_m.C3.A9moire_sur_le_.22Device.22"><span class="tocnumber">6</span> <span class="toctext">Allouer la mémoire sur le "Device"</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Initialiser_les_arguments_du_.22Kernel.22"><span class="tocnumber">7</span> <span class="toctext">Initialiser les arguments du "Kernel"</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Ex.C3.A9cution_du_kernel"><span class="tocnumber">8</span> <span class="toctext">Exécution du kernel</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Lecture_du_buffer_pour_obtenir_les_r.C3.A9sultats"><span class="tocnumber">9</span> <span class="toctext">Lecture du buffer pour obtenir les résultats</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Fin_:_remise_.C3.A0_disposition_de_la_m.C3.A9moire"><span class="tocnumber">10</span> <span class="toctext">Fin&nbsp;: remise à disposition de la mémoire</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Compilation_et_ex.C3.A9cution"><span class="tocnumber">11</span> <span class="toctext">Compilation et exécution</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#R.C3.A9f.C3.A9rences"><span class="tocnumber">12</span> <span class="toctext">Références</span></a></li>
+</ul>
+</td></tr></tbody></table><script>if (window.showTocToggle) { var tocShowText = "afficher"; var tocHideText = "masquer"; showTocToggle(); } </script>
+<h2> <span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>Voici les différentes étapes pour construire un programme OpenCL.
+Le programme est très simple car la gestion des erreurs n'est pas programmée. 
+Les tests de vérification après les appels de fonction sont souhaitables pour un projet plus important.
+</p><p>Au début du programme ne pas oublier d'ajouter les fichiers OpenCL.
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+&nbsp;
+<span class="co2">#ifdef __APPLE__</span>
+<span class="co2">#include &lt;OpenCL/opencl.h&gt;</span>
+<span class="co2">#else</span>
+<span class="co2">#include &lt;CL/cl.h&gt;</span>
+<span class="co2">#endif</span>
+<span class="co2">#define MEM_SIZE (128)</span>
+<span class="co2">#define MAX_SOURCE_SIZE (0x100000)</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span></pre></div></div>
+<h2> <span class="mw-headline" id="Obtenir_la_liste_des_.22Devices.22">Obtenir la liste des "Devices" </span></h2>
+<p>Détecter les matériels présents et éventuellement ses caractéristiques. Les trois fonctions utiles sont:
+</p>
+<ul><li> <a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clGetPlatformIDs.html" class="external text" rel="nofollow">clGetPlatformIDs</a>
+</li><li> <a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clGetPlatformInfo.html" class="external text" rel="nofollow">clGetPlatformInfo</a>
+</li><li> <a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clGetDeviceIDs.html" class="external text" rel="nofollow">clGetDeviceIDs</a>
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">  cl_device_id device_id <span class="sy1">=</span> <span class="kw2">NULL</span><span class="sy4">;</span>
+  cl_platform_id platform_id <span class="sy1">=</span> <span class="kw2">NULL</span><span class="sy4">;</span>
+  cl_uint ret_num_devices<span class="sy4">;</span>
+  cl_uint ret_num_platforms<span class="sy4">;</span>
+  cl_int ret<span class="sy4">;</span>
+&nbsp;
+  ret <span class="sy1">=</span> clGetPlatformIDs<span class="br0">(</span><span class="nu0">1</span>, <span class="sy3">&amp;</span>platform_id, <span class="sy3">&amp;</span>ret_num_platforms<span class="br0">)</span><span class="sy4">;</span>
+  ret <span class="sy1">=</span> clGetDeviceIDs<span class="br0">(</span> platform_id, CL_DEVICE_TYPE_DEFAULT, <span class="nu0">1</span>, <span class="sy3">&amp;</span>device_id, <span class="sy3">&amp;</span>ret_num_devices<span class="br0">)</span><span class="sy4">;</span></pre></div></div>
+<h2> <span class="mw-headline" id="Initialiser_le_.22Context.22">Initialiser le "Context"</span></h2>
+<p>Contient les variables qui vont nous permettre de piloter l'exécution de notre programme sur le GPU.
+</p>
+<ul><li> <a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clCreateContext.html" class="external text" rel="nofollow">clCreateContext</a>
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">  cl_context context <span class="sy1">=</span> <span class="kw2">NULL</span><span class="sy4">;</span>
+&nbsp;
+  context <span class="sy1">=</span> clCreateContext<span class="br0">(</span> <span class="kw2">NULL</span>, <span class="nu0">1</span>, <span class="sy3">&amp;</span>device_id, <span class="kw2">NULL</span>, <span class="kw2">NULL</span>, <span class="sy3">&amp;</span>ret<span class="br0">)</span><span class="sy4">;</span></pre></div></div>
+<h2> <span class="mw-headline" id="Le_.22Kernel.22"> Le "Kernel" </span></h2>
+<p>C'est le programme qui contient les commandes exécutées sur le "Device". Ce fichier se termine par .cl
+</p>
+<ul><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clCreateProgramWithSource.html" class="external text" rel="nofollow">clCreateProgramWithSource</a>
+</li></ul>
+<p>La lecture de ce fichier:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">  <span class="kw4">FILE</span> <span class="sy2">*</span>fp<span class="sy4">;</span>
+  <span class="kw4">char</span> fileName<span class="br0">[</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">"./hello.cl"</span><span class="sy4">;</span>
+  <span class="kw4">char</span> <span class="sy2">*</span>source_str<span class="sy4">;</span>
+  <span class="kw4">size_t</span> source_size<span class="sy4">;</span>
+  <span class="co1">//Lecture du fichier</span>
+  fp <span class="sy1">=</span> <span class="kw3">fopen</span><span class="br0">(</span>fileName, <span class="st0">"r"</span><span class="br0">)</span><span class="sy4">;</span>
+  source_str <span class="sy1">=</span> <span class="br0">(</span><span class="kw4">char</span><span class="sy2">*</span><span class="br0">)</span><span class="kw3">malloc</span><span class="br0">(</span>MAX_SOURCE_SIZE<span class="br0">)</span><span class="sy4">;</span>
+  source_size <span class="sy1">=</span> <span class="kw3">fread</span><span class="br0">(</span> source_str, <span class="nu0">1</span>, MAX_SOURCE_SIZE, fp<span class="br0">)</span><span class="sy4">;</span>
+  <span class="kw3">fclose</span><span class="br0">(</span> fp <span class="br0">)</span><span class="sy4">;</span>
+  <span class="co1">//creation du programme</span>
+  cl_program program <span class="sy1">=</span> <span class="kw2">NULL</span><span class="sy4">;</span>
+  program <span class="sy1">=</span> clCreateProgramWithSource<span class="br0">(</span>context, <span class="nu0">1</span>, <span class="br0">(</span><span class="kw4">const</span> <span class="kw4">char</span> <span class="sy2">**</span><span class="br0">)</span><span class="sy3">&amp;</span>source_str,
+			                      <span class="br0">(</span><span class="kw4">const</span> <span class="kw4">size_t</span> <span class="sy2">*</span><span class="br0">)</span><span class="sy3">&amp;</span>source_size, <span class="sy3">&amp;</span>ret<span class="br0">)</span><span class="sy4">;</span></pre></div></div>
+<p>Ce que contient ce fichier kernel
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"><span class="co2">#pragma OPENCL EXTENSION cl_khr_byte_addressable_store&nbsp;: enable</span>
+&nbsp;
+__kernel <span class="kw4">void</span> hello<span class="br0">(</span>__global <span class="kw4">char</span><span class="sy2">*</span> string<span class="br0">)</span>
+<span class="br0">{</span>
+   string<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'H'</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'e'</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">2</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'l'</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">3</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'l'</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">4</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'o'</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">','</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">6</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">' '</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">7</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'W'</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">8</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'o'</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">9</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'r'</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">10</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'l'</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">11</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'d'</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">12</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'!'</span><span class="sy4">;</span>
+   string<span class="br0">[</span><span class="nu0">13</span><span class="br0">]</span> <span class="sy1">=</span> <span class="st0">'<span class="es5">\0</span>'</span><span class="sy4">;</span>
+<span class="br0">}</span></pre></div></div>
+<p>Ce programme a besoin d'être compilé, on revient dans le fichier principal:
+</p>
+<ul><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clBuildProgram.html" class="external text" rel="nofollow">clBuildProgram</a>
+</li><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clCreateKernel.html" class="external text" rel="nofollow">clCreateKernel</a>
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">  <span class="co1">//Compilation</span>
+  ret <span class="sy1">=</span> clBuildProgram<span class="br0">(</span>program, <span class="nu0">1</span>, <span class="sy3">&amp;</span>device_id, <span class="kw2">NULL</span>, <span class="kw2">NULL</span>, <span class="kw2">NULL</span><span class="br0">)</span><span class="sy4">;</span>
+  <span class="co1">//Creation du kernel</span>
+  cl_kernel kernel <span class="sy1">=</span> <span class="kw2">NULL</span><span class="sy4">;</span>
+  kernel <span class="sy1">=</span> clCreateKernel<span class="br0">(</span>program, <span class="st0">"hello"</span>, <span class="sy3">&amp;</span>ret<span class="br0">)</span><span class="sy4">;</span></pre></div></div>
+<h2> <span class="mw-headline" id="Cr.C3.A9ation_de_la_.22Command_Queue.22"> Création de la "Command Queue" </span></h2>
+<p>Cette fonction va nous permettre de contrôler le lancement de nos 
+kernels. Cette queue permet ainsi de lancer plusieurs kernel 
+simultanément.
+</p>
+<ul><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clCreateCommandQueue.html" class="external text" rel="nofollow">clCreateCommandQueue</a>
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">  cl_command_queue command_queue <span class="sy1">=</span> <span class="kw2">NULL</span><span class="sy4">;</span>
+  command_queue <span class="sy1">=</span> clCreateCommandQueue<span class="br0">(</span>context, device_id, <span class="nu0">0</span>, <span class="sy3">&amp;</span>ret<span class="br0">)</span><span class="sy4">;</span></pre></div></div>
+<ul><li>Il est possible d'avoir plusieurs queues pour un même "device".
+</li><li>On peut également utiliser la même queue pour plusieurs "devices".
+</li></ul>
+<h2> <span class="mw-headline" id="Allouer_la_m.C3.A9moire_sur_le_.22Device.22">Allouer la mémoire sur le "Device" </span></h2>
+<p>On utilise pour cela un buffer.
+</p>
+<ul><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clCreateBuffer.html" class="external text" rel="nofollow">clCreateBuffer</a>
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">cl_mem memobj <span class="sy1">=</span> <span class="kw2">NULL</span><span class="sy4">;</span>
+memobj <span class="sy1">=</span> clCreateBuffer<span class="br0">(</span>context, CL_MEM_READ_WRITE,MEM_SIZE <span class="sy2">*</span> <span class="kw3">sizeof</span><span class="br0">(</span><span class="kw4">char</span><span class="br0">)</span>, <span class="kw2">NULL</span>, <span class="sy3">&amp;</span>ret<span class="br0">)</span><span class="sy4">;</span></pre></div></div>
+<p>On utilisera ce buffer pour transférer des données sur le "Device", une opération qu'il faudra éviter au maximum.
+</p>
+<h2> <span class="mw-headline" id="Initialiser_les_arguments_du_.22Kernel.22">Initialiser les arguments du "Kernel" </span></h2>
+<p>Tout "Kernel" possède des arguments qu'il faut initialiser obligatoirement:
+</p>
+<ul><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clSetKernelArg.html" class="external text" rel="nofollow">clSetKernelArg</a>
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">  ret <span class="sy1">=</span> clSetKernelArg<span class="br0">(</span>kernel, <span class="nu0">0</span>, <span class="kw3">sizeof</span><span class="br0">(</span>cl_mem<span class="br0">)</span>, <span class="br0">(</span><span class="kw4">void</span> <span class="sy2">*</span><span class="br0">)</span><span class="sy3">&amp;</span>memobj<span class="br0">)</span><span class="sy4">;</span></pre></div></div>
+<h2> <span class="mw-headline" id="Ex.C3.A9cution_du_kernel">Exécution du kernel</span></h2>
+<p>On utilise l'objet kernel instancié plus haut issu du fichier hello.cl et on déclenche son exécution à l'aide de la fonction
+</p>
+<ul><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clEnqueueTask.html" class="external text" rel="nofollow">clEnqueueTask</a>
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">ret <span class="sy1">=</span> clEnqueueTask<span class="br0">(</span>command_queue, kernel, <span class="nu0">0</span>, <span class="kw2">NULL</span>,<span class="kw2">NULL</span><span class="br0">)</span><span class="sy4">;</span></pre></div></div>
+<h2> <span class="mw-headline" id="Lecture_du_buffer_pour_obtenir_les_r.C3.A9sultats">Lecture du buffer pour obtenir les résultats</span></h2>
+<ul><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clEnqueueReadBuffer.html" class="external text" rel="nofollow">clEnqueueReadBuffer</a>
+</li></ul>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1"> ret <span class="sy1">=</span> clEnqueueReadBuffer<span class="br0">(</span>command_queue, memobj, CL_TRUE, <span class="nu0">0</span>,
+MEM_SIZE <span class="sy2">*</span> <span class="kw3">sizeof</span><span class="br0">(</span><span class="kw4">char</span><span class="br0">)</span>,string, <span class="nu0">0</span>, <span class="kw2">NULL</span>, <span class="kw2">NULL</span><span class="br0">)</span><span class="sy4">;</span>
+ <span class="kw3">puts</span><span class="br0">(</span>string<span class="br0">)</span><span class="sy4">;</span></pre></div></div>
+<h2> <span class="mw-headline" id="Fin_:_remise_.C3.A0_disposition_de_la_m.C3.A9moire">Fin&nbsp;: remise à disposition de la mémoire </span></h2>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="cpp source-cpp"><pre class="de1">  ret <span class="sy1">=</span> clFlush<span class="br0">(</span>command_queue<span class="br0">)</span><span class="sy4">;</span>
+  ret <span class="sy1">=</span> clFinish<span class="br0">(</span>command_queue<span class="br0">)</span><span class="sy4">;</span>
+  ret <span class="sy1">=</span> clReleaseKernel<span class="br0">(</span>kernel<span class="br0">)</span><span class="sy4">;</span>
+  ret <span class="sy1">=</span> clReleaseProgram<span class="br0">(</span>program<span class="br0">)</span><span class="sy4">;</span>
+  ret <span class="sy1">=</span> clReleaseMemObject<span class="br0">(</span>memobj<span class="br0">)</span><span class="sy4">;</span>
+  ret <span class="sy1">=</span> clReleaseCommandQueue<span class="br0">(</span>command_queue<span class="br0">)</span><span class="sy4">;</span>
+  ret <span class="sy1">=</span> clReleaseContext<span class="br0">(</span>context<span class="br0">)</span><span class="sy4">;</span>
+&nbsp;
+  <span class="kw3">free</span><span class="br0">(</span>source_str<span class="br0">)</span><span class="sy4">;</span>
+&nbsp;
+  <span class="kw1">return</span> <span class="nu0">0</span><span class="sy4">;</span>
+<span class="br0">}</span></pre></div></div>
+<ul><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clFlush.html" class="external text" rel="nofollow">clFlush</a>
+</li><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clFinish.html" class="external text" rel="nofollow">clFinish</a>
+</li><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clReleaseKernel.html" class="external text" rel="nofollow">clReleaseKernel</a>
+</li><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clReleaseProgram.html" class="external text" rel="nofollow">clReleaseProgram</a>
+</li><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clReleaseMemObject.html" class="external text" rel="nofollow">clReleaseMemObject</a>
+</li><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clReleaseCommandQueue.html" class="external text" rel="nofollow">clReleaseCommandQueue</a>
+</li><li><a href="http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clReleaseContext.html" class="external text" rel="nofollow">clReleaseContext</a>
+</li></ul>
+<h2> <span class="mw-headline" id="Compilation_et_ex.C3.A9cution">Compilation et exécution</span></h2>
+<p>Le fichier SConstruct
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="python source-python"><pre class="de1"><span class="kw1">import</span> <span class="kw3">os</span>
+env <span class="sy0">=</span> Environment<span class="br0">(</span>ENV<span class="sy0">=</span><span class="kw3">os</span>.<span class="me1">environ</span><span class="sy0">,</span>
+        CPPPATH<span class="sy0">=</span><span class="br0">[</span><span class="st0">'/System/Library/Frameworks/OpenCL.framework/Versions/A/Headers'</span><span class="br0">]</span><span class="sy0">,</span> 
+        FRAMEWORKS<span class="sy0">=</span><span class="br0">[</span><span class="st0">'OpenCL'</span><span class="br0">]</span><span class="br0">)</span>
+env.<span class="me1">Program</span><span class="br0">(</span><span class="st0">"hello.cpp"</span><span class="br0">)</span></pre></div></div>
+<pre>$ scons
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: `.' is up to date.
+scons: done building targets.
+$ ./hello 
+Hello, World!
+</pre>
+<h2> <span class="mw-headline" id="R.C3.A9f.C3.A9rences">Références</span></h2>
+<ul><li><a href="http://www-irma.u-strasbg.fr/%7Ehelluy/OPENCL/tut-opencl.html" class="external text" rel="nofollow">OpenCL Tutorial (by A. Crestetto and P. Helluy)</a>
+</li><li><a href="http://www.khronos.org/registry/cl/" class="external text" rel="nofollow">OpenCL Khronos website</a>
+</li><li><a href="http://developer.apple.com/library/mac/#documentation/Performance/Conceptual/OpenCL_MacProgGuide/Introduction/Introduction.html" class="external text" rel="nofollow">OpenCL Programming Guide for Mac OS X</a>
+</li><li><a href="http://developer.nvidia.com/opencl" class="external text" rel="nofollow">NVIDIA OpenCL website</a>
+</li><li><a href="http://www.fixstars.com/en/opencl/book/OpenCLProgrammingBook/contents.html" class="external text" rel="nofollow">The OpenCL Programming Book</a> par Ryoji Tsuchiyama, Takashi Nakamura, Takuro Iizuka, Akihiro Asahara, Satoshi Miki.
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 174/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wikidb-mw_:pcache:idhash:1490-0!1!0!!fr!2!edit=0 and timestamp 20120110200543 -->
+<div class="printfooter">
+Récupérée de « <a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Tutoriel_OpenCL">http://www-irma.u-strasbg.fr/irmawiki/index.php/Tutoriel_OpenCL</a> »</div>
+		<div id="catlinks" class="catlinks catlinks-allhidden"></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Affichages</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Tutoriel_OpenCL" title="Voir la page de contenu [alt-shift-c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php?title=Discussion:Tutoriel_OpenCL&amp;action=edit&amp;redlink=1" title="Discussion au sujet de cette page de contenu [alt-shift-t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php?title=Tutoriel_OpenCL&amp;action=edit" title="Cette page est protégée.
+Vous pouvez toutefois en visualiser la source. [alt-shift-e]" accesskey="e">Voir le texte source</a></li>
+				 <li id="ca-history"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php?title=Tutoriel_OpenCL&amp;action=history" title="Les versions passées de cette page (avec leurs contributeurs) [alt-shift-h]" accesskey="h">Historique</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Outils personnels</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php?title=Sp%C3%A9cial:Connexion&amp;returnto=Tutoriel_OpenCL" title="Vous êtes encouragé(e) à vous identifier ; ce n’est cependant pas obligatoire. [alt-shift-o]" accesskey="o">Connexion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(&quot;/irmawiki/skins/common/images/logoIRMA.gif&quot;);" href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Accueil" title="Page principale"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage-description"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Accueil" title="Aller à l’accueil [alt-shift-z]" accesskey="z">Accueil</a></li>
+				<li id="n-portal"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Irma-wiki:Accueil" title="À propos du projet">Communauté</a></li>
+				<li id="n-currentevents"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Irma-wiki:Actualit%C3%A9s" title="Trouver les informations de fond sur l’actualité du moment">Actualités</a></li>
+				<li id="n-recentchanges"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Sp%C3%A9cial:Modifications_r%C3%A9centes" title="Liste des modifications récentes sur le wiki [alt-shift-r]" accesskey="r">Modifications récentes</a></li>
+				<li id="n-randompage"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Sp%C3%A9cial:Page_au_hasard" title="Afficher une page au hasard [alt-shift-x]" accesskey="x">Page au hasard</a></li>
+				<li id="n-help"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Aide:Accueil" title="Aide">Aide</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Rechercher</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/irmawiki/index.php" id="searchform">
+				<input name="title" value="Spécial:Recherche" type="hidden">
+				<input id="searchInput" title="Rechercher dans Irma-wiki" accesskey="f" name="search" type="search">
+				<input name="go" class="searchButton" id="searchGoButton" value="Lire" title="Aller vers une page portant exactement ce nom si elle existe." type="submit">&nbsp;
+				<input name="fulltext" class="searchButton" id="mw-searchButton" value="Rechercher" title="Rechercher les pages comportant ce texte." type="submit">
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Boîte à outils</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Sp%C3%A9cial:Pages_li%C3%A9es/Tutoriel_OpenCL" title="Liste des pages liées à celle-ci [alt-shift-j]" accesskey="j">Pages liées</a></li>
+				<li id="t-recentchangeslinked"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Sp%C3%A9cial:Suivi_des_liens/Tutoriel_OpenCL" title="Liste des modifications récentes des pages liées à celle-ci [alt-shift-k]" accesskey="k">Suivi des pages liées</a></li>
+<li id="t-specialpages"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Sp%C3%A9cial:Pages_sp%C3%A9ciales" title="Liste de toutes les pages spéciales [alt-shift-q]" accesskey="q">Pages spéciales</a></li>
+				<li id="t-print"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php?title=Tutoriel_OpenCL&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [alt-shift-p]" accesskey="p">Version imprimable</a></li>				<li id="t-permalink"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php?title=Tutoriel_OpenCL&amp;oldid=3339" title="Lien permanent vers cette version de la page">Adresse de cette version</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="Tutoriel_OpenCL_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" height="31" width="88"></a></div>
+	<div id="f-copyrightico"><a href="http://www.gnu.org/copyleft/fdl.html"><img src="Tutoriel_OpenCL_fichiers/gnu-fdl.png" alt="GNU Free Documentation License 1.2" height="31" width="88"></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> Dernière modification de cette page le 19 juillet 2011 à 21:42.<br></li>
+		<li id="viewcount">Cette page a été consultée 1&nbsp;568 fois.</li>
+		<li id="copyright">Contenu disponible sous <a href="http://www.gnu.org/copyleft/fdl.html" class="external ">GNU Free Documentation License 1.2</a>.</li>
+		<li id="privacy"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Irma-wiki:Confidentialit%C3%A9" title="Irma-wiki:Confidentialité">Politique de confidentialité</a></li>
+		<li id="about"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Irma-wiki:%C3%80_propos" title="Irma-wiki:À propos">À propos de Irma-wiki</a></li>
+		<li id="disclaimer"><a href="http://www-irma.u-strasbg.fr/irmawiki/index.php/Irma-wiki:Avertissements_g%C3%A9n%C3%A9raux" title="Irma-wiki:Avertissements généraux">Avertissements</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.266 secs. -->
+</body></html>

@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A991CA214BC697D004A4B27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A991CA114BC697D004A4B27 /* UIKit.framework */; };
+		2A991CA414BC697D004A4B27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A991CA314BC697D004A4B27 /* Foundation.framework */; };
+		2A991CA614BC697D004A4B27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A991CA514BC697D004A4B27 /* CoreGraphics.framework */; };
+		2A991CAC14BC697D004A4B27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A991CAA14BC697D004A4B27 /* InfoPlist.strings */; };
+		2A991CAE14BC697D004A4B27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A991CAD14BC697D004A4B27 /* main.m */; };
+		2A991CB214BC697D004A4B27 /* HelloWorldAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A991CB114BC697D004A4B27 /* HelloWorldAppDelegate.m */; };
+		2A991CB514BC697D004A4B27 /* HelloWorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A991CB414BC697D004A4B27 /* HelloWorldViewController.m */; };
+		2A991CB814BC697D004A4B27 /* HelloWorldViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A991CB614BC697D004A4B27 /* HelloWorldViewController_iPhone.xib */; };
+		2A991CBB14BC697D004A4B27 /* HelloWorldViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A991CB914BC697D004A4B27 /* HelloWorldViewController_iPad.xib */; };
+		2A991CC314BC6B47004A4B27 /* Tirage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A991CC214BC6B47004A4B27 /* Tirage.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A991C9D14BC697D004A4B27 /* HelloTouchWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloTouchWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A991CA114BC697D004A4B27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2A991CA314BC697D004A4B27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2A991CA514BC697D004A4B27 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2A991CA914BC697D004A4B27 /* HelloTouchWorld-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloTouchWorld-Info.plist"; sourceTree = "<group>"; };
+		2A991CAB14BC697D004A4B27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2A991CAD14BC697D004A4B27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A991CAF14BC697D004A4B27 /* HelloTouchWorld-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloTouchWorld-Prefix.pch"; sourceTree = "<group>"; };
+		2A991CB014BC697D004A4B27 /* HelloWorldAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldAppDelegate.h; sourceTree = "<group>"; };
+		2A991CB114BC697D004A4B27 /* HelloWorldAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldAppDelegate.m; sourceTree = "<group>"; };
+		2A991CB314BC697D004A4B27 /* HelloWorldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldViewController.h; sourceTree = "<group>"; };
+		2A991CB414BC697D004A4B27 /* HelloWorldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldViewController.m; sourceTree = "<group>"; };
+		2A991CB714BC697D004A4B27 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HelloWorldViewController_iPhone.xib; sourceTree = "<group>"; };
+		2A991CBA14BC697D004A4B27 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HelloWorldViewController_iPad.xib; sourceTree = "<group>"; };
+		2A991CC114BC6B47004A4B27 /* Tirage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tirage.h; sourceTree = "<group>"; };
+		2A991CC214BC6B47004A4B27 /* Tirage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tirage.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A991C9A14BC697D004A4B27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A991CA214BC697D004A4B27 /* UIKit.framework in Frameworks */,
+				2A991CA414BC697D004A4B27 /* Foundation.framework in Frameworks */,
+				2A991CA614BC697D004A4B27 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A991C9214BC697C004A4B27 = {
+			isa = PBXGroup;
+			children = (
+				2A991CA714BC697D004A4B27 /* HelloTouchWorld */,
+				2A991CA014BC697D004A4B27 /* Frameworks */,
+				2A991C9E14BC697D004A4B27 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A991C9E14BC697D004A4B27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A991C9D14BC697D004A4B27 /* HelloTouchWorld.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A991CA014BC697D004A4B27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A991CA114BC697D004A4B27 /* UIKit.framework */,
+				2A991CA314BC697D004A4B27 /* Foundation.framework */,
+				2A991CA514BC697D004A4B27 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A991CA714BC697D004A4B27 /* HelloTouchWorld */ = {
+			isa = PBXGroup;
+			children = (
+				2A991CB014BC697D004A4B27 /* HelloWorldAppDelegate.h */,
+				2A991CB114BC697D004A4B27 /* HelloWorldAppDelegate.m */,
+				2A991CB314BC697D004A4B27 /* HelloWorldViewController.h */,
+				2A991CB414BC697D004A4B27 /* HelloWorldViewController.m */,
+				2A991CB614BC697D004A4B27 /* HelloWorldViewController_iPhone.xib */,
+				2A991CB914BC697D004A4B27 /* HelloWorldViewController_iPad.xib */,
+				2A991CA814BC697D004A4B27 /* Supporting Files */,
+				2A991CC114BC6B47004A4B27 /* Tirage.h */,
+				2A991CC214BC6B47004A4B27 /* Tirage.m */,
+			);
+			path = HelloTouchWorld;
+			sourceTree = "<group>";
+		};
+		2A991CA814BC697D004A4B27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A991CA914BC697D004A4B27 /* HelloTouchWorld-Info.plist */,
+				2A991CAA14BC697D004A4B27 /* InfoPlist.strings */,
+				2A991CAD14BC697D004A4B27 /* main.m */,
+				2A991CAF14BC697D004A4B27 /* HelloTouchWorld-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A991C9C14BC697D004A4B27 /* HelloTouchWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A991CBE14BC697D004A4B27 /* Build configuration list for PBXNativeTarget "HelloTouchWorld" */;
+			buildPhases = (
+				2A991C9914BC697D004A4B27 /* Sources */,
+				2A991C9A14BC697D004A4B27 /* Frameworks */,
+				2A991C9B14BC697D004A4B27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloTouchWorld;
+			productName = HelloTouchWorld;
+			productReference = 2A991C9D14BC697D004A4B27 /* HelloTouchWorld.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A991C9414BC697C004A4B27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 2A991C9714BC697C004A4B27 /* Build configuration list for PBXProject "HelloTouchWorld" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2A991C9214BC697C004A4B27;
+			productRefGroup = 2A991C9E14BC697D004A4B27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A991C9C14BC697D004A4B27 /* HelloTouchWorld */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A991C9B14BC697D004A4B27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A991CAC14BC697D004A4B27 /* InfoPlist.strings in Resources */,
+				2A991CB814BC697D004A4B27 /* HelloWorldViewController_iPhone.xib in Resources */,
+				2A991CBB14BC697D004A4B27 /* HelloWorldViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A991C9914BC697D004A4B27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A991CAE14BC697D004A4B27 /* main.m in Sources */,
+				2A991CB214BC697D004A4B27 /* HelloWorldAppDelegate.m in Sources */,
+				2A991CB514BC697D004A4B27 /* HelloWorldViewController.m in Sources */,
+				2A991CC314BC6B47004A4B27 /* Tirage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2A991CAA14BC697D004A4B27 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A991CAB14BC697D004A4B27 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2A991CB614BC697D004A4B27 /* HelloWorldViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A991CB714BC697D004A4B27 /* en */,
+			);
+			name = HelloWorldViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		2A991CB914BC697D004A4B27 /* HelloWorldViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A991CBA14BC697D004A4B27 /* en */,
+			);
+			name = HelloWorldViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A991CBC14BC697D004A4B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A991CBD14BC697D004A4B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A991CBF14BC697D004A4B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloTouchWorld/HelloTouchWorld-Prefix.pch";
+				INFOPLIST_FILE = "HelloTouchWorld/HelloTouchWorld-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2A991CC014BC697D004A4B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloTouchWorld/HelloTouchWorld-Prefix.pch";
+				INFOPLIST_FILE = "HelloTouchWorld/HelloTouchWorld-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A991C9714BC697C004A4B27 /* Build configuration list for PBXProject "HelloTouchWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A991CBC14BC697D004A4B27 /* Debug */,
+				2A991CBD14BC697D004A4B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A991CBE14BC697D004A4B27 /* Build configuration list for PBXNativeTarget "HelloTouchWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A991CBF14BC697D004A4B27 /* Debug */,
+				2A991CC014BC697D004A4B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A991C9414BC697C004A4B27 /* Project object */;
+}

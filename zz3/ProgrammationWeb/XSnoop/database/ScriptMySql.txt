@@ -1,0 +1,6 @@
+CREATE TABLE dummy ( first_name CHAR(20) , last_name CHAR(20) , age INT );
+INSERT INTO dummy (first_name,last_name,age) VALUES("Maxime","Escourbiac",24);
+INSERT INTO dummy (first_name,last_name,age) VALUES("Jean-Christophe","Septier",22);
+INSERT INTO dummy (first_name,last_name,age) VALUES("Curly","Carlin",12);
+CREATE  TABLE `Fred` (   `idFred` INT NOT NULL ,   `NameFred` VARCHAR(45) NULL ,   PRIMARY KEY (`idFred`) );
+INSERT INTO Fred (idFred,NameFred) VALUES(0,"Thread");

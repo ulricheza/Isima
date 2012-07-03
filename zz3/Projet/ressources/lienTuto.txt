@@ -1,0 +1,15 @@
+ http://code.google.com/p/scalacl/  [surtout le lien vers le wiki qui donne pas mal d'infos]
+[le projet d'Olivier Chafik sur GitHub] https://github.com/ochafik/nativelibs4java
+
+en PJ les slides sur ScalaCL
+
+tutos git
+http://help.github.com/git-cheat-sheets/
+http://progit.org/book/
+
+tuto Scala
+http://twitter.github.com/scala_school
+
+
+Bonne fin de journée
+Jonathan

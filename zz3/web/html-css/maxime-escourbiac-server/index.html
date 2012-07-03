@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Maxime Escourbiac's website</title>
+        <link rel="stylesheet" href="styles.css" type="text/css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+
+        <style type="text/css" media="screen">
+            h1.fontface {font: 32px/38px 'MichromaRegular', Arial, sans-serif;letter-spacing: 0;}
+            p.style1 {font: 18px/27px 'MichromaRegular', Arial, sans-serif;}
+
+            @font-face {
+                font-family: 'MichromaRegular';
+                src: url('Michroma-webfont.eot');
+                src: url('Michroma-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('Michroma-webfont.woff') format('woff'),
+                    url('Michroma-webfont.ttf') format('truetype'),
+                    url('Michroma-webfont.svg#MichromaRegular') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
+        <script type="text/javascript">
+            function create_mail(naam, domain, tld, body) {
+                var mail;
+                mail = '<a href="' + 'ma' + 'il' + 'to:' + naam;
+                mail += '&#64;' + domain + '.' + tld;
+                mail += '">' + body + '<' + '/a>';
+                document.write(mail);
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container_title">
+                <h1 class="fontface" id="title">Maxime Escourbiac's website</h1>
+            </div>
+        </header>
+
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./cv.html">CV</a></li>
+                    <li><a href="./cours_tp.html">Cours & TP</a></li>
+                    <li><a href="./projet.html">Projets</a></li>
+                    <li><a href="./stage.html">Stages</a></li>
+                    <li><a href="http://www.isima.fr">ISIMA</a></li>
+                    <li><a href="http://www.maxime-escourbiac-server.com/hudson">Hudson</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="wrapper"><!-- #wrapper -->
+            <section id="main"><!-- #main content and sidebar area -->
+                <aside id="sidebar1"><!-- sidebar1 -->
+                    <img id="image_isima" src="images/isima.jpg" alt="" /><br /><br />
+                    <img id="image_perso" src="images/moi.jpg" alt="" /><br /><br />
+
+                    <div class="bloc">
+                        <h3>Last news</h3>
+                        <ul>
+                            <li><a href="index.html#hudson">Installation de Hudson.</a></li>
+                            <li><a href="index.html#svn">Mise en place des repository SVN.</a></li>
+                            <li><a href="index.html#javasci">Java-sci.</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+
+                <section id="content">
+
+                    <article class="group3">
+                        <h2>Accueil</h2>
+                        <p>
+                            Bienvenue sur mon site personnel. Ce site a pour but de remplacer l'ancienne version crée avec i'Web.
+                            Vous y trouverez notamment les liens vers mes repository SVN de mes 3 années passées au sein de l'ISIMA.
+                            De plus, j'ai mis en place un serveur d'applications qui contient plusieurs outils du génie logiciel
+                            comme Hudson. Je peux le mettre à disposition pour les personnes souhaitant s'initier à ce genre de software. 
+                        </p> 
+                    </article>
+
+                    <div class="newsbox">
+                        <a name="hudson"></a>
+                        <h2> Hudson disponible</h2>
+                        <img src="images/hudson.png" class="floatimgleft">
+                        <br>
+                        <p>Désormais, Hudson est disponible à l'adresse <a style="font-size: 12px" href="http://www.maxime-escourbiac-server.com/hudson">suivante</a>.
+                            les fonctionnalités avec Maven n'ont pas été encore intégrées. Au niveau des jdk installés sur le serveur, les versions 1.6 et 1.7 d'oracle sont disponibles. 
+                            Pour toute demande d'hébergement de projet, n'hésitez pas à m'envoyer un mail.
+                        </p>
+                    </div>
+
+                    <div class="newsbox">
+                        <a name="svn"></a>
+                        <h2> Mise en place des repository SVN.</h2>
+                        <p>Tous les cours et tous les tp de zz1,zz2 et zz3 sont disponibles via svn. Pour obtenir directement un fichier spécifique,
+                            vous pouvez directement y accéder via un navigateur web.
+                        </p>
+                    </div>
+
+                    <div class="newsbox">
+                        <a name="javasci"></a>
+                        <h2> Java-Sci.</h2>
+                        <p>Java-sci est un framework scientifique en langage Java. La version actuelle est la 0.1. Cette version implementera les premiers 
+                            éléments de base (vecteurs, matrices, complexes, générateurs de nombres aléatoires). L'implementation d'algorithme de théorie
+                            des graphes est prévue pour la version 0.2.
+                        </p>
+                    </div>
+                </section>
+
+                <aside id="sidebar2">
+                    <div class="bloc">
+                        <h3>Contact</h3>
+                        <div class ="center">
+                            <a href="http://www.linkedin.com/pub/maxime-escourbiac/26/644/1bb"> <img src="images/linkedin.jpg"> </a>
+                            <a href="https://twitter.com/#!/Fisjkars"> <img src="images/twitter_32.png"> </a>
+                            <script type="text/javascript">
+                                create_mail("maxime.escourbiac", "gmail", "com",'<img src="images/mail.jpg">');
+                            </script> <br>
+                            <img src="images/telephone.jpg">
+                        </div>
+                    </div>
+
+                    <div class="bloc">
+                        <h3> Travaux en cours</h3>
+                        <ul>
+                            <li>Java-sci</li>
+                            <li>Budiez</li>
+                            <li>Cours Alternant</li>
+                        </ul>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Vidéo du moment</h3>
+                        <iframe width="180" height="155" src="http://www.youtube.com/embed/Tw2WjO28iKY" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="bloc">    
+                        <h3> Liens Utiles</h3>
+                        <ul>
+                            <li><a href="http://stackoverflow.com/">Stack Overflow</a></li>
+                            <li><a href="https://github.com/">Git Hub</a></li>
+                            <li><a href="http://www.developpez.com/">Developpez.com</a></li>
+                        </ul>
+                    </div>
+                </aside><!-- end of sidebar -->
+
+            </section><!-- end of #main content and sidebar-->
+        </div>
+        <footer>
+            <div>
+                <section id="footer-area">
+                </section>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Maxime Escourbiac's website</title>
+        <link rel="stylesheet" href="styles.css" type="text/css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+
+        <style type="text/css" media="screen">
+            h1.fontface {font: 32px/38px 'MichromaRegular', Arial, sans-serif;letter-spacing: 0;}
+            p.style1 {font: 18px/27px 'MichromaRegular', Arial, sans-serif;}
+
+            @font-face {
+                font-family: 'MichromaRegular';
+                src: url('Michroma-webfont.eot');
+                src: url('Michroma-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('Michroma-webfont.woff') format('woff'),
+                    url('Michroma-webfont.ttf') format('truetype'),
+                    url('Michroma-webfont.svg#MichromaRegular') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
+        <script type="text/javascript">
+            function create_mail(naam, domain, tld, body) {
+                var mail;
+                mail = '<a href="' + 'ma' + 'il' + 'to:' + naam;
+                mail += '&#64;' + domain + '.' + tld;
+                mail += '">' + body + '<' + '/a>';
+                document.write(mail);
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container_title">
+                <h1 class="fontface" id="title">Maxime Escourbiac's website</h1>
+            </div>
+        </header>
+
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./cv.html">CV</a></li>
+                    <li><a href="./cours_tp.html">Cours & TP</a></li>
+                    <li><a href="./projet.html">Projets</a></li>
+                    <li><a href="./stage.html">Stages</a></li>
+                    <li><a href="http://www.isima.fr">ISIMA</a></li>
+                    <li><a href="http://www.maxime-escourbiac-server.com/hudson">Hudson</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="wrapper"><!-- #wrapper -->
+            <section id="main"><!-- #main content and sidebar area -->
+                <aside id="sidebar1"><!-- sidebar1 -->
+                    <img id="image_isima" src="images/isima.jpg" alt="" /><br /><br />
+                    <img id="image_perso" src="images/moi.jpg" alt="" /><br /><br />
+
+                    <div class="bloc">
+                        <h3>Last news</h3>
+                        <ul>
+                            <li><a href="index.html#hudson">Installation de Hudson.</a></li>
+                            <li><a href="index.html#svn">Mise en place des repository SVN.</a></li>
+                            <li><a href="index.html#javasci">Java-sci.</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+
+                <section id="content">
+
+                    <h2>Curriculum vitae</h2>
+                    <p>
+                        Une version pdf de mon cv : <a style="font-size: 12px" href="./ressources/CV_fr_2012.pdf"> <img src="./images/pdf.jpg"> </a>.
+                    </p> 
+
+                    <div class="titre_cv">
+                        <p>Élève-Ingénieur en Informatique</p> 
+                    </div>
+
+                    <div class="newsbox">
+                        <div class="chapitre_cv">
+                            Formations.
+                        </div>
+
+                        <table>
+                            <tr>
+                                <td class="cv_key">
+                                    Depuis 2008
+                                </td>
+                                <td class="cv_value">
+                                    <strong>ISIMA(Institut Supérieur d'Informatique, de Modélisation et de leurs Applications)</strong> <br>
+                                    Option : Génie Logiciel et Systèmes Informatiques
+                                    à Clermont-Ferrand (63)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cv_key">2006-2008</td>
+                                <td class="cv_value">
+                                    <strong>Élève en classe préparatoire aux grandes écoles (Techniques et Sciences de l'Ingénieur)</strong><br>
+                                    à Albi (81)    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cv_key">
+                                    2003-2006
+                                </td>
+                                <td class="cv_value">
+                                    <strong>Baccalauréat STI – Option : Électronique , Mention Très Bien.</strong> <br> Lycée Alexis Monteil à Rodez (12)
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="chapitre_cv">
+                            Connaissances.
+                        </div>
+                        <table>
+                            <tr>
+                                <td class="cv_key">
+                                    Langages
+                                </td>
+                                <td class="cv_value">
+                                    C, C++, C#, Java, Scala, Matlab, UML, Objective-C (IOS),VB.NET, Fortran90, LISP, LaTeX.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cv_key">
+                                    Web
+                                </td>
+                                <td class="cv_value">
+                                    HTML5, CSS 3.0, PHP, Javascript.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cv_key">
+                                    Outils
+                                </td>
+                                <td class="cv_value">
+                                    Visual Studio 2008, 2010, Eclipse,  NetBeans, ArgoUML, Umbrello, MSProject.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cv_key">
+                                    SGBD
+                                </td>
+                                <td class="cv_value">
+                                    OracleDB, MySQL, SQL Server, PhpMyAdmin.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cv_key">
+                                    Sciences de gestion
+                                </td>
+                                <td class="cv_value">
+                                    Communication, Gestion, Droit, Gestion de projets, Management.
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="chapitre_cv">
+                            Stages et alternance.
+                        </div>
+
+                        <table>
+                            <tr>
+                                <td class="cv_key">
+                                    Sept 2011- Sept2012
+                                </td>
+                                <td class="cv_value">
+                                    <strong>Manufacture Française des pneumatiques Michelin, Clermont-Ferrand (63)</strong> <br>
+                                    Gestion de phase de test et développement d’applications tierces servant à l’intégration d'un logiciel d'analyse de l'information dans le contexte Michelin. Développement d’un client de consultation de brevets à partir du Web-Service RESTful OPS (Open Patent Service). Participation à l'élaboration d'un
+                                    prototype de moteur de recherche d'information scientifique (articles et brevets) dans un contexte d'entreprise. 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cv_key">
+                                    Avr-sept 2011
+                                </td>
+                                <td class="cv_value">
+                                    <strong>CEA (Commissariat à l'énergie atomique), Fontenay-aux-Roses (92)</strong> <br>
+                                    Réalisation d’un simulateur de propagation d’incendie dans une centrale en langage C++  utilisant 
+                                    la bibliothèque de classe MFC. Cet outil sera utilisé en cas de crise pour définir un plan 
+                                    d’intervention.
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="chapitre_cv">
+                            Projet.
+                        </div>
+                        <table>
+                            <tr>
+                                <td class="cv_key">
+                                    2012- Actuel
+                                </td>
+                                <td class="cv_value">
+                                    <strong>Projet open-source Java-Sci</strong> <br>
+                                    Développement d'un framework scientifique en Java.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cv_key">
+                                    2011-2012
+                                </td>
+                                <td class="cv_value">
+                                    <strong>Projet de 3ème année </strong> <br>
+                                    LIMOS – Jonathan Passerat-Palmbach (Scala, OpenCL, GP-GPU)<br>
+                                    Insertion d'un nouveau paradigme de programmation dans le projet open-source ScalaCL
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cv_key">
+                                    2010-2011
+                                </td>
+                                <td class="cv_value">
+                                    <strong>Projet de 2ème année </strong> <br>
+                                    CNRS - David Hill (Modélisation par Objets, UML, Méta-Modélisation)<br>
+                                    Modélisation de modèles métiers orientés objets développés pour les réseaux ferrés 
+                                    Français.
+                                </td>
+                            </tr>
+
+                        </table>
+                        <div class="chapitre_cv">
+                            Activités extra-scolaire.
+                        </div>
+                        <ul>
+                            <li>
+                                - Capitaine de l’équipe de rugby de l’ISIMA.
+                            </li>
+                            <li>
+                                - Intervenant du job-service IMAGE de l’ISIMA.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <aside id="sidebar2">
+                    <div class="bloc">
+                        <h3>Contact</h3>
+                        <div class ="center">
+                            <a href="http://www.linkedin.com/pub/maxime-escourbiac/26/644/1bb"> <img src="images/linkedin.jpg"> </a>
+                            <a href="https://twitter.com/#!/Fisjkars"> <img src="images/twitter_32.png"> </a>
+                            <script type="text/javascript">
+                                create_mail("maxime.escourbiac", "gmail", "com",'<img src="images/mail.jpg">');
+                            </script> <br>
+                            <img src="images/telephone.jpg">
+                        </div>
+                    </div>
+
+                    <div class="bloc">
+                        <h3> Travaux en cours</h3>
+                        <ul>
+                            <li>Java-sci</li>
+                            <li>Budiez</li>
+                            <li>Cours Alternant</li>
+                        </ul>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Vidéo du moment</h3>
+                        <iframe width="180" height="155" src="http://www.youtube.com/embed/Tw2WjO28iKY" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="bloc">    
+                        <h3> Liens Utiles</h3>
+                        <ul>
+                            <li><a href="http://stackoverflow.com/">Stack Overflow</a></li>
+                            <li><a href="https://github.com/">Git Hub</a></li>
+                            <li><a href="http://www.developpez.com/">Developpez.com</a></li>
+                        </ul>
+                    </div>
+                </aside><!-- end of sidebar -->
+
+            </section><!-- end of #main content and sidebar-->
+        </div>
+        <footer>
+            <div>
+                <section id="footer-area">
+                </section>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Hello world !</title>
+        <script type="text/javascript">
+            function changerText(){
+                var elt = document.getElementById('montext');
+                elt.innerHTML = "texte modifié"
+                elt.style.color = "blue";    
+            }
+            
+            function changerAllBC(){
+                var elts = document.getElementsByTagName('p');
+                for(i = 0; i < elts.length; ++i){
+                    elts[i].style.backgroundColor = "red"; 
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p id="montext"> 
+            texte original
+        </p>
+        
+        <p>
+            texte supple
+        </p>
+
+        <input type="button" value="Changer montext" onclick="changerText();"/>
+        <input type="button" value="Changer All" onclick="changerAllBC();"/>
+    </body>
+</html>

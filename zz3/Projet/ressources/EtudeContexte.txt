@@ -1,0 +1,56 @@
+/************************************************************/
+Trace d'execution ScalaCl
+
+Creation de contexte :
+ 
+ Context => Creation à partir de CLContext soit JavaCL.CreateCOntext avec un CLPlatform en argument
+ 
+ CLContext extends CLAbstractEntity<cl_context>
+ CLContext => extends com.nativelibs4java.opencl.CLAbstractEntity<com.nativelibs4java.opencl.library.OpenCLLibrary.cl_context> (Java) (hors du projet)
+ 
+ JavaCL => Classe mère du projet javaCL
+ JavaCL.CreateContext
+	/**
+	 * Creates an OpenCL context formed of the provided devices.<br/>
+	 * It is generally not a good idea to create a context with more than one device,
+	 * because much data is shared between all the devices in the same context.
+	 * @param devices devices that are to form the new context
+	 * @return new OpenCL context
+	 */
+    public static CLContext createContext(Map<CLPlatform.ContextProperties, Object> contextProperties, CLDevice... devices)
+	Cette methode appele createContext de la classe CLPlatform.
+	
+	
+	/**
+     * Creates an OpenCL context formed of the provided devices.<br/>
+     * It is generally not a good idea to create a context with more than one device,
+     * because much data is shared between all the devices in the same context.
+     * @param devices devices that are to form the new context
+     * @return new OpenCL context
+     */
+    public CLContext createContext(Map<ContextProperties, Object> contextProperties, CLDevice... devices) {
+        int nDevs = devices.length;
+        if (nDevs == 0) {
+            throw new IllegalArgumentException("Cannot create a context with no associated device !");
+        }
+        Pointer<cl_device_id> ids = allocateTypedPointers(cl_device_id.class, nDevs);
+        for (int i = 0; i < nDevs; i++) {
+            ids.set(i, devices[i].getEntity());
+        }
+
+        Pointer<Integer> errRef = allocateInt();
+
+        long[] props = getContextProps(contextProperties);
+        Pointer<SizeT> propsRef = props == null ? null : pointerToSizeTs(props);
+        //Pointer<clCreateContext_arg1_callback> errCb = null;//pointerTo(errorCallback);
+        //System.out.println("ERROR CALLBACK " + Long.toHexString(errCb.getPeer()));
+        cl_context context = CL.clCreateContext(propsRef, nDevs, ids, null, null, errRef);
+        error(errRef.get());
+        return new CLContext(this, ids, context);
+    }
+ 
+
+ 
+ 
+ 
+ 

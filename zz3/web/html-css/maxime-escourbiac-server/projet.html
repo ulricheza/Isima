@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Maxime Escourbiac's website</title>
+        <link rel="stylesheet" href="styles.css" type="text/css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+
+        <style type="text/css" media="screen">
+            h1.fontface {font: 32px/38px 'MichromaRegular', Arial, sans-serif;letter-spacing: 0;}
+            p.style1 {font: 18px/27px 'MichromaRegular', Arial, sans-serif;}
+
+            @font-face {
+                font-family: 'MichromaRegular';
+                src: url('Michroma-webfont.eot');
+                src: url('Michroma-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('Michroma-webfont.woff') format('woff'),
+                    url('Michroma-webfont.ttf') format('truetype'),
+                    url('Michroma-webfont.svg#MichromaRegular') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
+        <script type="text/javascript">
+            function create_mail(naam, domain, tld, body) {
+                var mail;
+                mail = '<a href="' + 'ma' + 'il' + 'to:' + naam;
+                mail += '&#64;' + domain + '.' + tld;
+                mail += '">' + body + '<' + '/a>';
+                document.write(mail);
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container_title">
+                <h1 class="fontface" id="title">Maxime Escourbiac's website</h1>
+            </div>
+        </header>
+
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./cv.html">CV</a></li>
+                    <li><a href="./cours_tp.html">Cours & TP</a></li>
+                    <li><a href="./projet.html">Projets</a></li>
+                    <li><a href="./stage.html">Stages</a></li>
+                    <li><a href="http://www.isima.fr">ISIMA</a></li>
+                    <li><a href="http://www.maxime-escourbiac-server.com/hudson">Hudson</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="wrapper"><!-- #wrapper -->
+            <section id="main"><!-- #main content and sidebar area -->
+                <aside id="sidebar1"><!-- sidebar1 -->
+                    <img id="image_isima" src="images/isima.jpg" alt="" /><br /><br />
+                    <img id="image_perso" src="images/moi.jpg" alt="" /><br /><br />
+
+                    <div class="bloc">
+                        <h3>Last news</h3>
+                        <ul>
+                            <li><a href="index.html#hudson">Installation de Hudson.</a></li>
+                            <li><a href="index.html#svn">Mise en place des repository SVN.</a></li>
+                            <li><a href="index.html#javasci">Java-sci.</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+
+                <section id="content">
+
+                    <article class="group3">
+                        <h2>Projets</h2>
+                        <p>
+                            Lors de ma scolarité à l'ISIMA, il nous a été demandé de réaliser un projet étudiant par année. Ces projet m'ont permis
+                            d'approcher divers domaines des métiers de l'informatique.
+                        </p>
+                    </article>
+
+                    <article class="newsbox">
+                        <div class="titre_cv">
+                            Projet ZZ1 :
+                        </div>
+                        <img src="images/bataille_navale.jpg" class="floatimgleft">  <br>
+                        <p>
+                            Réalisation d’un jeu de bataille en réseau en C,
+                            en utilisant les sockets, threads(POSIX). Interface graphique effectuée à
+                            l’aide de la library SDL, et le son avec FMOD.<br>
+                            La version actuelle (0.2) est compatible Linux,Windows,Mac. <br>
+                            Les sources sont disponibles sur le repository ZZ1 ou à l'adresse suivante 
+                            <a href="http://www.maxime-escourbiac-server.com/svn/zz1/Projet/version1_01/">ici</a>.
+                        </p>
+                    </article>
+
+                    <article class="newsbox">
+                        <div class="titre_cv">
+                            Projet ZZ2 :
+                        </div>
+                        <img src="images/train.jpg" class="floatimgleft">  <br>
+                        <p>
+                            Le sujet du projet était d'étudier un modèle proposé par le RFF (Réseau Ferrés de France).
+                            Pour réaliser ceci, nous avons dû étudier le logiciel de modélisation utilisé ici par l'entreprise,
+                            ArgoUML, et faire un tutorial montrant les bases de son utilisation.
+                        </p>
+                        <p>
+                            La finalité du projet a été d'implémenter un simulateur de transports ferroviaires en C# sous Visual Studio 2010
+                            utiisant une simplification du modèle proposé par le RFF.
+                        </p>
+                    </article>
+
+                    <article class="newsbox">
+                        <div class="titre_cv">
+                            Projet ZZ3 :
+                        </div>
+                        <img src="images/scala.jpg" class="floatimgleft">  <br>
+                        <p>
+                            Dans le domaine de la simulation, il est nécessaire de réaliser un certain nombre de réplications d'une même expérience,
+                            afin d'obtenir des résultats statistiquement corrects. Pour réduire le temps d'exécution de ces réplications, la
+                            parallélisation est utilisée. Un des moyens utilisés pour paralléliser est l'emploi de GPU (Graphics Processing Units).
+                            Cette solution permet à faible coût d'exécuter les mêmes opérations grâce aux threads : les nombreuses unités de calcul
+                            parallèle disponibles sur un GPU.
+                        </p>
+                        <p>
+                            Les chercheurs du LIMOS ont proposé une publication proposant une nouvelle approche de parallélisation, permettant
+                            de résoudre une limitation matérielle des GPU au niveau de l'accès à la mémoire vive et des exécutions de codes
+                            indépendants. Cette solution se nomme Warp-Level-Parallelism.
+                        </p>
+
+                        <p>
+                            Notre projet a consisté à implémenter ce paradigme dans un langage de haut niveau, nommé ScalaCL. ScalaCL est un projet
+                            Open Source créé par Olivier Chafik, permettant de générer du code OpenCL à partir d'un code Scala.
+                        </p>
+
+                        <p>
+                            La première étape de notre projet a été d'analyser la publication afin de comprendre l'intérêt de ce nouveau paradigme pour
+                            la réplication de simulations.
+                        </p>
+
+                        <p>
+                            La seconde étape a été ensuite d'insérer ce paradigme dans le projet ScalaCL. Nous avons d'abord réaliser une longue analyse
+                            sur le fonctionnement de cet outil. L'implémentation a été divisée en deux parties : l'implémentation de nouvelles collections
+                            ScalaCL, puis l'implémentation d'un plugin du compilateur ScalaCL pour convertir nos fonctions ScalCL en kernel OpenCL.
+                        </p>
+                    </article>
+                </section>
+
+                <aside id="sidebar2">
+                    <div class="bloc">
+                        <h3>Contact</h3>
+                        <div class ="center">
+                            <a href="http://www.linkedin.com/pub/maxime-escourbiac/26/644/1bb"> <img src="images/linkedin.jpg"> </a>
+                            <a href="https://twitter.com/#!/Fisjkars"> <img src="images/twitter_32.png"> </a>
+                            <script type="text/javascript">
+                                create_mail("maxime.escourbiac", "gmail", "com",'<img src="images/mail.jpg">');
+                            </script> <br>
+                            <img src="images/telephone.jpg">
+                        </div>
+                    </div>
+
+                    <div class="bloc">
+                        <h3> Travaux en cours</h3>
+                        <ul>
+                            <li>Java-sci</li>
+                            <li>Budiez</li>
+                            <li>Cours Alternant</li>
+                        </ul>
+                    </div>
+
+                    <div class="bloc">
+                        <h3>Vidéo du moment</h3>
+                        <iframe width="180" height="155" src="http://www.youtube.com/embed/Tw2WjO28iKY" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="bloc">    
+                        <h3> Liens Utiles</h3>
+                        <ul>
+                            <li><a href="http://stackoverflow.com/">Stack Overflow</a></li>
+                            <li><a href="https://github.com/">Git Hub</a></li>
+                            <li><a href="http://www.developpez.com/">Developpez.com</a></li>
+                        </ul>
+                    </div>
+                </aside><!-- end of sidebar -->
+
+            </section><!-- end of #main content and sidebar-->
+        </div>
+        <footer>
+            <div>
+                <section id="footer-area">
+                </section>
+            </div>
+        </footer>
+    </body>
+</html>

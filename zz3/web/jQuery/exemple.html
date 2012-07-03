@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<title>Dynamiser une page avec jQuery</title>
+
+ <!-- ajout de jQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"> </script>
+ <script type="text/javascript">
+ $(document).ready(function(){
+ alert('La première ligne va rougir');
+ $("li:first-child").addClass("first");
+ });
+ </script>
+
+ <!-- un peu de CSS -->
+ <style type="text/css">
+ .first{ color: #f00;}
+ </style>
+
+</head>
+<body>
+
+ <ul>
+ <li>1e ligne</li>
+ <li>2e ligne</li>
+ <li>3e ligne</li>
+ <li>4e ligne</li>
+ </ul>
+
+</body>
+</html> 

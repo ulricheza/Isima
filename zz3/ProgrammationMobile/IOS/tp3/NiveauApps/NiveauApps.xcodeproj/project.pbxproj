@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C252AC514CF2CC100111E41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C252AC414CF2CC100111E41 /* UIKit.framework */; };
+		9C252AC714CF2CC100111E41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C252AC614CF2CC100111E41 /* Foundation.framework */; };
+		9C252AC914CF2CC100111E41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C252AC814CF2CC100111E41 /* CoreGraphics.framework */; };
+		9C252ACF14CF2CC100111E41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C252ACD14CF2CC100111E41 /* InfoPlist.strings */; };
+		9C252AD114CF2CC100111E41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C252AD014CF2CC100111E41 /* main.m */; };
+		9C252AD514CF2CC100111E41 /* NiveauAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C252AD414CF2CC100111E41 /* NiveauAppDelegate.m */; };
+		9C252AD814CF2CC100111E41 /* NiveauViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C252AD714CF2CC100111E41 /* NiveauViewController.m */; };
+		9C252ADB14CF2CC100111E41 /* NiveauViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C252AD914CF2CC100111E41 /* NiveauViewController.xib */; };
+		9C252AE714CF2F6C00111E41 /* bulle-niveau.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C252AE514CF2F6C00111E41 /* bulle-niveau.png */; };
+		9C252AE814CF2F6C00111E41 /* fond-niveau.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C252AE614CF2F6C00111E41 /* fond-niveau.png */; };
+		9CB7A0A114CF70FE00E0E133 /* fleche.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CB7A0A014CF70FE00E0E133 /* fleche.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C252AC014CF2CC100111E41 /* NiveauApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiveauApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C252AC414CF2CC100111E41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9C252AC614CF2CC100111E41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9C252AC814CF2CC100111E41 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9C252ACC14CF2CC100111E41 /* NiveauApps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NiveauApps-Info.plist"; sourceTree = "<group>"; };
+		9C252ACE14CF2CC100111E41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C252AD014CF2CC100111E41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C252AD214CF2CC100111E41 /* NiveauApps-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NiveauApps-Prefix.pch"; sourceTree = "<group>"; };
+		9C252AD314CF2CC100111E41 /* NiveauAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NiveauAppDelegate.h; sourceTree = "<group>"; };
+		9C252AD414CF2CC100111E41 /* NiveauAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NiveauAppDelegate.m; sourceTree = "<group>"; };
+		9C252AD614CF2CC100111E41 /* NiveauViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NiveauViewController.h; sourceTree = "<group>"; };
+		9C252AD714CF2CC100111E41 /* NiveauViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NiveauViewController.m; sourceTree = "<group>"; };
+		9C252ADA14CF2CC100111E41 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NiveauViewController.xib; sourceTree = "<group>"; };
+		9C252AE514CF2F6C00111E41 /* bulle-niveau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bulle-niveau.png"; sourceTree = "<group>"; };
+		9C252AE614CF2F6C00111E41 /* fond-niveau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fond-niveau.png"; sourceTree = "<group>"; };
+		9CB7A0A014CF70FE00E0E133 /* fleche.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fleche.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C252ABD14CF2CC100111E41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C252AC514CF2CC100111E41 /* UIKit.framework in Frameworks */,
+				9C252AC714CF2CC100111E41 /* Foundation.framework in Frameworks */,
+				9C252AC914CF2CC100111E41 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C252AB514CF2CC100111E41 = {
+			isa = PBXGroup;
+			children = (
+				9C252AE914CF2F7200111E41 /* Images */,
+				9C252ACA14CF2CC100111E41 /* NiveauApps */,
+				9C252AC314CF2CC100111E41 /* Frameworks */,
+				9C252AC114CF2CC100111E41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C252AC114CF2CC100111E41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C252AC014CF2CC100111E41 /* NiveauApps.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C252AC314CF2CC100111E41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C252AC414CF2CC100111E41 /* UIKit.framework */,
+				9C252AC614CF2CC100111E41 /* Foundation.framework */,
+				9C252AC814CF2CC100111E41 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C252ACA14CF2CC100111E41 /* NiveauApps */ = {
+			isa = PBXGroup;
+			children = (
+				9C252AD314CF2CC100111E41 /* NiveauAppDelegate.h */,
+				9C252AD414CF2CC100111E41 /* NiveauAppDelegate.m */,
+				9C252AD614CF2CC100111E41 /* NiveauViewController.h */,
+				9C252AD714CF2CC100111E41 /* NiveauViewController.m */,
+				9C252AD914CF2CC100111E41 /* NiveauViewController.xib */,
+				9C252ACB14CF2CC100111E41 /* Supporting Files */,
+			);
+			path = NiveauApps;
+			sourceTree = "<group>";
+		};
+		9C252ACB14CF2CC100111E41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C252ACC14CF2CC100111E41 /* NiveauApps-Info.plist */,
+				9C252ACD14CF2CC100111E41 /* InfoPlist.strings */,
+				9C252AD014CF2CC100111E41 /* main.m */,
+				9C252AD214CF2CC100111E41 /* NiveauApps-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C252AE914CF2F7200111E41 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9CB7A0A014CF70FE00E0E133 /* fleche.jpg */,
+				9C252AE514CF2F6C00111E41 /* bulle-niveau.png */,
+				9C252AE614CF2F6C00111E41 /* fond-niveau.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C252ABF14CF2CC100111E41 /* NiveauApps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C252ADE14CF2CC100111E41 /* Build configuration list for PBXNativeTarget "NiveauApps" */;
+			buildPhases = (
+				9C252ABC14CF2CC100111E41 /* Sources */,
+				9C252ABD14CF2CC100111E41 /* Frameworks */,
+				9C252ABE14CF2CC100111E41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NiveauApps;
+			productName = NiveauApps;
+			productReference = 9C252AC014CF2CC100111E41 /* NiveauApps.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C252AB714CF2CC100111E41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = ISIMA;
+			};
+			buildConfigurationList = 9C252ABA14CF2CC100111E41 /* Build configuration list for PBXProject "NiveauApps" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9C252AB514CF2CC100111E41;
+			productRefGroup = 9C252AC114CF2CC100111E41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C252ABF14CF2CC100111E41 /* NiveauApps */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C252ABE14CF2CC100111E41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C252ACF14CF2CC100111E41 /* InfoPlist.strings in Resources */,
+				9C252ADB14CF2CC100111E41 /* NiveauViewController.xib in Resources */,
+				9C252AE714CF2F6C00111E41 /* bulle-niveau.png in Resources */,
+				9C252AE814CF2F6C00111E41 /* fond-niveau.png in Resources */,
+				9CB7A0A114CF70FE00E0E133 /* fleche.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C252ABC14CF2CC100111E41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C252AD114CF2CC100111E41 /* main.m in Sources */,
+				9C252AD514CF2CC100111E41 /* NiveauAppDelegate.m in Sources */,
+				9C252AD814CF2CC100111E41 /* NiveauViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C252ACD14CF2CC100111E41 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C252ACE14CF2CC100111E41 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C252AD914CF2CC100111E41 /* NiveauViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C252ADA14CF2CC100111E41 /* en */,
+			);
+			name = NiveauViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C252ADC14CF2CC100111E41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9C252ADD14CF2CC100111E41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C252ADF14CF2CC100111E41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NiveauApps/NiveauApps-Prefix.pch";
+				INFOPLIST_FILE = "NiveauApps/NiveauApps-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9C252AE014CF2CC100111E41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NiveauApps/NiveauApps-Prefix.pch";
+				INFOPLIST_FILE = "NiveauApps/NiveauApps-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C252ABA14CF2CC100111E41 /* Build configuration list for PBXProject "NiveauApps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C252ADC14CF2CC100111E41 /* Debug */,
+				9C252ADD14CF2CC100111E41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C252ADE14CF2CC100111E41 /* Build configuration list for PBXNativeTarget "NiveauApps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C252ADF14CF2CC100111E41 /* Debug */,
+				9C252AE014CF2CC100111E41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C252AB714CF2CC100111E41 /* Project object */;
+}

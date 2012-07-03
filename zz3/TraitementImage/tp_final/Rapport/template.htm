@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="#LANG"><head>	
+  
+  <title>#Projet d'Imagerie</title><meta http-equiv="Content-Type" content="text/html; charset=#CHARSET">
+  <link rel="stylesheet" href="./style.css" type="text/css">
+  <meta name="KeyWords" content="ISIMA, TP, imagerie">
+  <meta name="Description" content="compte rendu de projet de TP"></head>
+<body>
+	<h1>
+		Spatio-temporal image segmentation using optical flow and clustering algorithm
+	</h1>
+	<h3>&nbsp;&nbsp;&nbsp; Maxime ESCOURBIAC, Jean-Christophe SEPTIER ZZ3F2 promo 2012</h3>
+
+	<h1 class="titrearticle">Présentation du sujet</h1>
+                <br>
+La segmentation d'une sequence d'image est un sujet complexe et
+extremement couteux en temps de calcul.Saïsa Galic et Sven Loncaric
+proposent<br>une
+nouvelle méthode se basant sur du clustering à deux dimensions. La
+première dimension est la luminosité de chaque point de l'image et la
+deuxième <br>est la norme euclidienne du flot optique pour une
+sequence d'image donnée., celle-ci sera calculé avec l'algorithme de
+Horn-Schunk. Le résultat permettra <br>de discerner les objets mobiles
+d'une séquence d'image issues d'image à résonance magnétique provenant
+d'electro-cardiogramme. (Exemple d'image à étudier ci-dessous) <br>&nbsp;  
+	<br><div style="text-align: left; margin-left: 440px;"><small><img src="original.png" alt=""></small><span style="text-decoration: underline;"></span></div><br>Le
+but de ce sujet sera donc, d'analyser en profondeur la publication pour
+en extraire les algorithmes et les méthodes utilisées, afin de les implémenter avec l'aide de la bibliothéque<br>CImg.<br><br><h1 class="titrearticle">Méthode</h1>
+
+ 
+	<h2 class="soustitrearticle"> Partie théorique</h2>Le travail se decompose en 3 partie :<br><br>La
+première consiste à récuperer l'image représentant la luminosité de la
+source. Pour des images noires et blanches, comme celles utilisés dans
+les IRM,<br>on utilisera les valeurs des pixels de l'image tout simplement.<br>La
+deuxième partie préliminaire est le calcul du flot optique, traitement
+déjà réalisé lors du TP6 "Estimation de mouvement par flot optique", la
+méthode utilisée dans la publication<br>est celle de <span style="font-weight: bold;">Horn et Schunck.<br></span>La
+troisième et dernière partie est d'utiliser les résultats des deux
+premières partie comme arguments pour un algorithme de segmentation qui
+est le k-means avec dans ce cas là.<br>Le nombre de cluster à 4 (K=4). Les centres des clusters sont initialisés aux valeurs suivantes :<br>Cluster 1 = (0,0)<br>Cluster 2 = (0,norme max du flot optique)<br>Cluster 3 = (brillance max, 0)<br>Cluster 4 = (brillance max, norme max du flot optique)<br><br><span style="text-decoration: underline;">Détail de l'algorithme du K-Means :</span><br>Cet
+algorithme est différent des algorithmes classiques pour le K-Means, en
+effet ici, pour des questions de performances, on utilise une matrice
+de short pour stocker a quel cluster apparatienne chaque pixel.<br>La
+raison principale de ce choix est la réalisation du test de fin de
+l'algorithme. Le K-Means continue à fonctionner tant que l'état n est
+différent de n-1. Et le fait de travailler avec une matrice de short
+permet<br>d'éviter de travailler avec des objets comme CImg&lt;&gt; qui serait plus lourd a manipuler.<br><span style="text-decoration: underline;"><br>Pseudo algorithme implémenté pour le projet:<br><br></span>//paramétrage des 4 clusters;<br>continuer = true;<br><br>while(continuer == true)<br>&nbsp; &nbsp;continuer = false;<br>&nbsp; &nbsp;Reinitialisation des clusters;<br>&nbsp; &nbsp;for( i = 0 ; i &lt; witdh ; ++i)<br>&nbsp; &nbsp; &nbsp; for(j = 0; j &lt; height; ++j)<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; //On recupere les informations du pixel i,j<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;brillance = sequence(i,j);<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;norme = normeFlotoptique(i,j)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//On calcule de quel centre de cluster le point est le plus proche<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if( le point a change de cluster)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continuer = true;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //on modifie la matrice d'appartence pour le point i,j<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; endif<br>&nbsp; &nbsp; &nbsp; &nbsp;end for<br>&nbsp; &nbsp;end for<br>&nbsp;<br>&nbsp; &nbsp;//On calcule les nouveaux centres de chaque cluster<br>end while<br><br><br><span style="text-decoration: underline;">Infos :</span><br>Pour
+le calcul de la distance entre un pixel et le centre du cluster on
+utilise la norme Euclidienne sqrt(x² + y²) or on sait que pour x &gt;
+0;&nbsp; x &gt; y =&gt; sqrt(x) &gt; sqrt(y)<br>donc la formule utilisé pour des raisons de performance se limitera à&nbsp; x² + y².<br><br>Cet algorithme permet de retrouver 4 images représentant un cluster chacune.<br>Le cluster 0 correspont au fond statique.<br>Le cluster 1 correspont au fond mobile.<br>Le cluster 2 correspont aux objets statique.<br>Le cluster 3 correspont aux objets mobile.<br><br><br>
+
+	<h2 class="soustitrearticle"> Implémentation</h2>
+L'implémentation de ce projet a été réalisé en C++ à l'aide de la
+library CImg, l'architecture du programme se décompose en 2 classes :<br>- ClusteringSpatioTemporel : Classe qui contient l'ensemble des algorithmes utilisé pour ce projet (Horn et Schunk, K-Means).<br>-
+Cluster : Classe modélisant un cluster sera utilisé pour faciliter le
+développement du K-Means et améliorer concrétement les performances.<br><br>Une documentation Doxygen a été généré à l'aide des sources du projet. <a href="doc/html/index.html"><span style="text-decoration: underline;">Lien ici </span></a><br><br>
+<h1 class="titrearticle"> Résultats</h1><br>Voici le jeu d'entrée utilisé pour les tests :<br><br>Pour tester la robustesse de notre algorithme et voir si il peut être appliquer dans un contexte non médical.<br><br><img style="width: 233px; height: 233px;" alt="rubic" src="rubic1.bmp"><img style="width: 233px; height: 233px;" alt="rubic2" src="rubic2.bmp"><br><br>Pour tester sa validité dans son domaine de développement, l'étude d'image IRM.<br><br><img style="width: 256px; height: 216px;" alt="ecg1" src="ecg1.bmp"><img style="width: 256px; height: 216px;" alt="ecg2" src="ecg2.bmp"><br><br><br>Temps de calcul sur une machine équipé d'un processeur Intel Core I7 avec 8Go de mémoire RAM pour le test avec l'irm<br><br><img style="width: 1019px; height: 67px;" alt="speed" src="console.png"><br><br><br><br>Images des 4 clusters après réalisation de l'algorithme du K-Means :<br><br><img style="width: 1175px; height: 270px;" alt="a" src="resCubic.png"><br><br><img style="width: 1289px; height: 248px;" alt="aaa" src="resEcg.png"><br><br><br><br><br>
+
+<h1 class="titrearticle"> Discussion</h1><br>Pour conclure sur ce
+projet, on peut considérer cette aproche est intéressante pour le
+domaine médical, car elle permet d'avoir un focus sur les zones mobiles
+du corps humainlors d'une IRM.<br>D'un point de vue informatique, le
+test sur le rubic cube montre que cette approche pourrait être étendu
+dans un domaine plus général, et que cette méthode présente des
+qualités de robustesse certaine<br>face aux problémes d'hétérogéneité
+des images. On remarque aussi qu'au niveau temps de calcul, le
+clustering consomme très peu ( &lt; 0.05s ), ce qui pourra permettre
+une utilisation dans un contexte d'analyse médicale.<br><br><br><br></body></html>

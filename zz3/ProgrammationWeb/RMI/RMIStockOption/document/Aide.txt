@@ -1,0 +1,19 @@
+Commande à réaliser pour lancer l'application (sur Windows):
+
+- Compiler le projet
+
+- Ajouter le Path du bin du JDK : set path=%path%;c:\Program File\Java\jdk\bin
+
+- Compléter le classpath avec le dossir classes de notre application
+
+- Aller dans le dossier build\classes du projet et créer les stubs
+  rmic Client.clientSkeleton
+  rmic Client.administrateurSkeleton
+  rmic Server.ExchangeSkeleton
+  rmic Server.StockOptionSkeleton
+
+- Lancer le rmiregistry : rmiregistry
+
+- Lancer le serveur
+
+- Lancer les applications clientes

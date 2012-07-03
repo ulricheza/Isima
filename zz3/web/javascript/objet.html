@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+        <head>
+                <meta http-equiv="content-type" content="text/html; charset=utf-8">
+                <title>Hello world !</title>
+				<script type="text/javascript">
+				   function voiture(modele) {
+				      this.marque = "pigeot";
+				      this.modele = modele;
+					  this.afficher = function() {
+					     document.write( this.marque + " " + this.modele);
+					  }
+				   }
+				</script>
+        </head>
+        <body>
+                <script type="text/javascript">
+				   var essai = new voiture("504");
+				   document.write("<p>");
+				   essai.afficher();
+				   document.write("</p>");
+				</script>
+        </body>
+</html>
