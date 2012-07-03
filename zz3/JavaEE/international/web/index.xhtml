@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:outputStylesheet library="style" name="guess.css" />
+    <h:head>
+        <title>Facelet Title</title>
+        <f:view locale="#{loicBean.localisation}"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:commandLink  action="#{loicBean.setLocale('FR')}">
+                <h:graphicImage library="images" name="fr.gif" alt="Français" />
+            </h:commandLink>
+            <h:commandLink  action="#{loicBean.setLocale('EN')}">
+                <h:graphicImage library="images" name="en.gif" alt="Grand-Breton" />
+            </h:commandLink> 
+        </h:form>
+        <div id="content">
+            <div id="bigBubble">
+                <p id="text">
+                    <h:outputText escape="false" value="#{loicBean.phrase}"/>
+                </p>
+
+                <div id="mediumBubble">
+                </div>
+                <div id="smallBubble">
+                </div>
+            </div>
+
+            <h:graphicImage id="loic" alt="" library="images" name="loic_carre.png" />
+            <h:form id="proposition">
+                <h:inputText size="2" value="#{loicBean.utilisateur}"/>
+                <h:commandButton value="#{bundle.bouton}" action="#{loicBean.comparer()}"/>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+

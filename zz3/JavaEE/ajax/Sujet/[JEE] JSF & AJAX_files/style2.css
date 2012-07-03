@@ -1,0 +1,273 @@
+* {
+	font-family      : Arial, Helvetica, sans-serif;
+    font-size      : 1em;
+}
+
+@media print{
+ body {
+    background-color : #FFFFFF;
+    text-align       : left;
+    margin-top       : 1em;
+    margin-bottom    : 1em;
+	font-size         : 90%;
+ }
+
+ .noprint {
+    visibility : hidden;
+ }
+
+ div.main {
+     width:50em;
+	  /*border           : 1px solid #000;*/
+     margin-left      : 1em;
+     margin-right     : auto;
+     text-align       : center;
+     width            : 60em;
+     background-color : #FFFFFF;
+     padding          : 0.5em 0.5em 0.5em 0.5em;
+ }
+ 
+ #content a[href]:after {
+   content : "( " attr(href) ")";
+ }
+
+}
+
+@media screen{
+ body {
+    background-color : #E1EBFB;
+	/* background-image : url(../images/carreau.jpg); */
+    text-align       : center;
+    margin-top       : 1em;
+    margin-bottom    : 1em;
+    font-size        : 90%;
+ }
+
+div.main {
+     border           : 2px solid #B0CBF4;
+	  border-radius    : 20px;
+     margin-left      : auto;
+     margin-right     : auto;
+     text-align       : left;
+     background-color : #FFFFFF;
+     padding          : 0.5em 0.5em 0.5em 0.5em;
+     voice-family: "\"}\"";
+     voice-family:inherit;
+     width:800px;
+ }
+ 
+html>body div.main {
+   width:802px;
+}
+
+}
+
+
+a img {
+border : 0px
+}
+
+/* #E1EBFB #B0CBF4 #3366CC */
+
+code {
+  color: blue;
+}
+
+h1 {
+  text-align      : center;
+  color           : white;
+  width           : 100%;
+  font-size       : 2.9em;
+  }
+
+h2 {
+  border-bottom: inset;
+  text-align:left;
+  font-size:1.2em;
+}
+
+h3 { 
+   text-align : left;
+}
+
+a {
+   text-decoration : none;
+   color     : #0000A0;
+}
+
+
+a:hover {
+   text-decoration : underline;
+   color           : #5757FF;
+}
+
+p {
+  text-align : justify;
+}
+
+
+   div.code, div.code2 {
+      font-family      : monospace;
+      text-align       : left;
+      padding          : 5px 1em 5px 1em;
+      background-color : #E1EBFB;
+
+   }
+
+ div.footnote {
+     margin-left      : auto;
+     margin-right     : auto;
+     text-align       : right;
+     width            : 750px;
+     padding          : 5px 1em 5px 1em;
+     font-size        : 80%;
+     color            : #3366CC;
+ }
+   .j {
+	text-align: justify;
+}
+
+ol,ul,li {
+	text-align : justify;
+}
+
+#content {
+  width:95%;
+  margin:auto;
+}
+
+.warning {
+width:95%;margin:auto;
+background-color:#ddbdff;border: 2px solid purple;color:purple;padding:5px 5px 5px 1em;border-left:6px solid purple;
+}
+
+.warning a {
+   color : purple;
+   text-decoration : none;
+}
+
+.warning a:hover {
+   color : purple;
+   text-decoration : underline;
+}
+
+
+div#menu {
+   width:800px;margin-top:-22px;margin-left:5.5em;
+}
+
+ul.nav-menu
+{
+   list-style: none;
+   padding: 0;
+   margin : 0 0 0 1em;
+
+}
+
+.nav-menu li
+{
+   float: left;
+   height:2em;
+   margin-left:0.2em;
+   padding:0;
+   list-style-type: none;
+   list-style-image: none;
+   font-size:0.9em;
+}
+
+.nav-menu li a {
+   float: left;
+}
+
+.nav-menu li a, .button
+{
+   background: #fff url(../images/css-nav.gif) repeat-x bottom left ;
+   height: 2em;
+   display: block;
+   line-height: 2em;
+   border: 1px solid #dcdce9;
+   color: #0d2474;
+   text-decoration: none;
+   text-align: center;
+   padding:0 0.5em 0 0.5em;
+}
+
+
+.nav-menu li a:hover
+{
+   background:  #d5c2d3 url(../images/css-nav2.gif) repeat-x top left ;
+}
+
+/* code cache */    
+    .solution {
+      margin : auto;
+      position:relative;
+      border:2px solid #B0CBF4;
+    }
+    
+    
+    
+    .solution > .cache {
+      background-color:#E1EBFB;
+      position:absolute;
+      color:#B0CBF4; 
+      text-align:center;
+      z-index:100;
+      height:100%;
+    }
+    
+    .cache  img {
+    vertical-align:middle;
+    max-height:100%;
+    }
+    
+    .sh {
+    border:2px dotted #B0CBF4;
+    padding: 5px 0 5px 0;
+    }
+    
+    /* sommaire dynamique */
+    
+     #sommaire {
+      font-size : 95%;
+      /* overflow:auto; */
+	   width: 250px;
+		background-color : #ffe9ed;
+		border : 2px solid red;
+      border-radius : 20px;
+		padding : 5px 5px 5px 10px;
+		display : none;
+      position:absolute;
+      z-index:200;
+	 }
+    
+    #sommaire a, #sommaire a:visited {
+       text-decoration : none;
+       background-color : transparent;
+       color : red;
+    }
+    
+    
+    
+    #sommaire a:hover {
+       background-color : pink;
+    }
+    
+    #sommaire ol {
+       margin-left  :20px;
+       padding-left : 0px;
+       color : red;
+    }
+     #sommaire .fermer {
+      position:absolute;
+      right:0.5em;
+      top:0.5em;
+      color : red;
+      font-weight: bold;
+      background-color:transparent;
+     }
+     
+    #sommaire .fermer a:hover{
+      color : #ffe9ed;
+      background-color: red;
+     }

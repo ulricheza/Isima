@@ -1,0 +1,80 @@
+Ingénierie dirigée par les modèles
+Un article de Wikipédia, l'encyclopédie libre.
+Aller à : Navigation, rechercher
+
+L'Ingénierie dirigée par les modèles (IDM) est le domaine de l'informatique mettant à disposition des outils, concepts et langages pour créer et transformer des modèles.
+
+    * Langages : UML, MOF, QVT
+    * Mots-clés : Modèle, Métamodèle, Métamétamodèle, Diagramme de classe?
+    * En anglais : (en) Model Driven Engineering ou MDE
+
+Sommaire
+ [masquer] 
+
+    * 1 Présentation
+          o 1.1 Raisons d?être
+          o 1.2 Origine
+          o 1.3 Ce qu?est l?IDM
+                + 1.3.1 Catégorie des outils XML et des outils de transformation de graphes
+                + 1.3.2 Catégorie des outils de transformation de modèles via AGL commerciaux
+                + 1.3.3 Catégorie des outils spécifiques à la transformation de modèles intégrables en environnement de développement standard
+                + 1.3.4 Catégorie des outils de méta-modélisation
+          o 1.4 Avenir de l'IDM
+    * 2 Concept de modèle
+          o 2.1 Concept de méta-modèle et de langage de modélisation
+    * 3 Concept de transformations de modèles
+    * 4 Concepts voisins
+    * 5 Voir aussi
+    * 6 Références
+
+Présentation[modifier]
+Raisons d?être[modifier]
+
+La dernière décennie a vu se poursuivre l'accroissement exponentiel de la complexité des systèmes informatiques, avec par exemple l'apparition de la problématique des lignes de produits logiciels, visant à minimiser simultanément les coûts de développement et le temps de mise sur le marché de nouveaux logiciels d'une même famille. Comme dans les autres sciences, on s'est de plus en plus appuyé sur la modélisation pour essayer de maîtriser cette complexité, tant pour produire le logiciel (conception) que pour le valider (test).
+
+La modélisation, au sens large, est en effet l'utilisation efficace d'une représentation simplifiée d'un aspect de la réalité pour un objectif donné. Loin de se réduire à l'expression d'une solution à un niveau d'abstraction plus élevé que le code, la modélisation en informatique peut être vue comme la séparation des différents besoins fonctionnels et préoccupations extra-fonctionnelles (telles que sécurité, fiabilité, efficacité, performance, ponctualité, flexibilité, etc.) issus des exigences. Réciproquement la conception du logiciel consiste à fusionner (ou tisser) des solutions à ces différentes préoccupations dans du code. Ce processus n'est en aucun cas nouveau : bien qu'on utilise de nouveaux noms, ces activités d'abstraction/modélisation et conception/tissage sont le pain quotidien des développeurs depuis toujours. Cependant dans la plupart des cas, tant les modèles que les solutions de conceptions restent implicites, ou tout au moins informels (par exemples si l'on fait usage de patrons de conception), et sont appliqués manuellement. Le véritable défi dans un contexte de lignes de produits est de pouvoir décliner des gammes, c'est-à-dire pour chaque aspect changer facilement quelle version de quelle variante particulière est sélectionnée. Dans ce cas, refaire à chaque fois le complexe processus de tissage de la conception devient beaucoup trop cher, trop lent et trop sujet à erreurs.
+Origine[modifier]
+
+Ce que propose l'approche de l'ingénierie des modèles (IDM, ou MDE en anglais pour Model Driven Engineering) est simplement de mécaniser le processus que les ingénieurs expérimentés suivent à la main. L'intérêt pour l'IDM a été fortement amplifié à la fin du XX-ee siècle lorsque l'organisme de standardisation OMG (Object Management Group) a rendu publique son initiative MDA (Model Driven Architecture), qui peut être vue comme une restriction de l'IDM à la gestion de l'aspect particulier de dépendance d'un logiciel à une plateforme d'exécution. De manière plus générale, et comme de nombreuses autres approches de génie logiciel comme la programmation générative, la programmation par aspects, les usines à logiciel (Software Factories) où encore le MIC (Model Integrated Computing), l'IDM est une forme d'ingénierie générative, qui se singularise par une démarche par laquelle tout ou partie d'une application informatique est générée à partir de modèles.
+
+Pour cela il faut bien sûr que tant les modèles que les processus de tissage de la conception soient rendus explicites, et soient suffisamment précis pour être interprétés ou transformés par des machines. Le processus de conception peut alors être vu comme un ensemble de transformations de modèles partiellement ordonné, chaque transformation prenant des modèles en entrée et produisant des modèles en sortie, jusqu'à obtention d'artéfacts exécutables. Ainsi, quand on doit dériver un nouveau produit, qu'il soit simple évolution d'un produit existant ou nouvelle variante, on peut se contenter de « rejouer » automatiquement la plus grande partie du processus de conception, en changeant simplement quelques détails ici et là.
+Ce qu?est l?IDM[modifier]
+
+Dans le contexte de l'IDM, la notion de transformation de modèle joue un rôle fondamental ; aussi de nombreux outils, tant commerciaux que dans le monde de l'open source sont aujourd'hui disponibles pour faire la transformation de modèles. On peut grossièrement distinguer quatre catégories d'outils :
+
+   1. les outils de transformation génériques qui peuvent être utilisées pour faire de la transformation de modèles;
+   2. les facilités de type langages de scripts intégrés à la plupart des ateliers de génie logiciel;
+   3. les outils conçus spécifiquement pour faire de la transformation de modèles et prévus pour être plus ou moins intégrables dans les environnements de développement standards;
+   4. les outils de méta-modélisation « pur jus » dans lesquels la transformation de modèles revient à l'exécution d'un méta-programme.
+
+Catégorie des outils XML et des outils de transformation de graphes[modifier]
+
+Dans la première catégorie on trouve notamment d'une part les outils de la famille XML, comme XSLT ou Xquery, et d'autre part les outils de transformation de graphes (la plupart du temps issus du monde académique). Les premiers ont l'avantage d'être déjà largement utilisés dans le monde XML, ce qui leur a permis d'atteindre un certain niveau de maturité. En revanche, l'expérience montre que ce type de langage est assez mal adapté pour des transformations de modèles complexes (c'est-à-dire allant au-delà des problématiques de transcodage syntaxique), car ils ne permettent pas de travailler au niveau de la sémantique des modèles manipulés mais simplement à celui d'un arbre couvrant le graphe de la syntaxe abstraite du modèle ce qui impose de nombreuses contorsions qui rendent rapidement ce type de transformation de modèles complexes à élaborer, à valider et surtout à maintenir sur de longues périodes.
+Catégorie des outils de transformation de modèles via AGL commerciaux[modifier]
+
+Dans la seconde catégorie, on va trouver une famille d'outils de transformation de modèles proposés par des vendeurs d'ateliers de génie logiciel (AGL).
+
+L'intérêt de cette catégorie d'outils de transformation de modèles est d'une part leur relative maturité et d'autre part leur excellente intégration dans l'atelier de génie logiciel qui les héberge. Leur principal inconvénient est le revers de la médaille de cette intégration poussée : il s'agit la plupart du temps de langages de transformation de modèles propriétaires sur lesquels il peut être risqué de miser sur le long terme. De plus, historiquement ces langages de transformation de modèles ont été conçus comme des ajouts au départ marginaux à l'atelier de génie logiciel qui les héberge. Même s'ils ont aujourd'hui pris de l'importance, ils ne sont toujours pas vus comme les outils centraux qu'ils devraient être dans une véritable ingénierie dirigée par les modèles. De nouveau ces langages montrent leur limitation lorsque les transformations de modèles deviennent complexes et qu'il faut les gérer, les faire évoluer et les maintenir sur de longues périodes.
+Catégorie des outils spécifiques à la transformation de modèles intégrables en environnement de développement standard[modifier]
+
+La troisième catégorie regroupe les outils conçus spécifiquement pour faire de la transformation de modèles et prévus pour être plus ou moins intégrables dans les environnements de développement standards. Ces langages spécifiquement conçus pour la transformation de modèle ont l'avantage de permettre d'exprimer très simplement les transformations de modèles simples (comme par exemple des transcodages syntaxiques), mais ils trouvent rapidement leurs limites lorsque les transformations de modèles deviennent complexes du point de vue algorithmique, ou bien lorsqu'il faut gérer de nombreuses variantes (contexte des lignes de produits) et les faire évoluer et les maintenir sur de longues périodes.
+Catégorie des outils de méta-modélisation[modifier]
+
+La dernière catégorie d'outils de transformation de modèles est celle des outils de méta-modélisation. La transformation de modèles revient alors à l'exécution d'un méta-programme orienté objet, pour lequel il est relativement aisé de construire un framework facilitant la gestion et la maintenance de nombreuses variantes de transformations nécessaires au contexte des lignes de produits.
+Avenir de l'IDM[modifier]
+
+Même s'il existe une longue expérience de l'utilisation de l'ingénierie des modèles dans certains domaines comme les télécoms, sa généralisation à l'ensemble de l'industrie n'en est qu'à ses débuts. Visant à automatiser une partie du processus du développement, elle requiert un effort d'abstraction plus important de la part des développeurs. En contrepartie, elle permet de conserver le savoir faire de conception proche des centres de décision, grâce aux économies d'échelle dues à l'automatisation.
+Concept de modèle[modifier]
+
+Bien que possédant un grand nombre de définitions, un modèle dans l'IDM est l'abstraction d'un objet sujet de l'acte de modélisation. Son but est de permettre une étude plus simple dans un contexte maitrisé autre que le contexte réel.
+Concept de méta-modèle et de langage de modélisation[modifier]
+
+Le méta-modèle est l'entité concrétisant informatiquement un contexte de modélisation pour la conception et la manipulation de modèles. Il est l?abstraction, donc le modèle, du langage de modélisation des modèles. Un lien s'établit alors entre le modèle et le méta-modèle: la conformité du premier pour le second.
+
+Pour exemple, un plan est conforme à une légende. Du code Java est conforme à la grammaire JAVA.
+Concept de transformations de modèles[modifier]
+
+Deux types de transformations sont réalisables :
+
+    * Les transformations endogènes (au sein d'un même domaine de modélisation)
+    * Les transformations exogènes (d'un domaine de modélisation vers un autre)

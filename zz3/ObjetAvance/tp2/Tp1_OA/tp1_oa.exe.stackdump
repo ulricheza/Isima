@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=0040153B
+eax=000000C0 ebx=0000000B ecx=611663A0 edx=00000003 esi=00A2A118 edi=00000000
+ebp=0028CCD8 esp=0028CC80 program=D:\zz3\ObjetAvance\tp1\Tp1_OA\dist\Debug\Cygwin_4.x-Windows\tp1_oa.exe, pid 2972, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0028CCD8  0040153B  (00000001, 00A2A0A0, 00A180E0, 00008000)
+0028CD68  61007038  (00000000, 0028CDA4, 61006980, FFFDE000)
+End of stack trace

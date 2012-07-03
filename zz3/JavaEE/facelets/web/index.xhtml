@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:outputStylesheet library="style" name="guess.css" />
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div id="content">
+            <div id="bigBubble">
+                <p id="text">
+                    <h:outputText escape="false" value="#{loicBean.phrase}"/>
+                </p>
+
+                <div id="mediumBubble">
+                </div>
+                <div id="smallBubble">
+                </div>
+            </div>
+
+            <h:graphicImage id="loic" alt="" library="images" name="loic_carre.png" />
+            <h:form id="proposition">
+                <h:inputText size="2" value="#{loicBean.utilisateur}"/>
+                <h:commandButton value="Ok" action="#{loicBean.comparer()}"/>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+

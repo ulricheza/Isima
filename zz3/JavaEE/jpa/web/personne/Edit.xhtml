@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditPersonneTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditPersonneLabel_personnePK_nom}" for="personnePK_nom" />
+                    <h:inputText id="personnePK_nom" value="#{personneController.selected.personnePK.nom}" title="#{bundle.EditPersonneTitle_personnePK_nom}" required="true" requiredMessage="#{bundle.EditPersonneRequiredMessage_personnePK_nom}"/>
+                    <h:outputLabel value="#{bundle.EditPersonneLabel_personnePK_prenom}" for="personnePK_prenom" />
+                    <h:inputText id="personnePK_prenom" value="#{personneController.selected.personnePK.prenom}" title="#{bundle.EditPersonneTitle_personnePK_prenom}" required="true" requiredMessage="#{bundle.EditPersonneRequiredMessage_personnePK_prenom}"/>
+                    <h:outputLabel value="#{bundle.EditPersonneLabel_mail}" for="mail" />
+                    <h:inputText id="mail" value="#{personneController.selected.mail}" title="#{bundle.EditPersonneTitle_mail}" />
+                    <h:outputLabel value="#{bundle.EditPersonneLabel_telephone}" for="telephone" />
+                    <h:inputText id="telephone" value="#{personneController.selected.telephone}" title="#{bundle.EditPersonneTitle_telephone}" />
+                </h:panelGrid>
+                <h:commandLink action="#{personneController.update}" value="#{bundle.EditPersonneSaveLink}"/>
+                <br />
+                <br />
+                <h:commandLink action="View" value="#{bundle.EditPersonneViewLink}" immediate="true"/>
+                <br />
+                <h:commandLink action="#{personneController.prepareList}" value="#{bundle.EditPersonneShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:commandLink value="#{bundle.EditPersonneIndexLink}" action="/index" immediate="true" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

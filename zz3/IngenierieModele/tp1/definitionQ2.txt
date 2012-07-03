@@ -1,0 +1,54 @@
+Question 2:
+
+//Metadonnée
+
+Une métadonnée (mot composé du préfixe grec meta, indiquant l'auto-référence ; le mot signifie donc proprement « donnée de/à propos de donnée ») est une donnée servant à définir ou décrire une autre donnée quel que soit son support (papier ou électronique). <<Wikipédia>>
+
+/*****************************************************************************************************************************/
+
+Métadonnée signifie concrètement « des données sur des données ».
+
+Une métadonnée est une donné qui a pour but de décrire une autre donnée. Les métadonnées peuvent être des informations complémentaires, nécessaires à la compréhension d'une autre information ou dans le but de permettre une utilisation pertinente. Par exemple, les métadonnées d'une page web peuvent informer sur le créateur de la page, de la date de création, de la date de publication, son contenu, etc.
+
+Des métadonnées de qualité facilitent la consultation d'informations. Elles permettent d'améliorer la pertinence des résultats affichés par les moteurs de recherche lorsqu'un internaute effectue une requête. << http://www.graphic-evolution.fr/ >>
+
+/*****************************************************************************************************************************/
+
+Littéralement, "une donnée sur une donnée".
+Plus précisément, les métadonnées sont un ensemble structuré d'informations décrivant une ressource quelconque.
+Une métadonnée peut être utilisée à des fins diverses :
+
+    * la description et la recherche de ressources
+    * la gestion de collections de ressources
+    * la préservation des ressources
+
+L'opération qui consiste à assigner des métadonnées à une ressource pour l'identifier est l'indexation. Les métadonnées doivent être exprimées (ou codées) d'une manière normalisée pour pouvoir être repérées, lues, recherchées et échangées par les systèmes informatiques et être comprises par les êtres humains. << http://wiki.univ-paris5.fr/wiki/M%C3%A9tadonn%C3%A9e >>
+
+/*****************************************************************************************************************************/
+
+//introspection
+
+l'introspection, qui est la capacité d'un programme à examiner son propre état. <<http://www.techno-science.net/>>
+
+/*****************************************************************************************************************************/
+
+//meta-programmation
+
+La métaprogrammation est, par analogie avec les métadonnées et les métaclasses, la programmation de métaprogrammes. Elle est l'écriture de programmes qui manipulent des données décrivant des programmes (autres ou eux-mêmes).
+
+Elle peut être employée pour générer du code interprété par un compilateur et donner un résultat constant, afin d'éviter un calcul manuel. Il permet également de réduire le temps d'exécution du programme si le résultat constant avait été classiquement calculé par le programme comme pour les résultats variables.
+
+Cette méthode ne s'applique pas uniquement aux calculs mais aussi au remplissage de données constantes telles que des tableaux ou des structures plus complexes. Cependant cette technique ne fonctionne que pour des valeurs constantes. En effet, si une donnée manipulée par le métaprogramme est une entrée du programme (par exemple ici, le nombre n donné par l'utilisateur), elle ne peut pas être connue avant l'exécution du programme. Il est donc impossible qu'un tel métaprogramme soit interprété par un compilateur. L'optimisation par métaprogrammation est alors totalement perdue.
+
+La métaprogrammation ne se limite pas seulement à l'écriture de données contenant un programme destiné au compilateur. Elle peut simplement être la manipulation d'un programme en fonction d'entrées variables. Par exemple, un programme peut, selon ses entrées, muter le code d'un métaprogramme. Ce métaprogramme peut alors être destiné à une exécution ultérieure ou une génération de code. << Wikipédia >>
+
+/*****************************************************************************************************************************/
+
+//reflexivité
+
+En programmation informatique, la réflexion est la capacité d'un programme à examiner, et éventuellement à modifier, ses structures internes de haut niveau (par exemple ses objets) lors de son exécution.
+
+On appelle réflexivité le fait pour un langage de programmation de permettre l'écriture de tels programmes. Un tel langage de programmation est dit réflexif.
+
+
+//Articulation entre les differents termes.

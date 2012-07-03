@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:10397/WebApplicationJSP/WSDaoJpaService?wsdl" uri="src/conf/xml-resources/web-service-references/WSDaoJpaService/wsdl/localhost_10397/WebApplicationJSP/WSDaoJpaService.wsdl"/>
+    <system systemId="http://localhost:10397/WebApplicationJSP/WSDaoJpaService?xsd=1" uri="src/conf/xml-resources/web-service-references/WSDaoJpaService/wsdl/localhost_10397/WebApplicationJSP/WSDaoJpaService.xsd_1.xsd"/>
+</catalog>
+

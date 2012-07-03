@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0046)http://www.isima.fr/~loic/java/exo_jee_jsf.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><link rel="stylesheet" href="./[JEE] Devine en JSF_files/style2.css" type="text/css"><link rel="shortcut icon" type="image/x-icon" href="http://www.isima.fr/~loic/favicon.ico"><link rel="icon" type="image/gif" href="http://www.isima.fr/~loic/favicon.gif"><script src="./[JEE] Devine en JSF_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./[JEE] Devine en JSF_files/ga.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF_files/jquery.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF_files/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="./[JEE] Devine en JSF_files/tablesorter.css" type="text/css"><link rel="stylesheet" href="./[JEE] Devine en JSF_files/lock.css" type="text/css"><script type="text/javascript" src="./[JEE] Devine en JSF_files/shCore.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF_files/shBrushJScript.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF_files/shBrushBash.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF_files/shBrushSql.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF_files/shBrushJava.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF_files/shBrushXml.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF_files/shBrushPlain.js"></script><link type="text/css" rel="stylesheet" href="./[JEE] Devine en JSF_files/shCoreDefault.css"><script type="text/javascript">SyntaxHighlighter.defaults['class-name'] = 'sh'; SyntaxHighlighter.all();</script><title>[JEE] Devine en JSF</title>   
+   <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31339181-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+<script type="text/javascript" src="./[JEE] Devine en JSF_files/plusone.js" gapi_processed="true">
+  {lang: 'fr'}
+</script>
+
+
+</head><body>     <script type="text/javascript">
+  $(document).ready(function() {
+		$("#tete").hover(function(){
+		    $(this).css("background-color", "#fcfcbc");
+			$(this).css("border", "2px solid yellow");
+			/*$(this).css("width", 300);
+			$(this).css("height", 200);*/
+			$(this).stop(true, true).animate({ width:300, height : 200}, 600);
+		}, function() {
+		    $(this).stop(true, true);
+		    $(this).css("background-color", "transparent");
+			$(this).css("border", "none");
+			$(this).css("width", 91);
+			$(this).css("height", 91);
+		});
+	});
+</script>
+<div class="englobante"><div class="main">   
+   
+  <div id="bandeau" style="position:relative;top:-28px;width:100%;height:107px;background-color:#3366CC;border-radius: 20px;">
+   <div id="tete" style="position: absolute; padding: 5px; text-align: left; top: 5px; left: 0px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; z-index: 10; overflow: hidden; background-color: transparent; border: none; width: 91px; height: 91px; ">
+      <img style="float:left;margin-right:10px;margin-bottom:10px" src="./[JEE] Devine en JSF_files/loic_carre.png">
+	  <div style="margin-left:90px;width:200px;">
+	  <p><strong>Loïc YON</strong> [KIUX] <br>
+	  Enseignant-chercheur<br>
+	  Référent Formation Continue</p>
+	  <p>
+	  <img src="./[JEE] Devine en JSF_files/email.png"> &nbsp; <a href="http://www.google.com/recaptcha/mailhide/d?k=01NZnPN-yD6GEvshmcQhtMcg==&c=biFOLJ33jOYajI3yoRE6n2sfQT-QcdE4uw6RzQTVPao=" onclick="window.open(&#39;http://www.google.com/recaptcha/mailhide/d?k=01NZnPN-yD6GEvshmcQhtMcg==&amp;c=biFOLJ33jOYajI3yoRE6n2sfQT-QcdE4uw6RzQTVPao=&#39;, &#39;&#39;, &#39;toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300&#39;); return false;" title="Mon courriel protégé"><img style="position:relative;border:0;top:3px" src="./[JEE] Devine en JSF_files/mon_mail.png" title="mon mail" alt="mon mail"></a></p><p>
+	  <img src="./[JEE] Devine en JSF_files/pencil.png" style="margin-right:12px">ISIMA<br>&nbsp; Campus des Cézeaux<br>&nbsp; BP 10165<br>&nbsp; 63173 Aubière CEDEX</p></div>
+  </div>
+  <h1 style="padding-top:15px;">[JEE] Devine en JSF</h1>  
+  <div id="menu" class="noprint">
+  <ul class="nav-menu">
+     <li><a href="http://www.isima.fr/~loic/index.php">$HOME</a></li>
+     <li><a href="http://www.isima.fr/~loic/java/index.php">JAVA</a></li>
+     <li><a href="http://www.isima.fr/~loic/unixc.php">UNIX-C</a></li>
+	  <li><a href="http://www.isima.fr/~loic/cpp.php">++C</a></li>
+     <li><a href="http://www.isima.fr/~loic/divers.php">DIVERS</a></li>
+	  <li><a href="http://www.isima.fr/~loic/admin.php">ADMIN</a></li>
+     <li style="margin-left:1em;"><a href="http://www.isima.fr/~loic/recherche/index.php">RECHERCHE</a></li>
+   </ul> 
+   </div>  
+ </div>
+
+    
+    <div id="content">
+<script type="text/javascript">
+
+function creer_menu(num) {
+      
+		$('#sommaire').hide();
+      var txt = "<div class ='fermer'><a href='#'>x</a></div>";
+		txt += "<ol>";
+		var i = 1, j=0;
+	    $('h2').each(function() {
+         if (j>1) txt += "</ol>";
+         var id = "s"+i;
+         if (typeof $(this).attr("id") === "undefined") 
+		      $(this).attr("id", id);
+         else id = $(this).attr("id");
+		   txt += "<li><a href='#"+id+"'>"+this.innerHTML + "</a></li>";
+         if (!num) this.innerHTML = i +". "+this.innerHTML;
+		   
+         j = 1;
+		   $(this).nextUntil("h2", "h3").each(function() {
+           if (j==1) txt += "<ol>";
+           var id = "s"+i+"_"+j;
+           if (typeof $(this).attr("id") === "undefined") 
+		         $(this).attr("id", id);
+           else id = $(this).attr("id");
+		     txt += "<li><a href='#"+id+"'>"+this.innerHTML + "</a></li>";
+           if (!num) this.innerHTML = i +"."+j+". "+this.innerHTML;
+           j++;
+		   });
+         i++;
+		});
+      
+      txt+="</ol>";
+		$('#sommaire').html(txt);
+      $('.fermer').live("click", function() {
+         $("#sommaire").stop(true, true).hide();
+         return false;
+      });
+	}
+
+
+ $(document).ready(function() {
+
+         var som = document.createElement('div');
+         som.setAttribute('id', 'sommaire');
+         document.getElementsByTagName('body')[0].appendChild(som);
+          
+	      creer_menu();
+	    	      
+         $('#content').bind('click',function(e){
+              $('#sommaire').stop(true, true).css({ left: e.pageX, top: e.pageY, zIndex: '101' }).fadeIn();
+         });
+		
+         $('a').live('click', function (){
+		      $("#sommaire").stop(true, true).hide();
+		      return true;
+		   });
+      /*
+		   $('#sommaire a').live("click", function (){
+		      $("#sommaire").stop(true, true).hide();
+		      return true;
+		   }); */
+         
+         $(".solution").each(function() {
+             var cache = "<div class='cache' style='";
+             cache += "width:100%" +";";
+             cache += "height:"+ ($(this).height()) +";"; 
+             cache += "line-height:"+ $(this).height()+ "px;";
+             cache += "'><span><img src='../images/zoom.png' alt='Cliquer pour découvrir' title='Cliquer pour découvrir'></span></div>";
+             $(this).html(cache+$(this).html());
+         });
+         
+         $(".cache").click(function() {
+            $(this).slideUp();
+            return false;
+         });
+	 });
+    
+    </script>
+    
+
+
+
+<p><strong>Date de première publication : </strong>2012/05/18</p>
+
+<h2 id="s1">1. Objectif et contexte</h2>
+
+<p>L'objectif de cet exercice est de créer une petite application JSF à partir d'un jeu très simple : deviner un nombre entre 0 et 100.</p>
+
+<p>L'environnement de développement est le suivant :</p>
+<ul>
+  <li>Java : Java SE 7 u3 et Java EE 6 u3</li>
+  <li>Netbeans 7.1.1</li>
+  <li>Glassfish 3.1.2</li>
+  <li>Mojarra (JSF) 2.1.6</li>
+</ul>
+
+<p>Cette page reprend des éléments de</p> 
+<ol>
+  <li><a href="http://netbeans.org/kb/docs/web/jsf20-intro.html" target="_blank">Tutoriel JSF</a></li><a href="http://netbeans.org/kb/docs/web/jsf20-intro.html" target="_blank">
+  </a><li><a href="http://netbeans.org/kb/docs/web/jsf20-intro.html" target="_blank"></a><a href="http://docs.oracle.com/javaee/6/tutorial/doc/gipob.html" target="_blank">Java EE Tutorial</a></li>
+</ol>
+
+<h2 id="s2">2. Création du site statique</h2>
+
+<p>Ce n'est pas le plus intéressant de l'histoire mais il faut bien commencer par là. Il faut créer un petit <a href="http://www.isima.fr/~loic/java/guess_static.html" target="_blank">mockup de notre site web</a>. Avec ma mégalomanie, j'ai juste remplacé <em>Duke</em>. 
+On prendra la même page pour afficher la réponse, on changera le texte dans la bulle et éventuellement les boutons dans la zone de proposition.</p>
+
+<p>Une fois qu'on l'a, on peut soit créer une appli web à partir du modèle et convertir en jsf (ce que fait [1]), ou alors on crée un nouveau projet et on remet les choses dedans. Je choisis la dernière solution.</p>
+
+<h2 id="s3">3. Création du site dynamique</h2>
+
+<p>Créer un nouveau projet Netbeans :</p>
+<ul>
+  <li>Projet : Java Web / Web application</li>
+  <li>Nom : Guess</li>
+  <li>Serveur d'applications : Glassfish / Java EE 6 Web</li>
+  <li>Framework : JSF 2.1 avec Facelets</li>
+</ul>
+
+<p>Si l'on regarde le code généré : on a un fichier xhtml 1.0 transitionnel avec un joli espace de nommage. On peut ajouter l'attribut <code>lang="fr"</code> à la balise <code>html</code>.</p>
+
+<p>JSF 2.2 devrait <a href="http://jaxenter.com/html5-will-be-supported-in-jsf-2-2-36196.html" target="_blank">supporter</a> HTML 5. Sinon on peut attaquer par <a href="http://www.ibm.com/developerworks/java/library/j-jsf2fu-1010/?ca=drs-" target="_blank">là</a></p>
+
+
+
+<h3 id="s3_1">3.1. Les ressources</h3>
+
+
+
+<p>Les ressources sont des données nécessaires au bon rendu de l'application. Elles se trouvent dans un emplacement standard : 
+un sous-répertoire de <em>Web Pages</em> qui s'intitule <em>resources</em>. Cela revient à créer le répertoire <code>web/resources</code>.</p>
+
+<p>On peut identifier deux ressources pour ce projet</p>
+<ul>
+  <li>une feuille de style</li>
+  <li>une image (ma tête !)</li>
+</ul>
+
+<p>Commençons par la feuille de style : créer  un sous-répoertoire de <em>resources</em> intitulé <strong>style</strong>. Ce nouveau répertoire est ce que l'on appelle une <strong>bibliothèque</strong>, on va y placer toutes les informations de style et donc <code>guess.css</code></p>
+
+<p>Le mécanisme de ressources est beaucoup plus fin : on peut gérer les ressources en fonction de la langue de l'application (locale), d'un numéro de version de la bibliothèque et enfin d'un numéro de version de la ressource.</p>
+
+<p>Dans le code XHTML, pour accéder à la ressource, il faut taper le code suivant :</p>
+<div><div id="highlighter_272168" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">h:outputStylesheet</code> <code class="xml color1">library</code><code class="xml plain">=</code><code class="xml string">"style"</code> <code class="xml color1">name</code><code class="xml plain">=</code><code class="xml string">"guess.css"</code> <code class="xml plain">/&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+<p>Passons maintenant à l'image : créer une bibliothèque <strong>images</strong> et y placer l'image. Il faut ajouter une des balises suivantes au code XHTML :</p>
+
+<div><div id="highlighter_372809" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">h:graphicImage</code> <code class="xml color1">alt</code><code class="xml plain">=</code><code class="xml string">""</code> <code class="xml color1">value</code><code class="xml plain">=</code><code class="xml string">"#{resource['images:loic.png']}"</code> <code class="xml plain">/&gt;</code></div><div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">h:graphicImage</code> <code class="xml color1">alt</code><code class="xml plain">=</code><code class="xml string">""</code> <code class="xml color1">library</code><code class="xml plain">=</code><code class="xml string">"images"</code> <code class="xml color1">name</code><code class="xml plain">=</code><code class="xml string">"loic.png"</code> <code class="xml plain">/&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+<p>Cela peut être une bonne idée d'exécuter l'application (MAJ+F6) pour voir ce que l'on a fait ! et d'observer le code source généré. Vous pouvez également tester avec une ressource non trouvée.</p>
+
+<p>On pourrait aller plus loin et intégrer du javascript dans notre page : une balise <code>&lt;outputScript library="" name="" /&gt;</code> est à notre disposition. Il faut juste faire attention à la manière dont JSF génère les balises HTML, en particulier les <code>id</code>.</p>
+
+<h3 id="s3_2">3.2. Le formulaire</h3>
+
+<p>Je vous propose de copier le reste du fichier, en remplaçant <code>img</code> par <code>graphicImage</code> et de voir ce que cela donne ! Il ne manquerait pas quelque chose ?</p>
+<div class="solution"><div class="cache" style="width:100%;height:26;line-height:26px;"><span><img src="./[JEE] Devine en JSF_files/zoom.png" alt="Cliquer pour découvrir" title="Cliquer pour découvrir"></span></div><p style="margin:5px;">Un identifiant sur la balise <code>graphicImage</code> bien sûr ! Cela permet à l'image d'avoir la bonne taille.</p></div>
+
+<p>En passant, il est possible de sélectionner tout le code et de le reformater (clic  bouton droit) pour que cela soit plus propre.</p>
+
+<p>Il faut maintenant que l'on s'occupe des balises <em>formulaire</em> <code>form</code> et <code>input</code>.</p>
+
+<p>La balise <code>form</code> est simplement préfixée par l'espace de nommage <code>h</code> : <code>h:form</code>.</p>
+<p>Il y a une balise spécifique pour le bouton "submit" du formulaire</p>
+
+<div><div id="highlighter_283500" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">h:commandButton</code> <code class="xml color1">value</code><code class="xml plain">=</code><code class="xml string">"Ok"</code> <code class="xml color1">action</code><code class="xml plain">=</code><code class="xml string">"index"</code> <code class="xml plain">/&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+<p>L'attribut <code>action</code> permet de définir l'action à réaliser lors de la soumission du formulaire. Dans cette forme, on demande de charger la page <code>index.xhtml</code> qui est la page sur laquelle on est en train de travailler.</p>
+
+<p>Il y a également une balise spécifique pour le champ de saisie texte</p>
+
+<div><div id="highlighter_704110" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">h:inputText</code> <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"nombre"</code> <code class="xml color1">title</code><code class="xml plain">=</code><code class="xml string">"Un nombre de 1 à 100"</code> <code class="xml color1">size</code><code class="xml plain">=</code><code class="xml string">"2"</code> <code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">h:inputText</code> <code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+<p>En fait, il y a idéalement un attribut <code>value</code> que l'on ajoutera plus tard.</p>
+
+<p>Grâce à JSF, on peut contrôler la valeur à saisir. Essayer le code suivant :</p>
+
+<div><div id="highlighter_720720" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">h:inputText</code> <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"nombre"</code> <code class="xml color1">title</code><code class="xml plain">=</code><code class="xml string">"Un nombre de 1 à 100"</code> <code class="xml color1">value</code><code class="xml plain">=</code><code class="xml string">""</code> <code class="xml color1">size</code><code class="xml plain">=</code><code class="xml string">"2"</code> <code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">f:validateLongRange</code> <code class="xml color1">minimum</code><code class="xml plain">=</code><code class="xml string">"1"</code>&nbsp; <code class="xml color1">maximum</code><code class="xml plain">=</code><code class="xml string">"100"</code> <code class="xml plain">/&gt;</code></div><div class="line number3 index2 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">h:inputText</code> <code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+<p>Il faut importer le bon espace de nommage (laissez Netbeans vous aider !) et testez désormais le comportement !</p>
+
+<p>Testez la validation avec un champ non renseigné, un nombre dans les limites ou pas, ou quelque chose d'alphanumérique !</p>
+
+<h2 id="s4">4. Logique métier</h2>
+
+<p>C'est bien joli tout ça mais il n'y a pas encore d'interaction avec l'utilisateur. On va s'attaquer à la "logique métier" de notre application.</p>
+
+<h3 id="s4_1">4.1. Bean managé</h3>
+
+<p>La première chose à faire est de créer ce que l'on appelle un "bean managé", autrement dit :</p>
+<ul>
+  <li>bean : un <em>Plain Old Java Object</em> (POJO) qui respecte certaines conventions (constructeur sans argument, getter/setter pour les attributs) et qui aura la responsabilité de tirer un nombre au hasard entre 1 et 100 :</li>
+  <li>managé : géré par JSF</li>
+</ul>
+<p>Avec l'assitant Netbeans :</p>
+<ul>
+  <li>(M) File &gt; new &gt; JavaServer Faces &gt; JSF Managed Bean</li>
+  <li>Nom de la classe : LoicBean</li>
+  <li>Package : guess</li>
+  <li>Scope : Session</li>
+</ul>
+
+<p>Cet objet est bien vide alors il faut ajouter quelques petites choses. On va tout d'abord s'occuper du paramétrage de la phrase affichée.</p>
+
+<ul>
+  <li>Ajouter un attribut de type String <code>phrase</code> et son getter, à la main ou après un clic droit / insertion de code</li>
+  <li><code>phrase</code> est initialisé au petit texte "Je pense &amp;agrave; un nombre entre &lt;strong&gt;1&lt;/strong&gt; et &lt;strong&gt;100&lt;/strong&gt;. Pouvez-vous le trouver ?" dans le constructeur</li>
+</ul>
+<p>Aller dans le fichier index.xhtml. Remplacer le texte de la balise <code>p</code> par </p>
+
+<div><div id="highlighter_104534" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">p</code> <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"text"</code><code class="xml plain">&gt;#{loicBean.phrase}&lt;/</code><code class="xml keyword">p</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+<p>Lorsque l'on a créé le bean avec l'assistant de Netbeans, on a définit le nom de l'instance pour le retrouver et les fichiers de configuration ont été mis à jour automatiquement. L'écriture du dessus fait appel au getter de l'attribut phrase de l'instance loicBean de LoicBean, l'instance elle-même créée par JSF</p>
+
+<p>Si vous testez, vous constaterez que cela marche ...enfin presque... Pour éviter ce que l'on voit, il faut plutôt essayer cela :</p>
+
+<div><div id="highlighter_726154" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">p</code> <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"text"</code><code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">h:outputText</code> <code class="xml color1">value</code><code class="xml plain">=</code><code class="xml string">"#{loicBean.phrase}"</code> <code class="xml color1">escape</code><code class="xml plain">=</code><code class="xml string">"false"</code> <code class="xml plain">/&gt;</code></div><div class="line number3 index2 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">p</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+<p>C'est mieux, non ?</p>
+
+<p>On va maintenant générer un nombre au hasard que l'on appellera <code>devinette</code></p>
+<ul>
+  <li>Ajouter un attribut entier : <code>devinette</code>.</li>
+  <li>Initialiser <code>devinette</code> dans le constructeur. Ce nombre sera initialisé à chaque nouvelle session (la durée de vie du Bean).</li>
+  <li>Pas de getter/setter car l'information ne sortira pas de l'objet</li>
+</ul>
+
+<p>Et la proposition de l'utilisateur ?</p>
+
+<ul>
+  <li>Ajouter un attribut entier :  <code>utilisateur</code> pour la saisie utilisateur.</li>
+  <li>Ajouter le getter et le setter pour <code>utilisateur</code>.</li>
+</ul>
+
+<p>Pour permettre la lecture du nom, on va se servir de l'attribut <code>value</code> que l'on avait mis de côté.</p>
+
+<div><div id="highlighter_641021" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">h:inputText</code> <code class="xml color1">id</code><code class="xml plain">=</code><code class="xml string">"nombre"</code> <code class="xml color1">title</code><code class="xml plain">=</code><code class="xml string">"Un nombre de 1 à 100"</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml color1">value</code><code class="xml plain">=</code><code class="xml string">"#{loicBean.utilisateur}"</code> <code class="xml color1">size</code><code class="xml plain">=</code><code class="xml string">"2"</code> <code class="xml plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">h:inputText</code> <code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+<h3 id="s4_2">4.2. La comparaison ...</h3>
+
+<p>On va maintenant comparer les deux nombres <code>utilisateur</code> et <code>devinette</code>. Il faut ajouter une nouvelle méthode <code>comparer()</code> au bean qui modifie la phrase en fonction de la comparaison. La méthode n'admet aucun argument et retourne une chaîne de caractères significative pour JSF : un nom de page web, un résultat ... Pour que le traitement se fasse, il faut adapter l'attribut action :</p>
+
+<div><div id="highlighter_256053" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">h:commandButton</code> <code class="xml color1">value</code><code class="xml plain">=</code><code class="xml string">"Ok"</code> <code class="xml color1">action</code><code class="xml plain">=</code><code class="xml string">"#{loicBean.comparer()}"</code> <code class="xml plain">/&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+
+<h3 id="s4_3">4.3. Aller plus loin ...</h3>
+
+<p>Je vous propose de réaliser les compléments suivants : </p>
+<ul>
+  <li>Fixer les valeurs min et max de <code>devinette</code> et adapter l'affichage de la page en conséquence</li>
+  <li>Compter le nombre d'essais et éventuellement le limiter avec le message qui va bien</li>
+  <li>Afficher l'éventuel <a href="http://docs.oracle.com/javaee/6/tutorial/doc/bnarf.html#bnaso" target="_blank">message d'erreur</a> à la validation dans la bulle.</li>
+  <li>Permettre de recommencer. Afficher des informations conditionnelles peut être plus facile avec plusieurs pages, on peut aussi regarder ce que l'on peut faire avec <em><a href="http://docs.oracle.com/javaee/6/tutorial/doc/bnarf.html#bnaso" target="_blank">rendered</a></em></li>
+  <li><a href="http://docs.oracle.com/javaee/6/tutorial/doc/bnaxw.html" target="_blank">Internationaliser notre petite appli</a></li>
+  <li><a href="http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/" target="_blank">Documentation JSF</a></li>
+</ul>
+
+<p>Un truc qui peut vous aider si vous voulez une nouvelle session :</p>
+<div><div id="highlighter_174753" class="syntaxhighlighter sh java"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">FacesContext.getCurrentInstance().getExternalContext().invalidateSession();</code></div></div></td></tr></tbody></table></div></div>
+ 
+<p>La prochaine étape consiste à traduire notre application web en proposant l'internationalisation. C'est par <a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php">là</a>.</p> 
+ 
+</div></div><div class="footnote"><div style="width:49%;float:left;text-align:left;"> Loïc Yon [ kiux ] - 2012 - <a href="http://www.isima.fr/~loic/mentions.php">Mentions</a></div><div style="width:49%;float:right">Mise à jour : 03/06/2012</div><div style="padding:0;margin:-1px 0;text-align:center;vertical-align:middle"><div id="___plusone_0" style="height: 20px; width: 90px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial; "><iframe allowtransparency="true" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="width: 90px; margin: 0px; border-style: none; height: 20px; position: static; left: 0px; top: 0px; visibility: visible; " tabindex="0" vspace="0" width="100%" id="I1_1338798115109" name="I1_1338798115109" src="./[JEE] Devine en JSF_files/fastbutton.htm" title="+1"></iframe></div></div></div></div><div id="sommaire" style="display: none; "><div class="fermer"><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#">x</a></div><ol><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#s1">Objectif et contexte</a></li><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#s2">Création du site statique</a></li><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#s3">Création du site dynamique</a></li><ol><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#s3_1">Les ressources</a></li><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#s3_2">Le formulaire</a></li></ol><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#s4">Logique métier</a></li><ol><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#s4_1">Bean managé</a></li><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#s4_2">La comparaison ...</a></li><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php#s4_3">Aller plus loin ...</a></li></ol></ol></div></body></html>

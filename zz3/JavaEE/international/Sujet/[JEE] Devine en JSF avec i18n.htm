@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0051)http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><link rel="stylesheet" href="./[JEE] Devine en JSF avec i18n_files/style2.css" type="text/css"><link rel="shortcut icon" type="image/x-icon" href="http://www.isima.fr/~loic/favicon.ico"><link rel="icon" type="image/gif" href="http://www.isima.fr/~loic/favicon.gif"><script src="./[JEE] Devine en JSF avec i18n_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./[JEE] Devine en JSF avec i18n_files/ga.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF avec i18n_files/jquery.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF avec i18n_files/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="./[JEE] Devine en JSF avec i18n_files/tablesorter.css" type="text/css"><link rel="stylesheet" href="./[JEE] Devine en JSF avec i18n_files/lock.css" type="text/css"><script type="text/javascript" src="./[JEE] Devine en JSF avec i18n_files/shCore.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF avec i18n_files/shBrushJScript.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF avec i18n_files/shBrushBash.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF avec i18n_files/shBrushSql.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF avec i18n_files/shBrushJava.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF avec i18n_files/shBrushXml.js"></script><script type="text/javascript" src="./[JEE] Devine en JSF avec i18n_files/shBrushPlain.js"></script><link type="text/css" rel="stylesheet" href="./[JEE] Devine en JSF avec i18n_files/shCoreDefault.css"><script type="text/javascript">SyntaxHighlighter.defaults['class-name'] = 'sh'; SyntaxHighlighter.all();</script><title>[JEE] Devine en JSF avec i18n</title>   
+   <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31339181-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+<script type="text/javascript" src="./[JEE] Devine en JSF avec i18n_files/plusone.js" gapi_processed="true">
+  {lang: 'fr'}
+</script>
+
+
+</head><body>     <script type="text/javascript">
+  $(document).ready(function() {
+		$("#tete").hover(function(){
+		    $(this).css("background-color", "#fcfcbc");
+			$(this).css("border", "2px solid yellow");
+			/*$(this).css("width", 300);
+			$(this).css("height", 200);*/
+			$(this).stop(true, true).animate({ width:300, height : 200}, 600);
+		}, function() {
+		    $(this).stop(true, true);
+		    $(this).css("background-color", "transparent");
+			$(this).css("border", "none");
+			$(this).css("width", 91);
+			$(this).css("height", 91);
+		});
+	});
+</script>
+<div class="englobante"><div class="main">   
+   
+  <div id="bandeau" style="position:relative;top:-28px;width:100%;height:107px;background-color:#3366CC;border-radius: 20px;">
+   <div id="tete" style="position: absolute; padding: 5px; text-align: left; top: 5px; left: 0px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; z-index: 10; overflow: hidden; background-color: transparent; border: none; width: 91px; height: 91px; ">
+      <img style="float:left;margin-right:10px;margin-bottom:10px" src="./[JEE] Devine en JSF avec i18n_files/loic_carre.png">
+	  <div style="margin-left:90px;width:200px;">
+	  <p><strong>Loïc YON</strong> [KIUX] <br>
+	  Enseignant-chercheur<br>
+	  Référent Formation Continue</p>
+	  <p>
+	  <img src="./[JEE] Devine en JSF avec i18n_files/email.png"> &nbsp; <a href="http://www.google.com/recaptcha/mailhide/d?k=01NZnPN-yD6GEvshmcQhtMcg==&c=biFOLJ33jOYajI3yoRE6n2sfQT-QcdE4uw6RzQTVPao=" onclick="window.open(&#39;http://www.google.com/recaptcha/mailhide/d?k=01NZnPN-yD6GEvshmcQhtMcg==&amp;c=biFOLJ33jOYajI3yoRE6n2sfQT-QcdE4uw6RzQTVPao=&#39;, &#39;&#39;, &#39;toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300&#39;); return false;" title="Mon courriel protégé"><img style="position:relative;border:0;top:3px" src="./[JEE] Devine en JSF avec i18n_files/mon_mail.png" title="mon mail" alt="mon mail"></a></p><p>
+	  <img src="./[JEE] Devine en JSF avec i18n_files/pencil.png" style="margin-right:12px">ISIMA<br>&nbsp; Campus des Cézeaux<br>&nbsp; BP 10165<br>&nbsp; 63173 Aubière CEDEX</p></div>
+  </div>
+  <h1 style="padding-top:15px;">[JEE] Devine en JSF avec i18n</h1>  
+  <div id="menu" class="noprint">
+  <ul class="nav-menu">
+     <li><a href="http://www.isima.fr/~loic/index.php">$HOME</a></li>
+     <li><a href="http://www.isima.fr/~loic/java/index.php">JAVA</a></li>
+     <li><a href="http://www.isima.fr/~loic/unixc.php">UNIX-C</a></li>
+	  <li><a href="http://www.isima.fr/~loic/cpp.php">++C</a></li>
+     <li><a href="http://www.isima.fr/~loic/divers.php">DIVERS</a></li>
+	  <li><a href="http://www.isima.fr/~loic/admin.php">ADMIN</a></li>
+     <li style="margin-left:1em;"><a href="http://www.isima.fr/~loic/recherche/index.php">RECHERCHE</a></li>
+   </ul> 
+   </div>  
+ </div>
+
+    
+    <div id="content">
+<script type="text/javascript">
+
+function creer_menu(num) {
+      
+		$('#sommaire').hide();
+      var txt = "<div class ='fermer'><a href='#'>x</a></div>";
+		txt += "<ol>";
+		var i = 1, j=0;
+	    $('h2').each(function() {
+         if (j>1) txt += "</ol>";
+         var id = "s"+i;
+         if (typeof $(this).attr("id") === "undefined") 
+		      $(this).attr("id", id);
+         else id = $(this).attr("id");
+		   txt += "<li><a href='#"+id+"'>"+this.innerHTML + "</a></li>";
+         if (!num) this.innerHTML = i +". "+this.innerHTML;
+		   
+         j = 1;
+		   $(this).nextUntil("h2", "h3").each(function() {
+           if (j==1) txt += "<ol>";
+           var id = "s"+i+"_"+j;
+           if (typeof $(this).attr("id") === "undefined") 
+		         $(this).attr("id", id);
+           else id = $(this).attr("id");
+		     txt += "<li><a href='#"+id+"'>"+this.innerHTML + "</a></li>";
+           if (!num) this.innerHTML = i +"."+j+". "+this.innerHTML;
+           j++;
+		   });
+         i++;
+		});
+      
+      txt+="</ol>";
+		$('#sommaire').html(txt);
+      $('.fermer').live("click", function() {
+         $("#sommaire").stop(true, true).hide();
+         return false;
+      });
+	}
+
+
+ $(document).ready(function() {
+
+         var som = document.createElement('div');
+         som.setAttribute('id', 'sommaire');
+         document.getElementsByTagName('body')[0].appendChild(som);
+          
+	      creer_menu();
+	    	      
+         $('#content').bind('click',function(e){
+              $('#sommaire').stop(true, true).css({ left: e.pageX, top: e.pageY, zIndex: '101' }).fadeIn();
+         });
+		
+         $('a').live('click', function (){
+		      $("#sommaire").stop(true, true).hide();
+		      return true;
+		   });
+      /*
+		   $('#sommaire a').live("click", function (){
+		      $("#sommaire").stop(true, true).hide();
+		      return true;
+		   }); */
+         
+         $(".solution").each(function() {
+             var cache = "<div class='cache' style='";
+             cache += "width:100%" +";";
+             cache += "height:"+ ($(this).height()) +";"; 
+             cache += "line-height:"+ $(this).height()+ "px;";
+             cache += "'><span><img src='../images/zoom.png' alt='Cliquer pour découvrir' title='Cliquer pour découvrir'></span></div>";
+             $(this).html(cache+$(this).html());
+         });
+         
+         $(".cache").click(function() {
+            $(this).slideUp();
+            return false;
+         });
+	 });
+    
+    </script>
+    
+
+
+
+<p><strong>Date de première publication : </strong>2012/05/21</p>
+
+<h2 id="s1">1. Objectif et contexte</h2>
+
+<p>L'objectif de cet exercice est de compléter le petit <a href="http://www.isima.fr/~loic/java/exo_jee_jsf.php">jeu de devinette d'un nombre</a> en introduisant l'internationalisation</p>
+
+<h2 id="s2">2. Traductions et configuration</h2>
+
+<p>S'il existe plusieurs techniques pour le faire, nous allons "internationaliser" le site en proposant les traductions en ressource, dans des "bundles". Une seule différence notable avec les ressources classiques : elles ne  se trouvent pas dans le répertoire habituel.</p>
+
+<h3 id="s2_1">2.1. Fichiers contenant les traductions</h3>
+
+<ul> 
+ <li>(M) New file &gt; other &gt; Properties file</li>
+ <li>Nom : src/java/.../messages (le nom que vous voulez mais le répertoire est important)</li>
+</ul>
+
+<div><div id="highlighter_45889" class="syntaxhighlighter sh plain"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain plain"># commentaire : fichier clé=valeur</code></div><div class="line number2 index1 alt1"><code class="plain plain">phrase.bienvenue=Bonjour, je pense à un nombre entre &lt;strong&gt;1&lt;/strong&gt; \</code></div><div class="line number3 index2 alt2"><code class="plain spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain plain">et &lt;strong&gt;100&lt;/strong&gt;. Pouvez-vous le deviner ?</code></div><div class="line number4 index3 alt1"><code class="plain plain">phrase.petit=est trop petit !</code></div><div class="line number5 index4 alt2"><code class="plain plain">phrase.grand=est trop grand.</code></div><div class="line number6 index5 alt1"><code class="plain plain">phrase.fin=Bravo, vous avez trouvé ! On rejoue ?</code></div><div class="line number7 index6 alt2"><code class="plain plain">bouton = Tester</code></div></div></td></tr></tbody></table></div></div>
+
+<p>Sauvegarder le fichier sous <code>messages_en.properties</code> et ouvrir ce nouveau fichier. Il apparait alors une interface comparative assez sympa pour traduire les éléments que l'on a retenu.</p> 
+ 
+<div><div id="highlighter_276854" class="syntaxhighlighter sh plain"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain plain">phrase.bienvenue=Hello, I chose a number between &lt;strong&gt;1&lt;/strong&gt; \</code></div><div class="line number2 index1 alt1"><code class="plain spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain plain">and &lt;strong&gt;100&lt;/strong&gt;. Can you find it ?</code></div><div class="line number3 index2 alt2"><code class="plain plain">phrase.petit=is to small</code></div><div class="line number4 index3 alt1"><code class="plain plain">phrase.grand=is too big</code></div><div class="line number5 index4 alt2"><code class="plain plain">phrase.fin=Congrats, you found it ! Do we play again ?</code></div><div class="line number6 index5 alt1"><code class="plain plain">bouton=Test</code></div></div></td></tr></tbody></table></div></div>
+
+<h3 id="s2_2">2.2. Configuration</h3>
+
+<p>Il faut maintenant configurer l'application pour utiliser ces fichiers de traduction. Pour cela, il faut créer un fichier <code>faces-config.xml</code>. la méthode la plus rapide, hormis le copier-coller, est de passer par l'assistant :</p>
+<ul> 
+ <li>(M) New file &gt; JavaServer Faces &gt; JSF Faces configuration</li>
+ <li>Nom : faces-config</li>
+</ul>
+
+<p>C'est un fichier bien pratique qui peut également contenir les flux entre les pages (création graphique) mais revenons à la traduction et ajoutons cela :</p>
+
+<div><div id="highlighter_533686" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">application</code><code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">resource-bundle</code><code class="xml plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">base-name</code><code class="xml plain">&gt;messages&lt;/</code><code class="xml keyword">base-name</code><code class="xml plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">var</code><code class="xml plain">&gt;bundle&lt;/</code><code class="xml keyword">var</code><code class="xml plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">resource-bundle</code><code class="xml plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">locale-config</code><code class="xml plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">default-locale</code><code class="xml plain">&gt;fr&lt;/</code><code class="xml keyword">default-locale</code><code class="xml plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">supported-locale</code><code class="xml plain">&gt;en&lt;/</code><code class="xml keyword">supported-locale</code><code class="xml plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">locale-config</code><code class="xml plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">application</code><code class="xml plain">&gt; </code></div></div></td></tr></tbody></table></div></div>
+ 
+ <code>&lt;base-name&gt;</code> est le nom du fichier sans extension avec le chemin <strong>relatif</strong> par rapport au répertoire <code>src/java</code>
+
+ <h2 id="s3">3. Traduire</h2>
+ 
+ <h3 id="s3_1">3.1. Le bouton</h3>
+
+<p>On va tout d'abord proposer la traduction pour le bouton :</p> 
+ 
+ <div><div id="highlighter_953534" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">h:commandButton</code> <code class="xml color1">value</code> <code class="xml plain">=</code><code class="xml string">"#{bundle.bouton}"</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml color1">action</code><code class="xml plain">=</code><code class="xml string">"#{loicBean.comparer()}"</code><code class="xml plain">/&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+<p>L'affichage de la langue dépend des préférences de votre navigateur, ce qui peut donc se changer pour tester. Par exemple, sous Firefox, cela se fait par là :</p>
+<p> 
+(M) Tools &gt; Options &gt; (O) Content &gt; Languages &gt; (B) Choose 
+ </p>
+ <p>C'est chouette, non ?</p>
+ 
+ 
+ <p>Si vous n'avez pas le courage de configurer votre navigateur, on peut également changer la langue de manière statique. Le tutoriel Java EE 6 propose utiliser la balise <code>&lt;fmt:setLocale value="fr"&gt;</code> de l'espace de nommage <code>xmlns:fmt="http://java.sun.com/jstl/fmt"</code>. Cette partie de la bibilothèque JSTL n'est pas compatible avec Facelets. En revanche, on peut changer la locale avec : </p>
+ 
+ <div><div id="highlighter_404281" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">f:view</code> <code class="xml color1">locale</code><code class="xml plain">=</code><code class="xml string">"fr_FR"</code> <code class="xml plain">/&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+ 
+<h3 id="s3_2">3.2. La phrase</h3>
+<p>On va maintenant passer à la traduction de la phrase. Il faut tout d'abord accéder au "bundle", ce que fait le code suivant : </p>
+<div><div id="highlighter_175006" class="syntaxhighlighter sh java"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">ResourceBundle bundle = ResourceBundle.getBundle(</code><code class="java string">"messages"</code><code class="java plain">,</code></div><div class="line number2 index1 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">FacesContext.getCurrentInstance().getViewRoot().getLocale());</code></div></div></td></tr></tbody></table></div></div>
+<p>Il faut donner le nom du fichier avec son chemin (<em>basename</em>) et non pas la variable définie dans le fichier de configuration. Le bundle ne contient que les chaines traduites pour la locale donnée.</p>
+<p>Pour obtenir une traduction, il faut alors interroger le bundle :</p>
+<div><div id="highlighter_873804" class="syntaxhighlighter sh java"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">phrase = bundle.getString(</code><code class="java string">"phrase.bienvenue"</code><code class="java plain">);</code></div></div></td></tr></tbody></table></div></div>
+
+ <p>Nous devons résoudre une difficulté supplémentaire avec notre application qui vient du fait que l'on s'est limité à une seule page pour tout afficher. Il faut maintenant prendre en compte que la phrase qui change en fonction du contexte, change également lors d'un changement de locale.</p>
+ 
+ <p>Je propose de changer la signification de l'attribut <code>phrase</code> du bean managé et d'adapter le getter qui est appelé lors d'une instruction comme celle-ci (oui, c'est bien le getter qui est appelé et non l'attribut directement) :</p>
+ 
+<div><div id="highlighter_867902" class="syntaxhighlighter sh java"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java plain">&lt;h:outputText value=</code><code class="java string">"#{loicBean.phrase}"</code> <code class="java plain">escape=</code><code class="java string">"false"</code> <code class="java plain">/&gt;</code></div></div></td></tr></tbody></table></div></div>
+ 
+ <p>Je propose de place dans <code>phrase</code> une des clés du fichier de traduction et on délègue à <code>getPhrase()</code> la traduction dans la bonne locale.</p>
+ 
+ <h2 id="s4">4. Changer la langue d'affichage par l'utilisateur</h2>
+ 
+ <p>Pour changer la langue de notre application, nous allons afficher deux petits drapeaux (<img src="./[JEE] Devine en JSF avec i18n_files/fr.gif" title="drapeau FR" alt="drapeau FR"> et <img src="./[JEE] Devine en JSF avec i18n_files/en.gif" title="drapeau EN" alt="drapeau EN">) représentant les langues disponibles. Les images sont évidemment à copier dans le répertoire des ressources. Ces drapeaux seront des liens vers le changement de locale. On impose alors la locale dans le document avec <code>&lt;h:view&gt;</code></p>
+ 
+<p>Du côté du fichier xhtml, il faut créer un <strong>nouveau formulaire</strong> et mettre ce genre de chose :</p>
+
+<div><div id="highlighter_157917" class="syntaxhighlighter sh xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">h:commandLink</code>&nbsp; <code class="xml color1">action</code><code class="xml plain">=</code><code class="xml string">"#{loicBean.setLocale('FR')}"</code><code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">h:graphicImage</code> <code class="xml color1">library</code><code class="xml plain">=</code><code class="xml string">"images"</code> <code class="xml color1">name</code><code class="xml plain">=</code><code class="xml string">"fr.gif"</code> <code class="xml color1">alt</code><code class="xml plain">=</code><code class="xml string">"Français"</code> <code class="xml plain">/&gt;</code></div><div class="line number3 index2 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">h:commandLink</code><code class="xml plain">&gt; </code></div></div></td></tr></tbody></table></div></div>
+ 
+<p>Bien entendu, cela suppose que l'on ajoute une nouvelle méthode au bean qui change la locale. Vous savez le faire, vous avez été capable de récupérer la locale ! On peut également modifier l'attribut <code>lang</code> de la balise <code>html</code> pour donner la langue.</p>
+ 
+ <div class="solution"><div class="cache" style="width:100%;height:108;line-height:108px;"><span><img src="./[JEE] Devine en JSF avec i18n_files/zoom.png" alt="Cliquer pour découvrir" title="Cliquer pour découvrir"></span></div>
+ <div><div id="highlighter_162722" class="syntaxhighlighter  java"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="java keyword">public</code> <code class="java plain">String setLocale(String lang) {</code></div><div class="line number2 index1 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code><code class="java plain">locale = </code><code class="java keyword">new</code> <code class="java plain">Locale(lang);</code></div><div class="line number3 index2 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code><code class="java plain">FacesContext.getCurrentInstance().getViewRoot().setLocale(locale);</code></div><div class="line number4 index3 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;</code><code class="java keyword">return</code> <code class="java string">"index"</code><code class="java plain">;</code></div><div class="line number5 index4 alt2"><code class="java plain">} </code></div></div></td></tr></tbody></table></div></div>
+</div>
+
+<p>Est-ce que vous avez remarqué que même les messages d'erreur à la validation par exemple sont également traduits ?</p>
+
+<p>La dernière chose que je vous propose est de modifer les balises <code>&lt;h:commandLink&gt;</code> que l'on vient d'ajouter pour n'afficher que la langue qui n'est pas utilisée avec l'attribut <code>rendered</code> et EL.</p>
+
+<div class="solution"><div class="cache" style="width:100%;height:60;line-height:60px;"><span><img src="./[JEE] Devine en JSF avec i18n_files/zoom.png" alt="Cliquer pour découvrir" title="Cliquer pour découvrir"></span></div>
+ <div><div id="highlighter_724535" class="syntaxhighlighter  xml"><div class="toolbar"><span><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">h:commandLink</code>&nbsp; <code class="xml color1">action</code><code class="xml plain">=</code><code class="xml string">"#{loicBean.setLocale('EN')}"</code></div><div class="line number2 index1 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml color1">rendered</code><code class="xml plain">=</code><code class="xml string">'#{loicBean.locale ne "en"}'</code><code class="xml plain">&gt; </code></div></div></td></tr></tbody></table></div></div>
+</div>
+
+<p>Et voilà, c'en est fini pour cet exercice/tuto !</p>
+
+ <p>Si ce que l'on a fait dans cette dernière partie ne vous plait pas, voilà une <a href="http://www.mkyong.com/jsf2/jsf-2-internationalization-example/" target="_blank">alternative</a> au choix de la langue avec une boîte de sélection et un listener.</p>
+ 
+<h2 id="s5">5. É léments de correction</h2> 
+<p>Si vous êtes bloqués, je préfère que vous me demandiez de vous aider.</p><p>
+</p><p>Si vous voulez comparer avec ce que vous avez fait, voilà des éléments de  correction :</p> 
+<div class="solution"><div class="cache" style="width:100%;height:44;line-height:44px;"><span><img src="./[JEE] Devine en JSF avec i18n_files/zoom.png" alt="Cliquer pour découvrir" title="Cliquer pour découvrir"></span></div>
+<p style="padding-left:1em;">Vous êtes sûr ? C'est <a href="http://www.isima.fr/~loic/java/GuessI18n.zip">ici</a></p>
+</div> 
+
+ 
+</div></div><div class="footnote"><div style="width:49%;float:left;text-align:left;"> Loïc Yon [ kiux ] - 2012 - <a href="http://www.isima.fr/~loic/mentions.php">Mentions</a></div><div style="width:49%;float:right">Mise à jour : 03/06/2012</div><div style="padding:0;margin:-1px 0;text-align:center;vertical-align:middle"><div id="___plusone_0" style="height: 20px; width: 90px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial; "><iframe allowtransparency="true" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="width: 90px; margin: 0px; border-style: none; height: 20px; position: static; left: 0px; top: 0px; visibility: visible; " tabindex="0" vspace="0" width="100%" id="I0_1338801180995" name="I0_1338801180995" src="./[JEE] Devine en JSF avec i18n_files/fastbutton.htm" title="+1"></iframe></div></div></div></div><div id="sommaire" style="display: none; "><div class="fermer"><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#">x</a></div><ol><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#s1">Objectif et contexte</a></li><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#s2">Traductions et configuration</a></li><ol><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#s2_1">Fichiers contenant les traductions</a></li><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#s2_2">Configuration</a></li></ol><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#s3">Traduire</a></li><ol><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#s3_1">Le bouton</a></li><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#s3_2">La phrase</a></li></ol><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#s4">Changer la langue d'affichage par l'utilisateur</a></li><li><a href="http://www.isima.fr/~loic/java/exo_jee_jsf_i18n.php#s5">É léments de correction</a></li></ol></div></body></html>

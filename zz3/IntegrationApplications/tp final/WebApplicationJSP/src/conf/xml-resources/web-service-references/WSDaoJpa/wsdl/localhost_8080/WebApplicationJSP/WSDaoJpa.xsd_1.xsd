@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1.1-b09 (branches/2.1-6834; 2011-07-16T17:14:48+0000) JAXWS-RI/2.2.5-promoted-b04 JAXWS/2.2. --><xs:schema xmlns:tns="http://rendezvous/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://rendezvous/">
+
+<xs:element name="clients" type="tns:clients"/>
+
+<xs:element name="creneaux" type="tns:creneaux"/>
+
+<xs:element name="getAllClients" type="tns:getAllClients"/>
+
+<xs:element name="getAllClientsResponse" type="tns:getAllClientsResponse"/>
+
+<xs:element name="getAllCreneaux" type="tns:getAllCreneaux"/>
+
+<xs:element name="getAllCreneauxResponse" type="tns:getAllCreneauxResponse"/>
+
+<xs:element name="getAllMedecins" type="tns:getAllMedecins"/>
+
+<xs:element name="getAllMedecinsResponse" type="tns:getAllMedecinsResponse"/>
+
+<xs:element name="getAllRv" type="tns:getAllRv"/>
+
+<xs:element name="getAllRvResponse" type="tns:getAllRvResponse"/>
+
+<xs:element name="getClientById" type="tns:getClientById"/>
+
+<xs:element name="getClientByIdResponse" type="tns:getClientByIdResponse"/>
+
+<xs:element name="getCreneauById" type="tns:getCreneauById"/>
+
+<xs:element name="getCreneauByIdResponse" type="tns:getCreneauByIdResponse"/>
+
+<xs:element name="getMedecinById" type="tns:getMedecinById"/>
+
+<xs:element name="getMedecinByIdResponse" type="tns:getMedecinByIdResponse"/>
+
+<xs:element name="getRvById" type="tns:getRvById"/>
+
+<xs:element name="getRvByIdResponse" type="tns:getRvByIdResponse"/>
+
+<xs:element name="medecins" type="tns:medecins"/>
+
+<xs:element name="rv" type="tns:rv"/>
+
+<xs:complexType name="getAllRv">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllRvResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rv" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rv">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="idClient" type="tns:clients" minOccurs="0"/>
+<xs:element name="idCreneau" type="tns:creneaux" minOccurs="0"/>
+<xs:element name="jour" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clients">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="nom" type="xs:string" minOccurs="0"/>
+<xs:element name="prenom" type="xs:string" minOccurs="0"/>
+<xs:element name="titre" type="xs:string" minOccurs="0"/>
+<xs:element name="version" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="creneaux">
+<xs:sequence>
+<xs:element name="hdebut" type="xs:int"/>
+<xs:element name="hfin" type="xs:int"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="idMedecin" type="tns:medecins" minOccurs="0"/>
+<xs:element name="mdebut" type="xs:int"/>
+<xs:element name="mfin" type="xs:int"/>
+<xs:element name="version" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="medecins">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="nom" type="xs:string" minOccurs="0"/>
+<xs:element name="prenom" type="xs:string" minOccurs="0"/>
+<xs:element name="titre" type="xs:string" minOccurs="0"/>
+<xs:element name="version" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllClients">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllClientsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clients" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCreneaux">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllCreneauxResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:creneaux" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllMedecins">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllMedecinsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:medecins" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMedecinById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMedecinByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clients" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCreneauById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCreneauByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clients" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClientById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClientByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clients" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRvById">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRvByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clients" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
