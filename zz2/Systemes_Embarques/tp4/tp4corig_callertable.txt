@@ -1,0 +1,10 @@
+interrupt
+	Div_8x8_U
+	AFF3
+	AFF2
+	DEC2AFF
+	AFF1
+main
+	AFF_Init
+	LED_C
+	LED_C_Init

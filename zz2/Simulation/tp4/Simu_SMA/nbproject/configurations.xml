@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/agent.h</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/arme.h</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/entite.h</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/graphic.h</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/humain.h</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/mt19937ar.h</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/position.h</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/simulator.h</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/world.h</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/zombie.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/agent.cpp</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/arme.cpp</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/entite.cpp</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/graphic.cpp</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/humain.cpp</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/main.cpp</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/mt19937ar.cpp</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/position.cpp</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/simulator.cpp</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/world.cpp</itemPath>
+      <itemPath>/media/travail/zz2/simulation/tp4/Simu_SMA/zombie.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f1" displayName="Test" projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <warningLevel>2</warningLevel>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+          <commandLine>-lpthread -lSDLmain -lSDL -lfmod -lSDL_image</commandLine>
+        </linkerTool>
+      </compileType>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <architecture>1</architecture>
+          <commandlineTool>g++</commandlineTool>
+          <warningLevel>3</warningLevel>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+          <commandLine>-lpthread -lSDLmain -lSDL -lfmod -lSDL_image</commandLine>
+        </linkerTool>
+      </compileType>
+      <packaging>
+        <packType>Tar</packType>
+        <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/SimuSMAESCOURBIACSEPTIER.tar</output>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}ressources/bell.mp3"
+                            from="/media/travail/zz2/simulation/tp4/ressources/bell.mp3"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}ressources/humain.jpg"
+                            from="/media/travail/zz2/simulation/tp4/ressources/humain.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}ressources/knife.jpg"
+                            from="/media/travail/zz2/simulation/tp4/ressources/knife.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}ressources/libfmod.so"
+                            from="/media/travail/zz2/simulation/tp4/ressources/libfmod.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}ressources/libSDL.so"
+                            from="/media/travail/zz2/simulation/tp4/ressources/libSDL.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}ressources/libSDL_image.so"
+                            from="/media/travail/zz2/simulation/tp4/ressources/libSDL_image.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}ressources/zombie.jpg"
+                            from="/media/travail/zz2/simulation/tp4/ressources/zombie.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+      </packaging>
+    </conf>
+  </confs>
+</configurationDescriptor>
